@@ -1,8 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/api/worker?path=/:path*"
+    }
+  ],
   "crons": [
     {
-      "path": "/api/g4f-worker/cron/cleanup",
+      "path": "/api/worker/cron/cleanup",
       "schedule": "0 3 * * *"
     }
   ]
