@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+<base href="/apps/">
+    <link rel="canonical" href="https://g4f.dev/id/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="en" href="https://g4f.dev/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="ar" href="https://g4f.dev/ar/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="bg" href="https://g4f.dev/bg/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="cs" href="https://g4f.dev/cs/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="da" href="https://g4f.dev/da/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="de" href="https://g4f.dev/de/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="el" href="https://g4f.dev/el/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="es" href="https://g4f.dev/es/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="et" href="https://g4f.dev/et/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="fa" href="https://g4f.dev/fa/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="fi" href="https://g4f.dev/fi/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="fr" href="https://g4f.dev/fr/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="he" href="https://g4f.dev/he/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="hi" href="https://g4f.dev/hi/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="hr" href="https://g4f.dev/hr/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="hu" href="https://g4f.dev/hu/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="id" href="https://g4f.dev/id/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="it" href="https://g4f.dev/it/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="ja" href="https://g4f.dev/ja/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="kk" href="https://g4f.dev/kk/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="ko" href="https://g4f.dev/ko/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="nb" href="https://g4f.dev/nb/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="nl" href="https://g4f.dev/nl/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="pl" href="https://g4f.dev/pl/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="pt" href="https://g4f.dev/pt/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="ro" href="https://g4f.dev/ro/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="ru" href="https://g4f.dev/ru/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="sk" href="https://g4f.dev/sk/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="sl" href="https://g4f.dev/sl/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="sq" href="https://g4f.dev/sq/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="sr" href="https://g4f.dev/sr/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="sv" href="https://g4f.dev/sv/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="th" href="https://g4f.dev/th/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="tr" href="https://g4f.dev/tr/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="uk" href="https://g4f.dev/uk/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="ur" href="https://g4f.dev/ur/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="uz" href="https://g4f.dev/uz/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="vi" href="https://g4f.dev/vi/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="zh" href="https://g4f.dev/zh/apps/simple_poll_voting_app.html">
+    <link rel="alternate" hreflang="x-default" href="https://g4f.dev/apps/simple_poll_voting_app.html">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Simple Poll / Voting App</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    margin: 0;
+    padding: 40px;
+  }
+  .container {
+    max-width: 600px;
+    margin: auto;
+    background:#fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  h1 {
+    text-align:center;
+    margin-bottom: 20px;
+  }
+  .poll-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .option {
+    display: flex;
+    align-items: center;
+    margin-bottom:10px;
+    padding:8px;
+    border-radius:4px;
+    transition: background 0.3s;
+  }
+  .option:hover {
+    background:#f0f0f0;
+  }
+  input[type="radio"] {
+    margin-right:15px;
+    cursor:pointer;
+  }
+  label {
+    flex:1;
+    cursor:pointer;
+  }
+  button {
+    margin-top:15px;
+    padding:10px;
+    background:#007BFF;
+    color:#fff;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    font-size:16px;
+  }
+  button:disabled {
+    background:#999;
+    cursor:not-allowed;
+  }
+  .results {
+    margin-top:30px;
+  }
+  .result-item {
+    margin-bottom:15px;
+  }
+  .progress-container {
+    background:#e0e0e0;
+    border-radius:20px;
+    overflow:hidden;
+    height:20px;
+    margin-top:5px;
+  }
+  .progress-bar {
+    height:100%;
+    background:#007BFF;
+    width:0%;
+    transition: width 0.5s;
+  }
+  .total-votes {
+    text-align:center;
+    margin-top:10px;
+    font-weight: bold;
+  }
+  /* Responsive */
+  @media(max-width: 600px){
+    body {
+      padding:10px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Vote for Your Favorite Fruit</h1>
+
+<form id="pollForm" class="poll-form" onsubmit="return false;">
+  <div class="option">
+    <input type="radio" id="option1" name="vote" value="Apple" />
+    <label for="option1">Apple</label>
+  </div>
+  <div class="option">
+    <input type="radio" id="option2" name="vote" value="Banana" />
+    <label for="option2">Banana</label>
+  </div>
+  <div class="option">
+    <input type="radio" id="option3" name="vote" value="Cherry" />
+    <label for="option3">Cherry</label>
+  </div>
+  <div class="option">
+    <input type="radio" id="option4" name="vote" value="Orange" />
+    <label for="option4">Orange</label>
+  </div>
+  <button id="voteButton" type="button" onclick="submitVote()">Vote</button>
+</form>
+
+<div class="results" id="resultsSection" style="display:none;">
+  <h2>Current Results</h2>
+  <div id="resultsContainer"></div>
+  <div class="total-votes" id="totalVotes">Total Votes: 0</div>
+  <button onclick="resetPoll()">Reset Poll</button>
+</div>
+</div>
+
+<script>
+// Initialize options and votes
+let options = {
+  "Apple": 0,
+  "Banana": 0,
+  "Cherry": 0,
+  "Orange": 0
+};
+
+// To prevent multiple votes, store user voting state
+// In real app, this would be stored server-side or via cookies. 
+// For demo, we'll use localStorage.
+const userHasVotedKey = 'hasVoted';
+
+function submitVote() {
+  // Check if user already voted
+  if(localStorage.getItem(userHasVotedKey)){
+    alert("You've already voted. Thank you!");
+    showResults();
+    return;
+  }
+  
+  const selectedOption = document.querySelector('input[name="vote"]:checked');
+  if(!selectedOption){
+    alert("Please select an option before voting.");
+    return;
+  }
+
+  const optionValue = selectedOption.value;
+
+  // Increment vote count
+  options[optionValue]++;
+  saveVotes();
+  
+  // Mark user as voted
+  localStorage.setItem(userHasVotedKey, 'true');
+
+  // Show results
+  showResults();
+
+  // Disable voting buttons
+  document.getElementById('voteButton').disabled = true;
+}
+
+function saveVotes() {
+  localStorage.setItem('votes', JSON.stringify(options));
+  localStorage.setItem('totalVotes', getTotalVotes());
+}
+
+function loadVotes() {
+  const savedVotes = localStorage.getItem('votes');
+  if(savedVotes){
+    options = JSON.parse(savedVotes);
+  } else {
+    // First time, initialize votes in storage
+    saveVotes();
+  }
+}
+
+function getTotalVotes() {
+  return Object.values(options).reduce((a,b) => a+b,0);
+}
+
+function showResults() {
+  document.getElementById('resultsSection').style.display = 'block';
+  displayResults();
+}
+
+function displayResults() {
+  loadVotes();
+  const totalVotes = getTotalVotes() || 1; // prevent division by 0
+  const container = document.getElementById('resultsContainer');
+  container.innerHTML = '';
+
+  for(const [option, count] of Object.entries(options)){
+    const percent = ((count / totalVotes)*100).toFixed(1);
+    const resultItem = document.createElement('div');
+    resultItem.className = 'result-item';
+
+    resultItem.innerHTML = `
+      <strong>${option}</strong>: ${count} votes (${percent}%)
+      <div class="progress-container">
+        <div class="progress-bar" style="width:${percent}%"></div>
+      </div>
+    `;
+    container.appendChild(resultItem);
+  }
+
+  document.getElementById('totalVotes').innerText = 'Total Votes: ' + totalVotes;
+
+  // Disable voting inputs if already voted
+  disableVoting();
+}
+
+function disableVoting() {
+  const voteRadios = document.querySelectorAll('input[name="vote"]');
+  voteRadios.forEach(radio => radio.disabled = true);
+  document.getElementById('voteButton').disabled = true;
+}
+
+function resetPoll() {
+  if(confirm("Are you sure you want to reset the poll?")) {
+    options = {
+      "Apple": 0,
+      "Banana": 0,
+      "Cherry": 0,
+      "Orange": 0
+    };
+    localStorage.removeItem('votes');
+    localStorage.removeItem('hasVoted');
+    document.querySelector('input[name="vote"]:checked').checked = false;
+    document.getElementById('resultsSection').style.display = 'none';
+    // Re-enable voting inputs
+    const voteRadios = document.querySelectorAll('input[name="vote"]');
+    voteRadios.forEach(r => {r.disabled = false;});
+    document.getElementById('voteButton').disabled = false;
+  }
+}
+
+// On page load, load votes and check if user already voted
+window.onload = () => {
+  loadVotes();
+  if(localStorage.getItem(userHasVotedKey)){
+    // User already voted
+    showResults();
+  } else {
+    // Enable voting
+    document.getElementById('resultsSection').style.display='none';
+  }
+};
+</script>
+
+<script data-g4f-locale-runtime="1">
+(function () {
+    "use strict";
+    const locale = "id";
+    const supported = ["en", "es", "fr", "de"];
+    const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
+    const opened = match && supported.includes(match[1].toLowerCase())
+        ? match[1].toLowerCase()
+        : String(document.documentElement.lang || locale || "en")
+            .split(/[-_]/)[0].toLowerCase();
+    const base = supported.includes(opened) ? opened : "en";
+    const apply = () => {
+        if (!window.framework) return false;
+        try {
+            if (framework.setSelectedLanguage) framework.setSelectedLanguage(base);
+        } catch (e) { /* private mode */ }
+        const cached = framework.globalTranslations && framework.globalTranslations[base];
+        if (cached && cached.translations) {
+            framework.translations = Object.assign({}, framework.translations, cached.translations);
+            if (framework.translateElements) framework.translateElements();
+        }
+        if (base !== "en" && typeof framework.loadGlobalTranslations === "function") {
+            framework.loadGlobalTranslations(base).then((entry) => {
+                if (entry && entry.translations) {
+                    framework.translations = Object.assign(
+                        {}, framework.translations, entry.translations
+                    );
+                }
+                if (framework.translateElements) framework.translateElements();
+                if (typeof framework.translateAll === "function") framework.translateAll();
+            }).catch(() => {});
+        } else if (typeof framework.translateAll === "function") {
+            framework.translateAll();
+        }
+        return true;
+    };
+    if (!apply()) {
+        document.addEventListener("DOMContentLoaded", apply, { once: true });
+        window.addEventListener("load", apply, { once: true });
+    }
+})();
+</script>
+</body>
+</html>

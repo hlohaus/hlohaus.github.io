@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+<base href="/apps/">
+    <link rel="canonical" href="https://g4f.dev/pt/apps/hangman_game.html">
+    <link rel="alternate" hreflang="en" href="https://g4f.dev/apps/hangman_game.html">
+    <link rel="alternate" hreflang="ar" href="https://g4f.dev/ar/apps/hangman_game.html">
+    <link rel="alternate" hreflang="bg" href="https://g4f.dev/bg/apps/hangman_game.html">
+    <link rel="alternate" hreflang="cs" href="https://g4f.dev/cs/apps/hangman_game.html">
+    <link rel="alternate" hreflang="da" href="https://g4f.dev/da/apps/hangman_game.html">
+    <link rel="alternate" hreflang="de" href="https://g4f.dev/de/apps/hangman_game.html">
+    <link rel="alternate" hreflang="el" href="https://g4f.dev/el/apps/hangman_game.html">
+    <link rel="alternate" hreflang="es" href="https://g4f.dev/es/apps/hangman_game.html">
+    <link rel="alternate" hreflang="et" href="https://g4f.dev/et/apps/hangman_game.html">
+    <link rel="alternate" hreflang="fa" href="https://g4f.dev/fa/apps/hangman_game.html">
+    <link rel="alternate" hreflang="fi" href="https://g4f.dev/fi/apps/hangman_game.html">
+    <link rel="alternate" hreflang="fr" href="https://g4f.dev/fr/apps/hangman_game.html">
+    <link rel="alternate" hreflang="he" href="https://g4f.dev/he/apps/hangman_game.html">
+    <link rel="alternate" hreflang="hi" href="https://g4f.dev/hi/apps/hangman_game.html">
+    <link rel="alternate" hreflang="hr" href="https://g4f.dev/hr/apps/hangman_game.html">
+    <link rel="alternate" hreflang="hu" href="https://g4f.dev/hu/apps/hangman_game.html">
+    <link rel="alternate" hreflang="id" href="https://g4f.dev/id/apps/hangman_game.html">
+    <link rel="alternate" hreflang="it" href="https://g4f.dev/it/apps/hangman_game.html">
+    <link rel="alternate" hreflang="ja" href="https://g4f.dev/ja/apps/hangman_game.html">
+    <link rel="alternate" hreflang="kk" href="https://g4f.dev/kk/apps/hangman_game.html">
+    <link rel="alternate" hreflang="ko" href="https://g4f.dev/ko/apps/hangman_game.html">
+    <link rel="alternate" hreflang="nb" href="https://g4f.dev/nb/apps/hangman_game.html">
+    <link rel="alternate" hreflang="nl" href="https://g4f.dev/nl/apps/hangman_game.html">
+    <link rel="alternate" hreflang="pl" href="https://g4f.dev/pl/apps/hangman_game.html">
+    <link rel="alternate" hreflang="pt" href="https://g4f.dev/pt/apps/hangman_game.html">
+    <link rel="alternate" hreflang="ro" href="https://g4f.dev/ro/apps/hangman_game.html">
+    <link rel="alternate" hreflang="ru" href="https://g4f.dev/ru/apps/hangman_game.html">
+    <link rel="alternate" hreflang="sk" href="https://g4f.dev/sk/apps/hangman_game.html">
+    <link rel="alternate" hreflang="sl" href="https://g4f.dev/sl/apps/hangman_game.html">
+    <link rel="alternate" hreflang="sq" href="https://g4f.dev/sq/apps/hangman_game.html">
+    <link rel="alternate" hreflang="sr" href="https://g4f.dev/sr/apps/hangman_game.html">
+    <link rel="alternate" hreflang="sv" href="https://g4f.dev/sv/apps/hangman_game.html">
+    <link rel="alternate" hreflang="th" href="https://g4f.dev/th/apps/hangman_game.html">
+    <link rel="alternate" hreflang="tr" href="https://g4f.dev/tr/apps/hangman_game.html">
+    <link rel="alternate" hreflang="uk" href="https://g4f.dev/uk/apps/hangman_game.html">
+    <link rel="alternate" hreflang="ur" href="https://g4f.dev/ur/apps/hangman_game.html">
+    <link rel="alternate" hreflang="uz" href="https://g4f.dev/uz/apps/hangman_game.html">
+    <link rel="alternate" hreflang="vi" href="https://g4f.dev/vi/apps/hangman_game.html">
+    <link rel="alternate" hreflang="zh" href="https://g4f.dev/zh/apps/hangman_game.html">
+    <link rel="alternate" hreflang="x-default" href="https://g4f.dev/apps/hangman_game.html">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Advanced Hangman Game</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #222;
+    color: #eee;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    margin-bottom: 10px;
+  }
+  #category {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  #wordDisplay {
+    font-size: 2em;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+  }
+  #letters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .letter-btn {
+    width: 35px;
+    height: 35px;
+    margin: 3px;
+    border: none;
+    border-radius: 4px;
+    background-color: #444;
+    color: #eee;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s;
+  }
+  .letter-btn:hover {
+    background-color: #666;
+  }
+  .letter-btn:disabled {
+    background-color: #222;
+    cursor: not-allowed;
+  }
+  #stats {
+    margin-bottom: 15px;
+  }
+  #stats span {
+    margin: 0 15px;
+    font-size: 1em;
+  }
+  #message {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+  }
+  #restartBtn {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: #eee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  #restartBtn:hover {
+    background-color: #777;
+  }
+</style>
+</head>
+<body>
+
+<h1>🔠 Advanced Hangman</h1>
+<div id="category">Category: <span id="categoryName"></span></div>
+<div id="wordDisplay"></div>
+
+<div id="letters"></div>
+
+<div id="stats">
+  <span id="remainingGuesses">Remaining Guesses: 10</span>
+  <span id="guessedLetters">Guessed Letters: </span>
+</div>
+
+<div id="message"></div>
+<button id="restartBtn">Restart Game</button>
+
+<script>
+// List of words divided into categories for increased complexity
+const wordCategories = {
+  Animals: ['elephant', 'crocodile', 'kangaroo', 'giraffe', 'rhinoceros', 'hippopotamus', 'chimpanzee'],
+  Countries: ['australia', 'brazil', 'canada', 'denmark', 'egypt', 'finland', 'germany'],
+  Fruits: ['pineapple', 'watermelon', 'strawberry', 'blueberry', 'kiwi', 'banana', 'mango'],
+  Movies: ['inception', 'interstellar', 'gladiator', 'avatar', 'titanic', 'matrix', 'avatar'],
+  Technology: ['computer', 'artificial', 'intelligence', 'programming', 'algorithm', 'hardware', 'software']
+};
+
+// Game state variables
+let selectedWord = '';
+let displayWord = [];
+let guessedLetters = new Set();
+let remainingGuesses = 10;
+let currentCategory = '';
+let gameActive = true;
+
+const categorySpan = document.getElementById('categoryName');
+const wordDisplayDiv = document.getElementById('wordDisplay');
+const lettersDiv = document.getElementById('letters');
+const remainingSpan = document.getElementById('remainingGuesses');
+const guessedLettersSpan = document.getElementById('guessedLetters');
+const messageDiv = document.getElementById('message');
+const restartBtn = document.getElementById('restartBtn');
+
+function initGame() {
+  // Reset variables
+  guessedLetters.clear();
+  remainingGuesses = 10;
+  gameActive = true;
+  messageDiv.textContent = '';
+
+  // Pick a random category
+  const categories = Object.keys(wordCategories);
+  currentCategory = categories[Math.floor(Math.random() * categories.length)];
+  categorySpan.textContent = currentCategory;
+
+  // Pick a random word from that category
+  const words = wordCategories[currentCategory];
+  selectedWord = words[Math.floor(Math.random() * words.length)].toLowerCase();
+
+  // Initialize display word with underscores or guessed letters
+  displayWord = selectedWord.split('').map(letter => (letter === ' ' ? ' ' : '_'));
+
+  // Reset UI
+  updateWordDisplay();
+  createLetterButtons();
+  updateStats();
+  messageDiv.textContent = '';
+}
+
+// Update the displayed word with current guesses
+function updateWordDisplay() {
+  // Show space for unguessed letters
+  wordDisplayDiv.textContent = displayWord.join(' ');
+}
+
+// Create alphabet buttons
+function createLetterButtons() {
+  lettersDiv.innerHTML = '';
+  for (let i = 65; i <= 90; i++) {
+    const letter = String.fromCharCode(i).toLowerCase();
+    const button = document.createElement('button');
+    button.textContent = letter.toUpperCase();
+    button.className = 'letter-btn';
+    button.disabled = false;
+    button.addEventListener('click', () => handleGuess(letter));
+    lettersDiv.appendChild(button);
+  }
+}
+
+// Handle a letter guess
+function handleGuess(letter) {
+  if (!gameActive || guessedLetters.has(letter)) return;
+
+  guessedLetters.add(letter);
+  disableLetterButton(letter);
+  if (selectedWord.includes(letter)) {
+    // Correct guess
+    for (let i = 0; i < selectedWord.length; i++) {
+      if (selectedWord[i] === letter) {
+        displayWord[i] = letter;
+      }
+    }
+    updateWordDisplay();
+
+    if (!displayWord.includes('_')) {
+      // Player wins
+      messageDiv.textContent = '🎉 Congratulations! You guessed it!';
+      endGame();
+    }
+  } else {
+    // Incorrect guess
+    remainingGuesses--;
+    updateStats();
+    if (remainingGuesses <= 0) {
+      // Game over
+      revealWord();
+      messageDiv.textContent = `💥 Game Over! The word was "${selectedWord}".`;
+      endGame();
+    }
+  }
+}
+
+// Disable a letter button after selection
+function disableLetterButton(letter) {
+  const buttons = document.querySelectorAll('.letter-btn');
+  buttons.forEach(btn => {
+    if (btn.textContent.toLowerCase() === letter) {
+      btn.disabled = true;
+    }
+  });
+}
+
+// Update game stats display
+function updateStats() {
+  remainingSpan.textContent = `Remaining Guesses: ${remainingGuesses}`;
+  guessedLettersSpan.textContent = 'Guessed Letters: ' + Array.from(guessedLetters).join(', ').toUpperCase();
+}
+
+// Reveal the entire word at game over
+function revealWord() {
+  displayWord = selectedWord.split('');
+  updateWordDisplay();
+}
+
+// End the game (disable further guesses)
+function endGame() {
+  gameActive = false;
+  // Disable all buttons
+  const buttons = document.querySelectorAll('.letter-btn');
+  buttons.forEach(btn => btn.disabled = true);
+}
+
+// Handle keyboard input
+document.addEventListener('keydown', (e) => {
+  if (!gameActive) return;
+  const key = e.key.toLowerCase();
+  if (key >= 'a' && key <= 'z') {
+    handleGuess(key);
+  }
+});
+
+// Restart game
+restartBtn.addEventListener('click', initGame);
+
+// Initialize the first game
+initGame();
+</script>
+
+<script data-g4f-locale-runtime="1">
+(function () {
+    "use strict";
+    const locale = "pt";
+    const supported = ["en", "es", "fr", "de"];
+    const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
+    const opened = match && supported.includes(match[1].toLowerCase())
+        ? match[1].toLowerCase()
+        : String(document.documentElement.lang || locale || "en")
+            .split(/[-_]/)[0].toLowerCase();
+    const base = supported.includes(opened) ? opened : "en";
+    const apply = () => {
+        if (!window.framework) return false;
+        try {
+            if (framework.setSelectedLanguage) framework.setSelectedLanguage(base);
+        } catch (e) { /* private mode */ }
+        const cached = framework.globalTranslations && framework.globalTranslations[base];
+        if (cached && cached.translations) {
+            framework.translations = Object.assign({}, framework.translations, cached.translations);
+            if (framework.translateElements) framework.translateElements();
+        }
+        if (base !== "en" && typeof framework.loadGlobalTranslations === "function") {
+            framework.loadGlobalTranslations(base).then((entry) => {
+                if (entry && entry.translations) {
+                    framework.translations = Object.assign(
+                        {}, framework.translations, entry.translations
+                    );
+                }
+                if (framework.translateElements) framework.translateElements();
+                if (typeof framework.translateAll === "function") framework.translateAll();
+            }).catch(() => {});
+        } else if (typeof framework.translateAll === "function") {
+            framework.translateAll();
+        }
+        return true;
+    };
+    if (!apply()) {
+        document.addEventListener("DOMContentLoaded", apply, { once: true });
+        window.addEventListener("load", apply, { once: true });
+    }
+})();
+</script>
+</body>
+</html>

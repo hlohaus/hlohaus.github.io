@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="kk" dir="ltr">
+<head>
+<base href="/">
+    <link rel="canonical" href="https://g4f.dev/kk/background.html">
+    <link rel="alternate" hreflang="en" href="https://g4f.dev/background.html">
+    <link rel="alternate" hreflang="ar" href="https://g4f.dev/ar/background.html">
+    <link rel="alternate" hreflang="bg" href="https://g4f.dev/bg/background.html">
+    <link rel="alternate" hreflang="cs" href="https://g4f.dev/cs/background.html">
+    <link rel="alternate" hreflang="da" href="https://g4f.dev/da/background.html">
+    <link rel="alternate" hreflang="de" href="https://g4f.dev/de/background.html">
+    <link rel="alternate" hreflang="el" href="https://g4f.dev/el/background.html">
+    <link rel="alternate" hreflang="es" href="https://g4f.dev/es/background.html">
+    <link rel="alternate" hreflang="et" href="https://g4f.dev/et/background.html">
+    <link rel="alternate" hreflang="fa" href="https://g4f.dev/fa/background.html">
+    <link rel="alternate" hreflang="fi" href="https://g4f.dev/fi/background.html">
+    <link rel="alternate" hreflang="fr" href="https://g4f.dev/fr/background.html">
+    <link rel="alternate" hreflang="he" href="https://g4f.dev/he/background.html">
+    <link rel="alternate" hreflang="hi" href="https://g4f.dev/hi/background.html">
+    <link rel="alternate" hreflang="hr" href="https://g4f.dev/hr/background.html">
+    <link rel="alternate" hreflang="hu" href="https://g4f.dev/hu/background.html">
+    <link rel="alternate" hreflang="id" href="https://g4f.dev/id/background.html">
+    <link rel="alternate" hreflang="it" href="https://g4f.dev/it/background.html">
+    <link rel="alternate" hreflang="ja" href="https://g4f.dev/ja/background.html">
+    <link rel="alternate" hreflang="kk" href="https://g4f.dev/kk/background.html">
+    <link rel="alternate" hreflang="ko" href="https://g4f.dev/ko/background.html">
+    <link rel="alternate" hreflang="nb" href="https://g4f.dev/nb/background.html">
+    <link rel="alternate" hreflang="nl" href="https://g4f.dev/nl/background.html">
+    <link rel="alternate" hreflang="pl" href="https://g4f.dev/pl/background.html">
+    <link rel="alternate" hreflang="pt" href="https://g4f.dev/pt/background.html">
+    <link rel="alternate" hreflang="ro" href="https://g4f.dev/ro/background.html">
+    <link rel="alternate" hreflang="ru" href="https://g4f.dev/ru/background.html">
+    <link rel="alternate" hreflang="sk" href="https://g4f.dev/sk/background.html">
+    <link rel="alternate" hreflang="sl" href="https://g4f.dev/sl/background.html">
+    <link rel="alternate" hreflang="sq" href="https://g4f.dev/sq/background.html">
+    <link rel="alternate" hreflang="sr" href="https://g4f.dev/sr/background.html">
+    <link rel="alternate" hreflang="sv" href="https://g4f.dev/sv/background.html">
+    <link rel="alternate" hreflang="th" href="https://g4f.dev/th/background.html">
+    <link rel="alternate" hreflang="tr" href="https://g4f.dev/tr/background.html">
+    <link rel="alternate" hreflang="uk" href="https://g4f.dev/uk/background.html">
+    <link rel="alternate" hreflang="ur" href="https://g4f.dev/ur/background.html">
+    <link rel="alternate" hreflang="uz" href="https://g4f.dev/uz/background.html">
+    <link rel="alternate" hreflang="vi" href="https://g4f.dev/vi/background.html">
+    <link rel="alternate" hreflang="zh" href="https://g4f.dev/zh/background.html">
+    <link rel="alternate" hreflang="x-default" href="https://g4f.dev/background.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G4F - Background</title>
+    <link rel="icon" href="/dist/img/g4f.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/dist/img/g4f.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/dist/img/g4f.svg">
+    <link rel="manifest" href="/dist/img/site.webmanifest">
+    <style>
+        :root {
+            --colour-1: #000000;
+            --colour-2: #ccc;
+            --colour-3: #e4d4ff;
+            --colour-4: #f0f0f0;
+            --colour-5: #181818;
+            --colour-6: #242424;
+            --accent: #8b3dff;
+            --gradient: #1a1a1a;
+            --background: #16101b;
+            --size: 70vw;
+            --top: 50%;
+            --blur: 40px;
+            --opacity: 0.6;
+        }
+
+        .gradient {
+            position: absolute;
+            left: 50vw;
+            border-radius: 50%;
+            background: radial-gradient(circle at center, var(--accent), var(--gradient));
+            width: var(--size);
+            height: var(--size);
+            top: var(--top);
+            transform: translate(-50%, -50%);
+            filter: blur(var(--blur)) opacity(var(--opacity));
+            animation: zoom_gradient 6s infinite alternate;
+            display: none;
+            max-height: 100%;
+            transition: max-height 0.25s ease-in;
+        }
+
+        .gradient.hidden {
+            max-height: 0;
+            transition: max-height 0.15s ease-out;
+        }
+
+        @media only screen and (min-width: 40em) {
+            body .gradient{
+                display: block;
+            }
+        }
+
+        /* Animation for the gradient circle */
+        @keyframes zoom_gradient {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1.5);
+            }
+        }
+
+        /* Body and text color */
+        body {
+            background: var(--background);
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #background, #image-feed, #video-feed {
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            background: black;
+        }
+    </style>
+    <link rel="stylesheet" href="/dist/css/all.min.css">
+    <script src="/dist/js/framework.js"></script>
+</head>
+<body>
+    <img id="image-feed" class="hidden" alt="Image Feed">
+    <video id="video-feed" class="hidden" alt="Video Feed" autoplay muted></video>
+
+    <!-- Gradient Background Circle -->
+    <div class="gradient"></div>
+    <script>
+        (async () => {
+            const videoUrl = window.location.origin == "https://g4f.dev" ? "/background/video_{0}.mp4" : (framework.backendUrl + "/search/video?skip={0}");
+            const url = "https://image.pollinations.ai/feed";
+            const imageFeed = document.getElementById("image-feed");
+            const videoFeed = document.getElementById("video-feed");
+            const gradient = document.querySelector(".gradient");
+            const images = [];
+            let es = null;
+            let skipVideo = 2;
+            let skipImage = 0;
+            let errorVideo = 0;
+            let errorImage = 0;
+            let skipRefresh = 0;
+            videoFeed.onloadeddata = () => {
+                videoFeed.classList.remove("hidden");
+                gradient.classList.add("hidden");
+            };
+            videoFeed.onerror = (e) => {
+                videoFeed.classList.add("hidden");
+                errorVideo += 1;
+                if (errorVideo > 1) {
+                    gradient.classList.remove("hidden");
+                    return;
+                }
+                videoFeed.src = videoUrl.replace("{0}", skipVideo);
+                skipVideo++;
+            };
+            videoFeed.onended = () => {
+                videoFeed.src = videoUrl.replace("{0}", skipVideo);
+                skipVideo++;
+            };
+            videoFeed.onclick = () => {
+                videoFeed.src = videoUrl.replace("{0}", skipVideo);
+                skipVideo++;
+            };
+            videoFeed.src = videoUrl.replace("{0}", skipVideo);
+            skipVideo++;
+            function initES() {
+                if (es == null || es.readyState == EventSource.CLOSED) {
+                    const eventSource = new EventSource(url);
+                    eventSource.onmessage = (event) => {
+                        const data = JSON.parse(event.data);
+                        if (data.referrer && !data.referrer.startsWith("https://pollinations.ai"))
+                        console.log(data.referrer);
+                        if (data.nsfw || !data.nologo || data.width < 512 || !data.imageURL || data.isChild || data.status != "end_generating") {
+                            return;
+                        }
+                        const lower = data.prompt.toLowerCase();
+                        const tags = ["nsfw", "timeline", "feet", "blood", "soap", "orally", "heel", "latex", "bathroom", "boobs", "charts", "gel", "logo", "infographic", "warts", " bra ", "prostitute", "curvy", "breasts", "written", "bodies", "naked", "classroom", "malone", "dirty", "shoes", "shower", "banner", "fat", "nipples", "couple", "sexual", "sandal", "supplier", "overlord", "succubus", "platinum", "cracy", "crazy", "hemale", "oprah", "lamic", "ropes", "cables", "wires", "dirty", "messy", "cluttered", "chaotic", "disorganized", "disorderly", "untidy", "unorganized", "unorderly", "unsystematic", "disarranged", "disarrayed", "disheveled", "disordered", "jumbled", "muddled", "scattered", "shambolic", "sloppy", "unkept", "unruly", "bottomless", "18 year"];
+                        for (i in tags) {
+                            if (lower.indexOf(tags[i]) != -1) {
+                                console.log("Skipping image with tag: " + tags[i]);
+                                console.debug("Skipping image:", data.imageURL);
+                                return;
+                            }
+                        }
+                        const landscape = window.innerWidth > window.innerHeight;
+                        if (landscape && data.width >= data.height) {
+                            images.push(data.imageURL);
+                        } else if (landscape) {
+                            images.unshift(data.imageURL);
+                        }
+                        if (!landscape && data.width <= data.height) {
+                            images.push(data.imageURL);
+                        } else if (!landscape) {
+                            images.unshift(data.imageURL);
+                        }
+                    };
+                    eventSource.onerror = (event) => {
+                        eventSource.close();
+                    }
+                }
+            }
+            initES();
+            let refreshOnHide = true;
+            document.addEventListener("visibilitychange", () => {
+                if (document.hidden) {
+                    refreshOnHide = false;
+                } else {
+                    refreshOnHide = true;
+                }
+            });
+            setInterval(() => {
+                if ((framework.backendUrl && errorVideo < 2) || !refreshOnHide) {
+                    return;
+                }
+                if (skipRefresh > 0) {
+                    skipRefresh -= 1;
+                    return;
+                }
+                if (framework.backendUrl && errorImage < 2) {
+                    imageFeed.src = framework.backendUrl + "/search/image+g4f?skip=" + skipImage;
+                    skipImage++;
+                    return;
+                }
+                if (images.length > 0) {
+                    imageFeed.classList.remove("hidden");
+                    imageFeed.src = images.pop();
+                    gradient.classList.add("hidden");
+                } else {
+                    initES();
+                }
+            }, 7000);
+            imageFeed.onerror = () => {
+                imageFeed.classList.add("hidden");
+                gradient.classList.remove("hidden");
+                errorImage++;
+            };
+            imageFeed.onload = () => {
+                imageFeed.classList.remove("hidden");
+                gradient.classList.add("hidden");
+            };
+            imageFeed.onclick = () => {
+                if (framework.backendUrl) {
+                    imageFeed.src = framework.backendUrl + "/search/image?random=" + Math.random();
+                }
+                else if (images.length > 0) {
+                    imageFeed.src = images.pop();
+                }
+                if (skipRefresh < 3) {
+                    skipRefresh++;
+                }
+            };
+        })();
+    </script>
+
+<script data-g4f-locale-runtime="1">
+(function () {
+    "use strict";
+    const locale = "kk";
+    const supported = ["en", "es", "fr", "de"];
+    const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
+    const opened = match && supported.includes(match[1].toLowerCase())
+        ? match[1].toLowerCase()
+        : String(document.documentElement.lang || locale || "en")
+            .split(/[-_]/)[0].toLowerCase();
+    const base = supported.includes(opened) ? opened : "en";
+    const apply = () => {
+        if (!window.framework) return false;
+        try {
+            if (framework.setSelectedLanguage) framework.setSelectedLanguage(base);
+        } catch (e) { /* private mode */ }
+        const cached = framework.globalTranslations && framework.globalTranslations[base];
+        if (cached && cached.translations) {
+            framework.translations = Object.assign({}, framework.translations, cached.translations);
+            if (framework.translateElements) framework.translateElements();
+        }
+        if (base !== "en" && typeof framework.loadGlobalTranslations === "function") {
+            framework.loadGlobalTranslations(base).then((entry) => {
+                if (entry && entry.translations) {
+                    framework.translations = Object.assign(
+                        {}, framework.translations, entry.translations
+                    );
+                }
+                if (framework.translateElements) framework.translateElements();
+                if (typeof framework.translateAll === "function") framework.translateAll();
+            }).catch(() => {});
+        } else if (typeof framework.translateAll === "function") {
+            framework.translateAll();
+        }
+        return true;
+    };
+    if (!apply()) {
+        document.addEventListener("DOMContentLoaded", apply, { once: true });
+        window.addEventListener("load", apply, { once: true });
+    }
+})();
+</script>
+</body>
+</html>

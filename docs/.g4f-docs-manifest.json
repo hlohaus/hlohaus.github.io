@@ -52,5 +52,5 @@
     }
   },
   "schema": 1,
-  "source": "/app/gpt4free/docs"
+  "source": "/tmp/gpt4free-docs/docs"
 }

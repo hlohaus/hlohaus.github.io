@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+<base href="/">
+    <link rel="canonical" href="https://g4f.dev/id/test-webgpu-models.html">
+    <link rel="alternate" hreflang="en" href="https://g4f.dev/test-webgpu-models.html">
+    <link rel="alternate" hreflang="ar" href="https://g4f.dev/ar/test-webgpu-models.html">
+    <link rel="alternate" hreflang="bg" href="https://g4f.dev/bg/test-webgpu-models.html">
+    <link rel="alternate" hreflang="cs" href="https://g4f.dev/cs/test-webgpu-models.html">
+    <link rel="alternate" hreflang="da" href="https://g4f.dev/da/test-webgpu-models.html">
+    <link rel="alternate" hreflang="de" href="https://g4f.dev/de/test-webgpu-models.html">
+    <link rel="alternate" hreflang="el" href="https://g4f.dev/el/test-webgpu-models.html">
+    <link rel="alternate" hreflang="es" href="https://g4f.dev/es/test-webgpu-models.html">
+    <link rel="alternate" hreflang="et" href="https://g4f.dev/et/test-webgpu-models.html">
+    <link rel="alternate" hreflang="fa" href="https://g4f.dev/fa/test-webgpu-models.html">
+    <link rel="alternate" hreflang="fi" href="https://g4f.dev/fi/test-webgpu-models.html">
+    <link rel="alternate" hreflang="fr" href="https://g4f.dev/fr/test-webgpu-models.html">
+    <link rel="alternate" hreflang="he" href="https://g4f.dev/he/test-webgpu-models.html">
+    <link rel="alternate" hreflang="hi" href="https://g4f.dev/hi/test-webgpu-models.html">
+    <link rel="alternate" hreflang="hr" href="https://g4f.dev/hr/test-webgpu-models.html">
+    <link rel="alternate" hreflang="hu" href="https://g4f.dev/hu/test-webgpu-models.html">
+    <link rel="alternate" hreflang="id" href="https://g4f.dev/id/test-webgpu-models.html">
+    <link rel="alternate" hreflang="it" href="https://g4f.dev/it/test-webgpu-models.html">
+    <link rel="alternate" hreflang="ja" href="https://g4f.dev/ja/test-webgpu-models.html">
+    <link rel="alternate" hreflang="kk" href="https://g4f.dev/kk/test-webgpu-models.html">
+    <link rel="alternate" hreflang="ko" href="https://g4f.dev/ko/test-webgpu-models.html">
+    <link rel="alternate" hreflang="nb" href="https://g4f.dev/nb/test-webgpu-models.html">
+    <link rel="alternate" hreflang="nl" href="https://g4f.dev/nl/test-webgpu-models.html">
+    <link rel="alternate" hreflang="pl" href="https://g4f.dev/pl/test-webgpu-models.html">
+    <link rel="alternate" hreflang="pt" href="https://g4f.dev/pt/test-webgpu-models.html">
+    <link rel="alternate" hreflang="ro" href="https://g4f.dev/ro/test-webgpu-models.html">
+    <link rel="alternate" hreflang="ru" href="https://g4f.dev/ru/test-webgpu-models.html">
+    <link rel="alternate" hreflang="sk" href="https://g4f.dev/sk/test-webgpu-models.html">
+    <link rel="alternate" hreflang="sl" href="https://g4f.dev/sl/test-webgpu-models.html">
+    <link rel="alternate" hreflang="sq" href="https://g4f.dev/sq/test-webgpu-models.html">
+    <link rel="alternate" hreflang="sr" href="https://g4f.dev/sr/test-webgpu-models.html">
+    <link rel="alternate" hreflang="sv" href="https://g4f.dev/sv/test-webgpu-models.html">
+    <link rel="alternate" hreflang="th" href="https://g4f.dev/th/test-webgpu-models.html">
+    <link rel="alternate" hreflang="tr" href="https://g4f.dev/tr/test-webgpu-models.html">
+    <link rel="alternate" hreflang="uk" href="https://g4f.dev/uk/test-webgpu-models.html">
+    <link rel="alternate" hreflang="ur" href="https://g4f.dev/ur/test-webgpu-models.html">
+    <link rel="alternate" hreflang="uz" href="https://g4f.dev/uz/test-webgpu-models.html">
+    <link rel="alternate" hreflang="vi" href="https://g4f.dev/vi/test-webgpu-models.html">
+    <link rel="alternate" hreflang="zh" href="https://g4f.dev/zh/test-webgpu-models.html">
+    <link rel="alternate" hreflang="x-default" href="https://g4f.dev/test-webgpu-models.html">
+<meta charset="utf-8">
+<title>WebGPU models.list() — vram_required_MB check</title>
+</head>
+<body>
+<h3>await (new G4FClient.WebGPU()).models.list()</h3>
+<pre id="out">loading web-llm from esm.run …</pre>
+<script type="module">
+import { WebGPU } from '/dist/js/client.js';
+
+const out = document.getElementById('out');
+try {
+    const models = await (new WebGPU()).models.list();
+    const L = [];
+    const vram = m => m.vram_required_MB;
+    const deviceGB = navigator.deviceMemory || 0;
+    const availableMB = WebGPU.getAvailableMemoryMB();
+
+    L.push(`navigator.deviceMemory: ${deviceGB} GB -> max model vram_required_MB: ${availableMB === Infinity ? 'unknown (no filter)' : availableMB + ' MB'}`);
+    L.push(`filtered catalogue: ${models.length} models`);
+    const over = models.filter(m => typeof vram(m) === 'number' && vram(m) > availableMB);
+    L.push(`models above limit still listed: ${over.length}${over.length ? ' -> ' + over.map(m => m.id).join(', ') : ''}`);
+    const def = models.find(m => m.id === 'Llama-3.1-8B-Instruct-q4f32_1-MLC');
+    L.push(`default model still listed: ${!!def}${def ? ` (${vram(def)} MB)` : ''}`);
+    L.push('');
+    L.push('largest 5 listed models:');
+    for (const m of [...models].sort((a, b) => (vram(b) ?? 0) - (vram(a) ?? 0)).slice(0, 5)) {
+        L.push(`  ${m.id} = ${vram(m)} MB (${(vram(m) / 1024).toFixed(2)} GB)`);
+    }
+    L.push('');
+    L.push('sample labels:');
+    for (const m of [...models].sort((a, b) => (vram(b) ?? 0) - (vram(a) ?? 0)).slice(0, 5)) {
+        L.push(`  ${m.label}`);
+    }
+    const smallest = [...models].sort((a, b) => (vram(a) ?? 1e9) - (vram(b) ?? 1e9))[0];
+    if (smallest) L.push(`  ${smallest.label}`);
+    L.push('');
+    L.push('unfiltered comparison (filterByMemory: false):');
+    const all = await (new WebGPU({ filterByMemory: false })).models.list();
+    L.push(`  unfiltered: ${all.length} | filtered: ${models.length} | removed: ${all.length - models.length}`);
+
+    out.textContent = L.join('\n');
+} catch (e) {
+    out.textContent = 'ERROR: ' + (e && e.stack || e);
+}
+</script>
+
+<script data-g4f-locale-runtime="1">
+(function () {
+    "use strict";
+    const locale = "id";
+    const supported = ["en", "es", "fr", "de"];
+    const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
+    const opened = match && supported.includes(match[1].toLowerCase())
+        ? match[1].toLowerCase()
+        : String(document.documentElement.lang || locale || "en")
+            .split(/[-_]/)[0].toLowerCase();
+    const base = supported.includes(opened) ? opened : "en";
+    const apply = () => {
+        if (!window.framework) return false;
+        try {
+            if (framework.setSelectedLanguage) framework.setSelectedLanguage(base);
+        } catch (e) { /* private mode */ }
+        const cached = framework.globalTranslations && framework.globalTranslations[base];
+        if (cached && cached.translations) {
+            framework.translations = Object.assign({}, framework.translations, cached.translations);
+            if (framework.translateElements) framework.translateElements();
+        }
+        if (base !== "en" && typeof framework.loadGlobalTranslations === "function") {
+            framework.loadGlobalTranslations(base).then((entry) => {
+                if (entry && entry.translations) {
+                    framework.translations = Object.assign(
+                        {}, framework.translations, entry.translations
+                    );
+                }
+                if (framework.translateElements) framework.translateElements();
+                if (typeof framework.translateAll === "function") framework.translateAll();
+            }).catch(() => {});
+        } else if (typeof framework.translateAll === "function") {
+            framework.translateAll();
+        }
+        return true;
+    };
+    if (!apply()) {
+        document.addEventListener("DOMContentLoaded", apply, { once: true });
+        window.addEventListener("load", apply, { once: true });
+    }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="th" dir="ltr">
+<head>
+<base href="/">
+    <link rel="canonical" href="https://g4f.dev/th/agent.html">
+    <link rel="alternate" hreflang="en" href="https://g4f.dev/agent.html">
+    <link rel="alternate" hreflang="ar" href="https://g4f.dev/ar/agent.html">
+    <link rel="alternate" hreflang="bg" href="https://g4f.dev/bg/agent.html">
+    <link rel="alternate" hreflang="cs" href="https://g4f.dev/cs/agent.html">
+    <link rel="alternate" hreflang="da" href="https://g4f.dev/da/agent.html">
+    <link rel="alternate" hreflang="de" href="https://g4f.dev/de/agent.html">
+    <link rel="alternate" hreflang="el" href="https://g4f.dev/el/agent.html">
+    <link rel="alternate" hreflang="es" href="https://g4f.dev/es/agent.html">
+    <link rel="alternate" hreflang="et" href="https://g4f.dev/et/agent.html">
+    <link rel="alternate" hreflang="fa" href="https://g4f.dev/fa/agent.html">
+    <link rel="alternate" hreflang="fi" href="https://g4f.dev/fi/agent.html">
+    <link rel="alternate" hreflang="fr" href="https://g4f.dev/fr/agent.html">
+    <link rel="alternate" hreflang="he" href="https://g4f.dev/he/agent.html">
+    <link rel="alternate" hreflang="hi" href="https://g4f.dev/hi/agent.html">
+    <link rel="alternate" hreflang="hr" href="https://g4f.dev/hr/agent.html">
+    <link rel="alternate" hreflang="hu" href="https://g4f.dev/hu/agent.html">
+    <link rel="alternate" hreflang="id" href="https://g4f.dev/id/agent.html">
+    <link rel="alternate" hreflang="it" href="https://g4f.dev/it/agent.html">
+    <link rel="alternate" hreflang="ja" href="https://g4f.dev/ja/agent.html">
+    <link rel="alternate" hreflang="kk" href="https://g4f.dev/kk/agent.html">
+    <link rel="alternate" hreflang="ko" href="https://g4f.dev/ko/agent.html">
+    <link rel="alternate" hreflang="nb" href="https://g4f.dev/nb/agent.html">
+    <link rel="alternate" hreflang="nl" href="https://g4f.dev/nl/agent.html">
+    <link rel="alternate" hreflang="pl" href="https://g4f.dev/pl/agent.html">
+    <link rel="alternate" hreflang="pt" href="https://g4f.dev/pt/agent.html">
+    <link rel="alternate" hreflang="ro" href="https://g4f.dev/ro/agent.html">
+    <link rel="alternate" hreflang="ru" href="https://g4f.dev/ru/agent.html">
+    <link rel="alternate" hreflang="sk" href="https://g4f.dev/sk/agent.html">
+    <link rel="alternate" hreflang="sl" href="https://g4f.dev/sl/agent.html">
+    <link rel="alternate" hreflang="sq" href="https://g4f.dev/sq/agent.html">
+    <link rel="alternate" hreflang="sr" href="https://g4f.dev/sr/agent.html">
+    <link rel="alternate" hreflang="sv" href="https://g4f.dev/sv/agent.html">
+    <link rel="alternate" hreflang="th" href="https://g4f.dev/th/agent.html">
+    <link rel="alternate" hreflang="tr" href="https://g4f.dev/tr/agent.html">
+    <link rel="alternate" hreflang="uk" href="https://g4f.dev/uk/agent.html">
+    <link rel="alternate" hreflang="ur" href="https://g4f.dev/ur/agent.html">
+    <link rel="alternate" hreflang="uz" href="https://g4f.dev/uz/agent.html">
+    <link rel="alternate" hreflang="vi" href="https://g4f.dev/vi/agent.html">
+    <link rel="alternate" hreflang="zh" href="https://g4f.dev/zh/agent.html">
+    <link rel="alternate" hreflang="x-default" href="https://g4f.dev/agent.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G4F AgentTools Studio — Autonomous AI Agent Workbench</title>
+    <meta name="description" content="Interactive AI Agent Workbench powered by G4F AgentTools provider and Model Context Protocol (MCP).">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="/dist/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-dark: #060b0e;
+            --bg-card: rgba(10, 24, 19, 0.82);
+            --bg-card-hover: rgba(14, 34, 27, 0.95);
+            --border-color: rgba(16, 185, 129, 0.22);
+            --border-active: rgba(16, 185, 129, 0.55);
+            --primary: #10b981;
+            --primary-gradient: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+            --accent-cyan: #34d399;
+            --accent-emerald: #10b981;
+            --accent-amber: #f59e0b;
+            --text-main: #f0fdf4;
+            --text-muted: #86efac;
+            --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-code: 'Fira Code', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 85% 85%, rgba(5, 150, 105, 0.12) 0%, transparent 45%);
+        }
+
+        /* Header / Navbar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border-color);
+            background: rgba(9, 13, 22, 0.8);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+        }
+
+        .brand-badge {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            padding: 0.2rem 0.5rem;
+            border-radius: 20px;
+            background: rgba(99, 102, 241, 0.2);
+            color: #a5b4fc;
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        /* Layout Grid */
+        .app-container {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            flex: 1;
+            max-width: 1600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Sidebar Controls */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .panel-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.25rem;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .panel-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #e2e8f0;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .panel-title i {
+            color: var(--primary);
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+        }
+
+        .form-select, .form-input {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.6rem 0.8rem;
+            color: var(--text-main);
+            font-family: inherit;
+            font-size: 0.875rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-select:focus, .form-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+        }
+
+        /* Range Slider */
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .slider {
+            flex: 1;
+            accent-color: var(--primary);
+        }
+
+        .slider-value {
+            font-family: var(--font-code);
+            font-size: 0.85rem;
+            background: rgba(15, 23, 42, 0.8);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Active Tools List */
+        .tool-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            max-height: 260px;
+            overflow-y: auto;
+        }
+
+        .tool-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+        }
+
+        .tool-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tool-icon {
+            color: var(--accent-cyan);
+        }
+
+        .tool-tag {
+            font-size: 0.65rem;
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-emerald);
+            font-weight: 600;
+        }
+
+        /* Main Chat Area */
+        .main-workbench {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            backdrop-filter: blur(16px);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            height: calc(100vh - 120px);
+        }
+
+        /* Chat Messages Container */
+        .chat-feed {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .message-row {
+            display: flex;
+            gap: 1rem;
+            max-width: 90%;
+        }
+
+        .message-row.user {
+            margin-left: auto;
+            flex-direction: row-reverse;
+        }
+
+        .avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .user .avatar {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+        }
+
+        .agent .avatar {
+            background: var(--primary-gradient);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        .message-bubble {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid var(--border-color);
+            padding: 1rem 1.25rem;
+            border-radius: 14px;
+            font-size: 0.925rem;
+            line-height: 1.6;
+        }
+
+        .user .message-bubble {
+            background: rgba(99, 102, 241, 0.15);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        /* Agent Step Details */
+        .step-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .step-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #a5b4fc;
+            font-family: var(--font-code);
+        }
+
+        .tool-fence {
+            background: #0d1117;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 3px solid var(--accent-cyan);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-family: var(--font-code);
+            font-size: 0.825rem;
+            color: #e6edf3;
+            margin: 0.5rem 0;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+
+        /* Tool Call & Response Inspector Cards */
+        .tool-card {
+            background: rgba(13, 17, 23, 0.85);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-left: 3px solid var(--accent-cyan);
+            border-radius: 10px;
+            margin: 0.6rem 0;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+            transition: all 0.2s ease;
+        }
+
+        .tool-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.55rem 0.9rem;
+            background: rgba(22, 27, 34, 0.7);
+            cursor: pointer;
+            user-select: none;
+            font-size: 0.825rem;
+            font-weight: 500;
+            color: #e6edf3;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .tool-card-header:hover {
+            background: rgba(56, 189, 248, 0.12);
+        }
+
+        .tool-card-title {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .tool-card-badge {
+            background: rgba(56, 189, 248, 0.15);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            color: #7dd3fc;
+            font-size: 0.65rem;
+            padding: 0.1rem 0.45rem;
+            border-radius: 4px;
+            font-family: var(--font-code);
+            text-transform: uppercase;
+        }
+
+        .tool-card-body {
+            padding: 0.75rem 1rem;
+            font-family: var(--font-code);
+            font-size: 0.825rem;
+            color: #e2e8f0;
+        }
+
+        .tool-section-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 0.35rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .tool-args-box, .tool-result-box {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 6px;
+            padding: 0.6rem 0.8rem;
+            white-space: pre-wrap;
+            word-break: break-word;
+            max-height: 280px;
+            overflow-y: auto;
+            margin-bottom: 0.5rem;
+        }
+
+        .tool-result-box {
+            border-left: 3px solid #10b981;
+            background: rgba(6, 78, 59, 0.15);
+        }
+
+        .tool-result-box.error {
+            border-left-color: #ef4444;
+            background: rgba(127, 29, 29, 0.15);
+        }
+
+        .tool-copy-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: color 0.2s;
+        }
+
+        .tool-copy-btn:hover {
+            color: var(--primary);
+        }
+
+        .tool-card.collapsed .tool-card-body {
+            display: none;
+        }
+
+        .tool-card.collapsed .toggle-icon {
+            transform: rotate(-90deg);
+        }
+
+        .reasoning-block {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(129, 140, 248, 0.3);
+            border-left: 3px solid #818cf8;
+            border-radius: 10px;
+            margin: 0.6rem 0;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reasoning-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 0.85rem;
+            background: rgba(30, 41, 59, 0.5);
+            cursor: pointer;
+            user-select: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #c7d2fe;
+            transition: background 0.2s;
+        }
+
+        .reasoning-header:hover {
+            background: rgba(99, 102, 241, 0.2);
+        }
+
+        .reasoning-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .reasoning-badge {
+            background: rgba(129, 140, 248, 0.2);
+            border: 1px solid rgba(129, 140, 248, 0.4);
+            color: #a5b4fc;
+            font-size: 0.675rem;
+            padding: 0.1rem 0.45rem;
+            border-radius: 4px;
+            font-family: var(--font-code);
+        }
+
+        .reasoning-body {
+            padding: 0.75rem 1rem;
+            font-size: 0.825rem;
+            line-height: 1.55;
+            color: #cbd5e1;
+            font-family: var(--font-code);
+            white-space: pre-wrap;
+            word-break: break-word;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            max-height: 350px;
+            overflow-y: auto;
+        }
+
+        .reasoning-block.collapsed .reasoning-body {
+            display: none;
+        }
+
+        .reasoning-block.collapsed .toggle-icon {
+            transform: rotate(-90deg);
+        }
+
+        .toggle-icon {
+            transition: transform 0.2s;
+            color: #818cf8;
+            font-size: 0.75rem;
+        }
+
+        /* Prompt Suggestions */
+        .prompt-chips {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            padding: 0.75rem 1.5rem;
+            border-top: 1px solid var(--border-color);
+            background: rgba(15, 23, 42, 0.3);
+        }
+
+        .chip {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.775rem;
+            color: #cbd5e1;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .chip:hover {
+            background: rgba(99, 102, 241, 0.15);
+            border-color: rgba(99, 102, 241, 0.4);
+            color: #fff;
+        }
+
+        /* Input Form */
+        .input-box {
+            padding: 0.85rem 1.25rem;
+            background: rgba(6, 12, 16, 0.95);
+            border-top: 1px solid var(--border-color);
+            backdrop-filter: blur(14px);
+        }
+
+        .input-box-wrapper {
+            display: flex;
+            align-items: center;
+            background: rgba(12, 26, 21, 0.9);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 0.4rem 0.6rem 0.4rem 1rem;
+            gap: 0.75rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .input-box-wrapper:focus-within {
+            border-color: var(--primary);
+            box-shadow: 0 0 16px rgba(16, 185, 129, 0.3);
+        }
+
+        .input-textarea {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: var(--text-main);
+            font-family: inherit;
+            font-size: 0.925rem;
+            resize: none;
+            outline: none;
+            height: 42px;
+            max-height: 120px;
+            padding: 0.4rem 0;
+        }
+
+        .send-btn {
+            background: var(--primary-gradient);
+            border: none;
+            color: #fff;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 10px rgba(16, 185, 129, 0.35);
+        }
+
+        .send-btn:hover {
+            transform: scale(1.06);
+            box-shadow: 0 0 16px rgba(16, 185, 129, 0.5);
+        }
+
+        .send-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Sidebar Toggle */
+        .sidebar {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sidebar.collapsed {
+            display: none !important;
+        }
+
+        .app-container.sidebar-collapsed {
+            grid-template-columns: 1fr !important;
+        }
+
+        /* File Editor Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(4, 9, 12, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .modal-card {
+            background: #091310;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            width: 100%;
+            max-width: 900px;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(16, 185, 129, 0.2);
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem 1.2rem;
+            background: rgba(14, 28, 23, 0.9);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .modal-close-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .modal-close-btn:hover {
+            color: #ef4444;
+        }
+
+        .modal-code-area {
+            flex: 1;
+            background: #050a0d;
+            color: #34d399;
+            font-family: var(--font-code);
+            font-size: 0.875rem;
+            padding: 1rem;
+            border: none;
+            resize: none;
+            outline: none;
+            white-space: pre-wrap;
+            word-break: break-word;
+            line-height: 1.5;
+        }
+
+        .modal-footer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 0.75rem;
+            padding: 0.8rem 1.2rem;
+            background: rgba(14, 28, 23, 0.9);
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .app-container {
+                grid-template-columns: 1fr;
+            }
+            .main-workbench {
+                height: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <div class="brand">
+            <div class="brand-icon">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+            <span>AgentTools Studio</span>
+            <span class="brand-badge">g4f MCP Agent</span>
+        </div>
+        <div class="nav-links">
+            <button id="sidebar-toggle-btn" class="nav-btn" onclick="toggleSidebar()" title="Toggle Sidebar Panel"><i class="fa-solid fa-bars-staggered"></i> Toggle Panel</button>
+            <a href="/playground/#agent" class="nav-btn"><i class="fa-solid fa-code"></i> Code IDE</a>
+            <a href="/chat/" class="nav-btn"><i class="fa-solid fa-comments"></i> Classic Chat</a>
+            <a href="/docs/mcp-integration.html" class="nav-btn"><i class="fa-solid fa-book"></i> MCP Docs</a>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="app-container">
+        
+        <!-- Left Sidebar / Controls -->
+        <aside class="sidebar">
+            <div class="panel-card">
+                <div class="panel-title">
+                    <span><i class="fa-solid fa-sliders"></i> Agent Configuration</span>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Model Presets</label>
+                    <select id="agent-model-preset" class="form-select" onchange="document.getElementById('agent-model').value = this.value">
+                        <option value="auto" selected>auto (Recommended)</option>
+                        <option value="Pollinations:auto">Pollinations:auto</option>
+                        <option value="Copilot:gpt-4o">Copilot:gpt-4o</option>
+                        <option value="ChatGPT:auto">ChatGPT:auto</option>
+                        <option value="G4FSpace:auto">G4FSpace:auto</option>
+                        <option value="Airforce:unmoderated-gpt">Airforce:unmoderated-gpt</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Model Identifier (Provider:Model or Model)</label>
+                    <input type="text" id="agent-model" class="form-input" value="auto" placeholder="e.g. Copilot:gpt-4o or gpt-4o">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Max Tool Round-trips</label>
+                    <div class="slider-container">
+                        <input type="range" id="max-steps" class="slider" min="1" max="16" value="8">
+                        <span id="max-steps-val" class="slider-value">8</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Timeout (seconds)</label>
+                    <input type="number" id="agent-timeout" class="form-input" value="45" min="10" max="120">
+                </div>
+            </div>
+
+            <div class="panel-card">
+                <div class="panel-title">
+                    <span><i class="fa-solid fa-screwdriver-wrench"></i> Active MCP Tools</span>
+                    <button id="refresh-tools-btn" class="nav-btn" style="padding: 0.2rem 0.5rem; font-size: 0.75rem;">
+                        <i class="fa-solid fa-rotate"></i>
+                    </button>
+                </div>
+                
+                <div id="tools-container" class="tool-list">
+                    <div class="tool-item">
+                        <div class="tool-info">
+                            <i class="fa-solid fa-globe tool-icon"></i>
+                            <span>web_search</span>
+                        </div>
+                        <span class="tool-tag">Active</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-info">
+                            <i class="fa-solid fa-code tool-icon"></i>
+                            <span>python_execute</span>
+                        </div>
+                        <span class="tool-tag">Sandbox</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-info">
+                            <i class="fa-solid fa-image tool-icon"></i>
+                            <span>image_generation</span>
+                        </div>
+                        <span class="tool-tag">Active</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-info">
+                            <i class="fa-solid fa-folder-open tool-icon"></i>
+                            <span>file_read / write</span>
+                        </div>
+                        <span class="tool-tag">Workspace</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-info">
+                            <i class="fa-solid fa-window-maximize tool-icon"></i>
+                            <span>browser_navigate</span>
+                        </div>
+                        <span class="tool-tag">CDP</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-info">
+                            <i class="fa-brands fa-chrome tool-icon" style="color:#10b981;"></i>
+                            <span>WebMCP Browser Tools</span>
+                        </div>
+                        <span class="tool-tag">Client</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Main Workbench -->
+        <main class="main-workbench">
+            
+            <!-- Chat & Step Feed -->
+            <div id="chat-feed" class="chat-feed">
+                <div class="message-row agent">
+                    <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="message-bubble">
+                        Hello! I am your <strong>AgentTools</strong> autonomous assistant.
+                        I can execute Python scripts, perform web searches, manage workspace files, and run browser automation. What task would you like me to tackle today?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prompt Suggestions -->
+            <div class="prompt-chips">
+                <div class="chip" onclick="usePrompt('Search the web for the latest breakthrough in quantum computing.')">
+                    <i class="fa-solid fa-magnifying-glass"></i> Search latest AI news
+                </div>
+                <div class="chip" onclick="usePrompt('Calculate the 40th Fibonacci number using Python execute.')">
+                    <i class="fa-solid fa-calculator"></i> Calculate Fibonacci(40) in Python
+                </div>
+                <div class="chip" onclick="usePrompt('List the files in the workspace and write a summary.')">
+                    <i class="fa-solid fa-folder"></i> Inspect workspace files
+                </div>
+            </div>
+
+            <!-- Input Box -->
+            <div class="input-box">
+                <div class="input-box-wrapper">
+                    <textarea id="user-input" class="input-textarea" placeholder="Ask AgentTools to execute a task..." rows="1"></textarea>
+                    <button id="send-btn" class="send-btn" onclick="sendMessage()" title="Send prompt">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- File Editor Modal -->
+    <div id="file-editor-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div style="display:flex;align-items:center;gap:0.6rem;">
+                    <i class="fa-solid fa-file-code" style="color:var(--primary);"></i>
+                    <span id="modal-filepath" style="font-weight:600;font-family:var(--font-code);">filename.txt</span>
+                </div>
+                <div style="display:flex;gap:0.5rem;align-items:center;">
+                    <button class="tool-copy-btn" onclick="copyModalCode()"><i class="fa-solid fa-copy"></i> Copy</button>
+                    <button class="modal-close-btn" onclick="closeFileModal()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <textarea id="modal-code-body" class="modal-code-area" spellcheck="false"></textarea>
+            <div class="modal-footer">
+                <button class="nav-btn" onclick="closeFileModal()">Close</button>
+                <a id="modal-editor-link" href="/playground/#agent" target="_blank" class="nav-btn" style="background:var(--primary-gradient);color:#fff;border:none;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open in Code IDE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- WebMCP Polyfill and Scripts -->
+    <script src="/dist/js/web-mcp.js"></script>
+    <script src="/dist/js/mcp-client.js"></script>
+
+    <script>
+        // Update slider value display
+        document.getElementById('max-steps').addEventListener('input', (e) => {
+            document.getElementById('max-steps-val').textContent = e.target.value;
+        });
+
+        function usePrompt(text) {
+            document.getElementById('user-input').value = text;
+            sendMessage();
+        }
+
+        async function sendMessage() {
+            const inputEl = document.getElementById('user-input');
+            const prompt = inputEl.value.trim();
+            if (!prompt) return;
+
+            inputEl.value = '';
+            const sendBtn = document.getElementById('send-btn');
+            sendBtn.disabled = true;
+
+            const feed = document.getElementById('chat-feed');
+
+            // Render User Message
+            const userRow = document.createElement('div');
+            userRow.className = 'message-row user';
+            userRow.innerHTML = `
+                <div class="avatar"><i class="fa-solid fa-user"></i></div>
+                <div class="message-bubble">${escapeHtml(prompt)}</div>
+            `;
+            feed.appendChild(userRow);
+            feed.scrollTop = feed.scrollHeight;
+
+            // Create Agent Message Container
+            const agentRow = document.createElement('div');
+            agentRow.className = 'message-row agent';
+            agentRow.innerHTML = `
+                <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+                <div class="message-bubble" id="latest-agent-bubble">
+                    <div class="step-timeline" id="latest-timeline">
+                        <span class="step-badge"><i class="fa-solid fa-spinner fa-spin"></i> Initializing AgentTools...</span>
+                    </div>
+                    <div id="latest-content"></div>
+                </div>
+            `;
+            feed.appendChild(agentRow);
+            feed.scrollTop = feed.scrollHeight;
+
+            const timeline = agentRow.querySelector('#latest-timeline');
+            const contentDiv = agentRow.querySelector('#latest-content');
+
+            let inputModel = document.getElementById('agent-model').value.trim() || 'auto';
+            if (!inputModel.startsWith('agent-tools:') && !inputModel.startsWith('agent:')) {
+                inputModel = 'agent-tools:' + inputModel;
+            }
+            const maxSteps = document.getElementById('max-steps').value;
+            const timeout = document.getElementById('agent-timeout').value;
+
+            try {
+                const response = await fetch('/backend-api/v2/conversation', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        model: inputModel,
+                        messages: [{ role: 'user', content: prompt }],
+                        stream: true,
+                        max_steps: parseInt(maxSteps),
+                        agent_timeout: parseInt(timeout)
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                let textBuffer = '';
+                let currentEvent = 'message';
+
+                while (true) {
+                    const { value, done } = await reader.read();
+                    if (done) break;
+                    
+                    textBuffer += decoder.decode(value, { stream: true });
+                    const lines = textBuffer.split(/\r?\n/);
+                    textBuffer = lines.pop();
+
+                    for (const line of lines) {
+                        const trimmed = line.trim();
+                        if (!trimmed) continue;
+
+                        if (trimmed.startsWith('event:')) {
+                            currentEvent = trimmed.substring(6).trim();
+                            continue;
+                        }
+
+                        if (trimmed.startsWith('data:')) {
+                            const dataStr = trimmed.substring(5).trim();
+                            if (dataStr === '[DONE]') continue;
+
+                            try {
+                                const data = JSON.parse(dataStr);
+                                handleAgentChunk(data, timeline, contentDiv);
+                            } catch(e) {
+                                // Raw string payload
+                                if (currentEvent === 'log' || currentEvent === 'provider' || currentEvent === 'request' || currentEvent === 'headers') {
+                                    console.log(`[Agent ${currentEvent}]:`, dataStr);
+                                } else if (currentEvent === 'error') {
+                                    timeline.innerHTML += `<span class="step-badge" style="border-color: #ef4444; color: #f87171;"><i class="fa-solid fa-triangle-exclamation"></i> ${escapeHtml(dataStr)}</span>`;
+                                } else if (currentEvent === 'reasoning') {
+                                    appendReasoningText(timeline, dataStr);
+                                } else if (currentEvent === 'tool_call' || dataStr.includes('```json') || dataStr.includes('🔧')) {
+                                    parseAndAppendToolFence(timeline, dataStr);
+                                } else {
+                                    contentDiv.innerText += dataStr;
+                                }
+                            }
+                        }
+                    }
+                    feed.scrollTop = feed.scrollHeight;
+                }
+            } catch (err) {
+                timeline.innerHTML += `<span class="step-badge" style="border-color: #ef4444; color: #f87171;"><i class="fa-solid fa-triangle-exclamation"></i> Error: ${escapeHtml(err.message)}</span>`;
+            } finally {
+                sendBtn.disabled = false;
+            }
+        }
+
+        const TOOL_ICON_MAP = {
+            'execute_python': 'fa-solid fa-code',
+            'python': 'fa-solid fa-code',
+            'search': 'fa-solid fa-globe',
+            'web_search': 'fa-solid fa-globe',
+            'google_search': 'fa-solid fa-globe',
+            'read_file': 'fa-solid fa-file-code',
+            'write_file': 'fa-solid fa-file-signature',
+            'run_command': 'fa-solid fa-terminal',
+            'bash': 'fa-solid fa-terminal',
+            'shell': 'fa-solid fa-terminal',
+            'list_dir': 'fa-solid fa-folder-tree',
+            'browser': 'fa-solid fa-window-maximize'
+        };
+
+        function getToolIconClass(toolName) {
+            if (!toolName) return 'fa-solid fa-wand-magic-sparkles';
+            const lower = String(toolName).toLowerCase();
+            for (const k in TOOL_ICON_MAP) {
+                if (lower.includes(k)) return TOOL_ICON_MAP[k];
+            }
+            return 'fa-solid fa-wand-magic-sparkles';
+        }
+
+        function copyText(btn, text) {
+            if (!text) return;
+            navigator.clipboard.writeText(text).then(() => {
+                const orig = btn.innerHTML;
+                btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+                setTimeout(() => { btn.innerHTML = orig; }, 1500);
+            }).catch(() => {});
+        }
+
+        function formatToolSummary(name, args) {
+            if (!args || typeof args !== 'object') return escapeHtml(name || 'tool_call');
+            const n = String(name || '').toLowerCase();
+            if (n.includes('read_file') || n.includes('write_file') || n.includes('file')) {
+                const path = args.filepath || args.path || args.filename || args.file || '';
+                if (path) return `${escapeHtml(name)} <span style="opacity:0.7;font-weight:400;">(${escapeHtml(path)})</span>`;
+            }
+            if (n.includes('run_command') || n.includes('bash') || n.includes('shell') || n.includes('exec')) {
+                const cmd = args.command || args.cmd || args.script || '';
+                if (cmd) {
+                    const shortCmd = cmd.length > 35 ? cmd.substring(0, 35) + '...' : cmd;
+                    return `${escapeHtml(name)} <span style="opacity:0.7;font-weight:400;font-family:var(--font-code);">$ ${escapeHtml(shortCmd)}</span>`;
+                }
+            }
+            if (n.includes('search')) {
+                const query = args.query || args.prompt || args.q || '';
+                if (query) return `${escapeHtml(name)} <span style="opacity:0.7;font-weight:400;">"${escapeHtml(query)}"</span>`;
+            }
+            if (n.includes('python')) {
+                const code = args.code || args.script || '';
+                if (code) {
+                    const lines = code.trim().split('\n').length;
+                    return `${escapeHtml(name)} <span style="opacity:0.7;font-weight:400;">(${lines} line${lines > 1 ? 's' : ''})</span>`;
+                }
+            }
+            return escapeHtml(name || 'tool_call');
+        }
+
+        function toggleSidebar() {
+            const container = document.querySelector('.app-container');
+            const sidebar = document.querySelector('.sidebar');
+            if (sidebar) {
+                sidebar.classList.toggle('collapsed');
+                if (container) container.classList.toggle('sidebar-collapsed');
+            }
+        }
+
+        function openFileInModal(path, content) {
+            document.getElementById('modal-filepath').innerText = path || 'File View';
+            document.getElementById('modal-code-body').value = content || '';
+            document.getElementById('modal-editor-link').href = '/playground/#agent';
+            document.getElementById('file-editor-modal').style.display = 'flex';
+        }
+
+        function closeFileModal() {
+            document.getElementById('file-editor-modal').style.display = 'none';
+        }
+
+        function copyModalCode() {
+            const text = document.getElementById('modal-code-body').value;
+            navigator.clipboard.writeText(text).then(() => alert('Code copied to clipboard!'));
+        }
+
+        function formatToolArgsHtml(name, args) {
+            if (args === null || args === undefined) return '';
+            let parsedArgs = args;
+            if (typeof args === 'string') {
+                try { parsedArgs = JSON.parse(args); } catch(e) {}
+            }
+            const n = String(name || '').toLowerCase();
+            if (typeof parsedArgs === 'object' && parsedArgs !== null) {
+                if ((n.includes('python') || n.includes('code')) && parsedArgs.code) {
+                    const codeEsc = escapeHtml(parsedArgs.code);
+                    return `<div style="background:#090d16;border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:0.6rem 0.8rem;margin-bottom:0.5rem;"><div style="font-size:0.7rem;color:var(--accent-cyan);margin-bottom:0.3rem;display:flex;justify-content:space-between;align-items:center;"><span><i class="fa-brands fa-python"></i> Python Code</span><button class="tool-copy-btn" style="color:var(--primary);" onclick="openFileInModal('script.py', this.getAttribute('data-code'))" data-code="${codeEsc}"><i class="fa-solid fa-code"></i> Open in Editor</button></div><pre style="margin:0;font-family:var(--font-code);font-size:0.8rem;white-space:pre-wrap;">${codeEsc}</pre></div>`;
+                }
+                if ((n.includes('command') || n.includes('bash') || n.includes('shell')) && (parsedArgs.command || parsedArgs.cmd)) {
+                    const cmd = parsedArgs.command || parsedArgs.cmd;
+                    return `<div style="background:#090d16;border:1px solid rgba(56,189,248,0.2);border-radius:6px;padding:0.6rem 0.8rem;margin-bottom:0.5rem;font-family:var(--font-code);font-size:0.8rem;color:#7dd3fc;"><span style="color:#f472b6;">$</span> ${escapeHtml(cmd)}</div>`;
+                }
+                if ((n.includes('write_file') || n.includes('file') || n.includes('read_file')) && (parsedArgs.filepath || parsedArgs.path)) {
+                    const fpath = escapeHtml(parsedArgs.filepath || parsedArgs.path);
+                    const fcontent = escapeHtml(parsedArgs.content || '');
+                    return `<div style="background:#090d16;border:1px solid rgba(255,255,255,0.08);border-radius:6px;margin-bottom:0.5rem;"><div style="padding:0.4rem 0.8rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.75rem;color:var(--accent-cyan);display:flex;align-items:center;justify-content:space-between;"><span><i class="fa-solid fa-file-code"></i> ${fpath}</span><button class="tool-copy-btn" style="color:var(--primary);" onclick="openFileInModal(this.getAttribute('data-path'), this.getAttribute('data-content'))" data-path="${fpath}" data-content="${fcontent}"><i class="fa-solid fa-code"></i> Open in Editor</button></div>${fcontent ? `<pre style="padding:0.6rem 0.8rem;margin:0;font-family:var(--font-code);font-size:0.8rem;white-space:pre-wrap;max-height:200px;overflow-y:auto;">${fcontent}</pre>` : ''}</div>`;
+                }
+                try {
+                    return `<div class="tool-args-box">${escapeHtml(JSON.stringify(parsedArgs, null, 2))}</div>`;
+                } catch(e) {}
+            }
+            return `<div class="tool-args-box">${escapeHtml(String(args))}</div>`;
+        }
+
+        function formatToolResultHtml(result, isError) {
+            if (result === null || result === undefined) return '';
+            let text = typeof result === 'object' ? JSON.stringify(result, null, 2) : String(result);
+            text = text.trim();
+            if (!text) return '';
+
+            const lines = text.split('\n');
+            const isLong = lines.length > 12 || text.length > 600;
+            const previewText = isLong ? lines.slice(0, 10).join('\n') : text;
+            const errClass = isError ? 'error' : '';
+
+            if (!isLong) {
+                return `<div class="tool-result-box ${errClass}">${escapeHtml(text)}</div>`;
+            }
+
+            const uniqueId = 'res_' + Math.random().toString(36).slice(2, 9);
+            return `
+                <div class="tool-result-box ${errClass}" id="short_${uniqueId}">
+                    ${escapeHtml(previewText)}
+                    <div style="margin-top:0.4rem;padding-top:0.4rem;border-top:1px dashed rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:space-between;">
+                        <span style="font-size:0.7rem;opacity:0.75;">Output truncated (${lines.length} lines)</span>
+                        <button class="tool-copy-btn" style="color:var(--accent-cyan);" onclick="document.getElementById('short_${uniqueId}').style.display='none';document.getElementById('full_${uniqueId}').style.display='block';">Show full output (${lines.length} lines) ▾</button>
+                    </div>
+                </div>
+                <div class="tool-result-box ${errClass}" id="full_${uniqueId}" style="display:none;">
+                    ${escapeHtml(text)}
+                    <div style="margin-top:0.4rem;padding-top:0.4rem;border-top:1px dashed rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:space-between;">
+                        <button class="tool-copy-btn" style="color:var(--accent-cyan);" onclick="document.getElementById('full_${uniqueId}').style.display='none';document.getElementById('short_${uniqueId}').style.display='block';">Collapse output ▴</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function createToolCard({ name, args, result, status = 'success', duration = null }) {
+            const card = document.createElement('div');
+            card.className = 'tool-card' + (status === 'running' ? ' running' : '');
+            
+            const isError = status === 'error';
+            const iconClass = getToolIconClass(name);
+            const titleHtml = formatToolSummary(name, args);
+            const argsHtml = formatToolArgsHtml(name, args);
+            const resultHtml = formatToolResultHtml(result, isError);
+
+            let copyPayload = '';
+            if (args !== null && args !== undefined) {
+                copyPayload += typeof args === 'object' ? JSON.stringify(args, null, 2) : String(args);
+            }
+            if (result !== null && result !== undefined) {
+                copyPayload += (copyPayload ? '\n\nOutput:\n' : '') + (typeof result === 'object' ? JSON.stringify(result, null, 2) : String(result));
+            }
+
+            const badgeStyle = isError ? 'background:rgba(239,68,68,0.2);color:#f87171;border-color:rgba(239,68,68,0.4);' : 
+                               (status === 'running' ? 'background:rgba(245,158,11,0.2);color:#fbbf24;border-color:rgba(245,158,11,0.4);' : 
+                               'background:rgba(16,185,129,0.2);color:#34d399;border-color:rgba(16,185,129,0.4);');
+
+            const badgeLabel = status === 'running' ? '<i class="fa-solid fa-spinner fa-spin"></i> RUNNING' : 
+                               (isError ? '<i class="fa-solid fa-triangle-exclamation"></i> ERROR' : '<i class="fa-solid fa-check"></i> SUCCESS');
+
+            card.innerHTML = `
+                <div class="tool-card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+                    <div class="tool-card-title">
+                        <i class="${iconClass}" style="color: var(--accent-cyan);"></i>
+                        <span style="font-weight:600; font-family: var(--font-code);">${titleHtml}</span>
+                        <span class="tool-card-badge" style="${badgeStyle}">${badgeLabel}</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="tool-card-body">
+                    ${argsHtml ? `
+                    <div class="tool-section-label">
+                        <span><i class="fa-solid fa-sliders"></i> Input / Arguments</span>
+                    </div>
+                    ${argsHtml}
+                    ` : ''}
+                    ${resultHtml ? `
+                    <div class="tool-section-label">
+                        <span><i class="fa-solid fa-terminal"></i> Output / Result</span>
+                        <button class="tool-copy-btn" onclick="event.stopPropagation(); copyText(this, this.getAttribute('data-copy'))" data-copy="${escapeHtml(copyPayload)}"><i class="fa-solid fa-copy"></i> Copy</button>
+                    </div>
+                    ${resultHtml}
+                    ` : ''}
+                </div>
+            `;
+
+            return card;
+        }
+
+        function parseAndAppendToolFence(timeline, rawText) {
+            let toolName = 'tool_call';
+            let args = null;
+            let result = null;
+            let status = 'success';
+
+            const jsonMatch = rawText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || rawText.match(/({[\s\S]*})/);
+            if (jsonMatch) {
+                try {
+                    const parsed = JSON.parse(jsonMatch[1]);
+                    toolName = parsed.tool || parsed.name || parsed.function?.name || toolName;
+                    args = parsed.args || parsed.arguments || parsed.function?.arguments || parsed;
+                    result = parsed.result || parsed.output || null;
+                    if (parsed.error) {
+                        status = 'error';
+                        result = parsed.error;
+                    }
+                } catch(e) {
+                    args = rawText;
+                }
+            } else {
+                args = rawText;
+            }
+
+            const card = createToolCard({ name: toolName, args, result, status });
+            timeline.appendChild(card);
+        }
+
+        function getOrCreateReasoningBody(timeline) {
+            let rBlock = timeline.querySelector('.reasoning-block');
+            if (!rBlock) {
+                rBlock = document.createElement('div');
+                rBlock.className = 'reasoning-block';
+                rBlock.innerHTML = `
+                    <div class="reasoning-header" onclick="this.parentElement.classList.toggle('collapsed')" title="Click to inspect model reasoning trace">
+                        <div class="reasoning-title">
+                            <i class="fa-solid fa-brain" style="color: #818cf8;"></i>
+                            <span>Thinking Process</span>
+                            <span class="reasoning-badge">Inspect Reasoning</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="reasoning-body"></div>
+                `;
+                timeline.appendChild(rBlock);
+            }
+            return rBlock.querySelector('.reasoning-body');
+        }
+
+        function appendReasoningText(timeline, text) {
+            if (!text) return;
+            const body = getOrCreateReasoningBody(timeline);
+            body.textContent += text;
+            body.scrollTop = body.scrollHeight;
+        }
+
+        function handleAgentChunk(data, timeline, contentDiv) {
+            if (data.error) {
+                const errMsg = typeof data.error === 'object' ? (data.error.message || JSON.stringify(data.error)) : data.error;
+                timeline.innerHTML += `<span class="step-badge" style="border-color: #ef4444; color: #f87171;"><i class="fa-solid fa-triangle-exclamation"></i> ${escapeHtml(errMsg)}</span>`;
+                return;
+            }
+
+            if (data.reasoning || data.token || data.reasoning_content) {
+                const text = data.reasoning || data.token || data.reasoning_content;
+                appendReasoningText(timeline, text);
+            }
+
+            if (data.tool_calls || data.tool_call) {
+                const calls = data.tool_calls || [data.tool_call];
+                for (const call of calls) {
+                    const name = call.name || call.function?.name || 'tool_call';
+                    const args = call.args || call.function?.arguments || call;
+                    const card = createToolCard({ name, args, status: 'running' });
+                    timeline.appendChild(card);
+                }
+            }
+
+            if (data.tool_result) {
+                const res = data.tool_result;
+                const name = res.name || 'tool_result';
+                const result = res.result || res.output || res.content;
+                const isErr = res.error ? true : false;
+                const card = createToolCard({ name, args: res.args, result: isErr ? res.error : result, status: isErr ? 'error' : 'success' });
+                timeline.appendChild(card);
+            }
+
+            const choices = data.choices || [];
+            if (choices.length > 0 && choices[0].delta) {
+                const delta = choices[0].delta;
+                
+                if (delta.reasoning || delta.reasoning_content || delta.reasoning_details) {
+                    const reasoningText = delta.reasoning || delta.reasoning_content || (delta.reasoning_details?.[0]?.text);
+                    if (reasoningText) {
+                        appendReasoningText(timeline, reasoningText);
+                    }
+                }
+
+                if (delta.content) {
+                    if (delta.content.includes('<think>')) {
+                        const parts = delta.content.split('<think>');
+                        if (parts[0]) contentDiv.innerText += parts[0];
+                        if (parts[1]) {
+                            if (parts[1].includes('</think>')) {
+                                const subParts = parts[1].split('</think>');
+                                appendReasoningText(timeline, subParts[0]);
+                                if (subParts[1]) contentDiv.innerText += subParts[1];
+                            } else {
+                                appendReasoningText(timeline, parts[1]);
+                            }
+                        }
+                    } else if (delta.content.includes('```json') || delta.content.includes('🔧')) {
+                        parseAndAppendToolFence(timeline, delta.content);
+                    } else {
+                        contentDiv.innerText += delta.content;
+                    }
+                }
+            }
+
+            if (data.provider || data.model) {
+                let pBadge = timeline.querySelector('.provider-badge');
+                if (!pBadge && data.provider) {
+                    pBadge = document.createElement('span');
+                    pBadge.className = 'step-badge provider-badge';
+                    pBadge.innerHTML = `<i class="fa-solid fa-microchip"></i> ${escapeHtml(data.provider)} (${escapeHtml(data.model || 'auto')})`;
+                    timeline.appendChild(pBadge);
+                }
+            }
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+
+        // Enter key to send
+        document.getElementById('user-input').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        // Save & Restore Provider/Model Selection
+        const modelInput = document.getElementById('agent-model');
+        const presetSelect = document.getElementById('agent-model-preset');
+        const maxStepsInput = document.getElementById('max-steps');
+        const timeoutInput = document.getElementById('agent-timeout');
+
+        const savedModel = localStorage.getItem('g4f_agent_model');
+        const savedPreset = localStorage.getItem('g4f_agent_preset');
+        const savedSteps = localStorage.getItem('g4f_agent_max_steps');
+        const savedTimeout = localStorage.getItem('g4f_agent_timeout');
+
+        if (savedModel) modelInput.value = savedModel;
+        if (savedPreset && [...presetSelect.options].some(o => o.value === savedPreset)) presetSelect.value = savedPreset;
+        if (savedSteps) {
+            maxStepsInput.value = savedSteps;
+            document.getElementById('max-steps-val').innerText = savedSteps;
+        }
+        if (savedTimeout) timeoutInput.value = savedTimeout;
+
+        presetSelect.addEventListener('change', () => {
+            modelInput.value = presetSelect.value;
+            localStorage.setItem('g4f_agent_preset', presetSelect.value);
+            localStorage.setItem('g4f_agent_model', presetSelect.value);
+        });
+
+        modelInput.addEventListener('input', () => {
+            localStorage.setItem('g4f_agent_model', modelInput.value);
+        });
+
+        maxStepsInput.addEventListener('input', () => {
+            localStorage.setItem('g4f_agent_max_steps', maxStepsInput.value);
+        });
+
+        timeoutInput.addEventListener('input', () => {
+            localStorage.setItem('g4f_agent_timeout', timeoutInput.value);
+        });
+    </script>
+
+<script data-g4f-locale-runtime="1">
+(function () {
+    "use strict";
+    const locale = "th";
+    const supported = ["en", "es", "fr", "de"];
+    const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
+    const opened = match && supported.includes(match[1].toLowerCase())
+        ? match[1].toLowerCase()
+        : String(document.documentElement.lang || locale || "en")
+            .split(/[-_]/)[0].toLowerCase();
+    const base = supported.includes(opened) ? opened : "en";
+    const apply = () => {
+        if (!window.framework) return false;
+        try {
+            if (framework.setSelectedLanguage) framework.setSelectedLanguage(base);
+        } catch (e) { /* private mode */ }
+        const cached = framework.globalTranslations && framework.globalTranslations[base];
+        if (cached && cached.translations) {
+            framework.translations = Object.assign({}, framework.translations, cached.translations);
+            if (framework.translateElements) framework.translateElements();
+        }
+        if (base !== "en" && typeof framework.loadGlobalTranslations === "function") {
+            framework.loadGlobalTranslations(base).then((entry) => {
+                if (entry && entry.translations) {
+                    framework.translations = Object.assign(
+                        {}, framework.translations, entry.translations
+                    );
+                }
+                if (framework.translateElements) framework.translateElements();
+                if (typeof framework.translateAll === "function") framework.translateAll();
+            }).catch(() => {});
+        } else if (typeof framework.translateAll === "function") {
+            framework.translateAll();
+        }
+        return true;
+    };
+    if (!apply()) {
+        document.addEventListener("DOMContentLoaded", apply, { once: true });
+        window.addEventListener("load", apply, { once: true });
+    }
+})();
+</script>
+</body>
+</html>

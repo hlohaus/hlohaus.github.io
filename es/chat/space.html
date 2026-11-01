@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+<base href="/chat/">
+    <link rel="canonical" href="https://g4f.dev/es/chat/space.html">
+    <link rel="alternate" hreflang="en" href="https://g4f.dev/chat/space.html">
+    <link rel="alternate" hreflang="ar" href="https://g4f.dev/ar/chat/space.html">
+    <link rel="alternate" hreflang="bg" href="https://g4f.dev/bg/chat/space.html">
+    <link rel="alternate" hreflang="cs" href="https://g4f.dev/cs/chat/space.html">
+    <link rel="alternate" hreflang="da" href="https://g4f.dev/da/chat/space.html">
+    <link rel="alternate" hreflang="de" href="https://g4f.dev/de/chat/space.html">
+    <link rel="alternate" hreflang="el" href="https://g4f.dev/el/chat/space.html">
+    <link rel="alternate" hreflang="es" href="https://g4f.dev/es/chat/space.html">
+    <link rel="alternate" hreflang="et" href="https://g4f.dev/et/chat/space.html">
+    <link rel="alternate" hreflang="fa" href="https://g4f.dev/fa/chat/space.html">
+    <link rel="alternate" hreflang="fi" href="https://g4f.dev/fi/chat/space.html">
+    <link rel="alternate" hreflang="fr" href="https://g4f.dev/fr/chat/space.html">
+    <link rel="alternate" hreflang="he" href="https://g4f.dev/he/chat/space.html">
+    <link rel="alternate" hreflang="hi" href="https://g4f.dev/hi/chat/space.html">
+    <link rel="alternate" hreflang="hr" href="https://g4f.dev/hr/chat/space.html">
+    <link rel="alternate" hreflang="hu" href="https://g4f.dev/hu/chat/space.html">
+    <link rel="alternate" hreflang="id" href="https://g4f.dev/id/chat/space.html">
+    <link rel="alternate" hreflang="it" href="https://g4f.dev/it/chat/space.html">
+    <link rel="alternate" hreflang="ja" href="https://g4f.dev/ja/chat/space.html">
+    <link rel="alternate" hreflang="kk" href="https://g4f.dev/kk/chat/space.html">
+    <link rel="alternate" hreflang="ko" href="https://g4f.dev/ko/chat/space.html">
+    <link rel="alternate" hreflang="nb" href="https://g4f.dev/nb/chat/space.html">
+    <link rel="alternate" hreflang="nl" href="https://g4f.dev/nl/chat/space.html">
+    <link rel="alternate" hreflang="pl" href="https://g4f.dev/pl/chat/space.html">
+    <link rel="alternate" hreflang="pt" href="https://g4f.dev/pt/chat/space.html">
+    <link rel="alternate" hreflang="ro" href="https://g4f.dev/ro/chat/space.html">
+    <link rel="alternate" hreflang="ru" href="https://g4f.dev/ru/chat/space.html">
+    <link rel="alternate" hreflang="sk" href="https://g4f.dev/sk/chat/space.html">
+    <link rel="alternate" hreflang="sl" href="https://g4f.dev/sl/chat/space.html">
+    <link rel="alternate" hreflang="sq" href="https://g4f.dev/sq/chat/space.html">
+    <link rel="alternate" hreflang="sr" href="https://g4f.dev/sr/chat/space.html">
+    <link rel="alternate" hreflang="sv" href="https://g4f.dev/sv/chat/space.html">
+    <link rel="alternate" hreflang="th" href="https://g4f.dev/th/chat/space.html">
+    <link rel="alternate" hreflang="tr" href="https://g4f.dev/tr/chat/space.html">
+    <link rel="alternate" hreflang="uk" href="https://g4f.dev/uk/chat/space.html">
+    <link rel="alternate" hreflang="ur" href="https://g4f.dev/ur/chat/space.html">
+    <link rel="alternate" hreflang="uz" href="https://g4f.dev/uz/chat/space.html">
+    <link rel="alternate" hreflang="vi" href="https://g4f.dev/vi/chat/space.html">
+    <link rel="alternate" hreflang="zh" href="https://g4f.dev/zh/chat/space.html">
+    <link rel="alternate" hreflang="x-default" href="https://g4f.dev/chat/space.html">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Storage Usage in Settings</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+    background: #f9f9f9;
+  }
+  #settings {
+    background: white;
+    max-width: 400px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  h1 {
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  .bytes {
+    font-weight: bold;
+  }
+  #breakdown {
+    margin-top: 1rem;
+    padding-left: 1rem;
+  }
+  #error {
+    color: red;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+  <section id="settings">
+    <h1>Storage Usage</h1>
+    <p>Used space: <span id="used" class="bytes">-</span></p>
+    <p>Quota (max allowed): <span id="quota" class="bytes">-</span></p>
+    <div id="breakdown"></div>
+    <p id="error"></p>
+  </section>
+
+<script>
+  function formatBytes(bytes) {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  }
+
+  async function updateStorageUsage() {
+    const usedElem = document.getElementById('used');
+    const quotaElem = document.getElementById('quota');
+    const breakdownElem = document.getElementById('breakdown');
+    const errorElem = document.getElementById('error');
+    errorElem.textContent = '';
+    breakdownElem.textContent = '';
+
+    if ('storage' in navigator && 'estimate' in navigator.storage) {
+      try {
+        const estimate = await navigator.storage.estimate();
+        const used = estimate.usage || 0;
+        const quota = estimate.quota || 0;
+        usedElem.textContent = formatBytes(used);
+        quotaElem.textContent = formatBytes(quota);
+
+        if (estimate.usageDetails) {
+          // Show breakdown by storage type if available
+          const details = estimate.usageDetails;
+          const keys = Object.keys(details);
+          if (keys.length) {
+            const list = document.createElement('ul');
+            list.style.paddingLeft = '20px';
+            keys.forEach(key => {
+              const li = document.createElement('li');
+              li.textContent = `${key}: ${formatBytes(details[key])}`;
+              list.appendChild(li);
+            });
+            breakdownElem.appendChild(document.createTextNode('Breakdown:'));
+            breakdownElem.appendChild(list);
+          }
+        }
+      } catch (err) {
+        errorElem.textContent = 'Failed to get storage estimate: ' + err.message;
+        usedElem.textContent = '-';
+        quotaElem.textContent = '-';
+      }
+    } else {
+      errorElem.textContent = 'StorageManager API is not supported in your browser.';
+      usedElem.textContent = '-';
+      quotaElem.textContent = '-';
+    }
+  }
+
+  window.addEventListener('load', updateStorageUsage);
+</script>
+
+<script data-g4f-locale-runtime="1">
+(function () {
+    "use strict";
+    const locale = "es";
+    const supported = ["en", "es", "fr", "de"];
+    const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
+    const opened = match && supported.includes(match[1].toLowerCase())
+        ? match[1].toLowerCase()
+        : String(document.documentElement.lang || locale || "en")
+            .split(/[-_]/)[0].toLowerCase();
+    const base = supported.includes(opened) ? opened : "en";
+    const apply = () => {
+        if (!window.framework) return false;
+        try {
+            if (framework.setSelectedLanguage) framework.setSelectedLanguage(base);
+        } catch (e) { /* private mode */ }
+        const cached = framework.globalTranslations && framework.globalTranslations[base];
+        if (cached && cached.translations) {
+            framework.translations = Object.assign({}, framework.translations, cached.translations);
+            if (framework.translateElements) framework.translateElements();
+        }
+        if (base !== "en" && typeof framework.loadGlobalTranslations === "function") {
+            framework.loadGlobalTranslations(base).then((entry) => {
+                if (entry && entry.translations) {
+                    framework.translations = Object.assign(
+                        {}, framework.translations, entry.translations
+                    );
+                }
+                if (framework.translateElements) framework.translateElements();
+                if (typeof framework.translateAll === "function") framework.translateAll();
+            }).catch(() => {});
+        } else if (typeof framework.translateAll === "function") {
+            framework.translateAll();
+        }
+        return true;
+    };
+    if (!apply()) {
+        document.addEventListener("DOMContentLoaded", apply, { once: true });
+        window.addEventListener("load", apply, { once: true });
+    }
+})();
+</script>
+</body>
+</html>

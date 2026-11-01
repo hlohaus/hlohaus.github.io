@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html data-framework="javascript" lang="nl" dir="ltr">
+<head>
+<base href="/chat/">
+    <link rel="canonical" href="https://g4f.dev/nl/chat/">
+    <link rel="alternate" hreflang="en" href="https://g4f.dev/chat/">
+    <link rel="alternate" hreflang="ar" href="https://g4f.dev/ar/chat/">
+    <link rel="alternate" hreflang="bg" href="https://g4f.dev/bg/chat/">
+    <link rel="alternate" hreflang="cs" href="https://g4f.dev/cs/chat/">
+    <link rel="alternate" hreflang="da" href="https://g4f.dev/da/chat/">
+    <link rel="alternate" hreflang="de" href="https://g4f.dev/de/chat/">
+    <link rel="alternate" hreflang="el" href="https://g4f.dev/el/chat/">
+    <link rel="alternate" hreflang="es" href="https://g4f.dev/es/chat/">
+    <link rel="alternate" hreflang="et" href="https://g4f.dev/et/chat/">
+    <link rel="alternate" hreflang="fa" href="https://g4f.dev/fa/chat/">
+    <link rel="alternate" hreflang="fi" href="https://g4f.dev/fi/chat/">
+    <link rel="alternate" hreflang="fr" href="https://g4f.dev/fr/chat/">
+    <link rel="alternate" hreflang="he" href="https://g4f.dev/he/chat/">
+    <link rel="alternate" hreflang="hi" href="https://g4f.dev/hi/chat/">
+    <link rel="alternate" hreflang="hr" href="https://g4f.dev/hr/chat/">
+    <link rel="alternate" hreflang="hu" href="https://g4f.dev/hu/chat/">
+    <link rel="alternate" hreflang="id" href="https://g4f.dev/id/chat/">
+    <link rel="alternate" hreflang="it" href="https://g4f.dev/it/chat/">
+    <link rel="alternate" hreflang="ja" href="https://g4f.dev/ja/chat/">
+    <link rel="alternate" hreflang="kk" href="https://g4f.dev/kk/chat/">
+    <link rel="alternate" hreflang="ko" href="https://g4f.dev/ko/chat/">
+    <link rel="alternate" hreflang="nb" href="https://g4f.dev/nb/chat/">
+    <link rel="alternate" hreflang="nl" href="https://g4f.dev/nl/chat/">
+    <link rel="alternate" hreflang="pl" href="https://g4f.dev/pl/chat/">
+    <link rel="alternate" hreflang="pt" href="https://g4f.dev/pt/chat/">
+    <link rel="alternate" hreflang="ro" href="https://g4f.dev/ro/chat/">
+    <link rel="alternate" hreflang="ru" href="https://g4f.dev/ru/chat/">
+    <link rel="alternate" hreflang="sk" href="https://g4f.dev/sk/chat/">
+    <link rel="alternate" hreflang="sl" href="https://g4f.dev/sl/chat/">
+    <link rel="alternate" hreflang="sq" href="https://g4f.dev/sq/chat/">
+    <link rel="alternate" hreflang="sr" href="https://g4f.dev/sr/chat/">
+    <link rel="alternate" hreflang="sv" href="https://g4f.dev/sv/chat/">
+    <link rel="alternate" hreflang="th" href="https://g4f.dev/th/chat/">
+    <link rel="alternate" hreflang="tr" href="https://g4f.dev/tr/chat/">
+    <link rel="alternate" hreflang="uk" href="https://g4f.dev/uk/chat/">
+    <link rel="alternate" hreflang="ur" href="https://g4f.dev/ur/chat/">
+    <link rel="alternate" hreflang="uz" href="https://g4f.dev/uz/chat/">
+    <link rel="alternate" hreflang="vi" href="https://g4f.dev/vi/chat/">
+    <link rel="alternate" hreflang="zh" href="https://g4f.dev/zh/chat/">
+    <link rel="alternate" hreflang="x-default" href="https://g4f.dev/chat/">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      Content Security Policy.
+      Delivered as a meta tag so it also applies on GitHub Pages, which cannot
+      send custom HTTP headers. Keep it in sync with the resources the chat
+      actually loads:
+        - cdn.jsdelivr.net / esm.run / js.puter.com: CDN scripts and ESM imports
+        - www.youtube.com: YouTube IFrame API and embeds
+        - fonts.googleapis.com / fonts.gstatic.com: Google Fonts
+        - connect-src https:/wss: arbitrary OpenAI-compatible provider APIs
+        - 'unsafe-inline' / 'unsafe-eval': inline bootstrap scripts and the
+          addon loader (new Function); removing them breaks the app
+      frame-ancestors/report-uri are omitted because browsers ignore them in
+      meta-delivered policies.
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://g4f.dev https://cdn.jsdelivr.net https://esm.run https://js.puter.com https://www.youtube.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' data: blob: https://g4f.dev https: http://localhost:* http://127.0.0.1:*; font-src 'self' data: https://cdn.jsdelivr.net https://fonts.gstatic.com; connect-src 'self' https: wss: blob: https://g4f.dev data: http://localhost:* http://127.0.0.1:* ws://localhost:* ws://127.0.0.1:*; media-src 'self' data: blob: https: http://localhost:* http://127.0.0.1:*; frame-src 'self' data: blob: https://g4f.dev https://www.youtube.com https://www.youtube-nocookie.com; worker-src 'self' blob: https://g4f.dev; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+    -->
+    <title>G4F Chat - Conversational AI that Listens, Learns, and Challenges</title>
+
+    <!-- Improved meta description with relevant keywords -->
+    <meta name="description" content="G4F Chat is an advanced conversational AI platform designed to listen, learn, and challenge your ideas effectively. Experience AI-powered chat with private conversations, customizable settings, and multiple providers." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="G4F Chat - Conversational AI that Listens, Learns, and Challenges" />
+    <meta property="og:description" content="Engage with G4F Chat's AI system for dynamic, private, and customizable conversations powered by cutting-edge technology." />
+    <meta property="og:image" content="/dist/img/g4f.svg" />
+    <meta property="og:url" content="https://g4f.dev" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="G4F Chat - Conversational AI that Listens, Learns, and Challenges" />
+    <meta name="twitter:description" content="Use G4F Chat for private and customizable AI-driven chat experiences, supporting multiple AI providers and seamless communication." />
+    <meta name="twitter:image" content="/dist/img/g4f.svg" />
+
+    <!-- Canonical URL to avoid duplicate content issues -->
+    <link rel="stylesheet" href="/dist/css/style.css?v={{ v }}" />
+    <link rel="stylesheet" href="/dist/css/chat-modern.css?v={{ v }}" />
+    <script>
+      // "Switch back to classic": disable the modern UI layer (chat-modern.css)
+      // before first paint when the user turned it off in the settings.
+      if (localStorage.getItem("modernUI") === "false") {
+        const modernLink = document.querySelector('link[href*="chat-modern.css"]');
+        if (modernLink) modernLink.disabled = true;
+      }
+    </script>
+    <link rel="stylesheet" href="/dist/css/all.min.css" />
+    <link rel="stylesheet" href="/dist/css/dracula.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe/dist/photoswipe.css" />
+
+    <link rel="icon" href="/dist/img/g4f.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/dist/img/g4f.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/dist/img/g4f-180x180.png">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <meta name="theme-color" content="#0b0a10">
+
+    <script src="/dist/js/web-mcp.js?v={{ v }}"></script>
+    <script src="/dist/js/mcp-client.js?v={{ v }}"></script>
+    <script src="/dist/js/oauth-client.js?v={{ v }}"></script>
+    <script src="/dist/js/framework.js?v={{ v }}"></script>
+    <script src="/dist/js/v2.js?v={{ v }}" type="module" defer></script>
+    <script src="/dist/js/cake-baker.js?v={{ v }}"></script>
+    <script src="/dist/js/challenge-client.js?v={{ v }}" defer></script>
+    <script src="/dist/js/recorder.js" async></script>
+    <script src="/dist/js/highlight.min.js" async></script>
+    <script src="/dist/js/highlightjs-copy.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsencrypt/bin/jsencrypt.min.js" defer></script>
+    <script src="/dist/js/sanitize-html.js" async></script>
+    <script src="/dist/js/titlebar.js?v={{ v }}" defer></script>
+    <script src="/chat/pwa.js" defer></script>
+    <script type="module">
+        import container from "/dist/js/providers.js";
+        for (const [key, value] of Object.entries(container)) {
+            window[key] = value;
+        }
+    </script>
+    <script type="module" async>
+        import { convertModel, getModelTags, isValidModel } from '/dist/js/model.js';
+        window.convertModel = convertModel;
+        window.getModelTags = getModelTags;
+        window.isValidModel = isValidModel;
+    </script>
+    <script>
+      window.MathJax = {
+        chtml: {
+          scale: 1,
+          displayAlign: 'left'
+        },
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+      };
+    </script>
+    <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script>
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    </script>
+
+    <template>
+      <script src="https://cdn.jsdelivr.net/npm/gpt-tokenizer/dist/o200k_base.js" async></script>
+    </template>
+    <script async>
+      if (localStorage.getItem("countTokens") !== "false") {
+        const template = document.head.querySelector('template');
+        if (template) {
+          document.head.appendChild(template.content);
+          template.remove();
+        }
+      }
+    </script>
+
+    <script>
+      const user_image = '<img src="/dist/img/user_avatar.jpeg" alt="User avatar" />';
+      const gpt_image = '<img src="/dist/img/gpt_avatar.jpeg" alt="GPT avatar" />';
+      window.conversation_id = "";
+    </script>
+</head>
+<body>
+    <script async>
+      if (localStorage.getItem("liquid") !== "false") {
+        document.body.classList.add("liquid");
+      }
+      if (localStorage.getItem("darkMode") === "false") {
+        document.body.classList.add("white");
+      }
+      if (localStorage.getItem("disableAnimations") !== "false") {
+        document.body.classList.add("no-animations");
+      }
+    </script>
+
+    <div class="media-overlay" aria-hidden="true"></div>
+    <div class="gradient" aria-hidden="true"></div>
+
+    <div class="container">
+        <a href="sr.html" class="hidden">Open Screen Reader Optimized Version</a>
+        <aside class="sidebar" aria-label="Primary sidebar navigation">
+            <div class="sidebar-container">
+                <header class="sidebar-header">
+                    <h1 class="sidebar-logo" data-translate="true">G4F Chat</h1>
+                    <button class="mobile-sidebar-toggle" aria-label="Toggle sidebar menu">
+                        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                    </button>
+                </header>
+                <div id="user-tier-info" class="user-tier-info" role="status" aria-label="User tier and usage info">
+                    <div class="tier-row">
+                        <div class="tier-badge">
+                            <i class="fa-solid fa-user" aria-hidden="true"></i>
+                            <span id="user-tier-text" class="notranslate">Guest</span>
+                        </div>
+                        <a id="sidebar-login-btn" class="tier-auth-btn" href="#login" title="Login to Members Area">
+                            <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i>
+                            <span>Login</span>
+                        </a>
+                        <button id="sidebar-logout-btn" class="tier-auth-btn hidden" onclick="cloudSyncLogout()" title="Logout">
+                            <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>
+                            <span>Logout</span>
+                        </button>
+                    </div>
+                    <div class="tier-limits hidden" id="tier-limits-row">
+                        <span id="max-tokens-text" title="Tokens remaining/limit"><i class="fa-solid fa-coins" aria-hidden="true"></i> -</span>
+                        <span id="max-requests-text" title="Requests remaining/limit"><i class="fa-solid fa-list" aria-hidden="true"></i> -</span>
+                        <span id="cake-credits-text" class="notranslate" title="Credits earned by baking proof-of-work cakes"><i class="fa-solid fa-cake-candles" aria-hidden="true"></i> -</span>
+                    </div>
+                </div>
+                <div id="discord-upgrade-banner" class="discord-upgrade-banner hidden" role="region" aria-label="Discord free tier upgrade">
+                    <div class="discord-upgrade-banner-header">
+                        <i class="fab fa-discord" aria-hidden="true"></i>
+                        <span>Unlock Free tier</span>
+                    </div>
+                    <p id="discord-upgrade-text">Connect Discord and join the G4F support server to upgrade instantly.</p>
+                    <div class="discord-upgrade-banner-actions">
+                        <a id="discord-connect-link" class="discord-upgrade-link" href="#" rel="noopener">
+                            <i class="fab fa-discord" aria-hidden="true"></i> Connect
+                        </a>
+                        <a id="discord-join-link" class="discord-upgrade-link" href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Join
+                        </a>
+                        <button id="discord-verify-btn" class="discord-upgrade-link" type="button">
+                            <i class="fa-solid fa-check" aria-hidden="true"></i> Verify
+                        </button>
+                    </div>
+                </div>
+                <nav class="top" aria-label="Conversation actions">
+                    <button class="new_convo" aria-label="Start a new conversation">
+                        <i class="fa-regular fa-plus" aria-hidden="true"></i>
+                        <span>New Conversation</span>
+                    </button>
+                    <button class="new_convo private_conversation" aria-label="Start a private conversation">
+                        <i class="fa-solid fa-user-secret" aria-hidden="true"></i>
+                        <span>Private Conversation</span>
+                    </button>
+                    <div id="box_conversations" class="conversations" role="region" aria-live="polite" aria-label="List of conversations"></div>
+                </nav>
+                <section class="addon-panel" aria-label="Addon features and options">
+                    <h2 class="addon-panel-title" data-translate="true">Addons</h2>
+                    <div id="addon-panel" class="addon-panel-items"></div>
+                </section>
+                <section class="bottom_buttons" aria-label="Support and links">
+                    <button onclick="open_settings();" aria-label="Open settings">
+                        <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                        <span>Open Settings</span>
+                    </button>
+                    <div class="info" role="region" aria-label="Support Discord">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                        <span class="convo-title">
+                            support ~ 
+                            <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer" class="notranslate">discord.gg/qXA4Wf4Fsm</a>
+                        </span>
+                    </div>
+                    <div class="info" role="region" aria-label="GitHub Repository">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        <span class="convo-title">
+                            <span id="version_text" aria-live="polite" class="notranslate">github</span> ~
+                            <a href="https://github.com/gpt4free/g4f.dev" target="_blank" rel="noopener noreferrer" class="notranslate">gpt4free/g4f.dev</a>
+                        </span>
+                    </div>
+                    <div class="info" role="region" aria-label="Legal information">
+                        ⚖️
+                        <span class="convo-title">
+                            legal ~
+                            <a href="/privacy.html" target="_blank" rel="noopener noreferrer" data-translate="true">Privacy</a> ·
+                            <a href="/terms.html" target="_blank" rel="noopener noreferrer" data-translate="true">Terms</a>
+                        </span>
+                    </div>
+                </section>
+            </div>
+        </aside>
+
+        <!-- Settings panel -->
+        <section class="settings hidden" aria-label="Application Settings" tabindex="-1">
+            <div class="paper">
+                <header class="settings-top-bar">
+                    <button class="settings-back-button" onclick="open_settings();" aria-label="Back to main interface">
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    </button>
+                     <h2>Settings</h2>
+                </header>
+                <nav class="settings-tabs" role="tablist" aria-label="Settings categories">
+                    <button class="settings-tab active" data-tab="general" role="tab" aria-selected="true" aria-controls="tab-general">
+                        <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+                        <span>General</span>
+                    </button>
+                    <button class="settings-tab" data-tab="appearance" role="tab" aria-selected="false" aria-controls="tab-appearance">
+                        <i class="fa-solid fa-palette" aria-hidden="true"></i>
+                        <span>Appearance</span>
+                    </button>
+                    <button class="settings-tab" data-tab="prompts" role="tab" aria-selected="false" aria-controls="tab-prompts">
+                        <i class="fa-solid fa-comment" aria-hidden="true"></i>
+                        <span>Prompts</span>
+                    </button>
+                    <button class="settings-tab" data-tab="providers" role="tab" aria-selected="false" aria-controls="tab-providers">
+                        <i class="fa-solid fa-server" aria-hidden="true"></i>
+                        <span>Providers</span>
+                    </button>
+                    <button class="settings-tab" data-tab="api" role="tab" aria-selected="false" aria-controls="tab-api">
+                        <i class="fa-solid fa-key" aria-hidden="true"></i>
+                        <span>Custom Provider</span>
+                    </button>
+                    <button class="settings-tab" data-tab="advanced" role="tab" aria-selected="false" aria-controls="tab-advanced">
+                        <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                        <span>Advanced</span>
+                    </button>
+                    <button class="settings-tab" data-tab="cloudsync" role="tab" aria-selected="false" aria-controls="tab-cloudsync">
+                        <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+                        <span>Cloud Sync</span>
+                    </button>
+                </nav>
+                <div class="settings-content">
+                <form>
+                  <!-- General Tab -->
+                  <div class="settings-tab-content active" id="tab-general" role="tabpanel" aria-labelledby="tab-general">
+                  <div class="field">
+                      <span class="label">Render Markdown</span>
+                      <input type="checkbox" id="renderMarkdown" checked />
+                      <label for="renderMarkdown" class="toogle" title="Enable rendering of Markdown content"></label>
+                  </div>
+                  <div class="field">
+                      <span class="label">Simulate Typing</span>
+                      <input type="checkbox" id="simulateTyping" checked />
+                      <label for="simulateTyping" class="toogle" title="Enable simulated typing effect for responses"></label>
+                  </div>
+                  <div class="field">
+                      <span class="label">AI Features</span>
+                      <input type="checkbox" id="aiFeatures" />
+                      <label for="aiFeatures" class="toogle" title="Enable providing Follow Ups and Title Generation"></label>
+                  </div>
+                  <div class="field">
+                      <span class="label">Disable Conversation History</span>
+                      <input type="checkbox" id="history" />
+                      <label for="history" class="toogle" title="Improve response time or fix large conversation issues"></label>
+                  </div>
+                  <div class="field">
+                      <span class="label">Count Words and Tokens</span>
+                      <input type="checkbox" id="countTokens" checked />
+                      <label for="countTokens" class="toogle" title="Enable word and token counting"></label>
+                  </div>
+                  <div class="field">
+                      <span class="label">Download Generated Media</span>
+                      <input type="checkbox" id="download_media" checked/>
+                      <label for="download_media" class="toogle" title="Download and save generated images, audios, and videos"></label>
+                  </div>
+                  <div class="field">
+                      <span class="label">Automatic Orientation (16:9 or 9:16)</span>
+                      <input type="checkbox" id="automaticOrientation" checked />
+                      <label for="automaticOrientation" class="toogle" title="Auto-orient generated media"></label>
+                  </div>
+                  <div class="field box">
+                      <label for="userInput-height" class="label" title="Set minimum height of input box">Input Min Height (px)</label>
+                      <input type="number" id="userInput-height" value="200" min="100" max="500" />
+                  </div>
+                  <div class="field box">
+                      <label for="recognition-language" class="label" title="Set preferred language for speech recognition">Speech Recognition Language</label>
+                      <input type="text" id="recognition-language" value="" placeholder="Default: navigator.language" />
+                  </div>
+                  <div class="field row box">
+                      <label for="voice" class="label" title="Select voice for text-to-speech synthesis">Synthesize Voice</label>
+                      <select id="voice">
+                          <option value="">Loading voices...</option>
+                      </select>
+                  </div>
+                  <div class="bottom_buttons">
+                      <button type="button" onclick="delete_conversations()" aria-label="Clear all conversations">
+                          <i class="fa-solid fa-trash" aria-hidden="true"></i>
+                          <span>Clear Conversations</span>
+                      </button>
+                      <button type="button" onclick="save_storage()" aria-label="Export conversations">
+                          <i class="fa-solid fa-download" aria-hidden="true"></i>
+                          <span>Export Conversations</span>
+                      </button>
+                      <button type="button" onclick="save_storage(true)" aria-label="Export settings">
+                          <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+                          <span>Export Settings</span>
+                      </button>
+                      <button type="button" onclick="open_language_selection();" aria-label="Open language selection">
+                          <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                          <span>Language Selection</span>
+                      </button>
+                      <button type="button" onclick="this.querySelector('.fa-spin').classList.remove('hidden'); framework.translateAll().then(() => {this.querySelector('.fa-spin').classList.add('hidden')}).catch(() => {this.querySelector('.fa-spin').classList.add('hidden')})" aria-label="Translate user interface">
+                          <i class="fa-solid fa-language" aria-hidden="true"></i>
+                          <span>Translate UI</span>
+                          <i class="fas fa-spinner fa-spin hidden" aria-hidden="true"></i>
+                      </button>
+                      <button type="button" onclick="framework.deleteAllTranslations() && window.location.reload()" aria-label="Delete translations">
+                          <i class="fa-solid fa-trash" aria-hidden="true"></i>
+                          <span>Delete Translations</span>
+                      </button>
+                      <button id="showLog" type="button" aria-label="Show log">
+                          <i class="fa-solid fa-terminal" aria-hidden="true"></i>
+                          <span>Show log</span>
+                      </button>
+                  </div>
+                  </div>
+
+                  <!-- Appearance Tab -->
+                  <div class="settings-tab-content" id="tab-appearance" role="tabpanel" aria-labelledby="tab-appearance">
+                  <div class="field">
+                      <span class="label">Enable Dark Mode</span>
+                      <input type="checkbox" id="darkMode" checked />
+                      <label for="darkMode" class="toogle" title="Toggle Dark Mode"></label>
+                  </div>
+                  <div class="field">
+                      <span class="label">Enable Liquid Mode</span>
+                      <input type="checkbox" id="liquid" checked />
+                      <label for="liquid" class="toogle" title="Toggle Liquid Mode"></label>
+                  </div>
+                  <div class="field">
+                      <span class="label">Enable Modern Design</span>
+                      <input type="checkbox" id="modernUI" checked />
+                      <label for="modernUI" class="toogle" title="Toggle the modern design. Disable to switch back to the classic design"></label>
+                  </div>
+                  <div class="field">
+                      <span class="label">Disable Animations</span>
+                      <input type="checkbox" id="disableAnimations" checked />
+                      <label for="disableAnimations" class="toogle" title="Disable animations"></label>
+                  </div>
+                  <div class="field">
+                      <span class="label">Hide System Prompt</span>
+                      <input type="checkbox" id="hide-systemPrompt" />
+                      <label for="hide-systemPrompt" class="toogle" title="Hide system prompt for more space on phones"></label>
+                  </div>
+                  </div>
+
+                  <!-- Prompts Tab -->
+                  <div class="settings-tab-content" id="tab-prompts" role="tabpanel" aria-labelledby="tab-prompts">
+                  <div class="field row box">
+                      <label for="globalPrompt" class="label">Global System Prompt</label>
+                      <textarea id="globalPrompt" value="Render image URLs in Markdown format: `![](http://example/image.jpg)`
+Render audio URLs as HTML: &lt;audio controls src=&quot;http://example/audio.mp3&quot;&gt;&lt;/audio&gt;`" aria-describedby="globalPrompt-desc"></textarea>
+                      <small id="globalPrompt-desc" class="sr-only">Customize the AI's global prompt to personalize responses or enable features like image generation.</small>
+                  </div>
+                  <div class="field row box">
+                      <label for="systemPrompt" class="label">System Prompt Template</label>
+                      <textarea id="systemPrompt" placeholder="You are a helpful assistant." aria-describedby="systemPrompt-desc"></textarea>
+                      <small id="systemPrompt-desc" class="sr-only">Customize the AI's system prompt to personalize responses or enable features like image generation.</small>
+                  </div>
+                  </div>
+
+                  <!-- Providers Tab -->
+                  <div class="settings-tab-content" id="tab-providers" role="tabpanel" aria-labelledby="tab-providers">
+                  <!-- Provider API Keys section will be dynamically added here -->
+                  <div id="providers-api-keys-container"></div>
+                  <!-- Provider Enable/Disable section will be dynamically added here -->
+                  <div id="providers-toggle-container"></div>
+                  </div>
+
+                  <!-- API Keys Tab -->
+                  <div class="settings-tab-content" id="tab-api" role="tabpanel" aria-labelledby="tab-api">
+                  <div class="field box hidden row">
+                      <label for="Custom-api_base" class="label">Custom Provider Base URL</label>
+                      <input type="url" id="Custom-api_base" name="Custom[api_base]" placeholder="http://localhost:8080/v1" autocomplete="off" />
+                  </div>
+                  <div class="field box hidden row">
+                      <label for="Custom-api_key" class="label">Custom Provider API Key</label>
+                      <input type="text" id="Custom-api_key" name="Custom[api_key]" placeholder="API key" autocomplete="off" />
+                  </div>
+                  </div>
+
+                  <!-- Advanced Tab -->
+                  <div class="settings-tab-content" id="tab-advanced" role="tabpanel" aria-labelledby="tab-advanced">
+                  <div class="field">
+                      <span class="label">Log/Routing URL</span>
+                      <input type="checkbox" id="log_routing" />
+                      <label for="log_routing" class="toogle" title="Route all requests through local backend for logging"></label>
+                  </div>
+                  <div class="field">
+                      <span class="label">Report Errors</span>
+                      <input type="checkbox" id="reportError" checked />
+                      <label for="reportError" class="toogle" title="Send error reports"></label>
+                  </div>
+                  <div class="field">
+                      <span class="label">Debug Mode</span>
+                      <input type="checkbox" id="debugMode" />
+                      <label for="debugMode" class="toogle" title="Enable debug mode"></label>
+                  </div>
+                  
+                  <!-- MCP Servers Section -->
+                  <div class="field mcp-section">
+                      <div class="mcp-header">
+                          <span class="label">MCP Servers</span>
+                          <button type="button" id="add-mcp-server-btn" aria-label="Add MCP Server" title="Add a new MCP server">
+                              <i class="fa-solid fa-plus"></i>
+                          </button>
+                      </div>
+                      <div id="mcp-servers-list" class="mcp-servers-list"></div>
+                  </div>
+
+                  <!-- MCP Tools Section -->
+                  <div class="field mcp-section">
+                      <div class="mcp-header">
+                          <span class="label">MCP Tools</span>
+                          <button type="button" id="refresh-mcp-tools-btn" aria-label="Refresh Tools" title="Refresh tools from MCP servers">
+                              <i class="fa-solid fa-sync"></i>
+                          </button>
+                      </div>
+                      <div id="mcp-tools-list" class="mcp-tools-list"></div>
+                  </div>
+
+                  <!-- PA Providers Section -->
+                  <div class="field mcp-section">
+                      <div class="mcp-header">
+                          <span class="label">PA Providers</span>
+                          <button type="button" id="refresh-pa-providers-btn" aria-label="Refresh PA Providers" title="Refresh PA providers from workspace">
+                              <i class="fa-solid fa-sync"></i>
+                          </button>
+                      </div>
+                      <div id="pa-providers-list" class="mcp-tools-list"></div>
+                  </div>
+                  </div>
+
+                  <!-- Cloud Sync Tab -->
+                  <div class="settings-tab-content" id="tab-cloudsync" role="tabpanel" aria-labelledby="tab-cloudsync">
+                      <div class="cloud-sync-login" id="cloudSyncLogin">
+                          <p style="margin-bottom: 1rem; color: var(--colour-3);">Login to sync your conversations across devices.</p>
+                          <button type="button" id="cloudSyncLoginBtn" class="cloud-sync-btn">
+                              <i class="fa-solid fa-right-to-bracket"></i>
+                              <span>Login to Members Area</span>
+                          </button>
+                      </div>
+                      <div class="cloud-sync-section" id="cloudSyncSection" style="display: none;">
+                          <div class="cloud-sync-user-info" style="margin-bottom: 1rem; padding: 0.75rem; background: var(--blur-bg); border-radius: 8px;">
+                              <i class="fa-solid fa-user"></i>
+                              <span>Logged in as: </span>
+                              <strong id="cloudSyncUser" class="notranslate"></strong>
+                          </div>
+                          <div class="field" style="margin-bottom: 1rem;">
+                              <span class="label">Auto-upload to Secret Storage</span>
+                              <input type="checkbox" id="secretConversationSync" />
+                              <label for="secretConversationSync" class="toogle" title="Automatically upload conversations to your private secret storage on the local server"></label>
+                          </div>
+                          <div class="field" style="margin-bottom: 1rem;">
+                              <span class="label">Secret Storage Location</span>
+                              <div style="display: flex; gap: 0.5rem;">
+                                  <button type="button" id="storageModeLocal" class="cloud-sync-btn storage-mode-btn">
+                                      <i class="fa-solid fa-laptop"></i>
+                                      <span>Local Server</span>
+                                  </button>
+                                  <button type="button" id="storageModeCloud" class="cloud-sync-btn storage-mode-btn">
+                                      <i class="fa-solid fa-cloud"></i>
+                                      <span>Cloud (g4f.space)</span>
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="cloud-sync-actions" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                              <button type="button" id="secretSyncUpload" class="cloud-sync-btn">
+                                  <i class="fa-solid fa-lock"></i>
+                                  <span>Upload to Secret Storage</span>
+                              </button>
+                              <button type="button" id="secretSyncDownload" class="cloud-sync-btn">
+                                  <i class="fa-solid fa-lock-open"></i>
+                                  <span>Download from Secret Storage</span>
+                              </button>
+                              <button type="button" id="secretRequestBtn" class="cloud-sync-btn" disabled>
+                                  <i class="fa-solid fa-satellite-dish"></i>
+                                  <span>Get Secret from Online Device</span>
+                              </button>
+                              <button type="button" id="cloudSyncLogoutBtn" class="cloud-sync-btn logout">
+                                  <i class="fa-solid fa-right-from-bracket"></i>
+                                  <span>Logout</span>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+                </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Provider forms container -->
+        <section class="provider_forms hidden" aria-label="Provider forms">
+            <div class="bottom_buttons">
+                <button id="close_provider_forms" type="button" aria-label="Close provider forms">
+                    <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
+                    <span>Close</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Main chat container -->
+        <main class="chat-container" role="main" aria-label="Chat conversation">
+            <header class="chat-top-panel">
+                <button class="mobile-sidebar-toggle" aria-label="Toggle sidebar menu">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+                <h2 class="convo-title" id="conversationTitle">New Conversation</h2>
+                <button class="new_convo_icon" aria-label="Start new conversation">
+                    <i class="fa-regular fa-plus" aria-hidden="true"></i>
+                </button>
+                <button class="show_log hidden" aria-label="Show log">
+                    <i class="fa-solid fa-terminal" aria-hidden="true"></i>
+                </button>
+                <script async>
+                if (localStorage.getItem("debugMode") === "true") {
+                    let button = document.querySelector('.chat-top-panel .show_log');
+                    if (button) {
+                        button.classList.remove('hidden');
+                    }
+                    button = document.querySelector('.chat-top-panel .new_convo_icon');
+                    if (button) {
+                        button.classList.add('hidden');
+                    }
+                }
+                </script>
+            </header>
+
+            <label for="chatPrompt" class="sr-only">System prompt textarea</label>
+            <textarea id="chatPrompt" class="box" placeholder="System prompt" aria-multiline="true" rows="3"></textarea>
+
+            <button class="slide-header" aria-label="Collapse chat header">
+                <i class="fa-solid fa-angles-up" aria-hidden="true"></i>
+            </button>
+
+            <section class="chat-body" id="chatBody" tabindex="0" aria-live="polite" aria-label="Conversation content">
+                <button id="scroll-bottom-btn" class="scroll-bottom-btn hidden" type="button" aria-label="Scroll to bottom">
+                    <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                </button>
+            </section>
+
+            <footer class="chat-footer">
+                <div class="chat-toolbar" role="region" aria-label="Chat controls">
+                    <div id="input-count" class="">
+                        <button class="hide-input" aria-label="Hide input">
+                            <i class="fa-solid fa-angles-down" aria-hidden="true"></i>
+                        </button>
+                        <label for="agree" class="text" onclick="this.innerText='';"></label>
+                    </div>
+                    <div class="stop_generating stop_generating-hidden" role="region" aria-live="assertive">
+                        <button id="cancelButton" aria-label="Stop generating response">
+                            <span>Stop Generating</span>
+                            <i class="fa-solid fa-stop" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="regenerate" role="region" aria-live="polite">
+                        <button id="regenerateButton" aria-label="Regenerate last response">
+                            <span>Regenerate</span>
+                            <i class="fa-solid fa-rotate" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="media-player" aria-hidden="true">
+                    <i class="fa-regular fa-x" aria-hidden="true"></i>
+                </div>
+
+                <div class="media-select hidden" aria-label="Media input options" role="group">
+                    <label class="image-select" for="image" title="Select image file">
+                        <input
+                          type="file"
+                          id="image"
+                          name="image"
+                          accept="image/*"
+                          required
+                          aria-label="Select an image file"
+                        />
+                        <i class="fa-regular fa-image" aria-hidden="true"></i>
+                    </label>
+                    <label class="capture-camera" for="camera" title="Capture photo using camera">
+                        <input
+                          type="file"
+                          id="camera"
+                          name="camera"
+                          accept="image/*"
+                          capture="camera"
+                          required
+                          aria-label="Capture a photo using camera"
+                        />
+                        <i class="fa-solid fa-camera" aria-hidden="true"></i>
+                    </label>
+                    <label class="capture-audio" for="audio" title="Record audio">
+                        <small class="sr-only">Record audio message</small>
+                        <i class="fa-solid fa-microphone" aria-hidden="true"></i>
+                    </label>
+                    <label class="add-link" for="link" title="Add link">
+                        <i class="fa-solid fa-link" aria-hidden="true"></i>
+                    </label>
+                    <button class="close" type="button" aria-label="Close media selector">
+                        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <section class="user-input" role="region" aria-label="User input area">
+                    <div class="input-area">
+                        <a id="download" aria-hidden="true"></a><!-- Download Button -->
+
+                        <label for="userInput" class="sr-only">Type your message</label>
+                        <textarea
+                          id="userInput"
+                          class="box"
+                          placeholder="Type a message..."
+                          cols="30"
+                          rows="4"
+                          style="white-space: pre-wrap;resize: none;"
+                          autocomplete="off"
+                        ></textarea>
+
+                        <label class="file-label image-label" aria-label="USB device icon for uploads">
+                            <i class="fa-brands fa-usb" aria-hidden="true"></i>
+                        </label>
+
+                        <label class="file-label" for="file" aria-label="Attach one or multiple files">
+                            <input
+                              type="file"
+                              id="file"
+                              name="file"
+                              accept="*/*"
+                              multiple
+                              required
+                              aria-describedby="fileHelp"
+                            />
+                            <i class="fa-solid fa-paperclip" aria-hidden="true"></i>
+                        </label>
+                        <small id="fileHelp" class="sr-only">Upload files to send with your message.</small>
+
+                        <label class="micro-label" for="micro" aria-label="Microphone toggle">
+                            <small class="sr-only">Toggle microphone for audio input.</small>
+                            <i class="fa-solid fa-microphone-slash" aria-hidden="true"></i>
+                        </label>
+
+                        <button class="code" title="Insert code block" type="button" aria-label="Insert code block">
+                            <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        </button>
+
+                        <div class="send-buttons" role="group" aria-label="Send message buttons">
+                            <button id="addButton" aria-label="Add message" type="button">
+                                <i class="fa-solid fa-square-plus" aria-hidden="true"></i>
+                                <span>Add</span>
+                            </button>
+
+                            <button id="sendButton" aria-label="Send message" type="submit">
+                                <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
+                                <span>Send</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <nav class="chat-buttons" role="navigation" aria-label="Chat options">
+                    <div class="field">
+                        <button id="search" aria-label="Enable web search">
+                            <small class="sr-only">Enable web search</small>
+                            <i class="fa-solid fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="field">
+                        <label for="model" class="sr-only">Select AI Model</label>
+                        <select name="model" id="model" aria-describedby="modelHelp">
+                            <option value="" selected>Model: Default</option>
+                        </select>
+                        <small id="modelHelp" class="sr-only">Select AI model to use for conversations.</small>
+                    </div>
+                    <div class="field">
+                        <button id="open_picker" type="button" aria-label="Open provider and model picker" title="Browse all providers & models">
+                            <i class="fa-solid fa-table-list" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="field">
+                        <label for="provider" class="sr-only">Select Provider</label>
+                        <select name="provider" id="provider" aria-describedby="providerHelp">
+                            <option value="AnyProvider">Provider: Auto</option>
+                        </select>
+                        <small id="providerHelp" class="sr-only">Select AI provider for conversations.</small>
+                    </div>
+                    <div class="field">
+                        <button id="pin" type="button" aria-label="Pin conversation">
+                            <i class="fa-solid fa-thumbtack" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div id="pin_container" class="field" aria-live="polite"></div>
+                </nav>
+            </footer>
+        </main>
+
+        <!-- AI usage consent dialog -->
+        <div id="ai-consent-overlay" class="ai-consent-overlay hidden" role="presentation"></div>
+        <div id="ai-consent-dialog" class="ai-consent-dialog hidden" role="dialog" aria-modal="true" aria-labelledby="ai-consent-title" aria-describedby="ai-consent-text">
+            <h2 id="ai-consent-title" data-translate="true">AI-Generated Content</h2>
+            <div id="ai-consent-text" data-translate="true">
+                <p><strong>This chat is powered by artificial intelligence.</strong> Answers are generated automatically and can be wrong, incomplete or biased — never rely on them without verification.</p>
+                <p>Your messages are forwarded to third-party AI providers and may be processed there. Please don't share personal or confidential information.</p>
+                <p>Conversations are stored locally on your device by default; cloud sync is strictly opt-in.</p>
+                <p class="ai-consent-links">
+                    <a href="/privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> ·
+                    <a href="/terms.html" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+                </p>
+            </div>
+            <div class="ai-consent-actions">
+                <button type="button" id="ai-consent-accept" data-translate="true">I understand — Continue</button>
+            </div>
+        </div>
+
+        <!-- Logs -->
+        <section class="log hidden" aria-label="Application logs" tabindex="-1">
+            <header class="log-top-bar">
+                <button class="log-back-button" onclick="window.hideLog();" aria-label="Back to settings">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                </button>
+                <h2>Logs</h2>
+            </header>
+            <div class="log-content notranslate" role="region" aria-live="polite"></div>
+        </section>
+
+        <!-- Highlight.js iframe container-->
+        <div class="hljs-iframe-container hidden" aria-hidden="true">
+            <iframe class="hljs-iframe" title="Code syntax preview"></iframe>
+        </div>
+
+        <!-- Provider & Model Picker Panel (mounted by addon-picker.js) -->
+        <div id="picker-overlay" class="picker-overlay hidden" aria-hidden="true"></div>
+        <aside id="picker-panel" class="picker-panel hidden" role="dialog" aria-modal="true" aria-labelledby="picker-title">
+            <header class="picker-header">
+                <h2 id="picker-title"><i class="fa-solid fa-table-list" aria-hidden="true"></i> Providers &amp; Models</h2>
+                <div class="picker-header-actions">
+                    <button id="picker_show_hidden" type="button" class="picker-show-hidden" aria-label="Show hidden and disabled providers" aria-pressed="false" title="Show hidden &amp; disabled providers">
+                        <i class="fa-solid fa-eye" aria-hidden="true"></i> Show hidden
+                    </button>
+                    <button id="picker_refresh" type="button" class="picker-icon-btn" aria-label="Refresh models" title="Refresh models">
+                        <i class="fa-solid fa-rotate" aria-hidden="true"></i>
+                    </button>
+                    <button id="picker_close" type="button" class="picker-icon-btn" aria-label="Close panel" title="Close">
+                        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </header>
+
+            <div class="picker-search-row">
+                <div class="picker-search-box">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <input
+                      type="text"
+                      id="picker_search"
+                      placeholder="Search by model name (e.g. gpt-4, claude, gemini)..."
+                      autocomplete="off"
+                      autocapitalize="off"
+                      autocorrect="off"
+                      spellcheck="false"
+                      aria-label="Search models"
+                    />
+                    <button id="picker_clear" type="button" class="picker-clear-btn hidden" aria-label="Clear search">
+                        <i class="fa-solid fa-circle-xmark" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="picker-tags-row" id="picker_tags" role="group" aria-label="Filter by tags"></div>
+
+            <div class="picker-body">
+                <section class="picker-providers" aria-label="Providers">
+                    <h3 class="picker-section-title"><i class="fa-solid fa-server" aria-hidden="true"></i> Providers</h3>
+                    <div id="picker_providers" class="picker-providers-list"></div>
+                </section>
+                <section class="picker-models" aria-label="Models">
+                    <h3 class="picker-section-title">
+                        <i class="fa-solid fa-cubes" aria-hidden="true"></i> Models
+                        <span id="picker_count" class="picker-count">0</span>
+                    </h3>
+                    <div id="picker_models" class="picker-models-list"></div>
+                </section>
+            </div>
+
+            <footer class="picker-footer">
+                <div class="picker-detail" id="picker_detail">
+                    <span class="picker-detail-empty">Select a model to see base URL &amp; quick actions</span>
+                </div>
+            </footer>
+        </aside>
+    </div>
+
+    <!-- Modern empty state template (cloned into chatBody when no messages exist) -->
+    <template id="empty-state-template">
+        <div id="chat-empty-state" class="chat-empty-state" aria-label="Start a conversation">
+            <div class="empty-state-content">
+                <div class="empty-state-icon">
+                    <img src="/dist/img/g4f.svg" alt="" aria-hidden="true" />
+                </div>
+                <h2 class="empty-state-title" data-translate="true">How can I help you today?</h2>
+                <p class="empty-state-subtitle" data-translate="true">Ask anything — brainstorm, write, code, or explore. Pick a suggestion to get started.</p>
+                <div class="empty-state-suggestions">
+                    <button type="button" class="suggestion-card" data-prompt="Explain quantum computing in simple terms">
+                        <i class="fa-solid fa-atom" aria-hidden="true"></i>
+                        <span data-translate="true">Explain a topic</span>
+                        <small data-translate="true">Quantum computing in simple terms</small>
+                    </button>
+                    <button type="button" class="suggestion-card" data-prompt="Write a Python function that finds all prime numbers up to n">
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        <span data-translate="true">Write code</span>
+                        <small data-translate="true">Find all primes up to n in Python</small>
+                    </button>
+                    <button type="button" class="suggestion-card" data-prompt="Brainstorm 10 creative names for a coffee shop run by robots">
+                        <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                        <span data-translate="true">Brainstorm ideas</span>
+                        <small data-translate="true">Creative names for a robot coffee shop</small>
+                    </button>
+                    <button type="button" class="suggestion-card" data-prompt="Help me write a friendly email asking my team for project updates">
+                        <i class="fa-solid fa-pen-nib" aria-hidden="true"></i>
+                        <span data-translate="true">Help me write</span>
+                        <small data-translate="true">A friendly team update email</small>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Modern UI wiring: empty state + scroll-to-bottom -->
+    <script>
+    (function () {
+        "use strict";
+
+        const chatBody = document.getElementById("chatBody");
+        if (!chatBody) return;
+
+        const EMPTY_STATE_ID = "chat-empty-state";
+        const SCROLL_BTN_ID = "scroll-bottom-btn";
+
+        const buildEmptyState = () => {
+            const existing = document.getElementById(EMPTY_STATE_ID);
+            if (existing) return existing;
+            const template = document.getElementById("empty-state-template");
+            if (!template) return null;
+            const clone = template.content.firstElementChild.cloneNode(true);
+            chatBody.appendChild(clone);
+            return clone;
+        };
+
+        const hasMessages = () => chatBody.querySelector(".message, .suggestion") !== null;
+
+        const updateEmptyState = () => {
+            const emptyState = document.getElementById(EMPTY_STATE_ID);
+            if (!emptyState) return;
+            emptyState.classList.toggle("hidden", hasMessages());
+        };
+
+        // Observe chat body: show empty state when no messages exist.
+        const observer = new MutationObserver(() => {
+            updateEmptyState();
+            if (!hasMessages()) buildEmptyState();
+        });
+        observer.observe(chatBody, { childList: true, subtree: false });
+
+        // Suggestion cards fill the composer and send.
+        chatBody.addEventListener("click", async (event) => {
+            const card = event.target.closest(".suggestion-card");
+            if (!card) return;
+            const prompt = card.dataset.prompt || "";
+            const userInput = document.getElementById("userInput");
+            try {
+                if (typeof window.handle_ask === "function") {
+                    await window.handle_ask(true, prompt);
+                } else if (userInput) {
+                    if (userInput) userInput.value = prompt;
+                    userInput.dispatchEvent(new KeyboardEvent("keyup", { key: "Enter", bubbles: true }));
+                }
+            } catch (e) {
+                console.debug("suggestion-card send failed:", e);
+            }
+        });
+
+        // Scroll-to-bottom button.
+        const scrollBtn = document.getElementById(SCROLL_BTN_ID);
+        if (scrollBtn) {
+            const updateScrollBtn = () => {
+                const atBottom = chatBody.scrollTop + chatBody.clientHeight >= chatBody.scrollHeight - 60;
+                scrollBtn.classList.toggle("hidden", atBottom || !hasMessages());
+            };
+            chatBody.addEventListener("scroll", updateScrollBtn, { passive: true });
+            scrollBtn.addEventListener("click", () => {
+                chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: document.body.classList.contains("no-animations") ? "auto" : "smooth" });
+            });
+            chatBody.addEventListener("resize", updateScrollBtn);
+            window.addEventListener("resize", updateScrollBtn);
+            setTimeout(updateScrollBtn, 500);
+        }
+
+        // Initialize on load (after addons have rendered).
+        window.domReady?.then(() => {
+            if (!hasMessages()) buildEmptyState();
+            updateEmptyState();
+            window.addonsLoaded?.then(() => setTimeout(() => {
+                updateEmptyState();
+                if (!hasMessages()) buildEmptyState();
+            }, 300));
+        });
+    })();
+    </script>
+
+    <!-- Extension bridge: lets the gpt4free browser extension side panel
+         inject prompts (quick actions, page context) into this chat.
+         Conversations themselves persist in this page's IndexedDB, so
+         nothing needs to be synced back to the extension. -->
+    <script>
+    (function () {
+        "use strict";
+        const CHAT_ORIGIN = location.origin;
+
+        function announce() {
+            try { window.parent.postMessage({ type: "g4f-chat:ready" }, "*"); } catch (e) { /* ignore */ }
+        }
+        announce();
+        window.addEventListener("load", announce);
+        window.addonsLoaded?.then(announce);
+
+        async function askFromExtension(prompt) {
+            if (!prompt || typeof prompt !== "string") return;
+            try {
+                // The early "ready" announcement fires before addons load, so
+                // wait for addonsLoaded (which defines window.handle_ask)
+                // before delivering the prompt. Fall back to the composer if
+                // addons never become available.
+                if (window.addonsLoaded instanceof Promise) {
+                    await Promise.race([
+                        window.addonsLoaded,
+                        new Promise((resolve) => setTimeout(resolve, 5000)),
+                    ]);
+                }
+                if (typeof window.handle_ask === "function") {
+                    await window.handle_ask(true, prompt);
+                } else {
+                    const userInput = document.getElementById("userInput");
+                    if (!userInput) return;
+                    userInput.value = prompt;
+                    const sendButton = document.getElementById("sendButton");
+                    if (sendButton) {
+                        sendButton.click();
+                    } else {
+                        // The composer's Enter handler listens on keydown
+                        // (keyCode 13), not keyup.
+                        userInput.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter", keyCode: 13, bubbles: true }));
+                    }
+                }
+            } catch (e) {
+                console.debug("g4f-ext bridge ask failed:", e);
+            }
+        }
+
+        // Quick-action fallback: the side panel may deliver a prompt via a
+        // #q=<prompt> hash (e.g. when postMessage would fire before this
+        // page is ready). Consume it once on load, then scrub the hash so
+        // a manual reload does not re-run the prompt.
+        try {
+            const m = /^#q=(.+)$/.exec(location.hash || "");
+            if (m) {
+                history.replaceState(null, "", location.pathname + location.search);
+                askFromExtension(decodeURIComponent(m[1]));
+            }
+        } catch (e) { /* ignore */ }
+
+        window.addEventListener("message", (event) => {
+            if (event.origin !== CHAT_ORIGIN && event.source !== window.parent) return;
+            const data = event.data || {};
+            if (data.type === "g4f-ext:hello") {
+                // Mark the host as the browser-extension side panel: login
+                // popups are then requested via g4f-ext:open-auth instead
+                // of window.open (suppressed inside the side panel).
+                window.g4fExtHost = true;
+            }
+            if (data.type === "g4f-ext:ask" && typeof data.prompt === "string") {
+                askFromExtension(data.prompt);
+            }
+            if (data.type === "g4f-ext:auth-done") {
+                // The login popup closed: refresh the login UI (the storage
+                // event does not always fire across windows).
+                window.dispatchEvent(new CustomEvent("g4f-login:changed"));
+            }
+        });
+
+        // The login popup shares localStorage with this framed page (same
+        // origin). As soon as it writes the session, tell the extension host
+        // so it can close the popup and refresh the login UI. (The popup
+        // itself cannot notify us: extension-opened windows have no opener.)
+        window.addEventListener("storage", (event) => {
+            if (event.key === "g4f_session" || event.key === "g4f_user" || event.key === "g4f_expires") {
+                try { window.parent.postMessage({ type: "g4f-ext:auth-done" }, "*"); } catch (e) { /* ignore */ }
+            }
+        });
+    })();
+    </script>
+
+    <!-- Language selection: opens /language-selection.html in the full-size
+         message iframe. Shown automatically on first load (until a language
+         package is picked or the overlay is closed). When a package is
+         loaded or unloaded inside it, the selection page posts
+         "g4f-language:changed" and this page reloads, so the language
+         instance (framework.translations and framework.language) is rebuilt
+         from the new package on load. -->
+    <script>
+    (function () {
+        "use strict";
+
+        // Set once the selection was closed or a package picked — the
+        // automatic first-load prompt then stays off.
+        const LANGUAGE_PROMPT_KEY = "languageSelectionPrompted";
+        const wasDismissed = () => {
+            try { return localStorage.getItem(LANGUAGE_PROMPT_KEY) === "true"; } catch (e) { return true; }
+        };
+        const markDismissed = () => {
+            try { localStorage.setItem(LANGUAGE_PROMPT_KEY, "true"); } catch (e) { /* ignore */ }
+        };
+
+        const getContainer = () => window.iframe_container || document.querySelector(".hljs-iframe-container");
+        const getFrame = () => window.iframe || (getContainer() ? getContainer().querySelector(".hljs-iframe") : null);
+
+        const close_language_selection = () => {
+            const container = getContainer();
+            const frame = getFrame();
+            if (container) {
+                container.classList.add("hidden");
+                container.setAttribute("aria-hidden", "true");
+            }
+            if (frame) frame.src = "";
+        };
+
+        window.open_language_selection = function () {
+            const container = getContainer();
+            const frame = getFrame();
+            if (!container || !frame) return;
+            frame.title = "Language selection";
+            frame.src = "/language-selection.html";
+            container.classList.remove("hidden");
+            container.setAttribute("aria-hidden", "false");
+        };
+
+        window.addEventListener("message", (event) => {
+            if (event.origin !== location.origin) return;
+            const data = event.data || {};
+            if (data.type === "g4f-language:changed") {
+                markDismissed();
+                close_language_selection();
+                // Drop per-page translations of the previous package, so the
+                // language instance is rebuilt from the new one on load.
+                if (window.deleteTranslations) window.deleteTranslations();
+                window.location.reload();
+            }
+            if (data.type === "g4f-language:dismiss") {
+                markDismissed();
+                close_language_selection();
+            }
+        });
+
+        // First visit (no language package picked, not dismissed before):
+        // show the language selection in the full-size iframe on load.
+        window.addEventListener("load", () => {
+            if (wasDismissed()) return;
+            if (framework.getSelectedLanguage && framework.getSelectedLanguage()) return;
+            window.open_language_selection();
+        });
+    })();
+    </script>
+
+<script data-g4f-locale-runtime="1">
+(function () {
+    "use strict";
+    const locale = "nl";
+    const supported = ["en", "es", "fr", "de"];
+    const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
+    const opened = match && supported.includes(match[1].toLowerCase())
+        ? match[1].toLowerCase()
+        : String(document.documentElement.lang || locale || "en")
+            .split(/[-_]/)[0].toLowerCase();
+    const base = supported.includes(opened) ? opened : "en";
+    const apply = () => {
+        if (!window.framework) return false;
+        try {
+            if (framework.setSelectedLanguage) framework.setSelectedLanguage(base);
+        } catch (e) { /* private mode */ }
+        const cached = framework.globalTranslations && framework.globalTranslations[base];
+        if (cached && cached.translations) {
+            framework.translations = Object.assign({}, framework.translations, cached.translations);
+            if (framework.translateElements) framework.translateElements();
+        }
+        if (base !== "en" && typeof framework.loadGlobalTranslations === "function") {
+            framework.loadGlobalTranslations(base).then((entry) => {
+                if (entry && entry.translations) {
+                    framework.translations = Object.assign(
+                        {}, framework.translations, entry.translations
+                    );
+                }
+                if (framework.translateElements) framework.translateElements();
+                if (typeof framework.translateAll === "function") framework.translateAll();
+            }).catch(() => {});
+        } else if (typeof framework.translateAll === "function") {
+            framework.translateAll();
+        }
+        return true;
+    };
+    if (!apply()) {
+        document.addEventListener("DOMContentLoaded", apply, { once: true });
+        window.addEventListener("load", apply, { once: true });
+    }
+})();
+</script>
+</body>
+</html>

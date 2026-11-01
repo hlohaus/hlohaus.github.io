@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html data-color-mode="auto" data-light-theme="light" data-dark-theme="dark" lang="hu" dir="ltr">
+<head>
+<base href="/">
+    <link rel="canonical" href="https://g4f.dev/hu/status.html">
+    <link rel="alternate" hreflang="en" href="https://g4f.dev/status.html">
+    <link rel="alternate" hreflang="ar" href="https://g4f.dev/ar/status.html">
+    <link rel="alternate" hreflang="bg" href="https://g4f.dev/bg/status.html">
+    <link rel="alternate" hreflang="cs" href="https://g4f.dev/cs/status.html">
+    <link rel="alternate" hreflang="da" href="https://g4f.dev/da/status.html">
+    <link rel="alternate" hreflang="de" href="https://g4f.dev/de/status.html">
+    <link rel="alternate" hreflang="el" href="https://g4f.dev/el/status.html">
+    <link rel="alternate" hreflang="es" href="https://g4f.dev/es/status.html">
+    <link rel="alternate" hreflang="et" href="https://g4f.dev/et/status.html">
+    <link rel="alternate" hreflang="fa" href="https://g4f.dev/fa/status.html">
+    <link rel="alternate" hreflang="fi" href="https://g4f.dev/fi/status.html">
+    <link rel="alternate" hreflang="fr" href="https://g4f.dev/fr/status.html">
+    <link rel="alternate" hreflang="he" href="https://g4f.dev/he/status.html">
+    <link rel="alternate" hreflang="hi" href="https://g4f.dev/hi/status.html">
+    <link rel="alternate" hreflang="hr" href="https://g4f.dev/hr/status.html">
+    <link rel="alternate" hreflang="hu" href="https://g4f.dev/hu/status.html">
+    <link rel="alternate" hreflang="id" href="https://g4f.dev/id/status.html">
+    <link rel="alternate" hreflang="it" href="https://g4f.dev/it/status.html">
+    <link rel="alternate" hreflang="ja" href="https://g4f.dev/ja/status.html">
+    <link rel="alternate" hreflang="kk" href="https://g4f.dev/kk/status.html">
+    <link rel="alternate" hreflang="ko" href="https://g4f.dev/ko/status.html">
+    <link rel="alternate" hreflang="nb" href="https://g4f.dev/nb/status.html">
+    <link rel="alternate" hreflang="nl" href="https://g4f.dev/nl/status.html">
+    <link rel="alternate" hreflang="pl" href="https://g4f.dev/pl/status.html">
+    <link rel="alternate" hreflang="pt" href="https://g4f.dev/pt/status.html">
+    <link rel="alternate" hreflang="ro" href="https://g4f.dev/ro/status.html">
+    <link rel="alternate" hreflang="ru" href="https://g4f.dev/ru/status.html">
+    <link rel="alternate" hreflang="sk" href="https://g4f.dev/sk/status.html">
+    <link rel="alternate" hreflang="sl" href="https://g4f.dev/sl/status.html">
+    <link rel="alternate" hreflang="sq" href="https://g4f.dev/sq/status.html">
+    <link rel="alternate" hreflang="sr" href="https://g4f.dev/sr/status.html">
+    <link rel="alternate" hreflang="sv" href="https://g4f.dev/sv/status.html">
+    <link rel="alternate" hreflang="th" href="https://g4f.dev/th/status.html">
+    <link rel="alternate" hreflang="tr" href="https://g4f.dev/tr/status.html">
+    <link rel="alternate" hreflang="uk" href="https://g4f.dev/uk/status.html">
+    <link rel="alternate" hreflang="ur" href="https://g4f.dev/ur/status.html">
+    <link rel="alternate" hreflang="uz" href="https://g4f.dev/uz/status.html">
+    <link rel="alternate" hreflang="vi" href="https://g4f.dev/vi/status.html">
+    <link rel="alternate" hreflang="zh" href="https://g4f.dev/zh/status.html">
+    <link rel="alternate" hreflang="x-default" href="https://g4f.dev/status.html">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>G4F - Provider Quota Status</title>
+
+    <meta name="description" content="Real-time G4F provider quota status, usage limits, and availability monitoring for all supported AI providers." />
+    <meta name="keywords" content="G4F, GPT4Free, provider status, quota, usage limits, AI API status, free AI quota" />
+    <meta name="author" content="GPT4Free Team" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="G4F - Provider Quota Status" />
+    <meta property="og:description" content="Real-time monitoring of G4F provider quota, usage limits, and availability." />
+    <meta property="og:url" content="https://g4f.dev/status.html" />
+    <meta property="og:site_name" content="GPT4Free Documentation" />
+    <meta property="og:image" content="https://g4f.space/screenshot/status" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="G4F - Provider Quota Status" />
+    <meta name="twitter:description" content="Real-time monitoring of G4F provider quota, usage limits, and availability." />
+    <meta name="twitter:image" content="https://g4f.space/screenshot/status" />
+
+    <!-- Canonical -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/dist/img/g4f.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/dist/img/g4f-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/dist/img/g4f-16x16.png" />
+    <link rel="manifest" href="/dist/img/site.webmanifest" />
+    <link rel="stylesheet" href="/dist/css/dracula.min.css" />
+    <style>
+        :root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --muted: #9aa4b2;
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(180deg, #061021 0%, #07112a 60%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            color: #e6eef8;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            margin: 0 0 10px;
+        }
+        small {
+            color: var(--muted);
+        }
+        .status-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .refresh-btn {
+            background: #0ea5e9;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 16px;
+            color: white;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.2s;
+            margin-left: auto;
+        }
+        .refresh-btn:hover {
+            background: #0284c7;
+        }
+        .refresh-btn:disabled {
+            background: #64748b;
+            cursor: not-allowed;
+        }
+        .last-updated {
+            font-size: 13px;
+            color: var(--muted);
+        }
+        .table {
+            background: var(--card);
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 2fr auto;
+            gap: 15px;
+            padding: 12px 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            align-items: center;
+        }
+        @media (max-width: 992px) {
+            .row {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            .row > div:nth-child(4) {
+                grid-column: span 2;
+                justify-self: start;
+            }
+        }
+        @media (max-width: 576px) {
+            .row {
+                grid-template-columns: 1fr;
+            }
+            .row > div:nth-child(4) {
+                grid-column: span 1;
+            }
+        }
+        .row:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .provider {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(#0ea5e9, #60a5fa);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .badges {
+            font-size: 14px;
+        }
+        .quota-bar {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 6px;
+        }
+        .quota-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        .quota-details {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.4;
+        }
+        .status-badge {
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .status-healthy {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+        .status-low {
+            background: rgba(234, 179, 8, 0.2);
+            color: #eab308;
+        }
+        .status-critical {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+        .status-error {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+        .status-unsupported {
+            background: rgba(148, 163, 184, 0.2);
+            color: #94a3b8;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--muted);
+            font-size: 16px;
+        }
+        .error {
+            color: #ef4444;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    <script src="https://g4f.dev/dist/js/framework.js" defer></script>
+</head>
+<body>
+    <div class="status-header">
+        <div>
+            <h1>Provider Quota Status</h1>
+            <small>Real-time monitoring of G4F provider usage limits and availability</small>
+        </div>
+        <button id="refresh-btn" class="refresh-btn">Refresh Now</button>
+        <span id="last-updated" class="last-updated">Last updated: --</span>
+    </div>
+
+    <div class="table" id="quota-table">
+        <div class="loading">Loading providers and quota data...</div>
+    </div>
+
+    <script type="module">
+        import { loadProviders, createClient } from 'https://g4f.dev/dist/js/providers.js';
+
+        // Model type icons (same as docs page)
+        const modelTags = { image: "🎨", vision: "👓", audio: "🎧", video: "🎥" };
+
+        // Generate badges for provider (same as docs page)
+        function badgesFor(p) {
+            return (p.hf_space ? " 🤗" : "") +
+                   (p.nodriver ? " 🌐" : "") +
+                   (!p.nodriver && p.auth ? " 🔑" : "") +
+                   (p.live ? " 🟢" : "");
+        }
+
+        // Generate icons for provider capabilities (same as docs page)
+        function iconsFor(p) {
+            return (p.image ? modelTags.image : "") +
+                   (p.vision ? modelTags.vision : "") +
+                   (p.audio ? modelTags.audio : "") +
+                   (p.video ? modelTags.video : "");
+        }
+
+        // Get provider logo (same as docs page)
+        function getImage(key) {
+            key = key || "";
+            const img = new Image(200, 200);
+            const gen = 'https://g4f.space';
+            img.src = gen + '/logo/' +
+                key.replace(
+                    'MetaAIAccount', 'Facebook AI').replace(
+                    'MetaAI', 'Facebook AI').replace(
+                    'Aria', '').replace(
+                    'OpenAI', 'ChatGPT').replace(
+                    'Video', 'TV').replace(
+                    'Phi-4', 'Windows').replace(
+                    '(Text Generation)', '').replace(
+                    'Glhf', 'AI').replace(
+                    'GithubCopilot', 'GitHub Copilot').replace(
+                    'PerplexityApi', 'Perplexity API').replace(
+                    'Gemini', '').replace(
+                    'API', '').replace(
+                    '-2.5M', '').replace(
+                    'grok', 'xAI').replace(
+                    'Qwen_Qwen_3', 'Qwen').replace(
+                    'Yupp', 'with yupp').replace(
+                    'groq', 'Groq');
+            return img;
+        }
+
+        function formatNumber(value) {
+            return typeof value === 'number'
+                ? value.toLocaleString(undefined, { maximumFractionDigits: 2 })
+                : value;
+        }
+
+        // Interpret the many quota payload shapes the providers return.
+        // Returns null when the payload carries no quota information at all
+        // (e.g. a plain /models listing) — that means "reachable, no quota".
+        function parseQuota(quota) {
+            if (!quota || typeof quota !== 'object') return null;
+            const resetTime = quota.reset_time || quota.quota_reset || quota.limit_reset
+                || quota.data?.limit_reset || quota.quota_reset_time;
+
+            // OpenRouter /key style: { data: { limit, limit_remaining, usage } }
+            const d = quota.data;
+            if (d && typeof d === 'object' && !Array.isArray(d) && typeof d.limit === 'number') {
+                const total = d.limit;
+                const remaining = typeof d.limit_remaining === 'number'
+                    ? d.limit_remaining
+                    : (typeof d.usage === 'number' ? total - d.usage : total);
+                return { remaining, total, percentRemaining: total > 0 ? (remaining / total) * 100 : 100, resetTime };
+            }
+
+            // Pollinations Pollen balance
+            if (typeof quota.balance === 'number') {
+                const total = quota.accountBalance?.total ?? quota.balance;
+                return {
+                    remaining: quota.balance,
+                    total,
+                    percentRemaining: total > 0 ? (quota.balance / total) * 100 : 100,
+                    unit: 'Pollen',
+                    resetTime,
+                };
+            }
+
+            if (quota.credits && typeof quota.credits.remaining === 'number') {
+                const total = quota.credits.total || quota.credits.remaining;
+                return { remaining: quota.credits.remaining, total, percentRemaining: total > 0 ? (quota.credits.remaining / total) * 100 : 100, resetTime };
+            }
+
+            if (quota.allowanceInfo && typeof quota.allowanceInfo.remaining === 'number') {
+                const total = quota.allowanceInfo.monthUsageAllowance || quota.allowanceInfo.remaining;
+                return { remaining: quota.allowanceInfo.remaining, total, percentRemaining: total > 0 ? (quota.allowanceInfo.remaining / total) * 100 : 100, resetTime };
+            }
+
+            // Gemini style: { buckets: [{ modelId, remainingFraction }] }
+            if (Array.isArray(quota.buckets) && quota.buckets.length) {
+                const fractions = quota.buckets.map(b => b?.remainingFraction).filter(f => typeof f === 'number');
+                if (fractions.length) {
+                    const percent = Math.max(0, Math.min(1, Math.min(...fractions))) * 100;
+                    return { remaining: Math.round(percent), total: 100, percentRemaining: percent, unit: '%', resetTime };
+                }
+            }
+
+            // Antigravity style: { models: { id: { quotaInfo: { remainingFraction } } } }
+            if (quota.models && typeof quota.models === 'object' && !Array.isArray(quota.models)) {
+                const fractions = Object.values(quota.models)
+                    .map(m => m?.quotaInfo?.remainingFraction)
+                    .filter(f => typeof f === 'number');
+                if (fractions.length) {
+                    const percent = Math.max(0, Math.min(1, Math.min(...fractions))) * 100;
+                    return { remaining: Math.round(percent), total: 100, percentRemaining: percent, unit: '%', resetTime };
+                }
+            }
+
+            // Copilot style: { quota_snapshots: { premium_interactions, chat } }
+            if (quota.quota_snapshots) {
+                const percents = [quota.quota_snapshots.premium_interactions, quota.quota_snapshots.chat]
+                    .map(s => s?.percent_remaining)
+                    .filter(p => typeof p === 'number');
+                if (percents.length) {
+                    const percent = Math.max(0, Math.min(...percents));
+                    return { remaining: Math.round(percent), total: 100, percentRemaining: percent, unit: '%', resetTime };
+                }
+            }
+
+            for (const usage of [quota.session_usage, quota.weekly_usage]) {
+                if (usage && typeof usage.used_percent === 'number') {
+                    const percent = Math.max(0, 100 - usage.used_percent);
+                    return { remaining: Math.round(percent), total: 100, percentRemaining: percent, unit: '%', resetTime };
+                }
+            }
+
+            // Generic numeric fields. Note: quota.total/quota.offset means
+            // "servers loaded", not a quota, so it is deliberately excluded.
+            const remaining = quota.remaining_quota ?? quota.remaining ?? quota.quota_left;
+            const total = quota.total_quota ?? quota.quota_limit;
+            if (typeof remaining === 'number' && typeof total === 'number' && total > 0) {
+                return { remaining, total, percentRemaining: (remaining / total) * 100, resetTime };
+            }
+            if (typeof remaining === 'number') {
+                return { remaining, total: remaining, percentRemaining: remaining > 0 ? 100 : 0, resetTime };
+            }
+            return null;
+        }
+
+        // Calculate quota status and color from a fetchProviderQuota() result
+        function getQuotaStatus(result) {
+            if (!result) {
+                return { status: 'error', color: '#ef4444', label: 'Unavailable' };
+            }
+            if (result.status === 401) {
+                return { status: 'low', color: '#eab308', label: 'Unauthorized', detail: 'Authorization required' };
+            }
+            if (result.status === 404 || result.status === 501) {
+                return { status: 'unsupported', color: '#94a3b8', label: 'Not supported', detail: 'No health endpoint' };
+            }
+            if (result.success === false) {
+                return { status: 'error', color: '#ef4444', label: 'Error', detail: result.error };
+            }
+
+            const health = result.data ?? result;
+            if (health && health.ok === false) {
+                if (health.status === 401) {
+                    return { status: 'low', color: '#eab308', label: 'Unauthorized', detail: 'Authorization required' };
+                }
+                if (health.status === 404 || health.status === 501) {
+                    return { status: 'unsupported', color: '#94a3b8', label: 'Not supported', detail: `No health endpoint (HTTP ${health.status})` };
+                }
+                if (!health.status) {
+                    return { status: 'error', color: '#ef4444', label: 'Unreachable', detail: health.error };
+                }
+                return {
+                    status: 'error',
+                    color: '#ef4444',
+                    label: `Error ${health.status}`,
+                    detail: health.error,
+                };
+            }
+
+            const parsed = parseQuota(health?.quota ?? health);
+            if (!parsed) {
+                return { status: 'healthy', color: '#22c55e', label: 'Available', detail: 'No quota reported' };
+            }
+
+            const percentRemaining = Math.max(0, Math.min(100, parsed.percentRemaining));
+            const base = {
+                remaining: parsed.remaining,
+                total: parsed.total,
+                percentRemaining,
+                unit: parsed.unit,
+                resetTime: parsed.resetTime,
+            };
+            if (percentRemaining > 50) return { ...base, status: 'healthy', color: '#22c55e', label: 'Healthy' };
+            if (percentRemaining > 10) return { ...base, status: 'low', color: '#eab308', label: 'Low Quota' };
+            return { ...base, status: 'critical', color: '#ef4444', label: 'Critical' };
+        }
+
+        // Format reset time (handles both Unix timestamps (seconds/milliseconds) and ISO date strings)
+        function formatResetTime(resetTime) {
+            if (!resetTime) return '';
+            
+            let date = new Date(resetTime);
+            // If timestamp is in seconds (common for APIs), convert to milliseconds
+            if (resetTime < 10000000000) date = new Date(resetTime * 1000);
+            
+            const now = new Date();
+            const diff = date - now;
+            
+            if (diff <= 0) return 'Resets soon';
+            
+            const hours = Math.floor(diff / 3600000);
+            const minutes = Math.floor((diff % 3600000) / 60000);
+            
+            if (hours > 24) {
+                const days = Math.floor(hours / 24);
+                return `Resets in ${days}d ${hours % 24}h`;
+            }
+            return `Resets in ${hours}h ${minutes}m`;
+        }
+
+        // Resolve the stored API key for a provider, mirroring the addon's
+        // get_api_key_by_provider() so the status page sends the same key the
+        // chat page would use.
+        function getApiKey(provider) {
+            const name = provider.name || provider.key || '';
+            const read = (key) => { try { return window.localStorage.getItem(key); } catch { return null; } };
+            if (name.startsWith('custom:')) {
+                return read('g4f_session');
+            }
+            const stored = read(`${name}-api_key`);
+            if (stored) return stored;
+            if (name.startsWith('Puter')) {
+                return read('puter.auth.token') || read('g4f_session');
+            }
+            if (['GeminiPro', 'Ollama', 'Nvidia', 'OpenRouterFree', 'Pollinations', 'Groq'].includes(name)) {
+                return read('g4f_session');
+            }
+            return null;
+        }
+
+        // Query a single health endpoint and normalise the outcome. Every
+        // candidate URL is a GET; no chat completion is ever issued.
+        async function requestHealth(url, headers) {
+            const resp = await fetch(url, { headers });
+            if (resp.status === 401) {
+                return { success: false, status: 401, error: 'Authorization required' };
+            }
+            if (resp.status === 404 || resp.status === 501) {
+                return { success: false, status: resp.status, error: 'No health endpoint' };
+            }
+            if (!resp.ok) {
+                return { success: false, status: resp.status, error: `HTTP ${resp.status}: ${resp.statusText}` };
+            }
+            const data = await resp.json();
+            return { success: true, data };
+        }
+
+        // Fetch quota/health for a single provider. The backend route is tried
+        // first because it is not subject to CORS: the provider workers do not
+        // send Access-Control-Allow-Origin, so a direct browser fetch rejects
+        // with "Failed to fetch" even when the provider itself is reachable.
+        async function fetchProviderQuota(provider) {
+            if (provider.key === 'default') {
+                return { success: false, error: 'No quota endpoint' };
+            }
+
+            const apiKey = getApiKey(provider);
+            const headers = { 'Accept': 'application/json' };
+            if (apiKey) headers['x-api-key'] = apiKey;
+
+            const urls = [];
+            if (framework.backendUrl) {
+                const name = provider.type === 'core' ? provider.name : provider.key;
+                urls.push(`${framework.backendUrl}/backend-api/v2/health/${name}`);
+            }
+            if (provider.type !== 'core') {
+                const baseUrl = provider.backupUrl || `https://g4f.space/api/${provider.key}`;
+                urls.push(`${baseUrl}/health`);
+            }
+
+            let lastError = { success: false, status: 501, error: 'No health endpoint' };
+            for (const url of urls) {
+                try {
+                    const result = await requestHealth(url, headers);
+                    // 404/501 means "no health endpoint here" — worth trying the
+                    // next candidate before reporting it.
+                    if (result.success || (result.status !== 404 && result.status !== 501)) {
+                        return result;
+                    }
+                    lastError = result;
+                } catch (err) {
+                    lastError = { success: false, error: err.message };
+                }
+            }
+            return lastError;
+        }
+
+        // Main function to render quota table
+        async function renderQuotaTable() {
+            const table = document.getElementById('quota-table');
+            const refreshBtn = document.getElementById('refresh-btn');
+
+            refreshBtn.disabled = true;
+            refreshBtn.textContent = 'Refreshing...';
+            table.innerHTML = '<div class="loading">Loading providers and quota data...</div>';
+
+            try {
+                // Resolve the backend before querying core providers
+                if (!framework.backendUrl) {
+                    await framework.connectToBackend();
+                }
+
+                // Load all provider types (same as docs page)
+                const [jsProviders, customPublic, customPrivate, coreProviders] = await Promise.all([
+                    loadProviders().then(l => Object.fromEntries(Object.entries(l).filter(([key, p]) => key !== "default"))),
+                    fetch('https://g4f.space/custom/api/servers/public').then(r => r.json()).catch(() => ({})),
+                    fetch('https://g4f.space/custom/api/servers', {
+                        headers: { 'Authorization': `Bearer ${localStorage.getItem("g4f_session") || ""}` }
+                    }).then(r => r.json()).catch(() => ({})),
+                    framework.backendUrl
+                        ? fetch(`${framework.backendUrl}/backend-api/v2/providers`).then(r => r.json()).catch(() => [])
+                        : Promise.resolve([])
+                ]);
+
+                // Combine all providers
+                const allProviders = [
+                    ...Object.entries(jsProviders).map(([key, p]) => ({ ...p, key, type: 'js' })),
+                    ...(customPublic.servers || []).filter(p=>!p.is_hidden && !p.is_ollama && p.is_valid && !p.is_offline).map(p => ({ ...p, key: `custom:${p.id}`, type: 'custom' })),
+                    ...(customPrivate.servers || []).filter(p=>!p.is_public).map(p => ({ ...p, key: `custom:${p.id}`, type: 'custom' })),
+                    ...(coreProviders.map(p => ({ ...p, key: `core:${p.name}`, type: 'core' })).filter(p => p.active_by_default))
+                ];
+
+                // Clear table
+                table.innerHTML = '';
+
+                // Render each provider row
+                allProviders.forEach((p) => {
+                    const row = document.createElement('div');
+                    row.className = 'row';
+
+                    // Provider info column
+                    const prov = document.createElement('div');
+                    prov.className = 'provider';
+                    const logo = document.createElement('div');
+                    logo.className = 'logo';
+                    logo.appendChild(getImage(p.is_public ? p.label : p.key.replace('core:', '').replace('custom:', '')));
+
+                    const meta = document.createElement('div');
+                    let labelHtml = p.label && p.label !== p.name ? `<div style='color:#7dd3fc;font-size:11px'>${p.label}</div>` : '';
+                    let serverIdHtml = p.id ? `<div style='font-size:11px;color:#fbbf24'><b>Server ID:</b> ${p.id}</div>` : '';
+                    meta.innerHTML = `
+                        <div>${p.label || p.name || p.key}</div>
+                        ${labelHtml}
+                        ${serverIdHtml}
+                        <small>${iconsFor(p)}${badgesFor(p)}</small>
+                    `;
+
+                    prov.appendChild(logo);
+                    prov.appendChild(meta);
+                    row.appendChild(prov);
+
+                    // Tags column
+                    const tags = document.createElement('div');
+                    tags.className = 'badges';
+                    tags.textContent = p.tags || '';
+                    row.appendChild(tags);
+
+                    // Quota info column
+                    const quotaCol = document.createElement('div');
+                    quotaCol.style.flex = '2';
+                    quotaCol.style.minWidth = '200px';
+                    quotaCol.innerHTML = '<div class="quota-details">Checking…</div>';
+                    row.appendChild(quotaCol);
+
+                    // Status badge column (appended before the async fill so the
+                    // grid column order stays stable)
+                    const statusBadge = document.createElement('span');
+                    statusBadge.className = 'status-badge';
+                    statusBadge.textContent = '…';
+                    row.appendChild(statusBadge);
+
+                    table.appendChild(row);
+
+                    fetchProviderQuota(p).then(result => {
+                        const status = getQuotaStatus(result);
+                        statusBadge.className = `status-badge status-${status.status}`;
+                        statusBadge.textContent = status.label;
+
+                        quotaCol.innerHTML = '';
+
+                        if (status.percentRemaining !== undefined) {
+                            const percentUsed = Math.round(100 - status.percentRemaining);
+                            const quotaBar = document.createElement('div');
+                            quotaBar.className = 'quota-bar';
+                            const quotaFill = document.createElement('div');
+                            quotaFill.className = 'quota-fill';
+                            quotaFill.style.width = `${percentUsed}%`;
+                            quotaFill.style.backgroundColor = status.color;
+                            quotaBar.appendChild(quotaFill);
+                            quotaCol.appendChild(quotaBar);
+                        }
+
+                        const resetText = formatResetTime(status.resetTime);
+                        const unit = status.unit ? ` ${status.unit}` : '';
+                        const details = document.createElement('div');
+                        details.className = 'quota-details';
+                        let text = `<span style="color: ${status.color}; font-weight: 500;">${status.label}</span>`;
+                        if (status.remaining !== undefined) {
+                            text += ` • Remaining: ${formatNumber(status.remaining)} / ${formatNumber(status.total)}${unit} (${Math.round(status.percentRemaining)}% left)`;
+                        } else if (status.detail) {
+                            text += ` • ${status.detail}`;
+                        }
+                        if (resetText) text += ` • ${resetText}`;
+                        details.innerHTML = text;
+                        quotaCol.appendChild(details);
+                    }).catch(e => {
+                        statusBadge.className = 'status-badge status-error';
+                        statusBadge.textContent = 'Error';
+                        quotaCol.innerHTML = `<div class="quota-details"><span style="color: #ef4444;">Quota data unavailable: ${e.message}</span></div>`;
+                    });
+                });
+
+                // Update last refreshed time
+                document.getElementById('last-updated').textContent = `Last updated: ${new Date().toLocaleTimeString()}`;
+            } catch (err) {
+                table.innerHTML = `<div class="error">Error loading providers: ${err.message}</div>`;
+            } finally {
+                refreshBtn.disabled = false;
+                refreshBtn.textContent = 'Refresh Now';
+            }
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Refresh button handler
+            document.getElementById('refresh-btn').addEventListener('click', renderQuotaTable);
+
+            // Initial load
+            renderQuotaTable();
+
+            // Optional: Auto-refresh every 5 minutes (adjust interval as needed)
+            // setInterval(renderQuotaTable, 5 * 60 * 1000);
+        });
+    </script>
+
+<script data-g4f-locale-runtime="1">
+(function () {
+    "use strict";
+    const locale = "hu";
+    const supported = ["en", "es", "fr", "de"];
+    const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
+    const opened = match && supported.includes(match[1].toLowerCase())
+        ? match[1].toLowerCase()
+        : String(document.documentElement.lang || locale || "en")
+            .split(/[-_]/)[0].toLowerCase();
+    const base = supported.includes(opened) ? opened : "en";
+    const apply = () => {
+        if (!window.framework) return false;
+        try {
+            if (framework.setSelectedLanguage) framework.setSelectedLanguage(base);
+        } catch (e) { /* private mode */ }
+        const cached = framework.globalTranslations && framework.globalTranslations[base];
+        if (cached && cached.translations) {
+            framework.translations = Object.assign({}, framework.translations, cached.translations);
+            if (framework.translateElements) framework.translateElements();
+        }
+        if (base !== "en" && typeof framework.loadGlobalTranslations === "function") {
+            framework.loadGlobalTranslations(base).then((entry) => {
+                if (entry && entry.translations) {
+                    framework.translations = Object.assign(
+                        {}, framework.translations, entry.translations
+                    );
+                }
+                if (framework.translateElements) framework.translateElements();
+                if (typeof framework.translateAll === "function") framework.translateAll();
+            }).catch(() => {});
+        } else if (typeof framework.translateAll === "function") {
+            framework.translateAll();
+        }
+        return true;
+    };
+    if (!apply()) {
+        document.addEventListener("DOMContentLoaded", apply, { once: true });
+        window.addEventListener("load", apply, { once: true });
+    }
+})();
+</script>
+</body>
+</html>

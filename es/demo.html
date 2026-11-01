@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+<base href="/">
+    <link rel="canonical" href="https://g4f.dev/es/demo.html">
+    <link rel="alternate" hreflang="en" href="https://g4f.dev/demo.html">
+    <link rel="alternate" hreflang="ar" href="https://g4f.dev/ar/demo.html">
+    <link rel="alternate" hreflang="bg" href="https://g4f.dev/bg/demo.html">
+    <link rel="alternate" hreflang="cs" href="https://g4f.dev/cs/demo.html">
+    <link rel="alternate" hreflang="da" href="https://g4f.dev/da/demo.html">
+    <link rel="alternate" hreflang="de" href="https://g4f.dev/de/demo.html">
+    <link rel="alternate" hreflang="el" href="https://g4f.dev/el/demo.html">
+    <link rel="alternate" hreflang="es" href="https://g4f.dev/es/demo.html">
+    <link rel="alternate" hreflang="et" href="https://g4f.dev/et/demo.html">
+    <link rel="alternate" hreflang="fa" href="https://g4f.dev/fa/demo.html">
+    <link rel="alternate" hreflang="fi" href="https://g4f.dev/fi/demo.html">
+    <link rel="alternate" hreflang="fr" href="https://g4f.dev/fr/demo.html">
+    <link rel="alternate" hreflang="he" href="https://g4f.dev/he/demo.html">
+    <link rel="alternate" hreflang="hi" href="https://g4f.dev/hi/demo.html">
+    <link rel="alternate" hreflang="hr" href="https://g4f.dev/hr/demo.html">
+    <link rel="alternate" hreflang="hu" href="https://g4f.dev/hu/demo.html">
+    <link rel="alternate" hreflang="id" href="https://g4f.dev/id/demo.html">
+    <link rel="alternate" hreflang="it" href="https://g4f.dev/it/demo.html">
+    <link rel="alternate" hreflang="ja" href="https://g4f.dev/ja/demo.html">
+    <link rel="alternate" hreflang="kk" href="https://g4f.dev/kk/demo.html">
+    <link rel="alternate" hreflang="ko" href="https://g4f.dev/ko/demo.html">
+    <link rel="alternate" hreflang="nb" href="https://g4f.dev/nb/demo.html">
+    <link rel="alternate" hreflang="nl" href="https://g4f.dev/nl/demo.html">
+    <link rel="alternate" hreflang="pl" href="https://g4f.dev/pl/demo.html">
+    <link rel="alternate" hreflang="pt" href="https://g4f.dev/pt/demo.html">
+    <link rel="alternate" hreflang="ro" href="https://g4f.dev/ro/demo.html">
+    <link rel="alternate" hreflang="ru" href="https://g4f.dev/ru/demo.html">
+    <link rel="alternate" hreflang="sk" href="https://g4f.dev/sk/demo.html">
+    <link rel="alternate" hreflang="sl" href="https://g4f.dev/sl/demo.html">
+    <link rel="alternate" hreflang="sq" href="https://g4f.dev/sq/demo.html">
+    <link rel="alternate" hreflang="sr" href="https://g4f.dev/sr/demo.html">
+    <link rel="alternate" hreflang="sv" href="https://g4f.dev/sv/demo.html">
+    <link rel="alternate" hreflang="th" href="https://g4f.dev/th/demo.html">
+    <link rel="alternate" hreflang="tr" href="https://g4f.dev/tr/demo.html">
+    <link rel="alternate" hreflang="uk" href="https://g4f.dev/uk/demo.html">
+    <link rel="alternate" hreflang="ur" href="https://g4f.dev/ur/demo.html">
+    <link rel="alternate" hreflang="uz" href="https://g4f.dev/uz/demo.html">
+    <link rel="alternate" hreflang="vi" href="https://g4f.dev/vi/demo.html">
+    <link rel="alternate" hreflang="zh" href="https://g4f.dev/zh/demo.html">
+    <link rel="alternate" hreflang="x-default" href="https://g4f.dev/demo.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G4F Demo</title>
+    <link rel="icon" href="/dist/img/g4f.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/dist/img/g4f.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/dist/img/g4f.svg">
+    <link rel="manifest" href="/dist/img/site.webmanifest">
+    <script async src="/dist/js/framework.js"></script>
+    <style>
+        :root {
+            --colour-1: #000000;
+            --colour-2: #ccc;
+            --colour-3: #e4d4ff;
+            --colour-4: #f0f0f0;
+            --colour-5: #181818;
+            --colour-6: #242424;
+            --accent: #8b3dff;
+            --gradient: #1a1a1a;
+            --background: #16101b;
+            --size: 70vw;
+            --top: 50%;
+            --blur: 40px;
+            --opacity: 0.6;
+        }
+
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+        /* Body and text color */
+        body {
+            background: var(--background);
+            color: var(--colour-3);
+            font-family: "Inter", sans-serif;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-weight: bold;
+        }
+
+        /* Container for the main content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        header {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin: 20px;
+            color: var(--colour-4);
+        }
+
+        iframe {
+            background: transparent;
+            width: 100%;
+            border: none;
+        }
+
+        #background {
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        .container * {
+            z-index: 2;
+        }
+
+        .stream-widget {
+            max-height: 0;
+            transition: max-height 0.15s ease-out;
+            color: var(--colour-5);
+            overflow: scroll;
+            text-align: left;
+        }
+
+        .stream-widget.show {
+            max-height: 1000px;
+            height: 1000px;
+            transition: max-height 0.25s ease-in;
+            background: rgba(255,255,255,0.7);
+            border-top: 2px solid rgba(255,255,255,0.5);
+            padding: 20px;
+        }
+
+        .stream-widget img {
+            max-width: 320px;
+            display: block;
+        }
+
+        #stream-container {
+            width: 100%;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--colour-2);
+        }
+
+        .input-field {
+            width: 80%;
+            max-width: 400px;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid var(--colour-6);
+            background-color: var(--colour-5);
+            color: var(--colour-3);
+            border-radius: 8px;
+            font-size: 1.1rem;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .button {
+            background-color: var(--accent);
+            color: var(--colour-3);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+            width: 100%;
+            max-width: 400px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #7a2ccd;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: var(--colour-2);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+</head>
+<body class="translate">
+    <iframe id="background" src="background.html"></iframe>
+
+    <!-- Main Content -->
+    <div class="container">
+        <header>
+            G4F Demo
+        </header>
+        <div class="description">
+            <span>Welcome to the G4F Demo!</span><br>
+            <span>AI assistant is ready to assist you.</span>
+        </div>
+
+        <!-- Input and Button -->
+        <form action="/chat/">
+            <input type="text" name="prompt" class="input-field" placeholder="Enter your query...">
+            <button class="button">Open Chat</button>
+        </form>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2026 G4F. All Rights Reserved.</p>
+            <p>Powered by the G4F framework</p>
+        </div>
+
+        <div class="stream-widget">Loading...</div>
+    </div>
+    <script>
+        const streamWidget = document.querySelector('.stream-widget');
+        (async () => {
+            await framework.connectToBackend();
+            const randIdx = Math.floor(Math.random() * 12)
+            if (randIdx < 3) {
+                search = "xtekky/gpt4free releases";
+            } else if (randIdx < 6) {
+                search = "developer news";
+            } else {
+                const language = framework.getLanguage();
+                search = (language == "de" ? "news in deutsch" : language == "en" ? "world news" : `news in ${language}`);
+            }
+            let summaryPrompt = "Present the news from the search results in a clear and organized markdown format.";
+            summaryPrompt += "\nInclude a headline, a brief summary, key points, and one or more relevant images with proper attribution.";
+            summaryPrompt += "\nEnsure the content is concise, well-structured, and visually appealing.";
+            summaryPrompt += `\nResponse in language: ${framework.getLanguage()} (iso-code)`;
+            const url = `${framework.backendUrl}/backend-api/v2/create?prompt=${summaryPrompt}&stream=1&web_search=${search}`;
+            const response = await fetch(url, {
+                method: 'GET'
+            });
+            const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
+            let buffer = [];
+            let text = "";
+            while (true) {
+                const { value, done } = await reader.read();
+                if (done) {
+                    break;
+                }
+                buffer.push(value);
+                text = buffer.join("");
+                streamWidget.innerText = text;
+            }
+            clearTimeout(scrollToBottom);
+            if (text && text.indexOf('"error"') < 0) {
+                streamWidget.classList.add('show');
+                streamWidget.innerHTML = `${framework.markdown(framework.filterMarkdown(text, null, text))}`;
+                streamWidget.scrollTop = "0px";
+            }
+        })();
+        setTimeout(()=>{
+            streamWidget.classList.add('show');
+        }, 1000);
+        let scrollToBottom = null;
+        let scrollToBottomCallback = () => {
+            streamWidget.scrollTop = streamWidget.scrollHeight;
+            if (streamWidget.scrollHeight - streamWidget.scrollTop < 2 * streamWidget.scrollHeight) {
+                scrollToBottom = setTimeout(scrollToBottomCallback, 1000);
+            }
+        };
+        scrollToBottom = setTimeout(scrollToBottomCallback, 1000);
+    </script>
+
+<script data-g4f-locale-runtime="1">
+(function () {
+    "use strict";
+    const locale = "es";
+    const supported = ["en", "es", "fr", "de"];
+    const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
+    const opened = match && supported.includes(match[1].toLowerCase())
+        ? match[1].toLowerCase()
+        : String(document.documentElement.lang || locale || "en")
+            .split(/[-_]/)[0].toLowerCase();
+    const base = supported.includes(opened) ? opened : "en";
+    const apply = () => {
+        if (!window.framework) return false;
+        try {
+            if (framework.setSelectedLanguage) framework.setSelectedLanguage(base);
+        } catch (e) { /* private mode */ }
+        const cached = framework.globalTranslations && framework.globalTranslations[base];
+        if (cached && cached.translations) {
+            framework.translations = Object.assign({}, framework.translations, cached.translations);
+            if (framework.translateElements) framework.translateElements();
+        }
+        if (base !== "en" && typeof framework.loadGlobalTranslations === "function") {
+            framework.loadGlobalTranslations(base).then((entry) => {
+                if (entry && entry.translations) {
+                    framework.translations = Object.assign(
+                        {}, framework.translations, entry.translations
+                    );
+                }
+                if (framework.translateElements) framework.translateElements();
+                if (typeof framework.translateAll === "function") framework.translateAll();
+            }).catch(() => {});
+        } else if (typeof framework.translateAll === "function") {
+            framework.translateAll();
+        }
+        return true;
+    };
+    if (!apply()) {
+        document.addEventListener("DOMContentLoaded", apply, { once: true });
+        window.addEventListener("load", apply, { once: true });
+    }
+})();
+</script>
+</body>
+</html>

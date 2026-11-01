@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+<base href="/apps/">
+    <link rel="canonical" href="https://g4f.dev/de/apps/digital_clock.html">
+    <link rel="alternate" hreflang="en" href="https://g4f.dev/apps/digital_clock.html">
+    <link rel="alternate" hreflang="ar" href="https://g4f.dev/ar/apps/digital_clock.html">
+    <link rel="alternate" hreflang="bg" href="https://g4f.dev/bg/apps/digital_clock.html">
+    <link rel="alternate" hreflang="cs" href="https://g4f.dev/cs/apps/digital_clock.html">
+    <link rel="alternate" hreflang="da" href="https://g4f.dev/da/apps/digital_clock.html">
+    <link rel="alternate" hreflang="de" href="https://g4f.dev/de/apps/digital_clock.html">
+    <link rel="alternate" hreflang="el" href="https://g4f.dev/el/apps/digital_clock.html">
+    <link rel="alternate" hreflang="es" href="https://g4f.dev/es/apps/digital_clock.html">
+    <link rel="alternate" hreflang="et" href="https://g4f.dev/et/apps/digital_clock.html">
+    <link rel="alternate" hreflang="fa" href="https://g4f.dev/fa/apps/digital_clock.html">
+    <link rel="alternate" hreflang="fi" href="https://g4f.dev/fi/apps/digital_clock.html">
+    <link rel="alternate" hreflang="fr" href="https://g4f.dev/fr/apps/digital_clock.html">
+    <link rel="alternate" hreflang="he" href="https://g4f.dev/he/apps/digital_clock.html">
+    <link rel="alternate" hreflang="hi" href="https://g4f.dev/hi/apps/digital_clock.html">
+    <link rel="alternate" hreflang="hr" href="https://g4f.dev/hr/apps/digital_clock.html">
+    <link rel="alternate" hreflang="hu" href="https://g4f.dev/hu/apps/digital_clock.html">
+    <link rel="alternate" hreflang="id" href="https://g4f.dev/id/apps/digital_clock.html">
+    <link rel="alternate" hreflang="it" href="https://g4f.dev/it/apps/digital_clock.html">
+    <link rel="alternate" hreflang="ja" href="https://g4f.dev/ja/apps/digital_clock.html">
+    <link rel="alternate" hreflang="kk" href="https://g4f.dev/kk/apps/digital_clock.html">
+    <link rel="alternate" hreflang="ko" href="https://g4f.dev/ko/apps/digital_clock.html">
+    <link rel="alternate" hreflang="nb" href="https://g4f.dev/nb/apps/digital_clock.html">
+    <link rel="alternate" hreflang="nl" href="https://g4f.dev/nl/apps/digital_clock.html">
+    <link rel="alternate" hreflang="pl" href="https://g4f.dev/pl/apps/digital_clock.html">
+    <link rel="alternate" hreflang="pt" href="https://g4f.dev/pt/apps/digital_clock.html">
+    <link rel="alternate" hreflang="ro" href="https://g4f.dev/ro/apps/digital_clock.html">
+    <link rel="alternate" hreflang="ru" href="https://g4f.dev/ru/apps/digital_clock.html">
+    <link rel="alternate" hreflang="sk" href="https://g4f.dev/sk/apps/digital_clock.html">
+    <link rel="alternate" hreflang="sl" href="https://g4f.dev/sl/apps/digital_clock.html">
+    <link rel="alternate" hreflang="sq" href="https://g4f.dev/sq/apps/digital_clock.html">
+    <link rel="alternate" hreflang="sr" href="https://g4f.dev/sr/apps/digital_clock.html">
+    <link rel="alternate" hreflang="sv" href="https://g4f.dev/sv/apps/digital_clock.html">
+    <link rel="alternate" hreflang="th" href="https://g4f.dev/th/apps/digital_clock.html">
+    <link rel="alternate" hreflang="tr" href="https://g4f.dev/tr/apps/digital_clock.html">
+    <link rel="alternate" hreflang="uk" href="https://g4f.dev/uk/apps/digital_clock.html">
+    <link rel="alternate" hreflang="ur" href="https://g4f.dev/ur/apps/digital_clock.html">
+    <link rel="alternate" hreflang="uz" href="https://g4f.dev/uz/apps/digital_clock.html">
+    <link rel="alternate" hreflang="vi" href="https://g4f.dev/vi/apps/digital_clock.html">
+    <link rel="alternate" hreflang="zh" href="https://g4f.dev/zh/apps/digital_clock.html">
+    <link rel="alternate" hreflang="x-default" href="https://g4f.dev/apps/digital_clock.html">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Advanced Digital Clock</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background-size: 600% 600%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #fff;
+  }
+
+  .clock-container {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .time-display {
+    font-size: 4em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+  }
+
+  .segment {
+    position: relative;
+    width: 50px;
+    height: 80px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Digital digits styling */
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+
+  #date {
+    margin-top: 20px;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+  }
+
+  /* Additional styling for seconds and other info if needed */
+  /* Optional: add date display and timezone info */
+
+</style>
+</head>
+<body>
+
+<div class="clock-container">
+  <div class="time-display" id="digital-clock">
+    <!-- Will be filled by JS -->
+  </div>
+  <div id="date"></div>
+</div>
+
+<script>
+  // Function to format numbers with leading zero
+  function pad(number) {
+    return number < 10 ? '0' + number : number;
+  }
+
+  // Function to get current time and format it
+  function updateClock() {
+    const now = new Date();
+
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+
+    // For 12-hour format, uncomment below
+    // const ampm = hours >= 12 ? 'PM' : 'AM';
+    // const displayHours = hours % 12 || 12;
+
+    // 24-hour format
+    const displayHours = hours;
+
+    const timeString =
+      `<span class="digit">${pad(displayHours)}</span>:` +
+      `<span class="digit">${pad(minutes)}</span>:` +
+      `<span class="digit">${pad(seconds)}</span>`;
+
+    document.getElementById('digital-clock').innerHTML = timeString;
+
+    // Update date info
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('date').textContent = now.toLocaleDateString(undefined, options);
+  }
+
+  // Optional: add blinking colon effect
+  function blinkingColon() {
+    const clockDiv = document.getElementById('digital-clock');
+    setInterval(() => {
+      const colons = clockDiv.querySelectorAll(':');
+      // Not needed since colons are static, but can animate if desired
+    }, 500);
+  }
+
+  // Initialize clock
+  setInterval(updateClock, 1000);
+  updateClock(); // initial call
+</script>
+
+
+<script data-g4f-locale-runtime="1">
+(function () {
+    "use strict";
+    const locale = "de";
+    const supported = ["en", "es", "fr", "de"];
+    const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
+    const opened = match && supported.includes(match[1].toLowerCase())
+        ? match[1].toLowerCase()
+        : String(document.documentElement.lang || locale || "en")
+            .split(/[-_]/)[0].toLowerCase();
+    const base = supported.includes(opened) ? opened : "en";
+    const apply = () => {
+        if (!window.framework) return false;
+        try {
+            if (framework.setSelectedLanguage) framework.setSelectedLanguage(base);
+        } catch (e) { /* private mode */ }
+        const cached = framework.globalTranslations && framework.globalTranslations[base];
+        if (cached && cached.translations) {
+            framework.translations = Object.assign({}, framework.translations, cached.translations);
+            if (framework.translateElements) framework.translateElements();
+        }
+        if (base !== "en" && typeof framework.loadGlobalTranslations === "function") {
+            framework.loadGlobalTranslations(base).then((entry) => {
+                if (entry && entry.translations) {
+                    framework.translations = Object.assign(
+                        {}, framework.translations, entry.translations
+                    );
+                }
+                if (framework.translateElements) framework.translateElements();
+                if (typeof framework.translateAll === "function") framework.translateAll();
+            }).catch(() => {});
+        } else if (typeof framework.translateAll === "function") {
+            framework.translateAll();
+        }
+        return true;
+    };
+    if (!apply()) {
+        document.addEventListener("DOMContentLoaded", apply, { once: true });
+        window.addEventListener("load", apply, { once: true });
+    }
+})();
+</script>
+</body>
+</html>

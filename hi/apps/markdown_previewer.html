@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr">
+<head>
+<base href="/apps/">
+    <link rel="canonical" href="https://g4f.dev/hi/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="en" href="https://g4f.dev/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="ar" href="https://g4f.dev/ar/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="bg" href="https://g4f.dev/bg/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="cs" href="https://g4f.dev/cs/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="da" href="https://g4f.dev/da/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="de" href="https://g4f.dev/de/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="el" href="https://g4f.dev/el/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="es" href="https://g4f.dev/es/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="et" href="https://g4f.dev/et/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="fa" href="https://g4f.dev/fa/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="fi" href="https://g4f.dev/fi/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="fr" href="https://g4f.dev/fr/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="he" href="https://g4f.dev/he/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="hi" href="https://g4f.dev/hi/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="hr" href="https://g4f.dev/hr/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="hu" href="https://g4f.dev/hu/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="id" href="https://g4f.dev/id/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="it" href="https://g4f.dev/it/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="ja" href="https://g4f.dev/ja/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="kk" href="https://g4f.dev/kk/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="ko" href="https://g4f.dev/ko/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="nb" href="https://g4f.dev/nb/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="nl" href="https://g4f.dev/nl/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="pl" href="https://g4f.dev/pl/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="pt" href="https://g4f.dev/pt/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="ro" href="https://g4f.dev/ro/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="ru" href="https://g4f.dev/ru/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="sk" href="https://g4f.dev/sk/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="sl" href="https://g4f.dev/sl/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="sq" href="https://g4f.dev/sq/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="sr" href="https://g4f.dev/sr/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="sv" href="https://g4f.dev/sv/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="th" href="https://g4f.dev/th/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="tr" href="https://g4f.dev/tr/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="uk" href="https://g4f.dev/uk/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="ur" href="https://g4f.dev/ur/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="uz" href="https://g4f.dev/uz/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="vi" href="https://g4f.dev/vi/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="zh" href="https://g4f.dev/zh/apps/markdown_previewer.html">
+    <link rel="alternate" hreflang="x-default" href="https://g4f.dev/apps/markdown_previewer.html">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Advanced Markdown Previewer</title>
+<!-- Include Highlight.js for syntax highlighting -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" />
+<style>
+  /* Reset and base styles */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Fira Code', monospace, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #1e1e2f;
+    color: #f8f8f2;
+  }
+
+  header {
+    padding: 10px 20px;
+    background-color: #292832;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 1.2em;
+  }
+
+  button {
+    padding: 8px 16px;
+    background-color: #6272a4;
+    color: #f8f8f2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+  button:hover {
+    background-color: #7081d8;
+  }
+
+  main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  #editorContainer, #previewContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    padding: 8px 12px;
+    background-color: #44475a;
+    font-weight: bold;
+    color: #f8f8f2;
+  }
+
+  textarea {
+    flex: 1;
+    padding: 12px;
+    font-family: 'Fira Code', monospace;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    resize: none;
+    background-color: #282c34;
+    color: #f8f8f2;
+    overflow-y: auto;
+  }
+
+  #preview {
+    flex: 1;
+    padding: 12px;
+    overflow-y: auto;
+    background-color: #282c34;
+  }
+
+  /* Style for links in preview */
+  #preview a {
+    color: #61dafb;
+    text-decoration: underline;
+  }
+
+  /* Additional styles for task lists checkboxes */
+  /* Note: Markdown parser will generate checkboxes for task lists */
+  /* No special styling needed here unless for custom appearance */
+
+  /* Responsive for small screens */
+  @media (max-width: 768px) {
+    main {
+      flex-direction: column;
+    }
+    #editorContainer, #previewContainer {
+      flex: none;
+      height: 50%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Advanced Markdown Previewer</h1>
+  <button id="togglePreview">Toggle Preview</button>
+</header>
+
+<main>
+  <div id="editorContainer">
+    <label for="editor">Markdown Editor</label>
+    <textarea id="editor" placeholder="Type your Markdown here..."></textarea>
+  </div>
+  <div id="previewContainer">
+    <label for="preview">Preview</label>
+    <div id="preview"></div>
+  </div>
+</main>
+
+<!-- Include marked.js for Markdown parsing -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<!-- Include highlight.js for syntax highlighting -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>
+  // Initialize variables
+  const editor = document.getElementById('editor');
+  const preview = document.getElementById('preview');
+  const toggleBtn = document.getElementById('togglePreview');
+  const previewContainer = document.getElementById('previewContainer');
+
+  // Default Markdown content
+  const defaultMarkdown = `# Welcome to the Advanced Markdown Previewer!
+
+Write some **Markdown** in the editor on the left, and see the preview on the right.
+
+## Features
+- Real-time preview
+- Syntax highlighting for code blocks
+- Emoji support :smile:
+- Tables
+- Task lists
+- Footnotes[^1]
+- Custom styling
+
+## Code Block Example
+\`\`\`javascript
+function helloWorld() {
+  console.log("Hello, world!");
+}
+\`\`\`
+
+## Table Example
+
+| Header 1 | Header 2 | Header 3 |
+| -------- | -------- | -------- |
+| Cell 1   | Cell 2   | Cell 3   |
+| Cell 4   | Cell 5   | Cell 6   |
+
+## Task List
+
+- [x] Write documentation
+- [ ] Add more features
+- [ ] Fix bugs
+
+[^1]: This is a footnote.
+
+---
+
+Enjoy!
+`;
+
+  // Set default content
+  editor.value = defaultMarkdown;
+
+  // Configure marked.js options for advanced features
+  marked.setOptions({
+    breaks: true, // line breaks
+    gfm: true,
+    headerIds: true,
+    langPrefix: 'hljs language-', // for syntax highlighting
+    highlight: function (code, language) {
+      const validLanguage = hljs.getLanguage(language) ? language : 'plaintext';
+      return hljs.highlight(code, { language: validLanguage }).value;
+    }
+  });
+
+  // Function to convert markdown to HTML and render
+  function renderMarkdown() {
+    const markdownText = editor.value;
+    const html = marked.parse(markdownText);
+    preview.innerHTML = html;
+
+    // Automatically highlight code blocks after rendering
+    document.querySelectorAll('pre code').forEach((block) => {
+      hljs.highlightElement(block);
+    });
+  }
+
+  // Initial render
+  renderMarkdown();
+
+  // Add event listener for live updating
+  editor.addEventListener('input', renderMarkdown);
+
+  // Toggle preview visibility
+  toggleBtn.addEventListener('click', () => {
+    if (previewContainer.style.display === 'none') {
+      previewContainer.style.display = 'flex';
+    } else {
+      previewContainer.style.display = 'none';
+    }
+  });
+
+  // Optional: Persist editor content using localStorage
+  // Load from localStorage if exists
+  const savedContent = localStorage.getItem('markdownContent');
+  if (savedContent) {
+    editor.value = savedContent;
+    renderMarkdown();
+  }
+
+  // Save to localStorage on change
+  editor.addEventListener('input', () => {
+    localStorage.setItem('markdownContent', editor.value);
+  });
+</script>
+
+<script data-g4f-locale-runtime="1">
+(function () {
+    "use strict";
+    const locale = "hi";
+    const supported = ["en", "es", "fr", "de"];
+    const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
+    const opened = match && supported.includes(match[1].toLowerCase())
+        ? match[1].toLowerCase()
+        : String(document.documentElement.lang || locale || "en")
+            .split(/[-_]/)[0].toLowerCase();
+    const base = supported.includes(opened) ? opened : "en";
+    const apply = () => {
+        if (!window.framework) return false;
+        try {
+            if (framework.setSelectedLanguage) framework.setSelectedLanguage(base);
+        } catch (e) { /* private mode */ }
+        const cached = framework.globalTranslations && framework.globalTranslations[base];
+        if (cached && cached.translations) {
+            framework.translations = Object.assign({}, framework.translations, cached.translations);
+            if (framework.translateElements) framework.translateElements();
+        }
+        if (base !== "en" && typeof framework.loadGlobalTranslations === "function") {
+            framework.loadGlobalTranslations(base).then((entry) => {
+                if (entry && entry.translations) {
+                    framework.translations = Object.assign(
+                        {}, framework.translations, entry.translations
+                    );
+                }
+                if (framework.translateElements) framework.translateElements();
+                if (typeof framework.translateAll === "function") framework.translateAll();
+            }).catch(() => {});
+        } else if (typeof framework.translateAll === "function") {
+            framework.translateAll();
+        }
+        return true;
+    };
+    if (!apply()) {
+        document.addEventListener("DOMContentLoaded", apply, { once: true });
+        window.addEventListener("load", apply, { once: true });
+    }
+})();
+</script>
+</body>
+</html>

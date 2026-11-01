@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+<head>
+<base href="/">
+    <link rel="canonical" href="https://g4f.dev/vi/home.html">
+    <link rel="alternate" hreflang="en" href="https://g4f.dev/home.html">
+    <link rel="alternate" hreflang="ar" href="https://g4f.dev/ar/home.html">
+    <link rel="alternate" hreflang="bg" href="https://g4f.dev/bg/home.html">
+    <link rel="alternate" hreflang="cs" href="https://g4f.dev/cs/home.html">
+    <link rel="alternate" hreflang="da" href="https://g4f.dev/da/home.html">
+    <link rel="alternate" hreflang="de" href="https://g4f.dev/de/home.html">
+    <link rel="alternate" hreflang="el" href="https://g4f.dev/el/home.html">
+    <link rel="alternate" hreflang="es" href="https://g4f.dev/es/home.html">
+    <link rel="alternate" hreflang="et" href="https://g4f.dev/et/home.html">
+    <link rel="alternate" hreflang="fa" href="https://g4f.dev/fa/home.html">
+    <link rel="alternate" hreflang="fi" href="https://g4f.dev/fi/home.html">
+    <link rel="alternate" hreflang="fr" href="https://g4f.dev/fr/home.html">
+    <link rel="alternate" hreflang="he" href="https://g4f.dev/he/home.html">
+    <link rel="alternate" hreflang="hi" href="https://g4f.dev/hi/home.html">
+    <link rel="alternate" hreflang="hr" href="https://g4f.dev/hr/home.html">
+    <link rel="alternate" hreflang="hu" href="https://g4f.dev/hu/home.html">
+    <link rel="alternate" hreflang="id" href="https://g4f.dev/id/home.html">
+    <link rel="alternate" hreflang="it" href="https://g4f.dev/it/home.html">
+    <link rel="alternate" hreflang="ja" href="https://g4f.dev/ja/home.html">
+    <link rel="alternate" hreflang="kk" href="https://g4f.dev/kk/home.html">
+    <link rel="alternate" hreflang="ko" href="https://g4f.dev/ko/home.html">
+    <link rel="alternate" hreflang="nb" href="https://g4f.dev/nb/home.html">
+    <link rel="alternate" hreflang="nl" href="https://g4f.dev/nl/home.html">
+    <link rel="alternate" hreflang="pl" href="https://g4f.dev/pl/home.html">
+    <link rel="alternate" hreflang="pt" href="https://g4f.dev/pt/home.html">
+    <link rel="alternate" hreflang="ro" href="https://g4f.dev/ro/home.html">
+    <link rel="alternate" hreflang="ru" href="https://g4f.dev/ru/home.html">
+    <link rel="alternate" hreflang="sk" href="https://g4f.dev/sk/home.html">
+    <link rel="alternate" hreflang="sl" href="https://g4f.dev/sl/home.html">
+    <link rel="alternate" hreflang="sq" href="https://g4f.dev/sq/home.html">
+    <link rel="alternate" hreflang="sr" href="https://g4f.dev/sr/home.html">
+    <link rel="alternate" hreflang="sv" href="https://g4f.dev/sv/home.html">
+    <link rel="alternate" hreflang="th" href="https://g4f.dev/th/home.html">
+    <link rel="alternate" hreflang="tr" href="https://g4f.dev/tr/home.html">
+    <link rel="alternate" hreflang="uk" href="https://g4f.dev/uk/home.html">
+    <link rel="alternate" hreflang="ur" href="https://g4f.dev/ur/home.html">
+    <link rel="alternate" hreflang="uz" href="https://g4f.dev/uz/home.html">
+    <link rel="alternate" hreflang="vi" href="https://g4f.dev/vi/home.html">
+    <link rel="alternate" hreflang="zh" href="https://g4f.dev/zh/home.html">
+    <link rel="alternate" hreflang="x-default" href="https://g4f.dev/home.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G4F - Framework & Tools Hub</title>
+    <link rel="icon" href="/dist/img/g4f.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/dist/img/g4f.svg" type="image/svg+xml">
+    <link rel="manifest" href="/dist/img/site.webmanifest">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/dist/css/theme.css">
+    <style>
+        /* ---- Top bar actions ---- */
+        .nav-toggle {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            padding: 0;
+            background: rgba(139, 61, 255, 0.15);
+            border: 1px solid var(--border-card);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 1.15rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .nav-toggle:hover {
+            background: var(--accent);
+            border-color: var(--accent-light);
+            box-shadow: 0 0 16px var(--accent-glow);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .btn-toggle-sidebar {
+            background: rgba(139, 61, 255, 0.15);
+            border: 1px solid var(--border-card);
+            color: var(--text-primary);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+        }
+
+        .btn-toggle-sidebar:hover {
+            background: var(--accent);
+            border-color: var(--accent-light);
+            box-shadow: 0 0 16px var(--accent-glow);
+        }
+
+        /* ---- Backend connection indicator ---- */
+        .connect-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            max-width: 320px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            background: rgba(139, 61, 255, 0.1);
+            border: 1px solid var(--border-card);
+            color: var(--text-secondary);
+            font-size: 0.825rem;
+            font-weight: 600;
+            font-family: inherit;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .connect-status:hover {
+            border-color: var(--border-hover);
+            color: var(--text-primary);
+        }
+
+        .connect-status .connect-label {
+            color: var(--text-muted);
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .connect-status .connect-url {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: var(--accent-light);
+        }
+
+        /* ---- Main layout ---- */
+        .main-layout {
+            display: flex;
+            flex: 1;
+            position: relative;
+        }
+
+        .content-area {
+            flex: 1;
+            padding: 3rem 2.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* ---- Hero ---- */
+        .hero {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .hero-subtitle {
+            max-width: 650px;
+            margin: 0 auto 2rem;
+        }
+
+        /* ---- Search box ---- */
+        .search-box {
+            max-width: 680px;
+            margin: 0 auto 1.5rem;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 18px 140px 18px 24px;
+            background: rgba(23, 19, 34, 0.85);
+            border: 2px solid var(--border-card);
+            border-radius: 14px;
+            color: #fff;
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+        }
+
+        .search-input:focus {
+            border-color: var(--accent-light);
+            box-shadow: 0 0 24px var(--accent-glow);
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            bottom: 8px;
+            padding: 0 24px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .search-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px var(--accent-glow);
+        }
+
+        /* ---- Tools grid ---- */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.75rem;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .tool-card {
+            padding: 1.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(to right, transparent, var(--accent-light), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .tool-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+        }
+
+        .card-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: rgba(139, 61, 255, 0.12);
+            border: 1px solid rgba(168, 85, 247, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--accent-light);
+            transition: transform 0.3s ease;
+        }
+
+        .tool-card:hover .card-icon {
+            transform: scale(1.1);
+            background: rgba(139, 61, 255, 0.25);
+            color: #fff;
+        }
+
+        .card-badge {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-action {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--accent-light);
+            transition: gap 0.2s ease;
+        }
+
+        .tool-card:hover .card-action {
+            gap: 12px;
+            color: #fff;
+        }
+
+        /* ---- Sidebar drawer ---- */
+        .sidebar {
+            width: var(--sidebar-width, 340px);
+            background: var(--bg-elevated);
+            backdrop-filter: blur(20px);
+            border-left: 1px solid var(--border-card);
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 73px;
+            right: 0;
+            bottom: 0;
+            z-index: 90;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sidebar.collapsed {
+            transform: translateX(100%);
+        }
+
+        .sidebar-header {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--border-card);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .sidebar-title {
+            font-size: 1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sidebar-search {
+            padding: 0.75rem 1.25rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .sidebar-search-input {
+            width: 100%;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-card);
+            border-radius: 8px;
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.85rem;
+            outline: none;
+        }
+
+        .sidebar-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0.75rem;
+        }
+
+        .provider-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.2s ease;
+            margin-bottom: 4px;
+        }
+
+        .provider-item:hover {
+            background: rgba(139, 61, 255, 0.15);
+            transform: translateX(-2px);
+        }
+
+        .provider-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            object-fit: cover;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .provider-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .provider-badges {
+            display: flex;
+            gap: 4px;
+        }
+
+        .p-badge {
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 2px 5px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .p-badge.working { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
+        .p-badge.auth { background: rgba(234, 179, 8, 0.2); color: #fde047; }
+        .p-badge.image { background: rgba(168, 85, 247, 0.2); color: #c084fc; }
+
+        @media (max-width: 992px) {
+            .navbar {
+                flex-wrap: wrap;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .nav-actions {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+                max-height: calc(100dvh - 73px);
+                overflow-y: auto;
+                padding: 1rem 1.25rem 1.25rem;
+                background: rgba(12, 10, 18, 0.98);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border-bottom: 1px solid var(--border-card);
+                box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+            }
+
+            .nav-actions.open {
+                display: flex;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            .nav-links a {
+                padding: 12px 8px;
+                border-radius: 8px;
+                font-size: 1rem;
+            }
+
+            .nav-links a:hover,
+            .nav-links a.active {
+                background: rgba(139, 61, 255, 0.15);
+            }
+
+            .connect-status {
+                max-width: none;
+                width: 100%;
+            }
+
+            .status-badge {
+                justify-content: center;
+            }
+
+            .btn-toggle-sidebar {
+                justify-content: center;
+                width: 100%;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                width: 100%;
+                top: 73px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand-text {
+                font-size: 1.15rem;
+            }
+
+            .content-area {
+                padding: 2rem 1.1rem;
+            }
+
+            .search-input {
+                padding: 16px 120px 16px 18px;
+            }
+
+            .search-btn {
+                padding: 0 16px;
+            }
+        }
+    </style>
+    <script src="/dist/js/framework.js" defer></script>
+</head>
+<body class="translate">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="/" class="brand">
+            <div class="brand-logo">
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+            <span class="brand-text">G4F Framework</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-actions">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="nav-actions" id="nav-actions">
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="/chat/">Chat</a>
+                <a href="/providers/">Providers</a>
+                <a href="/stats/">Stats</a>
+            </nav>
+            <a class="connect-status" id="connect_status" href="#" target="_blank" rel="noopener" title="Connected backend URL">
+                <i class="fa-solid fa-plug"></i>
+                <span class="connect-label">Connect to</span>
+                <span class="connect-url" id="connect-status-url">connecting…</span>
+            </a>
+            <div class="status-badge" id="backend-status-badge">
+                <span class="status-dot"></span>
+                <span id="backend-status-text">Backend Active</span>
+            </div>
+            <button class="btn-toggle-sidebar" id="toggle-sidebar-btn">
+                <i class="fa-solid fa-cubes"></i>
+                <span>Providers</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="main-layout">
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <!-- Hero Header -->
+            <section class="hero">
+                <h1 class="hero-title">G4F AI Tools & Dashboard</h1>
+                <p class="hero-subtitle">
+                    Access high-performance AI tools, web search, real-time backend logs, model status, and multi-provider endpoints.
+                </p>
+
+                <!-- Search & Quick Query Box -->
+                <form action="/chat/" method="GET" class="search-box">
+                    <input type="text" name="prompt" class="search-input" id="search-query-input" placeholder="Ask AI or enter prompt to jump straight into chat..." autocomplete="off">
+                    <button type="submit" class="search-btn">
+                        <i class="fa-solid fa-paper-plane"></i> Launch
+                    </button>
+                </form>
+            </section>
+
+            <!-- Tools Section -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-toolbox"></i> Backend Tools & Modules
+                    </h2>
+                </div>
+
+                <div class="tools-grid">
+                    <!-- Tool 1: AI Browser -->
+                    <a href="/browser" class="tool-card" id="tool-card-browser">
+                        <div>
+                            <div class="card-top">
+                                <div class="card-icon">
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+                                <span class="card-badge">Web Search</span>
+                            </div>
+                            <h3 class="card-title">AI Web Browser</h3>
+                            <p class="card-desc">Search the live web with AI assistance, scrape pages, summarize news, and extract real-time web context.</p>
+                        </div>
+                        <div class="card-action">
+                            <span>Open Browser</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Tool 2: Backend Logs -->
+                    <a href="/logs" class="tool-card" id="tool-card-logs">
+                        <div>
+                            <div class="card-top">
+                                <div class="card-icon">
+                                    <i class="fa-solid fa-terminal"></i>
+                                </div>
+                                <span class="card-badge">Inspector</span>
+                            </div>
+                            <h3 class="card-title">Backend Logs</h3>
+                            <p class="card-desc">Inspect real-time API logs, track prompt executions, audit incoming requests, and view system trace logs.</p>
+                        </div>
+                        <div class="card-action">
+                            <span>View Logs</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Tool 3: Usage Stats -->
+                    <a href="/stats" class="tool-card" id="tool-card-stats">
+                        <div>
+                            <div class="card-top">
+                                <div class="card-icon">
+                                    <i class="fa-solid fa-chart-pie"></i>
+                                </div>
+                                <span class="card-badge">Analytics</span>
+                            </div>
+                            <h3 class="card-title">Usage & Statistics</h3>
+                            <p class="card-desc">Detailed request breakdown, token usage stats, top model performance metrics, and usage history charts.</p>
+                        </div>
+                        <div class="card-action">
+                            <span>View Stats</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Tool 4: System Status -->
+                    <a href="/status" class="tool-card" id="tool-card-status">
+                        <div>
+                            <div class="card-top">
+                                <div class="card-icon">
+                                    <i class="fa-solid fa-server"></i>
+                                </div>
+                                <span class="card-badge">Health Monitor</span>
+                            </div>
+                            <h3 class="card-title">System & Provider Status</h3>
+                            <p class="card-desc">Real-time availability monitoring, quota limits, working model endpoints, and service health check.</p>
+                        </div>
+                        <div class="card-action">
+                            <span>Check Status</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Tool 5: Providers Catalog -->
+                    <a href="/providers" class="tool-card" id="tool-card-providers">
+                        <div>
+                            <div class="card-top">
+                                <div class="card-icon">
+                                    <i class="fa-solid fa-layer-group"></i>
+                                </div>
+                                <span class="card-badge">Catalog</span>
+                            </div>
+                            <h3 class="card-title">AI Providers Catalog</h3>
+                            <p class="card-desc">Explore 100+ supported free & auth-based AI provider integrations, supported vision models, and streaming capabilities.</p>
+                        </div>
+                        <div class="card-action">
+                            <span>Explore Providers</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Tool 6: Chat App -->
+                    <a href="/chat/" class="tool-card" id="tool-card-chat">
+                        <div>
+                            <div class="card-top">
+                                <div class="card-icon">
+                                    <i class="fa-solid fa-comments"></i>
+                                </div>
+                                <span class="card-badge">Chat Interface</span>
+                            </div>
+                            <h3 class="card-title">G4F Chat Assistant</h3>
+                            <p class="card-desc">Full-featured conversational UI supporting multi-model switches, custom prompts, code highlighting, and session memory.</p>
+                        </div>
+                        <div class="card-action">
+                            <span>Start Chat</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Tool 7: Image Studio -->
+                    <a href="/apps/unfinished/image.html" class="tool-card" id="tool-card-images">
+                        <div>
+                            <div class="card-top">
+                                <div class="card-icon">
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                </div>
+                                <span class="card-badge">Generative</span>
+                            </div>
+                            <h3 class="card-title">AI Image Studio</h3>
+                            <p class="card-desc">Generate images using Flux, Stable Diffusion, Pollinations, and DALL-E models with custom aspect ratios.</p>
+                        </div>
+                        <div class="card-action">
+                            <span>Create Images</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Tool 8: Web Apps Hub -->
+                    <a href="/apps/" class="tool-card" id="tool-card-apps">
+                        <div>
+                            <div class="card-top">
+                                <div class="card-icon">
+                                    <i class="fa-solid fa-shapes"></i>
+                                </div>
+                                <span class="card-badge">Mini-Apps</span>
+                            </div>
+                            <h3 class="card-title">Web Apps & Utilities</h3>
+                            <p class="card-desc">Collection of interactive web utilities including model testers, code previewers, games, and developer tools.</p>
+                        </div>
+                        <div class="card-action">
+                            <span>Open Apps Hub</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Tool 9: API Documentation -->
+                    <a href="/v1" class="tool-card" id="tool-card-v1">
+                        <div>
+                            <div class="card-top">
+                                <div class="card-icon">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <span class="card-badge">REST API</span>
+                            </div>
+                            <h3 class="card-title">OpenAI-Compatible API</h3>
+                            <p class="card-desc">Connect external applications like LangChain, AutoGen, and Continue using standard `/v1/chat/completions` endpoints.</p>
+                        </div>
+                        <div class="card-action">
+                            <span>View API Docs</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar Drawer (Providers) -->
+        <aside class="sidebar collapsed" id="providers-sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-title">
+                    <i class="fa-solid fa-server" style="color: var(--accent-light);"></i>
+                    <span>Providers Catalog</span>
+                </div>
+                <span class="card-badge" id="sidebar-provider-count">0 Active</span>
+            </div>
+            <div class="sidebar-search">
+                <input type="text" id="sidebar-filter-input" class="sidebar-search-input" placeholder="Filter providers...">
+            </div>
+            <div class="sidebar-body" id="sidebar-providers-list">
+                <div style="text-align:center; padding: 2rem; color: var(--text-muted);">Loading providers...</div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 G4F Framework. All Rights Reserved. | <a href="https://github.com/xtekky/gpt4free" target="_blank">GitHub Repository</a></p>
+    </footer>
+
+    <script>
+        // Sidebar Toggle Logic
+        const toggleBtn = document.getElementById('toggle-sidebar-btn');
+        const sidebar = document.getElementById('providers-sidebar');
+        const filterInput = document.getElementById('sidebar-filter-input');
+        const providersListEl = document.getElementById('sidebar-providers-list');
+        const countEl = document.getElementById('sidebar-provider-count');
+
+        let allProviders = [];
+
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+        });
+
+        // Responsive navigation menu
+        const navToggleBtn = document.getElementById('nav-toggle-btn');
+        const navActions = document.getElementById('nav-actions');
+        const navToggleIcon = navToggleBtn.querySelector('i');
+
+        function setNavOpen(open) {
+            navActions.classList.toggle('open', open);
+            navToggleBtn.setAttribute('aria-expanded', String(open));
+            navToggleBtn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+            navToggleIcon.className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        }
+
+        navToggleBtn.addEventListener('click', () => {
+            setNavOpen(!navActions.classList.contains('open'));
+        });
+
+        navActions.addEventListener('click', (event) => {
+            if (event.target.closest('a, button')) setNavOpen(false);
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') setNavOpen(false);
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 992) setNavOpen(false);
+        });
+
+        // Fetch Providers for Sidebar
+        async function loadProviders() {
+            try {
+                const res = await fetch(`${framework.backendUrl}/backend-api/v2/providers`);
+                if (!res.ok) throw new Error('Failed to fetch');
+                allProviders = await res.json();
+                countEl.textContent = `${allProviders.length} ${framework.translate("Total", false)}`;
+                renderSidebarProviders(allProviders);
+            } catch (err) {
+                providersListEl.innerHTML = `<div style="text-align:center; padding: 2rem; color: #ef4444;">${framework.translate("Failed to load providers", false)}</div>`;
+            }
+        }
+
+        function logoUrl(name) {
+            return 'https://g4f.space/logo/' + name
+                .replace('MetaAIAccount', 'Facebook AI')
+                .replace('MetaAI', 'Facebook AI')
+                .replace('OpenAI', 'ChatGPT')
+                .replace('Gemini', '')
+                .replace('API', '');
+        }
+
+        function renderSidebarProviders(list) {
+            if (!list.length) {
+                providersListEl.innerHTML = `<div style="text-align:center; padding: 1.5rem; color: var(--text-muted);">${framework.translate("No providers match filter", false)}</div>`;
+                return;
+            }
+            providersListEl.innerHTML = list.map(p => {
+                const badges = [];
+                if (p.working) badges.push('<span class="p-badge working">WORK</span>');
+                if (p.auth) badges.push('<span class="p-badge auth">AUTH</span>');
+                if (p.image) badges.push('<span class="p-badge image">IMG</span>');
+
+                return `
+                    <a href="/providers/${encodeURIComponent(p.name)}" class="provider-item">
+                        <img src="${logoUrl(p.name)}" class="provider-logo" alt="${p.name}" loading="lazy" onerror="this.style.opacity=0.3">
+                        <span class="provider-name">${p.label || p.name}</span>
+                        <div class="provider-badges">${badges.join('')}</div>
+                    </a>
+                `;
+            }).join('');
+        }
+
+        filterInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            const filtered = allProviders.filter(p => (p.label || p.name).toLowerCase().includes(query));
+            renderSidebarProviders(filtered);
+        });
+
+        // Fetch Backend System Status
+        async function checkBackendStatus() {
+            try {
+                const res = await fetch(`${framework.backendUrl}/backend-api/v2/status`);
+                if (res.ok) {
+                    const data = await res.json();
+                    document.getElementById('backend-status-text').textContent = `v${data.version || '2.0'} ${framework.translate("Active", false)}`;
+                }
+            } catch (e) {}
+        }
+
+
+        // Show the backend URL the page is currently connected to
+        const connectStatusEl = document.getElementById("connect_status");
+        const connectStatusUrlEl = document.getElementById("connect-status-url");
+
+        function renderConnectStatus() {
+            if (framework.backendUrl) {
+                connectStatusEl.href = framework.backendUrl;
+                connectStatusUrlEl.textContent = framework.backendUrl;
+                connectStatusEl.title = `Connect to ${framework.backendUrl}`;
+            } else {
+                connectStatusEl.removeAttribute("href");
+                connectStatusUrlEl.textContent = framework.translate("not connected", false);
+                connectStatusEl.title = framework.translate("No backend connected", false);
+            }
+        }
+
+        localStorage.removeItem("backendUrl");
+        // framework.js is loaded with `defer`, so wait until it has executed
+        // before touching the `framework` global.
+        document.addEventListener("DOMContentLoaded", () => {
+            framework.connectToBackend().then(() => {
+                renderConnectStatus();
+                loadProviders();
+                checkBackendStatus();
+            }).catch((err) => {
+                renderConnectStatus();
+                console.error('Failed to connect to backend', err);
+            });
+        });
+    </script>
+
+<script data-g4f-locale-runtime="1">
+(function () {
+    "use strict";
+    const locale = "vi";
+    const supported = ["en", "es", "fr", "de"];
+    const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
+    const opened = match && supported.includes(match[1].toLowerCase())
+        ? match[1].toLowerCase()
+        : String(document.documentElement.lang || locale || "en")
+            .split(/[-_]/)[0].toLowerCase();
+    const base = supported.includes(opened) ? opened : "en";
+    const apply = () => {
+        if (!window.framework) return false;
+        try {
+            if (framework.setSelectedLanguage) framework.setSelectedLanguage(base);
+        } catch (e) { /* private mode */ }
+        const cached = framework.globalTranslations && framework.globalTranslations[base];
+        if (cached && cached.translations) {
+            framework.translations = Object.assign({}, framework.translations, cached.translations);
+            if (framework.translateElements) framework.translateElements();
+        }
+        if (base !== "en" && typeof framework.loadGlobalTranslations === "function") {
+            framework.loadGlobalTranslations(base).then((entry) => {
+                if (entry && entry.translations) {
+                    framework.translations = Object.assign(
+                        {}, framework.translations, entry.translations
+                    );
+                }
+                if (framework.translateElements) framework.translateElements();
+                if (typeof framework.translateAll === "function") framework.translateAll();
+            }).catch(() => {});
+        } else if (typeof framework.translateAll === "function") {
+            framework.translateAll();
+        }
+        return true;
+    };
+    if (!apply()) {
+        document.addEventListener("DOMContentLoaded", apply, { once: true });
+        window.addEventListener("load", apply, { once: true });
+    }
+})();
+</script>
+</body>
+</html>

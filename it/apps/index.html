@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+<base href="/apps/">
+    <link rel="canonical" href="https://g4f.dev/it/apps/">
+    <link rel="alternate" hreflang="en" href="https://g4f.dev/apps/">
+    <link rel="alternate" hreflang="ar" href="https://g4f.dev/ar/apps/">
+    <link rel="alternate" hreflang="bg" href="https://g4f.dev/bg/apps/">
+    <link rel="alternate" hreflang="cs" href="https://g4f.dev/cs/apps/">
+    <link rel="alternate" hreflang="da" href="https://g4f.dev/da/apps/">
+    <link rel="alternate" hreflang="de" href="https://g4f.dev/de/apps/">
+    <link rel="alternate" hreflang="el" href="https://g4f.dev/el/apps/">
+    <link rel="alternate" hreflang="es" href="https://g4f.dev/es/apps/">
+    <link rel="alternate" hreflang="et" href="https://g4f.dev/et/apps/">
+    <link rel="alternate" hreflang="fa" href="https://g4f.dev/fa/apps/">
+    <link rel="alternate" hreflang="fi" href="https://g4f.dev/fi/apps/">
+    <link rel="alternate" hreflang="fr" href="https://g4f.dev/fr/apps/">
+    <link rel="alternate" hreflang="he" href="https://g4f.dev/he/apps/">
+    <link rel="alternate" hreflang="hi" href="https://g4f.dev/hi/apps/">
+    <link rel="alternate" hreflang="hr" href="https://g4f.dev/hr/apps/">
+    <link rel="alternate" hreflang="hu" href="https://g4f.dev/hu/apps/">
+    <link rel="alternate" hreflang="id" href="https://g4f.dev/id/apps/">
+    <link rel="alternate" hreflang="it" href="https://g4f.dev/it/apps/">
+    <link rel="alternate" hreflang="ja" href="https://g4f.dev/ja/apps/">
+    <link rel="alternate" hreflang="kk" href="https://g4f.dev/kk/apps/">
+    <link rel="alternate" hreflang="ko" href="https://g4f.dev/ko/apps/">
+    <link rel="alternate" hreflang="nb" href="https://g4f.dev/nb/apps/">
+    <link rel="alternate" hreflang="nl" href="https://g4f.dev/nl/apps/">
+    <link rel="alternate" hreflang="pl" href="https://g4f.dev/pl/apps/">
+    <link rel="alternate" hreflang="pt" href="https://g4f.dev/pt/apps/">
+    <link rel="alternate" hreflang="ro" href="https://g4f.dev/ro/apps/">
+    <link rel="alternate" hreflang="ru" href="https://g4f.dev/ru/apps/">
+    <link rel="alternate" hreflang="sk" href="https://g4f.dev/sk/apps/">
+    <link rel="alternate" hreflang="sl" href="https://g4f.dev/sl/apps/">
+    <link rel="alternate" hreflang="sq" href="https://g4f.dev/sq/apps/">
+    <link rel="alternate" hreflang="sr" href="https://g4f.dev/sr/apps/">
+    <link rel="alternate" hreflang="sv" href="https://g4f.dev/sv/apps/">
+    <link rel="alternate" hreflang="th" href="https://g4f.dev/th/apps/">
+    <link rel="alternate" hreflang="tr" href="https://g4f.dev/tr/apps/">
+    <link rel="alternate" hreflang="uk" href="https://g4f.dev/uk/apps/">
+    <link rel="alternate" hreflang="ur" href="https://g4f.dev/ur/apps/">
+    <link rel="alternate" hreflang="uz" href="https://g4f.dev/uz/apps/">
+    <link rel="alternate" hreflang="vi" href="https://g4f.dev/vi/apps/">
+    <link rel="alternate" hreflang="zh" href="https://g4f.dev/zh/apps/">
+    <link rel="alternate" hreflang="x-default" href="https://g4f.dev/apps/">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>G4F Dev Apps Showcase</title>
+  <style>
+    body, html {
+      margin: 0; padding: 0; height: 100vh; overflow: hidden;
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+    }
+    #app-selector {
+      background: #222;
+      color: white;
+      padding: 10px;
+      flex: 0 0 auto;
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    #app-selector button {
+      background: #444;
+      border: none;
+      color: white;
+      padding: 8px 12px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.3s;
+    }
+    #app-selector button:hover, #app-selector button.active {
+      background: #08f;
+    }
+    #iframe-container {
+      position: relative;
+      flex: 1 1 auto;
+      height: calc(100vh - 48px); /* selector height + padding approx */
+      width: 100%;
+      overflow: hidden;
+    }
+    iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      z-index: 1000; /* iframe always on top */
+    }
+  </style>
+</head>
+<body>
+  <div id="app-selector" aria-label="Select app">
+    <!-- buttons inserted by JS -->
+  </div>
+  <div id="iframe-container">
+    <iframe id="app-frame" src="" scrolling="yes" title="G4F Dev App"></iframe>
+  </div>
+
+  <script>
+    const apps = [
+    { name: "2048 Game", url: "2048_game.html" },
+    { name: "API Tester Like Postman Lite", url: "api_tester_like_postman-lite.html" },
+    { name: "Calculator", url: "calculator.html" },
+    { name: "Color Picker", url: "color_picker.html" },
+    { name: "Countdown Timer", url: "countdown_timer.html" },
+    { name: "Currency Converter", url: "currency_converter.html" },
+    { name: "Daily Motivational Quote Generator", url: "dailymotivationalquotegenerator.html" },
+    { name: "Digital Clock", url: "digital_clock.html" },
+    { name: "Code Editor", url: "editor.html" },
+    { name: "Dynamic Kanban Board Drag & Drop", url: "dynamic_kanban_board_drag__drop.html" },
+    { name: "Expense Tracker LocalStorage", url: "expense_tracker_localstorage.html" },
+    { name: "File Drop Image Compressor", url: "file-drop_image_compressor.html" },
+    { name: "Flappy Bird Clone", url: "flappy_bird_clone.html" },
+    { name: "Flashcard Learning App", url: "flashcard_learning_app.html" },
+    { name: "Hangman Game", url: "hangman_game.html" },
+    { name: "Interactive Quiz Platform", url: "interactivequizplatform.html" },
+    { name: "Interactive To-do List with Drag and Drop", url: "interactiveto-dolistwithdrag-and-drop.html" },
+    { name: "Markdown Previewer", url: "markdown_previewer.html" },
+    { name: "Maze Generator & Solver", url: "maze_generator__solver.html" },
+    { name: "Memory Card Matching Challenge", url: "memorycardmatchingchallenge.html" },
+    { name: "Notepad Notes App", url: "notepad_notes_app.html" },
+    { name: "Pac-Man Game Canvas", url: "pac-man_game_canvas.html" },
+    { name: "Paint Clone", url: "paint_clone.html" },
+    { name: "Personal Expense Tracker with Charts", url: "personalexpensetrackerwithcharts.html" },
+    { name: "Quote Generator", url: "quote_generator.html" },
+    { name: "Random Password Generator", url: "random_password_generator.html" },
+    { name: "Recipe Finder by Ingredients", url: "recipefinderbyingredients.html" },
+    { name: "Simon Memory Game", url: "simon_memory_game.html" },
+    { name: "Simple BMI Calculator", url: "simple_bmi_calculator.html" },
+    { name: "Simple Poll Voting App", url: "simple_poll_voting_app.html" },
+    { name: "Snake Game", url: "snake_game.html" },
+    { name: "Speech Assistant for Mute", url: "mute.html" },
+    { name: "Stopwatch", url: "stopwatch.html" },
+    { name: "Sudoku Solver (Basic)", url: "sudoku_solver_(basic).html" },
+    { name: "Tetris", url: "tetris.html" },
+    { name: "Tip Calculator", url: "tip_calculator.html" },
+    { name: "To-Do List App", url: "to-do_list_app.html" },
+    { name: "Typing Speed Test", url: "typing_speed_test.html" },
+    { name: "Unit Converter (Length, Weight, Temperature)", url: "unit_converter_(length,_weight,_temperature).html" },
+    { name: "Video Converter", url: "video-converter.html" },
+    { name: "Voice Controlled Stopwatch", url: "voice-controlledstopwatch.html" },
+    { name: "Workout Planner with Timer", url: "workoutplannerwithtimer.html" }
+  ];
+
+
+    const selector = document.getElementById('app-selector');
+    const iframe = document.getElementById('app-frame');
+
+    function setActiveButton(activeBtn) {
+      [...selector.children].forEach(btn => btn.classList.remove('active'));
+      activeBtn.classList.add('active');
+    }
+
+    function loadApp(url, btn) {
+      iframe.src = url;
+      setActiveButton(btn);
+    }
+
+    // Build buttons
+    apps.forEach(({name, url}, idx) => {
+      const btn = document.createElement('button');
+      btn.textContent = name;
+      btn.type = 'button';
+      btn.title = name;
+      btn.addEventListener('click', () => loadApp(url, btn));
+      selector.appendChild(btn);
+      // Load first app by default
+      if (idx === 0) {
+        loadApp(url, btn);
+      }
+    });
+  </script>
+
+<script data-g4f-locale-runtime="1">
+(function () {
+    "use strict";
+    const locale = "it";
+    const supported = ["en", "es", "fr", "de"];
+    const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
+    const opened = match && supported.includes(match[1].toLowerCase())
+        ? match[1].toLowerCase()
+        : String(document.documentElement.lang || locale || "en")
+            .split(/[-_]/)[0].toLowerCase();
+    const base = supported.includes(opened) ? opened : "en";
+    const apply = () => {
+        if (!window.framework) return false;
+        try {
+            if (framework.setSelectedLanguage) framework.setSelectedLanguage(base);
+        } catch (e) { /* private mode */ }
+        const cached = framework.globalTranslations && framework.globalTranslations[base];
+        if (cached && cached.translations) {
+            framework.translations = Object.assign({}, framework.translations, cached.translations);
+            if (framework.translateElements) framework.translateElements();
+        }
+        if (base !== "en" && typeof framework.loadGlobalTranslations === "function") {
+            framework.loadGlobalTranslations(base).then((entry) => {
+                if (entry && entry.translations) {
+                    framework.translations = Object.assign(
+                        {}, framework.translations, entry.translations
+                    );
+                }
+                if (framework.translateElements) framework.translateElements();
+                if (typeof framework.translateAll === "function") framework.translateAll();
+            }).catch(() => {});
+        } else if (typeof framework.translateAll === "function") {
+            framework.translateAll();
+        }
+        return true;
+    };
+    if (!apply()) {
+        document.addEventListener("DOMContentLoaded", apply, { once: true });
+        window.addEventListener("load", apply, { once: true });
+    }
+})();
+</script>
+</body>
+</html>

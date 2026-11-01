@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="el" dir="ltr">
+<head>
+<base href="/chat/">
+    <link rel="canonical" href="https://g4f.dev/el/chat/pro.html">
+    <link rel="alternate" hreflang="en" href="https://g4f.dev/chat/pro.html">
+    <link rel="alternate" hreflang="ar" href="https://g4f.dev/ar/chat/pro.html">
+    <link rel="alternate" hreflang="bg" href="https://g4f.dev/bg/chat/pro.html">
+    <link rel="alternate" hreflang="cs" href="https://g4f.dev/cs/chat/pro.html">
+    <link rel="alternate" hreflang="da" href="https://g4f.dev/da/chat/pro.html">
+    <link rel="alternate" hreflang="de" href="https://g4f.dev/de/chat/pro.html">
+    <link rel="alternate" hreflang="el" href="https://g4f.dev/el/chat/pro.html">
+    <link rel="alternate" hreflang="es" href="https://g4f.dev/es/chat/pro.html">
+    <link rel="alternate" hreflang="et" href="https://g4f.dev/et/chat/pro.html">
+    <link rel="alternate" hreflang="fa" href="https://g4f.dev/fa/chat/pro.html">
+    <link rel="alternate" hreflang="fi" href="https://g4f.dev/fi/chat/pro.html">
+    <link rel="alternate" hreflang="fr" href="https://g4f.dev/fr/chat/pro.html">
+    <link rel="alternate" hreflang="he" href="https://g4f.dev/he/chat/pro.html">
+    <link rel="alternate" hreflang="hi" href="https://g4f.dev/hi/chat/pro.html">
+    <link rel="alternate" hreflang="hr" href="https://g4f.dev/hr/chat/pro.html">
+    <link rel="alternate" hreflang="hu" href="https://g4f.dev/hu/chat/pro.html">
+    <link rel="alternate" hreflang="id" href="https://g4f.dev/id/chat/pro.html">
+    <link rel="alternate" hreflang="it" href="https://g4f.dev/it/chat/pro.html">
+    <link rel="alternate" hreflang="ja" href="https://g4f.dev/ja/chat/pro.html">
+    <link rel="alternate" hreflang="kk" href="https://g4f.dev/kk/chat/pro.html">
+    <link rel="alternate" hreflang="ko" href="https://g4f.dev/ko/chat/pro.html">
+    <link rel="alternate" hreflang="nb" href="https://g4f.dev/nb/chat/pro.html">
+    <link rel="alternate" hreflang="nl" href="https://g4f.dev/nl/chat/pro.html">
+    <link rel="alternate" hreflang="pl" href="https://g4f.dev/pl/chat/pro.html">
+    <link rel="alternate" hreflang="pt" href="https://g4f.dev/pt/chat/pro.html">
+    <link rel="alternate" hreflang="ro" href="https://g4f.dev/ro/chat/pro.html">
+    <link rel="alternate" hreflang="ru" href="https://g4f.dev/ru/chat/pro.html">
+    <link rel="alternate" hreflang="sk" href="https://g4f.dev/sk/chat/pro.html">
+    <link rel="alternate" hreflang="sl" href="https://g4f.dev/sl/chat/pro.html">
+    <link rel="alternate" hreflang="sq" href="https://g4f.dev/sq/chat/pro.html">
+    <link rel="alternate" hreflang="sr" href="https://g4f.dev/sr/chat/pro.html">
+    <link rel="alternate" hreflang="sv" href="https://g4f.dev/sv/chat/pro.html">
+    <link rel="alternate" hreflang="th" href="https://g4f.dev/th/chat/pro.html">
+    <link rel="alternate" hreflang="tr" href="https://g4f.dev/tr/chat/pro.html">
+    <link rel="alternate" hreflang="uk" href="https://g4f.dev/uk/chat/pro.html">
+    <link rel="alternate" hreflang="ur" href="https://g4f.dev/ur/chat/pro.html">
+    <link rel="alternate" hreflang="uz" href="https://g4f.dev/uz/chat/pro.html">
+    <link rel="alternate" hreflang="vi" href="https://g4f.dev/vi/chat/pro.html">
+    <link rel="alternate" hreflang="zh" href="https://g4f.dev/zh/chat/pro.html">
+    <link rel="alternate" hreflang="x-default" href="https://g4f.dev/chat/pro.html">
+  <meta charset="UTF-8" />
+  <title>GPT Chat UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      max-width: 1200px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .block {
+      display: block;
+    }
+    #topbar {
+      padding: 1rem;
+      background: #e9ecef;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #chat {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem;
+    }
+    .message {
+      margin-bottom: 1rem;
+    }
+    .user {
+      text-align: right;
+      font-weight: bold;
+    }
+    .assistant {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      max-width: 80%;
+    }
+    .assistant img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    #form {
+      display: flex;
+      padding: 1rem;
+      background: #fff;
+      border-top: 1px solid #ccc;
+    }
+    #input {
+      flex: 1;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    #submit {
+      margin-left: 0.5rem;
+      padding: 0.75rem 1.2rem;
+      font-size: 1rem;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    select, input[type="text"] {
+      padding: 0.4rem;
+      font-size: 0.9rem;
+    }
+    select {
+      max-width: 250px;
+    }
+    code {
+      background: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background: #eee;
+      padding: 1em;
+      overflow-x: auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+<div id="topbar">
+  <div class="block">
+    <label>Provider:
+      <select id="provider"><option disabled selected>Loading...</option></select>
+    </label>
+  </div>
+  <div class="block">
+    <label>Model:
+    <select id="modelSelect"><option value="" disabled selected>Loading...</option></select>
+  </label>
+  </div>
+  <div class="block">
+      <label>API Key: <input type="text" id="apiKey" placeholder="Optional" /></label>
+  </div>
+</div>
+
+<div id="chat"></div>
+
+<form id="form">
+  <input type="text" id="input" placeholder="Ask something..." autocomplete="off" />
+  <button id="submit">Send</button>
+</form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jsencrypt/bin/jsencrypt.min.js"></script>
+<script src="/dist/js/framework.js"></script>
+<script type="module">
+  import { loadProviders, providerLocalStorage, createClient }  from "/dist/js/providers.js";
+  
+  import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+
+  const chat = document.getElementById('chat');
+  const form = document.getElementById('form');
+  const input = document.getElementById('input');
+  const providerSelect = document.getElementById('provider');
+  const apiKeyInput = document.getElementById('apiKey');
+  const modelSelect = document.getElementById('modelSelect');
+
+  let client = null;
+  let messages = [];
+
+  // Set the initial height of the container to fit the viewport
+  document.querySelector(".container").style.maxHeight = window.innerHeight + "px";
+
+  providerSelect.innerHTML = '';
+  for (const key of Object.keys(await loadProviders())) {
+      providerSelect.appendChild(new Option(key, key));
+  }
+
+  async function initClient() {
+    const provider = providerSelect.value;
+    const apiKey = apiKeyInput.value.trim();
+    const options = apiKey ? { apiKey } : {};
+    client = await createClient(provider, options);
+    await loadModels();
+  }
+
+  async function loadModels() {
+    modelSelect.innerHTML = '<option disabled selected>Loading...</option>';
+    try {
+      const models = await client.models.list();
+      modelSelect.innerHTML = '';
+      models.forEach(model => {
+        if (model.type && !["chat", "image", "text"].includes(model.type)) {
+          return;
+        }
+        const opt = document.createElement('option');
+        opt.value = model.id;
+        opt.textContent = model.id + (model.type == "image" ? " 🎨" : "");
+        if (model.type) {
+          opt.dataset.type = model.type;
+        }
+        if (model.id === client.defaultModel) opt.selected = true;
+        modelSelect.appendChild(opt);
+      });
+    } catch (err) {
+      console.error('Model load failed:', err);
+      modelSelect.innerHTML = "";
+    }
+  }
+
+  providerSelect.addEventListener('change', initClient);
+  apiKeyInput.addEventListener('change', initClient);
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const text = input.value.trim();
+    if (!text) return;
+
+    // Get the full selected option element to access its data attributes.
+    const selectedOption = modelSelect.options[modelSelect.selectedIndex];
+    const selectedModel = selectedOption.value || client.defaultModel;
+    const modelType = selectedOption.dataset.type || 'chat'; // Default to 'chat' if type is not specified
+
+    addMessage('user', text);
+    messages.push({ role: 'user', content: text });
+    input.value = '';
+
+    const assistantEl = document.createElement('div');
+    assistantEl.className = 'message assistant';
+    assistantEl.innerHTML = `<em>Generating with ${modelType} model...</em>`;
+    chat.appendChild(assistantEl);
+    chat.scrollTop = chat.scrollHeight;
+
+    try {
+      if (modelType === 'image') {
+        const response = await client.images.generate({
+          model: selectedModel,
+          prompt: text,
+        });
+        
+        const imageUrl = response.data[0].url;
+        assistantEl.innerHTML = `<img src="${imageUrl}" alt="${text}" />`;
+        messages.push({ role: 'assistant', content: `Image generated: ${imageUrl}` });
+
+      } else {
+        const stream = await client.chat.completions.create({
+          model: selectedModel,
+          messages,
+          stream: true
+        });
+
+        let fullResponse = '';
+        let isReasoning = false;
+        for await (const chunk of stream) {
+          let delta;
+          if (chunk.choices && chunk.choices[0]?.delta?.reasoning) {
+            delta = chunk.choices[0]?.delta?.reasoning;
+            isReasoning = true;
+          } else if (chunk.choices) {
+            delta = chunk.choices[0]?.delta?.content || '';
+            if (isReasoning) {
+              isReasoning = false;
+              delta = '\n\n---\n\n' + delta;
+            }
+          }
+          if (!delta) continue; // Skip empty chunks
+          fullResponse += delta;
+          assistantEl.innerHTML = marked.parse(fullResponse);
+          chat.scrollTop = chat.scrollHeight;
+        }
+        messages.push({ role: 'assistant', content: fullResponse });
+      }
+    } catch (err) {
+      assistantEl.innerHTML = '<strong>Error:</strong> ' + err.message;
+      console.error(err);
+    }
+  });
+
+  function addMessage(role, content) {
+    const el = document.createElement('div');
+    el.className = 'message ' + role;
+    el.innerHTML = role === 'user'
+      ? `<div class="user">${content}</div>`
+      : marked.parse(content);
+    chat.appendChild(el);
+    chat.scrollTop = chat.scrollHeight;
+  }
+
+  await initClient();
+</script>
+
+<script data-g4f-locale-runtime="1">
+(function () {
+    "use strict";
+    const locale = "el";
+    const supported = ["en", "es", "fr", "de"];
+    const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
+    const opened = match && supported.includes(match[1].toLowerCase())
+        ? match[1].toLowerCase()
+        : String(document.documentElement.lang || locale || "en")
+            .split(/[-_]/)[0].toLowerCase();
+    const base = supported.includes(opened) ? opened : "en";
+    const apply = () => {
+        if (!window.framework) return false;
+        try {
+            if (framework.setSelectedLanguage) framework.setSelectedLanguage(base);
+        } catch (e) { /* private mode */ }
+        const cached = framework.globalTranslations && framework.globalTranslations[base];
+        if (cached && cached.translations) {
+            framework.translations = Object.assign({}, framework.translations, cached.translations);
+            if (framework.translateElements) framework.translateElements();
+        }
+        if (base !== "en" && typeof framework.loadGlobalTranslations === "function") {
+            framework.loadGlobalTranslations(base).then((entry) => {
+                if (entry && entry.translations) {
+                    framework.translations = Object.assign(
+                        {}, framework.translations, entry.translations
+                    );
+                }
+                if (framework.translateElements) framework.translateElements();
+                if (typeof framework.translateAll === "function") framework.translateAll();
+            }).catch(() => {});
+        } else if (typeof framework.translateAll === "function") {
+            framework.translateAll();
+        }
+        return true;
+    };
+    if (!apply()) {
+        document.addEventListener("DOMContentLoaded", apply, { once: true });
+        window.addEventListener("load", apply, { once: true });
+    }
+})();
+</script>
+</body>
+</html>
