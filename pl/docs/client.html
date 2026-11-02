@@ -499,7 +499,7 @@
 <h2>Initializing the Client</h2>
 <p>To utilize the G4F Client, create a new instance. <strong>Below is an example showcasing custom providers:</strong></p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">Client</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">BingCreateImages</span>, <span class="pl-v">OpenaiChat</span>, <span class="pl-v">Gemini</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Dostawca</span> <span class="pl-k">import</span> <span class="pl-v">BingCreateImages</span>, <span class="pl-v">OpenaiChat</span>, <span class="pl-v">Gemini</span>
 
 <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">Client</span>(
     <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">OpenaiChat</span>,
@@ -511,7 +511,7 @@
 <p><strong>Here’s an improved example of creating chat completions:</strong></p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
     <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4o-mini"</span>,
-    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[
+    <span class="pl-s1">wiadomości</span><span class="pl-c1">=</span>[
         {
             <span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>,
             <span class="pl-s">"content"</span>: <span class="pl-s">"Say this is a test"</span>
@@ -544,7 +544,7 @@
 Specifies the AI model to be used for the task. Examples include <code class="notranslate">"gpt-4o"</code> for GPT-4 Optimized or <code class="notranslate">"gpt-4o-mini"</code> for a lightweight version. The choice of model determines the quality and speed of the response. Always ensure the selected model is supported by the provider.</p>
 </li>
 <li>
-<p><strong><code class="notranslate">messages</code></strong>:<br>
+<p><strong><code class="notranslate">wiadomości</code></strong>:<br>
 <strong>A list of dictionaries representing the conversation context. Each dictionary contains two keys:</strong><br>
 - <code class="notranslate">role</code>: Defines the role of the message sender, such as <code class="notranslate">"user"</code> (input from the user) or <code class="notranslate">"system"</code> (instructions to the AI).<br>
 - <code class="notranslate">content</code>: The actual text of the message.<br>
@@ -573,7 +573,7 @@ Boolean flag indicating whether to enable internet-based search capabilities. Th
 
 <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
     <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4o-mini"</span>,
-    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[
+    <span class="pl-s1">wiadomości</span><span class="pl-c1">=</span>[
         {
             <span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>,
             <span class="pl-s">"content"</span>: <span class="pl-s">"Say this is a test"</span>
@@ -590,7 +590,7 @@ Boolean flag indicating whether to enable internet-based search capabilities. Th
 
 <span class="pl-s1">stream</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
     <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4"</span>,
-    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[
+    <span class="pl-s1">wiadomości</span><span class="pl-c1">=</span>[
         {
             <span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>,
             <span class="pl-s">"content"</span>: <span class="pl-s">"Say this is a test"</span>
@@ -606,10 +606,10 @@ Boolean flag indicating whether to enable internet-based search capabilities. Th
 <h3>Using a Vision Model</h3>
 <p><strong>Analyze an image and generate a description:</strong></p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">g4f</span>
-<span class="pl-k">import</span> <span class="pl-s1">requests</span>
+<span class="pl-k">import</span> <span class="pl-s1">Żądania</span>
 
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">Client</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span>.<span class="pl-v">GeminiPro</span> <span class="pl-k">import</span> <span class="pl-v">GeminiPro</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Dostawca</span>.<span class="pl-v">GeminiPro</span> <span class="pl-k">import</span> <span class="pl-v">GeminiPro</span>
 
 <span class="pl-c"># Initialize the GPT client with the desired provider and api key</span>
 <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">Client</span>(
@@ -617,12 +617,12 @@ Boolean flag indicating whether to enable internet-based search capabilities. Th
     <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">GeminiPro</span>
 )
 
-<span class="pl-s1">image</span> <span class="pl-c1">=</span> <span class="pl-s1">requests</span>.<span class="pl-c1">get</span>(<span class="pl-s">"https://raw.githubusercontent.com/xtekky/gpt4free/refs/heads/main/docs/images/cat.jpeg"</span>, <span class="pl-s1">stream</span><span class="pl-c1">=</span><span class="pl-c1">True</span>).<span class="pl-c1">raw</span>
+<span class="pl-s1">image</span> <span class="pl-c1">=</span> <span class="pl-s1">Żądania</span>.<span class="pl-c1">get</span>(<span class="pl-s">"https://raw.githubusercontent.com/xtekky/gpt4free/refs/heads/main/docs/images/cat.jpeg"</span>, <span class="pl-s1">stream</span><span class="pl-c1">=</span><span class="pl-c1">True</span>).<span class="pl-c1">raw</span>
 <span class="pl-c"># Or: image = open("docs/images/cat.jpeg", "rb")</span>
 
 <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
-    <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">models</span>.<span class="pl-c1">default</span>,
-    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[
+    <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">models</span>.<span class="pl-c1">domyślny</span>,
+    <span class="pl-s1">wiadomości</span><span class="pl-c1">=</span>[
         {
             <span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>,
             <span class="pl-s">"content"</span>: <span class="pl-s">"What's in this image?"</span>
@@ -673,7 +673,7 @@ Boolean flag indicating whether to enable internet-based search capabilities. Th
 <h3>Creating Image Variations</h3>
 <p><strong>Create variations of an existing image:</strong></p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">Client</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">OpenaiChat</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Dostawca</span> <span class="pl-k">import</span> <span class="pl-v">OpenaiChat</span>
 
 <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">Client</span>(
     <span class="pl-s1">image_provider</span><span class="pl-c1">=</span><span class="pl-v">OpenaiChat</span>
@@ -724,7 +724,7 @@ Boolean flag indicating whether to enable internet-based search capabilities. Th
         <span class="pl-c"># Get response from AI</span>
         <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">self</span>.<span class="pl-c1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
             <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4o-mini"</span>,
-            <span class="pl-s1">messages</span><span class="pl-c1">=</span><span class="pl-s1">self</span>.<span class="pl-c1">history</span>,
+            <span class="pl-s1">wiadomości</span><span class="pl-c1">=</span><span class="pl-s1">self</span>.<span class="pl-c1">history</span>,
             <span class="pl-s1">web_search</span><span class="pl-c1">=</span><span class="pl-c1">False</span>
         )
         
@@ -794,7 +794,7 @@ The conversation history grows with each interaction. For long conversations, yo
 
 <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
     <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4"</span>,
-    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[
+    <span class="pl-s1">wiadomości</span><span class="pl-c1">=</span>[
         {<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Tell me about recent advancements in AI."</span>}
     ],
     <span class="pl-s1">tool_calls</span><span class="pl-c1">=</span><span class="pl-s1">tool_calls</span>
@@ -819,7 +819,7 @@ The conversation history grows with each interaction. For long conversations, yo
 <hr>
 <h3>Using a List of Providers with RetryProvider</h3>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">Client</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">RetryProvider</span>, <span class="pl-v">Phind</span>, <span class="pl-v">FreeChatgpt</span>, <span class="pl-v">Liaobots</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Dostawca</span> <span class="pl-k">import</span> <span class="pl-v">RetryProvider</span>, <span class="pl-v">Phind</span>, <span class="pl-v">FreeChatgpt</span>, <span class="pl-v">Liaobots</span>
 <span class="pl-k">import</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">debug</span>
 
 <span class="pl-s1">g4f</span>.<span class="pl-c1">debug</span>.<span class="pl-c1">logging</span> <span class="pl-c1">=</span> <span class="pl-c1">True</span>
@@ -831,7 +831,7 @@ The conversation history grows with each interaction. For long conversations, yo
 
 <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
     <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">""</span>,
-    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[
+    <span class="pl-s1">wiadomości</span><span class="pl-c1">=</span>[
         {
             <span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>,
             <span class="pl-s">"content"</span>: <span class="pl-s">"Hello"</span>
@@ -849,7 +849,7 @@ The conversation history grows with each interaction. For long conversations, yo
 <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">Client</span>()
 
 <span class="pl-c"># Initialize an empty conversation history</span>
-<span class="pl-s1">messages</span> <span class="pl-c1">=</span> []
+<span class="pl-s1">wiadomości</span> <span class="pl-c1">=</span> []
 
 <span class="pl-k">while</span> <span class="pl-c1">True</span>:
     <span class="pl-c"># Get user input</span>
@@ -861,13 +861,13 @@ The conversation history grows with each interaction. For long conversations, yo
         <span class="pl-k">break</span>  <span class="pl-c"># Exit the loop to end the conversation</span>
 
     <span class="pl-c"># Update the conversation history with the user's message</span>
-    <span class="pl-s1">messages</span>.<span class="pl-c1">append</span>({<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s1">user_input</span>})
+    <span class="pl-s1">wiadomości</span>.<span class="pl-c1">append</span>({<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s1">user_input</span>})
 
     <span class="pl-k">try</span>:
         <span class="pl-c"># Get GPT's response</span>
         <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
-            <span class="pl-s1">messages</span><span class="pl-c1">=</span><span class="pl-s1">messages</span>,
-            <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">models</span>.<span class="pl-c1">default</span>,
+            <span class="pl-s1">wiadomości</span><span class="pl-c1">=</span><span class="pl-s1">wiadomości</span>,
+            <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">models</span>.<span class="pl-c1">domyślny</span>,
         )
 
         <span class="pl-c"># Extract the GPT response and print it</span>
@@ -875,7 +875,7 @@ The conversation history grows with each interaction. For long conversations, yo
         <span class="pl-en">print</span>(<span class="pl-s">f"Bot: <span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">gpt_response</span><span class="pl-kos">}</span></span>"</span>)
 
         <span class="pl-c"># Update the conversation history with GPT's response</span>
-        <span class="pl-s1">messages</span>.<span class="pl-c1">append</span>({<span class="pl-s">"role"</span>: <span class="pl-s">"assistant"</span>, <span class="pl-s">"content"</span>: <span class="pl-s1">gpt_response</span>})
+        <span class="pl-s1">wiadomości</span>.<span class="pl-c1">append</span>({<span class="pl-s">"role"</span>: <span class="pl-s">"assistant"</span>, <span class="pl-s">"content"</span>: <span class="pl-s1">gpt_response</span>})
 
     <span class="pl-k">except</span> <span class="pl-v">Exception</span> <span class="pl-k">as</span> <span class="pl-s1">e</span>:
         <span class="pl-en">print</span>(<span class="pl-s">f"An error occurred: <span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">e</span><span class="pl-kos">}</span></span>"</span>)</pre></div>
@@ -1004,7 +1004,7 @@ The conversation history grows with each interaction. For long conversations, yo
 (function () {
     "use strict";
     const locale = "pl";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

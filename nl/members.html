@@ -1339,14 +1339,14 @@
     <header class="navbar" role="banner" id="navbar">
         <a href="/" class="logo">G4<span>F</span></a>
         <nav class="nav-links" role="navigation">
-            <a href="/">Home</a>
-            <a href="/docs/" title="Documentation">Docs</a>
+            <a href="/">Startpagina</a>
+            <a href="/docs/" title="Documentatie">Documentatie</a>
             <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
             <div class="user-info" id="navUserInfo" style="display: none;">
-                <img class="user-avatar" id="navAvatar" src="" alt="User avatar">
+                <img class="user-avatar" id="navAvatar" src="" alt="Gebruikersavatar">
                 <span id="navUsername"></span>
             </div>
-            <a href="/chat/" class="nav-cta">Start Chat</a>
+            <a href="/chat/" class="nav-cta">Chat starten</a>
         </nav>
     </header>
 
@@ -1354,8 +1354,8 @@
         <div class="connection-error" id="connectionError" role="alert" hidden></div>
         <!-- Redirect Login Section (shown when redirect parameter is present) -->
         <section class="login-section" id="redirectLoginSection" style="display: none;">
-            <h1>Login Required</h1>
-            <p>Sign in to continue to your application. After signing in, you'll be redirected back with an API key.</p>
+            <h1>Inloggen vereist</h1>
+            <p>Meld u aan om door te gaan naar uw applicatie. Na het aanmelden wordt u teruggeleid met een API-sleutel.</p>
             <p style="color: var(--secondary); font-size: 0.9rem;" id="redirectTarget"></p>
             
             <div class="login-buttons">
@@ -1368,8 +1368,8 @@
 
         <!-- Login Section (shown when not logged in) -->
         <section class="login-section" id="loginSection">
-            <h1>Members Area</h1>
-            <p>Sign in to access your dashboard, manage API keys, and view usage statistics.</p>
+            <h1>Ledengebied</h1>
+            <p>Meld u aan om toegang te krijgen tot uw dashboard, API-sleutels te beheren en gebruikersstatistieken te bekijken.</p>
             
             <div class="login-buttons">
                 <button class="oauth-btn g4f" id="loginG4f">
@@ -1379,7 +1379,7 @@
             </div>
             
             <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(255,255,255,0.5);">
-                By signing in, you agree to our <a href="#" style="color: var(--secondary);">Terms of Service</a> and <a href="#" style="color: var(--secondary);">Privacy Policy</a>.
+                Door u aan te melden, gaat u akkoord met onze <a href="#" style="color: var(--secondary);">Servicevoorwaarden</a> en <a href="#" style="color: var(--secondary);">Privacybeleid</a>.
             </p>
         </section>
 
@@ -1387,11 +1387,11 @@
         <section class="dashboard" id="dashboard">
             <div class="welcome-header">
                 <div>
-                    <h1>Welcome back, <span id="userName">User</span>! 👋</h1>
-                    <p style="margin: 0; color: rgba(255,255,255,0.6);">Manage your API keys and monitor your usage</p>
+                    <h1>Welkom terug, <span id="userName">Gebruiker</span>! 👋</h1>
+                    <p style="margin: 0; color: rgba(255,255,255,0.6);">Beheer uw API-sleutels en monitor uw gebruik</p>
                 </div>
                 <button class="logout-btn" id="logoutBtn">
-                    <i class="fas fa-sign-out-alt"></i> Sign Out
+                    <i class="fas fa-sign-out-alt"></i> Afmelden
                 </button>
             </div>
 
@@ -1424,27 +1424,27 @@
             <div class="dashboard-grid">
                 <!-- Usage Stats Card -->
                 <div class="card">
-                    <h2><span class="icon">📊</span> Usage Statistics</h2>
+                    <h2><span class="icon">📊</span> Gebruiksstatistieken</h2>
                     <div class="stats-grid">
                         <div class="stat-item">
                             <div class="stat-value" id="statRequests">0</div>
-                            <div class="stat-label">API Requests</div>
+                            <div class="stat-label">API-verzoeken</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statTokens">0</div>
-                            <div class="stat-label">Tokens Used</div>
+                            <div class="stat-label">Gebruikte tokens</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statImages">0</div>
-                            <div class="stat-label">Images Generated</div>
+                            <div class="stat-label">Gegenereerde afbeeldingen</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statChats">0</div>
-                            <div class="stat-label">Chat Sessions</div>
+                            <div class="stat-label">Chat-sessies</div>
                         </div>
-                        <div class="stat-item" title="Credits earned by baking proof-of-work cakes. Each baked cake = $0.05.">
+                        <div class="stat-item" title="Credits verdiend door proof-of-work cakes te bakken. Elke gebakken cake = $0.05.">
                             <div class="stat-value" id="statCredits">$0.00</div>
-                            <div class="stat-label">Cake Credits</div>
+                            <div class="stat-label">Cake-credits</div>
                         </div>
                     </div>
                     <div class="usage-chart">
@@ -1462,39 +1462,39 @@
                 
                 <!-- API Key Card -->
                 <div class="card">
-                    <h2><span class="icon">🔑</span> API Key</h2>
+                    <h2><span class="icon">🔑</span> API-sleutel</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Use this key to authenticate your API requests
+                        Gebruik deze sleutel om uw API-verzoeken te verifiëren
                     </p>
                     <div class="api-key-container">
                         <div class="api-key-display">
-                            <input type="password" class="api-key-input" id="apiKeyInput" readonly placeholder="Click 'Generate' to create an API key">
-                            <button class="btn btn-secondary btn-small" id="toggleKeyBtn" title="Show/Hide">
+                            <input type="password" class="api-key-input" id="apiKeyInput" readonly placeholder="Klik op 'Genereren' om een API-sleutel te maken">
+                            <button class="btn btn-secondary btn-small" id="toggleKeyBtn" title="Tonen/Verbergen">
                                 <i class="fas fa-eye"></i>
                             </button>
-                            <button class="btn btn-secondary btn-small" id="copyKeyBtn" title="Copy">
+                            <button class="btn btn-secondary btn-small" id="copyKeyBtn" title="Kopiëren">
                                 <i class="fas fa-copy"></i>
                             </button>
                         </div>
-                        <p>Expires: <span id="apiKeyExpires">-</span></p>
+                        <p>Verloopt: <span id="apiKeyExpires">-</span></p>
                         <button class="btn" id="generateKeyBtn" style="width: 100%;">
-                            <i class="fas fa-sync-alt"></i> Generate New Key
+                            <i class="fas fa-sync-alt"></i> Nieuwe sleutel genereren
                         </button>
-                        <div class="base-url-label" style="margin-top: 1rem;">Base URL</div>
+                        <div class="base-url-label" style="margin-top: 1rem;">Basis-URL</div>
                         <div class="base-url" id="baseUrl">https://g4f.space/v1</div>
                     </div>
                 </div>
                 
                 <!-- Account Info Card -->
                 <div class="card">
-                    <h2><span class="icon">👤</span> Account Information</h2>
+                    <h2><span class="icon">👤</span> Accountinformatie</h2>
                     <div class="account-info">
                         <div class="info-row">
-                            <span class="info-label">Username</span>
+                            <span class="info-label">Gebruikersnaam</span>
                             <span class="info-value" id="accountUsername">-</span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Email</span>
+                            <span class="info-label">E-mail</span>
                             <span class="info-value" id="accountEmail">-</span>
                         </div>
                         <div class="info-row">
@@ -1508,20 +1508,20 @@
                         <div class="info-row">
                             <span class="info-label">Plan</span>
                             <span class="info-value">
-                                <span class="badge free" id="accountPlan">Free</span>
+                                <span class="badge free" id="accountPlan">Gratis</span>
                             </span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Tier Limits</span>
+                            <span class="info-label">Tierlimieten</span>
                             <span class="info-value">
                                 <div class="tier-limits" id="tier-limits-row">
-                                    <span id="max-tokens-text" title="Tokens: loading..."><i class="fa-solid fa-coins" aria-hidden="true"></i> —</span>
-                                    <span id="max-requests-text" title="Requests: loading..."><i class="fa-solid fa-list" aria-hidden="true"></i> —</span>
+                                    <span id="max-tokens-text" title="Tokens: laden..."><i class="fa-solid fa-coins" aria-hidden="true"></i> —</span>
+                                    <span id="max-requests-text" title="Aanvragen: laden..."><i class="fa-solid fa-list" aria-hidden="true"></i> —</span>
                                 </div>
                             </span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Member Since</span>
+                            <span class="info-label">Lid sinds</span>
                             <span class="info-value" id="accountJoined">-</span>
                         </div>
                     </div>
@@ -1529,13 +1529,13 @@
                 
                 <!-- Recent Activity Card -->
                 <div class="card">
-                    <h2><span class="icon">⚡</span> Recent Activity</h2>
+                    <h2><span class="icon">⚡</span> Recente activiteit</h2>
                     <ul class="activity-list" id="activityList">
                         <li class="activity-item">
                             <div class="activity-icon chat">💬</div>
                             <div class="activity-details">
-                                <div class="activity-title">Chat session started</div>
-                                <div class="activity-time">No activity yet</div>
+                                <div class="activity-title">Chatsessie gestart</div>
+                                <div class="activity-time">Nog geen activiteit</div>
                             </div>
                         </li>
                     </ul>
@@ -1543,22 +1543,22 @@
                 
                 <!-- Custom Servers Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🖥️</span> Custom Servers</h2>
+                    <h2><span class="icon">🖥️</span> Aangepaste servers</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Add your own AI servers for model routing. Tokens are counted per server.
+                        Voeg uw eigen AI-servers toe voor modelroutering. Tokens worden per server geteld.
                     </p>
                     
                     <!-- Server List -->
                     <div id="serversList" class="servers-list">
                         <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">
-                            Loading servers...
+                            Servers laden...
                         </p>
                     </div>
                     
                     <!-- Add Server Button -->
                     <div style="display: flex; gap: 1rem; margin-top: 1rem;">
                         <button class="btn" id="addServerBtn" style="flex: 1;">
-                            <i class="fas fa-plus"></i> Add Server
+                            <i class="fas fa-plus"></i> Server toevoegen
                         </button>
                         <button class="oauth-btn puter" id="addPuterServerBtn" style="flex: 1;">
                             🤖
@@ -1571,47 +1571,47 @@
                 <div class="modal" id="serverModal" style="display: none;">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 id="serverModalTitle">Add New Server</h3>
+                            <h3 id="serverModalTitle">Nieuwe server toevoegen</h3>
                             <button class="modal-close" id="closeServerModal">&times;</button>
                         </div>
                         <form id="serverForm">
                             <div class="form-group">
                                 <label for="serverLabel">Label</label>
-                                <input type="text" id="serverLabel" class="form-input" placeholder="My Custom Server" required>
+                                <input type="text" id="serverLabel" class="form-input" placeholder="Mijn aangepaste server" required>
                             </div>
                             <div class="form-group">
-                                <label for="serverBaseUrl">Base URL</label>
+                                <label for="serverBaseUrl">Basis-URL</label>
                                 <input type="url" id="serverBaseUrl" class="form-input" placeholder="https://api.example.com/v1" required>
-                                <small style="color: rgba(255,255,255,0.5);">OpenAI-compatible API endpoint</small>
+                                <small style="color: rgba(255,255,255,0.5);">OpenAI-compatibele API-eindpunt</small>
                             </div>
                             <div class="form-group">
-                                <label for="serverApiKeys">API Keys (one per line)</label>
+                                <label for="serverApiKeys">API-sleutels (één per regel)</label>
                                 <textarea id="serverApiKeys" class="form-input" rows="3" placeholder="sk-xxx...&#10;sk-yyy..."></textarea>
-                                <small style="color: rgba(255,255,255,0.5);">Multiple keys for load balancing. Leave empty if no auth required.</small>
+                                <small style="color: rgba(255,255,255,0.5);">Meerdere sleutels voor load balancing. Laat leeg als geen authenticatie nodig is.</small>
                             </div>
                             <div class="form-group">
-                                <label for="serverModels">Allowed Models (one per line, optional)</label>
+                                <label for="serverModels">Toegestane modellen (één per regel, optioneel)</label>
                                 <textarea id="serverModels" class="form-input" rows="3" placeholder="gpt-4&#10;gpt-3.5-turbo"></textarea>
-                                <small style="color: rgba(255,255,255,0.5);">Leave empty to allow all models. Will auto-detect from server.</small>
+                                <small style="color: rgba(255,255,255,0.5);">Laat leeg om alle modellen toe te staan. Wordt automatisch gedetecteerd vanaf de server.</small>
                             </div>
                             <div class="form-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="serverAutoUpdateModels" checked>
-                                    <span>Auto-update allowed models list from server</span>
+                                    <span>Automatisch bijwerken van de lijst met toegestane modellen van de server</span>
                                 </label>
-                                <small style="color: rgba(255,255,255,0.5);">When enabled, the allowed models list is automatically refreshed from the server's /models endpoint.</small>
+                                <small style="color: rgba(255,255,255,0.5);">Wanneer ingeschakeld, wordt de lijst met toegestane modellen automatisch vernieuwd vanuit het /models-eindpunt van de server.</small>
                             </div>
                             <div class="form-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="serverPublic">
-                                    <span>Make server public (visible to other users)</span>
+                                    <span>Maak de server openbaar (zichtbaar voor andere gebruikers)</span>
                                 </label>
                             </div>
                             <div id="serverValidation" class="validation-status" style="display: none;"></div>
                             <div class="form-actions">
-                                <button type="button" class="btn btn-secondary" id="cancelServerBtn">Cancel</button>
+                                <button type="button" class="btn btn-secondary" id="cancelServerBtn">Annuleren</button>
                                 <button type="submit" class="btn" id="saveServerBtn">
-                                    <i class="fas fa-check"></i> Save Server
+                                    <i class="fas fa-check"></i> Server opslaan
                                 </button>
                             </div>
                             <input type="hidden" id="editServerId" value="">
@@ -1622,16 +1622,16 @@
                 <!-- API Keys Management Card -->
                 <div class="card" style="grid-column: 1 / -1;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                        <h2 style="margin: 0;"><span class="icon">🗝️</span> Manage API Keys</h2>
+                        <h2 style="margin: 0;"><span class="icon">🗝️</span> API-sleutels beheren</h2>
                         <button class="btn btn-small" id="addApiKeyBtn">
-                            <i class="fas fa-plus"></i> New Key
+                            <i class="fas fa-plus"></i> Nieuwe sleutel
                         </button>
                     </div>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Create and manage multiple API keys for different applications or environments.
+                        Maak en beheer meerdere API-sleutels voor verschillende applicaties of omgevingen.
                     </p>
                     <div id="apiKeysList" class="api-keys-list">
-                        <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">Loading API keys...</p>
+                        <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">API-sleutels laden...</p>
                     </div>
                 </div>
 
@@ -1639,45 +1639,45 @@
                 <div class="modal" id="apiKeyModal" style="display: none;">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 id="apiKeyModalTitle">Create API Key</h3>
+                            <h3 id="apiKeyModalTitle">API-sleutel aanmaken</h3>
                             <button class="modal-close" id="closeApiKeyModalBtn">&times;</button>
                         </div>
 
                         <!-- Shown after successful create / rotate -->
                         <div id="apiKeyNewDisplay" style="display: none;">
                             <div class="validation-status success" style="margin-bottom: 1rem;">
-                                <i class="fas fa-check-circle"></i> Key ready — copy it now, it won't be shown again.
+                                <i class="fas fa-check-circle"></i> Sleutel gereed — kopieer deze nu, hij wordt niet opnieuw weergegeven.
                             </div>
                             <div class="api-key-display">
                                 <input type="text" class="api-key-input" id="newApiKeyValue" readonly>
-                                <button class="btn btn-secondary btn-small" id="copyNewApiKeyBtn" title="Copy">
+                                <button class="btn btn-secondary btn-small" id="copyNewApiKeyBtn" title="Kopiëren">
                                     <i class="fas fa-copy"></i>
                                 </button>
                             </div>
                             <div class="form-actions">
-                                <button class="btn" id="doneApiKeyBtn"><i class="fas fa-check"></i> Done</button>
+                                <button class="btn" id="doneApiKeyBtn"><i class="fas fa-check"></i> Klaar</button>
                             </div>
                         </div>
 
                         <!-- Create / Edit form -->
                         <form id="apiKeyForm">
                             <div class="form-group">
-                                <label for="apiKeyName">Name / Label</label>
-                                <input type="text" id="apiKeyName" class="form-input" placeholder="e.g. My App, Production, Testing" maxlength="80" required>
+                                <label for="apiKeyName">Naam / Label</label>
+                                <input type="text" id="apiKeyName" class="form-input" placeholder="bijv. Mijn App, Productie, Testen" maxlength="80" required>
                             </div>
                             <div class="form-group" id="apiKeyExpiryGroup">
-                                <label for="apiKeyExpiry">Expiry</label>
+                                <label for="apiKeyExpiry">Vervaldatum</label>
                                 <select id="apiKeyExpiry" class="form-input">
-                                    <option value="30">30 days</option>
-                                    <option value="90" selected>90 days</option>
-                                    <option value="365">1 year</option>
-                                    <option value="0">No expiry</option>
+                                    <option value="30">30 dagen</option>
+                                    <option value="90" selected>90 dagen</option>
+                                    <option value="365">1 jaar</option>
+                                    <option value="0">Geen vervaldatum</option>
                                 </select>
                             </div>
                             <div class="form-actions">
-                                <button type="button" class="btn btn-secondary" id="cancelApiKeyModalBtn">Cancel</button>
+                                <button type="button" class="btn btn-secondary" id="cancelApiKeyModalBtn">Annuleren</button>
                                 <button type="submit" class="btn" id="saveApiKeyBtn">
-                                    <i class="fas fa-plus"></i> Create Key
+                                    <i class="fas fa-plus"></i> Sleutel aanmaken
                                 </button>
                             </div>
                             </form>
@@ -1686,53 +1686,53 @@
 
                 <!-- Quick Links Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🚀</span> Quick Actions</h2>
+                    <h2><span class="icon">🚀</span> Snelle acties</h2>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
                         <button class="btn">
-                            <i class="fas fa-comments"></i> <a href="/chat/">Open Chat</a>
+                            <i class="fas fa-comments"></i> <a href="/chat/">Chat openen</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fas fa-book"></i> <a href="/docs/">API Documentation</a>
+                            <i class="fas fa-book"></i> <a href="/docs/">API-documentatie</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fas fa-heart"></i> <a href="https://github.com/sponsors/hlohaus" target="_blank">Become a Sponsor</a>
+                            <i class="fas fa-heart"></i> <a href="https://github.com/sponsors/hlohaus" target="_blank">Word een sponsor</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fab fa-github"></i> <a href="https://github.com/xtekky/gpt4free" target="_blank">View on GitHub</a>
+                            <i class="fab fa-github"></i> <a href="https://github.com/xtekky/gpt4free" target="_blank">Bekijk op GitHub</a>
                         </button>
                     </div>
                 </div>
 
                 <!-- Cross-Device Secret Sync Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🔐</span> Cross-Device Secret Sync</h2>
+                    <h2><span class="icon">🔐</span> Sync van geheimen tussen apparaten</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Your workspace secret enables encrypted conversation sync across devices. This device automatically confirms requests from your other logged-in devices.
+                        Uw werkruimtegeheim staat versleutelde gesprekssynchronisatie tussen apparaten toe. Dit apparaat bevestigt automatisch verzoeken van uw andere ingelogde apparaten.
                     </p>
                     <div id="secretSyncStatus" style="padding: 0.75rem 1rem; border-radius: 8px; background: rgba(255,255,255,0.05); margin-bottom: 1rem; font-size: 0.9rem;">
-                        <span class="loading"></span> Checking workspace secret...
+                        <span class="loading"></span> Werkruimtegeheim wordt gecontroleerd...
                     </div>
                     <button class="btn btn-secondary" id="secretRequestBtn" style="display: none;">
-                        <i class="fa-solid fa-satellite-dish"></i> Request Secret from Online Device
+                        <i class="fa-solid fa-satellite-dish"></i> Geheim aanvragen van online apparaat
                     </button>
                 </div>
 
                 <!-- Danger Zone Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">⚠️</span> Danger Zone</h2>
+                    <h2><span class="icon">⚠️</span> Gevaarlijke zone</h2>
                     <div id="dangerZoneContent" class="danger-zone">
                         <div id="scheduledDeletionNotice" class="deletion-countdown" style="display: none;">
-                            <strong>⏳ Account deletion scheduled</strong>
-                            <span id="deletionCountdownText">Your account will be deleted in...</span>
+                            <strong>⏳ Accountverwijdering gepland</strong>
+                            <span id="deletionCountdownText">Uw account wordt verwijderd over...</span>
                         </div>
-                        <h3>Delete Account</h3>
-                        <p>Permanently delete your account, API keys, and all associated data. A 24-hour grace period applies — you can cancel during this time.</p>
+                        <h3>Account verwijderen</h3>
+                        <p>Verwijder uw account, API-sleutels en alle gerelateerde gegevens permanent. Er geldt een 24-uurs gratiemoment — u kunt annuleren tijdens deze tijd.</p>
                         <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                             <button class="btn-danger" id="deleteAccountBtn">
-                                <i class="fas fa-trash"></i> Delete Account
+                                <i class="fas fa-trash"></i> Account verwijderen
                             </button>
                             <button class="btn btn-secondary" id="cancelDeleteAccountBtn" style="display: none;">
-                                <i class="fas fa-undo"></i> Cancel Deletion
+                                <i class="fas fa-undo"></i> Verwijdering annuleren
                             </button>
                         </div>
                     </div>
@@ -1743,14 +1743,14 @@
 
     <footer>
         <div class="footer-links">
-            <a href="/docs/">Documentation</a>
+            <a href="/docs/">Documentatie</a>
             <a href="/chat/">Chat</a>
-            <a href="/members.html">Members</a>
-            <a href="/manifesto">Manifesto</a>
+            <a href="/members.html">Leden</a>
+            <a href="/manifesto">Manifest</a>
             <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="/community">Community</a>
-            <a href="/privacy.html">Privacy Policy</a>
-            <a href="/terms.html">Terms of Service</a>
+            <a href="/community">Gemeenschap</a>
+            <a href="/privacy.html">Privacybeleid</a>
+            <a href="/terms.html">Servicevoorwaarden</a>
         </div>
         <p>&copy; 2026 GPT4Free Project. All rights reserved.</p>
     </footer>
@@ -1764,6 +1764,9 @@
         const API_URL = 'https://g4f.space';
         const MEMBERS_API = `${API_BASE}/members/api`;
         const SECRET_API = 'https://auth.g4f.space';
+        const AUTH_MEMBERS_URL = 'https://auth.g4f.space/members.html';
+        const AUTH_HOSTNAME = 'auth.g4f.space';
+        const IS_AUTH_HOST = window.location.hostname === AUTH_HOSTNAME;
 
         // DOM Elements
         const loginSection = document.getElementById('loginSection');
@@ -1878,6 +1881,50 @@
             setTimeout(() => {
                 toast.classList.remove('show');
             }, 3000);
+        }
+
+        // Browsers that block third-party cookies cannot use the session
+        // cookie set by auth.g4f.space while this page runs on g4f.dev.
+        // Probe for cookie support and, when it is missing, move to the
+        // first-party copy of this page on auth.g4f.space.
+        async function thirdPartyCookiesBlocked() {
+            if (IS_AUTH_HOST || !/^https?:$/.test(window.location.protocol)) {
+                return false;
+            }
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                return false;
+            }
+            const nonce = (window.crypto && crypto.randomUUID)
+                ? crypto.randomUUID()
+                : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+            const probeUrl = `${MEMBERS_API}/cookie-check`;
+            try {
+                const setResponse = await fetch(`${probeUrl}?set=${encodeURIComponent(nonce)}`, {
+                    credentials: 'include',
+                    cache: 'no-store'
+                });
+                if (!setResponse.ok) return false;
+                const checkResponse = await fetch(`${probeUrl}?expect=${encodeURIComponent(nonce)}`, {
+                    credentials: 'include',
+                    cache: 'no-store'
+                });
+                if (!checkResponse.ok) return false;
+                const result = await checkResponse.json();
+                return result && result.cookies === false;
+            } catch (e) {
+                console.warn('Could not verify cookie access:', e);
+                return false;
+            }
+        }
+
+        function redirectToAuthMembersPage() {
+            if (IS_AUTH_HOST) return;
+            const target = new URL(AUTH_MEMBERS_URL);
+            target.search = window.location.search;
+            target.hash = window.location.hash;
+            if (target.toString() !== window.location.href) {
+                window.location.replace(target.toString());
+            }
         }
 
         // Check if user is logged in
@@ -2142,10 +2189,12 @@
             const requestBtn = document.getElementById('secretRequestBtn');
             if (!statusEl) return;
             if (secret) {
-                statusEl.innerHTML = '<i class="fas fa-check-circle" style="color: var(--success);"></i> Workspace secret active — this device can confirm requests from other devices.';
+                statusEl.innerHTML = '<i class="fas fa-check-circle" style="color: var(--success);"></i> ' +
+                    framework.translate('Workspace secret active — this device can confirm requests from other devices.');
                 if (requestBtn) requestBtn.style.display = 'none';
             } else {
-                statusEl.innerHTML = '<i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> No workspace secret. Request one from an online device.';
+                statusEl.innerHTML = '<i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> ' +
+                    framework.translate('No workspace secret. Request one from an online device.');
                 if (requestBtn) requestBtn.style.display = 'inline-flex';
             }
         }
@@ -2527,8 +2576,17 @@
             }
         }
 
+        function hasDiscordConnection(user) {
+            if (!user) return false;
+            if (user.provider === 'discord' || user.discord_id) return true;
+            return !!(user.discord && (user.discord.id || user.discord.username));
+        }
+
         function isDiscordUpgradeEligible(user) {
-            return !!user && (user.tier === 'new' || user.tier === 'anonymous');
+            if (!user) return false;
+            // Show the banner to new/anonymous accounts that can be upgraded,
+            // and to any account that has not connected Discord yet.
+            return user.tier === 'new' || user.tier === 'anonymous' || !hasDiscordConnection(user);
         }
 
         function renderDiscordUpgradeBanner(user, status) {
@@ -2551,20 +2609,20 @@
             discordStepDone('upgrade', status.tier !== 'new' && status.tier !== 'anonymous');
 
             if (reconnect) {
-                discordUpgradeText.textContent = 'Reconnect Discord so we can verify your support server membership, then upgrade to the Free tier.';
+                discordUpgradeText.textContent = framework.translate('Reconnect Discord so we can verify your support server membership, then upgrade to the Free tier.');
             } else if (!connected) {
-                discordUpgradeText.textContent = 'Connect Discord and join the G4F support server — we will verify your membership and upgrade your account right away.';
+                discordUpgradeText.textContent = framework.translate('Connect Discord and join the G4F support server — we will verify your membership and upgrade your account right away.');
             } else if (!joined) {
-                discordUpgradeText.textContent = 'Almost there! Join the G4F support server, then click Verify to unlock the Free tier.';
+                discordUpgradeText.textContent = framework.translate('Almost there! Join the G4F support server, then click Verify to unlock the Free tier.');
             } else {
-                discordUpgradeText.textContent = 'Support server membership confirmed. Verify now to upgrade your account to the Free tier.';
+                discordUpgradeText.textContent = framework.translate('Support server membership confirmed. Verify now to upgrade your account to the Free tier.');
             }
 
             const redirect = encodeURIComponent(window.location.origin + '/members.html');
             discordConnectBtn.href = `${API_BASE}/members/auth/discord?link=1&redirect=${redirect}`;
             discordConnectBtn.innerHTML = reconnect || connected
-                ? '<i class="fab fa-discord"></i> Reconnect Discord'
-                : '<i class="fab fa-discord"></i> Connect Discord';
+                ? `<i class="fab fa-discord"></i> ${framework.translate('Reconnect Discord')}`
+                : `<i class="fab fa-discord"></i> ${framework.translate('Connect Discord')}`;
             discordConnectBtn.style.display = connected && !reconnect ? 'none' : '';
             if (discordJoinBtn) {
                 discordJoinBtn.href = status.invite || DISCORD_INVITE_URL;
@@ -2598,7 +2656,7 @@
                 const cached = JSON.parse(localStorage.getItem('g4f_user') || '{}');
                 discordBannerLoading = true;
                 discordVerifyBtn.disabled = true;
-                discordVerifyBtn.innerHTML = '<span class="loading"></span> Verifying...';
+                discordVerifyBtn.innerHTML = '<span class="loading"></span> ' + framework.translate('Verifying...');
                 try {
                     const result = await apiRequest('/discord/verify', {
                         method: 'POST',
@@ -2623,7 +2681,7 @@
                     showToastFormat('Verification failed: {0}', 'error', error.message);
                 } finally {
                     discordBannerLoading = false;
-                    discordVerifyBtn.innerHTML = '<i class="fas fa-check"></i> Verify &amp; Upgrade';
+                    discordVerifyBtn.innerHTML = '<i class="fas fa-check"></i> ' + framework.translate('Verify & Upgrade');
                     if (discordMembership) {
                         discordVerifyBtn.disabled = !discordMembership.connected || discordMembership.needs_reconnect;
                     }
@@ -2749,6 +2807,14 @@
 
         // Initialize
         document.addEventListener('DOMContentLoaded', async () => {
+            // Third-party cookie blocking prevents the auth.g4f.space session
+            // cookie from reaching this origin. Use the first-party members
+            // page instead so sign-in and API access keep working.
+            if (await thirdPartyCookiesBlocked()) {
+                redirectToAuthMembersPage();
+                return;
+            }
+
             // Connect to backend
             if (typeof framework !== 'undefined') {
                 framework.connectToBackend();
@@ -3419,14 +3485,14 @@
             const prefix    = key.prefix || (key.api_key ? key.api_key.substring(0, 10) : null);
             const masked    = prefix ? `${prefix}${'•'.repeat(18)}` : '••••••••••••••••••••••••••••';
             const created   = key.created_at ? new Date(key.created_at).toLocaleDateString() : '-';
-            const expires   = expiresMs !== null ? new Date(expiresMs).toLocaleDateString() : 'Never';
+            const expires   = expiresMs !== null ? new Date(expiresMs).toLocaleDateString() : framework.translate('Never');
 
             return `
                 <div class="api-key-item" data-key-id="${escapeHtml(String(key.id))}">
                     <div class="api-key-info">
-                        <div class="api-key-name">${escapeHtml(key.name || key.label || 'Unnamed Key')}</div>
+                        <div class="api-key-name">${escapeHtml(key.name || key.label || framework.translate('Unnamed Key'))}</div>
                         <div class="api-key-masked">${escapeHtml(masked)}</div>
-                        <div class="api-key-meta">Created: ${created} &bull; Expires: ${expires}</div>
+                        <div class="api-key-meta">${framework.translate('Created:')} ${created} &bull; ${framework.translate('Expires:')} ${expires}</div>
                     </div>
                     <span class="key-status ${isExpired ? 'expired' : 'active'}">
                         <i class="fas fa-circle" style="font-size:0.45rem;"></i>
@@ -3575,7 +3641,7 @@
 (function () {
     "use strict";
     const locale = "nl";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

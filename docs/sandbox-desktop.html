@@ -423,7 +423,7 @@
         <main role="main" class="markdown-body entry-content" itemprop="text" itemscope itemtype="https://schema.org/TechArticle">
             <h1>Sandbox desktop</h1>
 <p>The sandbox desktop is a full Xfce session (TigerVNC + noVNC) with the g4f API
-and a one-click <strong>Install &amp; Open</strong> menu for coding agents, browsers, gateways,
+and a one-click menu for coding agents, browsers, gateways,
 local runtimes and assistants. Everything runs in one container and the API,
 the web desktop and the routed apps share a single published port.</p>
 <p>For the complete tool list and per-entry details, see
@@ -458,10 +458,16 @@ the individual tools. <code>g4f-sandbox --desktop install &lt;tool&gt;</code> in
 when it is first needed; <code>g4f-sandbox --desktop cli list</code> lists them.</p></li><li><p><strong>State is persistent</strong> under <code>~/.g4f-sandbox</code> (<code>--data-dir</code> to change it):
 cookies and media in API mode, <code>.config</code>/<code>.local</code> in desktop mode.</p></li><li><p><code>--app-dir DIR</code> mounts a checkout at <code>/app/gpt4free</code>; <code>--port</code>,
 <code>--vnc-port</code>, <code>--bind</code>, <code>--api-key</code>, <code>--pull</code>, <code>--no-pull</code>, <code>--engine</code>,
-<code>--recreate</code> and <code>--no-open</code> mirror the start script where they overlap.</p></li><li><p><strong>Termux/Android</strong> is detected automatically. The launcher runs the API
-natively with Termux's Python (no Docker), installs <code>g4f[slim]</code> on first run,
-and manages the process with <code>up</code>, <code>down</code>, <code>status</code> and <code>logs</code>. The desktop
-mode still requires Docker/Podman.</p></li></ul>
+<code>--recreate</code> and <code>--no-open</code> mirror the start script where they overlap.</p></li><li><p><strong>Termux/Android</strong> is detected automatically. The standalone
+<code>g4f-sandbox</code> launcher runs the API natively with Termux's Python (no
+Docker), installs <code>g4f[slim]</code> on first run, and manages the process with
+<code>up</code>, <code>down</code>, <code>status</code> and <code>logs</code>. <code>g4f-go sandbox</code> instead uses
+<a href="https://github.com/indigo-dc/udocker">udocker</a>, installed with pip and set up
+with <code>udocker install</code> on first use, so it runs the same slim and desktop
+images without root; the native backend remains available with `--backend
+termux<code>. </code>G4F_SANDBOX_UDOCKER_DIR` moves the udocker root (default
+<code>~/.udocker</code>) and <code>G4F_SANDBOX_UDOCKER_EXECMODE</code> selects the execution mode
+(<code>P1</code>, <code>P2</code>, <code>F1</code>-<code>F4</code>, <code>R1</code>-<code>R3</code>, <code>S1</code>).</p></li></ul>
 <p><code>g4f-go</code> embeds the same launcher (<code>g4f-go sandbox ...</code>) and adds
 <code>g4f-go sandbox-cli</code> for running <code>sandbox-cli</code> inside the desktop container.</p>
 <h3>Hosted Polli sandbox</h3>
@@ -725,6 +731,9 @@ sandbox-cli list            list the known tools
 sandbox-cli settings        model, API key, HOME, provider and proxy
 sandbox-cli reset           clear the saved settings
 sandbox-cli package         show, update or pin the g4f package
+sandbox-cli update          update the g4f-go launcher itself
+sandbox-cli upgrade         update the g4f package in the runtime
+sandbox-cli uninstall       remove g4f-go and its managed data
 sandbox-cli urls            print the public URLs served by the API
 sandbox-cli hosts           print the /etc/hosts entries for the app domains
 sandbox-cli harness         pick a coding agent and a model from the g4f API
@@ -734,6 +743,12 @@ sandbox-cli polli-sandbox   create/connect/manage hosted Polli sandboxes</code><
 settings commands accept flags for scripting, for example
 <code>sandbox-cli settings --api-key &#x27;key&#x27; --model gpt-4o</code>,
 <code>sandbox-cli settings --show</code> and <code>sandbox-cli settings --json</code>.</p>
+<p>The launcher and its Python runtime are owned by <code>g4f-go</code>, so the management
+commands forward to it: <code>sandbox-cli update</code> updates the <code>g4f-go</code> binary
+(<code>--check</code> reports without installing, <code>--version &lt;tag&gt;</code> picks a release),
+<code>sandbox-cli upgrade</code> updates the g4f package in the runtime, and
+<code>sandbox-cli uninstall</code> removes the launcher and its managed runtime, browser
+and caches (<code>--keep-binary</code>, <code>--keep-data</code> and <code>--dry-run</code> are passed through).</p>
 <h2>Polli sandbox install</h2>
 <p>A Polli sandbox is a headless Debian VM (E2B) reached as <code>&lt;id&gt;.polli</code> over
 ssh. The menu can install itself there:</p>

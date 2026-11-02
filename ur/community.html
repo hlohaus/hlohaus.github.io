@@ -66,50 +66,50 @@
     <header class="navbar" id="navbar" role="banner">
         <a href="/" class="logo">G4<span>F</span></a>
         <nav class="nav-links" role="navigation">
-            <a href="/">Home</a>
-            <a href="/docs/">Docs</a>
-            <a href="/members.html">Members</a>
-            <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">Discord</a>
-            <a href="/chat/" class="nav-cta">Get Started</a>
+            <a href="/">ہوم</a>
+            <a href="/docs/">دستاویزات</a>
+            <a href="/members.html">ارکان</a>
+            <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">ڈسکورڈ</a>
+            <a href="/chat/" class="nav-cta">شروع کریں</a>
         </nav>
     </header>
 
     <main>
         <section class="page-head">
-            <span class="kicker">✦ Community</span>
-            <h1>Community Forum</h1>
-            <p>Ask a question, share an idea or help someone out. Join our Discord: <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">discord.gg/qXA4Wf4Fsm</a></p>
+            <span class="kicker">✦ کمیونٹی</span>
+            <h1>کمیونٹی فورم</h1>
+            <p>کوئی سوال پوچھیں، خیال شیئر کریں یا کسی کی مدد کریں۔ ہمارے Discord سے جڑیں: <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">discord.gg/qXA4Wf4Fsm</a></p>
         </section>
 
         <section class="section">
             <div id="loginStatus" class="status"></div>
 
             <div class="post-form" id="postForm" style="display: none;">
-                <textarea id="postContent" placeholder="Ask a question or post to the Community..."></textarea>
-                <button id="postButton" class="btn" type="button">Post</button>
+                <textarea id="postContent" placeholder="کمیونٹی میں سوال پوچھیں یا پوسٹ کریں..."></textarea>
+                <button id="postButton" class="btn" type="button">پوسٹ کریں</button>
             </div>
 
             <div class="section-header">
-                <span class="kicker">✦ Posts</span>
-                <h2>Latest Posts</h2>
+                <span class="kicker">✦ پوسٹس</span>
+                <h2>تازہ ترین پوسٹس</h2>
             </div>
 
-            <div id="posts" class="muted">Loading posts...</div>
+            <div id="posts" class="muted">پوسٹس لوڈ ہو رہی ہیں...</div>
         </section>
     </main>
 
     <footer>
         <div class="footer-links">
-            <a href="/docs/">Documentation</a>
-            <a href="/chat/">Chat</a>
-            <a href="/members.html">Members</a>
-            <a href="/manifesto">Manifesto</a>
-            <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="/community">Community</a>
-            <a href="/privacy.html">Privacy Policy</a>
-            <a href="/terms.html">Terms of Service</a>
+            <a href="/docs/">دستاویزات</a>
+            <a href="/chat/">چٹ</a>
+            <a href="/members.html">ارکان</a>
+            <a href="/manifesto">مینیفیسٹو</a>
+            <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">گیت ہب</a>
+            <a href="/community">کمیونٹی</a>
+            <a href="/privacy.html">رازداری کی پالیسی</a>
+            <a href="/terms.html">سروس کی شرائط</a>
         </div>
-        <p>© 2026 GPT4Free Project. Open source and free forever. ✨</p>
+        <p>© 2026 جی پی ٹی 4 فری پروجیکٹ۔ اوپن سورس اور ہمیشہ مفت۔ ✨</p>
     </footer>
 
     <script>
@@ -456,7 +456,7 @@
 (function () {
     "use strict";
     const locale = "ur";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

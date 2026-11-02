@@ -168,8 +168,8 @@
   <button id="eraserBtn" aria-pressed="false" title="Eraser Tool" aria-label="Select Eraser Tool">Eraser</button>
   <button id="undoBtn" title="Undo (Ctrl+Z)" aria-label="Undo Last Action" disabled>Undo</button>
   <button id="redoBtn" title="Redo (Ctrl+Y)" aria-label="Redo Last Action" disabled>Redo</button>
-  <button id="clearBtn" title="Clear Canvas" aria-label="Clear Canvas">Clear</button>
-  <button id="saveBtn" title="Save Image" aria-label="Save Drawing as Image">Save</button>
+  <button id="clearBtn" title="Clear Canvas" aria-label="Clear Canvas">Pastro</button>
+  <button id="saveBtn" title="Save Image" aria-label="Save Drawing as Image">Ruaj</button>
 </div>
 
 <div id="canvas-container">
@@ -510,7 +510,7 @@
 (function () {
     "use strict";
     const locale = "sq";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

@@ -495,8 +495,8 @@ print(response.choices[0].message.content)</code></pre>
 <thead>
 <tr>
 <th>Key</th>
-<th>Required</th>
-<th>Description</th>
+<th>必須</th>
+<th>説明</th>
 </tr>
 </thead>
 <tbody>
@@ -538,7 +538,7 @@ The result is cached in memory (5 min TTL) and invalidated on 429 responses.</p>
 <table>
 <thead>
 <tr>
-<th>Provider</th>
+<th>プロバイダー</th>
 <th><code>get_quota()</code> format</th>
 <th>Example condition</th>
 </tr>
@@ -597,7 +597,7 @@ older than 1 hour are automatically pruned.</p>
 <td>Equality / inequality</td>
 </tr>
 <tr>
-<td><code>and</code> <code>or</code> <code>not</code></td>
+<td><code>と</code> <code>or</code> <code>not</code></td>
 <td>Logical connectives</td>
 </tr>
 <tr>
@@ -827,7 +827,7 @@ a warning and skips config.yaml loading.</p>
 (function () {
     "use strict";
     const locale = "ja";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

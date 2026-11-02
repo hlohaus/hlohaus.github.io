@@ -466,7 +466,7 @@
 <h2>Overview</h2>
 <p>The gpt4free MCP server exposes three main tools:</p>
 <ol>
-<li><strong>Web Search</strong> - Search the web using DuckDuckGo</li>
+<li><strong>Pencarian Web</strong> - Search the web using DuckDuckGo</li>
 <li><strong>Web Scraping</strong> - Extract and clean text content from web pages</li>
 <li><strong>Image Generation</strong> - Generate images from text prompts using various AI providers</li>
 </ol>
@@ -678,7 +678,7 @@
 <li>URLs are valid and accessible</li>
 <li>Image generation providers are not rate-limited</li>
 </ul>
-<h3>Debug Mode</h3>
+<h3>Mode Debug</h3>
 <p>The server writes diagnostic information to stderr. To see debug output:</p>
 <div class="highlight highlight-source-shell"><pre class="notranslate">python -m g4f.mcp <span class="pl-k">2&gt;</span> debug.log</pre></div>
 <h2>License</h2>
@@ -813,7 +813,7 @@
 (function () {
     "use strict";
     const locale = "id";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

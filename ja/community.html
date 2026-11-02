@@ -66,50 +66,50 @@
     <header class="navbar" id="navbar" role="banner">
         <a href="/" class="logo">G4<span>F</span></a>
         <nav class="nav-links" role="navigation">
-            <a href="/">Home</a>
-            <a href="/docs/">Docs</a>
-            <a href="/members.html">Members</a>
+            <a href="/">ホーム</a>
+            <a href="/docs/">ドキュメント</a>
+            <a href="/members.html">メンバー</a>
             <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">Discord</a>
-            <a href="/chat/" class="nav-cta">Get Started</a>
+            <a href="/chat/" class="nav-cta">始める</a>
         </nav>
     </header>
 
     <main>
         <section class="page-head">
-            <span class="kicker">✦ Community</span>
-            <h1>Community Forum</h1>
-            <p>Ask a question, share an idea or help someone out. Join our Discord: <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">discord.gg/qXA4Wf4Fsm</a></p>
+            <span class="kicker">✦ コミュニティ</span>
+            <h1>コミュニティフォーラム</h1>
+            <p>質問をしたり、アイデアを共有したり、誰かを助けたりしましょう。私たちのDiscordに参加してください: <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">discord.gg/qXA4Wf4Fsm</a></p>
         </section>
 
         <section class="section">
             <div id="loginStatus" class="status"></div>
 
             <div class="post-form" id="postForm" style="display: none;">
-                <textarea id="postContent" placeholder="Ask a question or post to the Community..."></textarea>
-                <button id="postButton" class="btn" type="button">Post</button>
+                <textarea id="postContent" placeholder="質問を投稿するか、コミュニティに投稿してください..."></textarea>
+                <button id="postButton" class="btn" type="button">投稿</button>
             </div>
 
             <div class="section-header">
-                <span class="kicker">✦ Posts</span>
-                <h2>Latest Posts</h2>
+                <span class="kicker">✦ 投稿</span>
+                <h2>最新の投稿</h2>
             </div>
 
-            <div id="posts" class="muted">Loading posts...</div>
+            <div id="posts" class="muted">投稿を読み込み中...</div>
         </section>
     </main>
 
     <footer>
         <div class="footer-links">
-            <a href="/docs/">Documentation</a>
-            <a href="/chat/">Chat</a>
-            <a href="/members.html">Members</a>
-            <a href="/manifesto">Manifesto</a>
+            <a href="/docs/">ドキュメント</a>
+            <a href="/chat/">チャット</a>
+            <a href="/members.html">メンバー</a>
+            <a href="/manifesto">マニフェスト</a>
             <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="/community">Community</a>
-            <a href="/privacy.html">Privacy Policy</a>
-            <a href="/terms.html">Terms of Service</a>
+            <a href="/community">コミュニティ</a>
+            <a href="/privacy.html">プライバシーポリシー</a>
+            <a href="/terms.html">利用規約</a>
         </div>
-        <p>© 2026 GPT4Free Project. Open source and free forever. ✨</p>
+        <p>© 2026 GPT4Free プロジェクト。オープンソースで永遠に無料。✨</p>
     </footer>
 
     <script>
@@ -456,7 +456,7 @@
 (function () {
     "use strict";
     const locale = "ja";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

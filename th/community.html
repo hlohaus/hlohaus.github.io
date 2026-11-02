@@ -66,50 +66,50 @@
     <header class="navbar" id="navbar" role="banner">
         <a href="/" class="logo">G4<span>F</span></a>
         <nav class="nav-links" role="navigation">
-            <a href="/">Home</a>
-            <a href="/docs/">Docs</a>
-            <a href="/members.html">Members</a>
+            <a href="/">หน้าแรก</a>
+            <a href="/docs/">เอกสาร</a>
+            <a href="/members.html">สมาชิก</a>
             <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">Discord</a>
-            <a href="/chat/" class="nav-cta">Get Started</a>
+            <a href="/chat/" class="nav-cta">เริ่มต้น</a>
         </nav>
     </header>
 
     <main>
         <section class="page-head">
-            <span class="kicker">✦ Community</span>
-            <h1>Community Forum</h1>
-            <p>Ask a question, share an idea or help someone out. Join our Discord: <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">discord.gg/qXA4Wf4Fsm</a></p>
+            <span class="kicker">✦ ชุมชน</span>
+            <h1>ฟอรัมชุมชน</h1>
+            <p>ถามคำถาม แชร์ไอเดีย หรือช่วยเหลือผู้อื่น ร่วมเข้ากลุ่ม Discord ของเรา: <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">discord.gg/qXA4Wf4Fsm</a></p>
         </section>
 
         <section class="section">
             <div id="loginStatus" class="status"></div>
 
             <div class="post-form" id="postForm" style="display: none;">
-                <textarea id="postContent" placeholder="Ask a question or post to the Community..."></textarea>
-                <button id="postButton" class="btn" type="button">Post</button>
+                <textarea id="postContent" placeholder="ถามคำถามหรือโพสต์ไปยังชุมชน..."></textarea>
+                <button id="postButton" class="btn" type="button">โพสต์</button>
             </div>
 
             <div class="section-header">
-                <span class="kicker">✦ Posts</span>
-                <h2>Latest Posts</h2>
+                <span class="kicker">✦ โพสต์</span>
+                <h2>โพสต์ล่าสุด</h2>
             </div>
 
-            <div id="posts" class="muted">Loading posts...</div>
+            <div id="posts" class="muted">กำลังโหลดโพสต์...</div>
         </section>
     </main>
 
     <footer>
         <div class="footer-links">
-            <a href="/docs/">Documentation</a>
-            <a href="/chat/">Chat</a>
-            <a href="/members.html">Members</a>
-            <a href="/manifesto">Manifesto</a>
+            <a href="/docs/">เอกสาร</a>
+            <a href="/chat/">แชท</a>
+            <a href="/members.html">สมาชิก</a>
+            <a href="/manifesto">แถลงการณ์</a>
             <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="/community">Community</a>
-            <a href="/privacy.html">Privacy Policy</a>
-            <a href="/terms.html">Terms of Service</a>
+            <a href="/community">ชุมชน</a>
+            <a href="/privacy.html">นโยบายความเป็นส่วนตัว</a>
+            <a href="/terms.html">ข้อกำหนดการให้บริการ</a>
         </div>
-        <p>© 2026 GPT4Free Project. Open source and free forever. ✨</p>
+        <p>© 2026 โครงการ GPT4Free เป็นโอเพนซอร์สและใช้ฟรีตลอดไป ✨</p>
     </footer>
 
     <script>
@@ -456,7 +456,7 @@
 (function () {
     "use strict";
     const locale = "th";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

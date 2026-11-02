@@ -469,14 +469,14 @@
 <h4><strong>Generate Audio with PollinationsAI:</strong></h4>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">AsyncClient</span>
-<span class="pl-k">import</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span>
+<span class="pl-k">import</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provedor</span>
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main</span>():
-    <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">Provider</span>.<span class="pl-c1">PollinationsAI</span>)
+    <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">Provedor</span>.<span class="pl-c1">PollinationsAI</span>)
 
     <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
         <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"openai-audio"</span>,
-        <span class="pl-s1">messages</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Say good day to the world"</span>}],
+        <span class="pl-s1">mensagens</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Say good day to the world"</span>}],
         <span class="pl-s1">audio</span><span class="pl-c1">=</span>{<span class="pl-s">"voice"</span>: <span class="pl-s">"alloy"</span>, <span class="pl-s">"format"</span>: <span class="pl-s">"mp3"</span>},
     )
     <span class="pl-s1">response</span>.<span class="pl-c1">choices</span>[<span class="pl-c1">0</span>].<span class="pl-c1">message</span>.<span class="pl-c1">save</span>(<span class="pl-s">"alloy.mp3"</span>)
@@ -486,10 +486,10 @@
 <summary>Generate Audio with OpenAIFM:</summary>
 <p>OpenAIFM provides high-quality text-to-speech with various voice options and customizable voice styles.</p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">Client</span>
-<span class="pl-k">import</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">as</span> <span class="pl-v">Provider</span>
+<span class="pl-k">import</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provedor</span> <span class="pl-k">as</span> <span class="pl-v">Provedor</span>
 
 <span class="pl-c"># Initialize client with OpenAIFM provider</span>
-<span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">Client</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">Provider</span>.<span class="pl-c1">OpenAIFM</span>)
+<span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">Client</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">Provedor</span>.<span class="pl-c1">OpenAIFM</span>)
 
 <span class="pl-c"># Generate audio with default settings</span>
 <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">media</span>.<span class="pl-c1">generate</span>(
@@ -522,9 +522,9 @@
 <summary>Using Predefined Voice Styles in OpenAIFM:</summary>
 <p>OpenAIFM provides several predefined voice styles that can be accessed as class attributes. These styles define the personality, tone, and delivery characteristics of the generated speech:</p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">Client</span>
-<span class="pl-k">import</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">as</span> <span class="pl-v">Provider</span>
+<span class="pl-k">import</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provedor</span> <span class="pl-k">as</span> <span class="pl-v">Provedor</span>
 
-<span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">Client</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">Provider</span>.<span class="pl-c1">OpenAIFM</span>)
+<span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">Client</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">Provedor</span>.<span class="pl-c1">OpenAIFM</span>)
 
 <span class="pl-c"># Available predefined styles as class attributes</span>
 <span class="pl-c"># Provider.OpenAIFM.friendly - Default friendly style</span>
@@ -540,7 +540,7 @@
     <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4o-mini-tts"</span>,
     <span class="pl-s1">audio</span><span class="pl-c1">=</span>{
         <span class="pl-s">"voice"</span>: <span class="pl-s">"onyx"</span>,
-        <span class="pl-s">"instructions"</span>: <span class="pl-v">Provider</span>.<span class="pl-c1">OpenAIFM</span>.<span class="pl-c1">noir_detective</span>
+        <span class="pl-s">"instructions"</span>: <span class="pl-v">Provedor</span>.<span class="pl-c1">OpenAIFM</span>.<span class="pl-c1">noir_detective</span>
     }
 )
 
@@ -559,9 +559,9 @@
 <summary>Creating Custom Voice Instructions in OpenAIFM:</summary>
 <p>You can create your own voice style by defining custom instructions as a multi-line string. The instructions should describe the voice characteristics, tone, pacing, emotion, pronunciation, and pauses:</p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">Client</span>
-<span class="pl-k">import</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">as</span> <span class="pl-v">Provider</span>
+<span class="pl-k">import</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provedor</span> <span class="pl-k">as</span> <span class="pl-v">Provedor</span>
 
-<span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">Client</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">Provider</span>.<span class="pl-c1">OpenAIFM</span>)
+<span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">Client</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">Provedor</span>.<span class="pl-c1">OpenAIFM</span>)
 
 <span class="pl-c"># Custom voice style</span>
 <span class="pl-s1">custom_instructions</span> <span class="pl-c1">=</span> <span class="pl-s">"""</span>
@@ -620,7 +620,7 @@
         <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
 
         <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-c1">!</span><span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-c1">ok</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
-            <span class="pl-k">throw</span> <span class="pl-k">new</span> <span class="pl-v">Error</span><span class="pl-kos">(</span><span class="pl-s">`API error: <span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-c1">status</span><span class="pl-kos">}</span></span> <span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-c1">statusText</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+            <span class="pl-k">throw</span> <span class="pl-k">new</span> <span class="pl-v">Erro</span><span class="pl-kos">(</span><span class="pl-s">`API error: <span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-c1">status</span><span class="pl-kos">}</span></span> <span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-c1">statusText</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
         <span class="pl-kos">}</span>
 
         <span class="pl-k">const</span> <span class="pl-s1">audioBlob</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-en">blob</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
@@ -639,7 +639,7 @@
 <summary>Examples for all providers</summary>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">Client</span>
 
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-s1">gTTS</span>, <span class="pl-v">EdgeTTS</span>, <span class="pl-v">Gemini</span>, <span class="pl-v">PollinationsAI</span>, <span class="pl-v">OpenAIFM</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provedor</span> <span class="pl-k">import</span> <span class="pl-s1">gTTS</span>, <span class="pl-v">EdgeTTS</span>, <span class="pl-v">Gemini</span>, <span class="pl-v">PollinationsAI</span>, <span class="pl-v">OpenAIFM</span>
 
 <span class="pl-c"># OpenAIFM</span>
 <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">Client</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">OpenAIFM</span>)
@@ -679,14 +679,14 @@
 <p>Some providers in G4F support audio inputs in chat completions, allowing you to transcribe audio files by instructing the model accordingly. This example demonstrates how to use the <code class="notranslate">AsyncClient</code> to transcribe an audio file asynchronously:</p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">AsyncClient</span>
-<span class="pl-k">import</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span>
+<span class="pl-k">import</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provedor</span>
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main</span>():
-    <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">Provider</span>.<span class="pl-c1">Microsoft_Phi_4_Multimodal</span>)
+    <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">Provedor</span>.<span class="pl-c1">Microsoft_Phi_4_Multimodal</span>)
 
-    <span class="pl-k">with</span> <span class="pl-en">open</span>(<span class="pl-s">"audio.wav"</span>, <span class="pl-s">"rb"</span>) <span class="pl-k">as</span> <span class="pl-s1">audio_file</span>:
+    <span class="pl-k">com</span> <span class="pl-en">open</span>(<span class="pl-s">"audio.wav"</span>, <span class="pl-s">"rb"</span>) <span class="pl-k">as</span> <span class="pl-s1">audio_file</span>:
         <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
-            <span class="pl-s1">messages</span><span class="pl-c1">=</span><span class="pl-s">"Transcribe this audio"</span>,
+            <span class="pl-s1">mensagens</span><span class="pl-c1">=</span><span class="pl-s">"Transcribe this audio"</span>,
             <span class="pl-s1">media</span><span class="pl-c1">=</span>[[<span class="pl-s1">audio_file</span>, <span class="pl-s">"audio.wav"</span>]],
             <span class="pl-s1">modalities</span><span class="pl-c1">=</span>[<span class="pl-s">"text"</span>],
         )
@@ -698,10 +698,10 @@
 <h4>Explanation</h4>
 <ul>
 <li><strong>Client Initialization</strong>: An <code class="notranslate">AsyncClient</code> instance is created with a provider that supports audio inputs, such as <code class="notranslate">PollinationsAI</code> or <code class="notranslate">Microsoft_Phi_4_Multimodal</code>.</li>
-<li><strong>File Handling</strong>: The audio file (<code class="notranslate">audio.wav</code>) is opened in binary read mode (<code class="notranslate">"rb"</code>) using a context manager (<code class="notranslate">with</code> statement) to ensure proper file closure after use.</li>
+<li><strong>File Handling</strong>: The audio file (<code class="notranslate">audio.wav</code>) is opened in binary read mode (<code class="notranslate">"rb"</code>) using a context manager (<code class="notranslate">com</code> statement) to ensure proper file closure after use.</li>
 <li><strong>API Call</strong>: The <code class="notranslate">chat.completions.create</code> method is called with:
 <ul>
-<li><code class="notranslate">messages</code>: Containing a user message instructing the model to transcribe the audio.</li>
+<li><code class="notranslate">mensagens</code>: Containing a user message instructing the model to transcribe the audio.</li>
 <li><code class="notranslate">media</code>: A list of lists, where each inner list contains the file object and its name (<code class="notranslate">[[audio_file, "audio.wav"]]</code>).</li>
 <li><code class="notranslate">modalities=["text"]</code>: Specifies that the output should be text (the transcription).</li>
 </ul>
@@ -730,7 +730,7 @@
         <span class="pl-c1">body</span>: <span class="pl-s1">formData</span><span class="pl-kos">,</span>
     <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
     <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-c1">!</span><span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-c1">ok</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
-        <span class="pl-k">throw</span> <span class="pl-k">new</span> <span class="pl-v">Error</span><span class="pl-kos">(</span><span class="pl-s">`API request failed: <span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-c1">status</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+        <span class="pl-k">throw</span> <span class="pl-k">new</span> <span class="pl-v">Erro</span><span class="pl-kos">(</span><span class="pl-s">`API request failed: <span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-c1">status</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
     <span class="pl-kos">}</span>
     <span class="pl-k">const</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-en">json</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
     <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">"Transcribed text:"</span><span class="pl-kos">,</span> <span class="pl-s1">result</span><span class="pl-kos">.</span><span class="pl-c1">text</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
@@ -800,10 +800,10 @@
 </details>
 <details>
 <summary>Python and requests</summary>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">requests</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">requisições</span>
 
-<span class="pl-k">with</span> <span class="pl-en">open</span>(<span class="pl-s">'audio.wav'</span>, <span class="pl-s">'rb'</span>) <span class="pl-k">as</span> <span class="pl-s1">audio_file</span>:
-    <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">requests</span>.<span class="pl-c1">post</span>(<span class="pl-s">'http://localhost:8080/api/markitdown'</span>, <span class="pl-s1">files</span><span class="pl-c1">=</span>{<span class="pl-s">'file'</span>: <span class="pl-s1">audio_file</span>})
+<span class="pl-k">com</span> <span class="pl-en">open</span>(<span class="pl-s">'audio.wav'</span>, <span class="pl-s">'rb'</span>) <span class="pl-k">as</span> <span class="pl-s1">audio_file</span>:
+    <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">requisições</span>.<span class="pl-c1">post</span>(<span class="pl-s">'http://localhost:8080/api/markitdown'</span>, <span class="pl-s1">files</span><span class="pl-c1">=</span>{<span class="pl-s">'file'</span>: <span class="pl-s1">audio_file</span>})
     <span class="pl-k">if</span> <span class="pl-s1">response</span>.<span class="pl-c1">status_code</span> <span class="pl-c1">==</span> <span class="pl-c1">200</span>:
         <span class="pl-s1">data</span> <span class="pl-c1">=</span> <span class="pl-s1">response</span>.<span class="pl-c1">json</span>()
         <span class="pl-en">print</span>(<span class="pl-s1">data</span>[<span class="pl-s">'text'</span>])
@@ -816,7 +816,7 @@
 
 <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">OpenAI</span>(<span class="pl-s1">base_url</span><span class="pl-c1">=</span><span class="pl-s">"http://localhost:8080/v1"</span>, <span class="pl-s1">api_key</span><span class="pl-c1">=</span><span class="pl-s">"secret"</span>)
 
-<span class="pl-k">with</span> <span class="pl-en">open</span>(<span class="pl-s">"audio.wav"</span>, <span class="pl-s">"rb"</span>) <span class="pl-k">as</span> <span class="pl-s1">file</span>:
+<span class="pl-k">com</span> <span class="pl-en">open</span>(<span class="pl-s">"audio.wav"</span>, <span class="pl-s">"rb"</span>) <span class="pl-k">as</span> <span class="pl-s1">file</span>:
     <span class="pl-s1">transcript</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">audio</span>.<span class="pl-c1">transcriptions</span>.<span class="pl-c1">create</span>(
         <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">""</span>,
         <span class="pl-s1">extra_body</span><span class="pl-c1">=</span>{<span class="pl-s">"provider"</span>: <span class="pl-s">"MarkItDown"</span>},
@@ -900,7 +900,7 @@
 <h4><strong>Create Image Variations:</strong></h4>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">AsyncClient</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">OpenaiChat</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provedor</span> <span class="pl-k">import</span> <span class="pl-v">OpenaiChat</span>
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main</span>():
     <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>(<span class="pl-s1">image_provider</span><span class="pl-c1">=</span><span class="pl-v">OpenaiChat</span>)
@@ -920,7 +920,7 @@
 <h4><strong>Generate a Video:</strong></h4>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">AsyncClient</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">HuggingFaceMedia</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provedor</span> <span class="pl-k">import</span> <span class="pl-v">HuggingFaceMedia</span>
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main</span>():
     <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>(
@@ -962,7 +962,7 @@
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">os</span>
 <span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">AsyncClient</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">HuggingFaceMedia</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provedor</span> <span class="pl-k">import</span> <span class="pl-v">HuggingFaceMedia</span>
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main</span>():
     <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>(
@@ -1117,7 +1117,7 @@
 (function () {
     "use strict";
     const locale = "pt";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

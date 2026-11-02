@@ -323,9 +323,9 @@
     <thead>
       <tr>
         <th>#</th>
-        <th>Model</th>
-        <th>Provider</th>
-        <th>Requests</th>
+        <th>モデル</th>
+        <th>プロバイダー</th>
+        <th>リクエスト</th>
         <th>Status</th>
         <th>Time</th>
         <th>Response</th>
@@ -672,7 +672,7 @@ document.getElementById('apiKeys').addEventListener('change', (e) => {
 (function () {
     "use strict";
     const locale = "ja";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

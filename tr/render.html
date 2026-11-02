@@ -45,7 +45,7 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/render.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G4F Render - AI Generated Content</title>
+    <title>G4F Render - Yapay Zeka Oluşturulan İçerik</title>
     <link rel="icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="shortcut icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/dist/img/g4f.svg">
@@ -454,12 +454,12 @@
                     type="text"
                     id="promptInput"
                     class="input-field"
-                    placeholder="Enter a prompt to generate content..."
+                    placeholder="İçerik oluşturmak için bir istem girin..."
                     autofocus
                 />
                 <button id="generateBtn" class="button">Generate</button>
             </div>
-            <button id="clearBtn" class="button button-secondary">Clear</button>
+            <button id="clearBtn" class="button button-secondary">Temizle</button>
         </div>
     </div>
 
@@ -467,10 +467,10 @@
     <div class="main-container">
         <!-- Sidebar: History -->
         <div class="sidebar">
-            <h3>📋 History</h3>
+            <h3>📋 Geçmiş</h3>
             <div id="historyList">
                 <div style="color: var(--colour-2); font-size: 0.85rem; opacity: 0.6;">
-                    No history yet
+                    Henüz geçmiş yok
                 </div>
             </div>
         </div>
@@ -662,7 +662,7 @@
 (function () {
     "use strict";
     const locale = "tr";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

@@ -208,16 +208,16 @@
         <!-- Input and Button -->
         <form action="/chat/">
             <input type="text" name="prompt" class="input-field" placeholder="Enter your query...">
-            <button class="button">Open Chat</button>
+            <button class="button">Otwórz czat</button>
         </form>
 
         <!-- Footer -->
         <div class="footer">
             <p>&copy; 2026 G4F. All Rights Reserved.</p>
-            <p>Powered by the G4F framework</p>
+            <p>Napędzane przez framework G4F</p>
         </div>
 
-        <div class="stream-widget">Loading...</div>
+        <div class="stream-widget">Ładowanie...</div>
     </div>
     <script>
         const streamWidget = document.querySelector('.stream-widget');
@@ -276,7 +276,7 @@
 (function () {
     "use strict";
     const locale = "pl";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

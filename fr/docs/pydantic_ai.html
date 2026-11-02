@@ -526,7 +526,7 @@
 <span class="pl-k">from</span> <span class="pl-s1">pydantic_ai</span> <span class="pl-k">import</span> <span class="pl-v">Agent</span>
 <span class="pl-k">from</span> <span class="pl-s1">pydantic_ai</span>.<span class="pl-s1">models</span> <span class="pl-k">import</span> <span class="pl-v">ModelSettings</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">integration</span>.<span class="pl-s1">pydantic_ai</span> <span class="pl-k">import</span> <span class="pl-v">AIModel</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">PollinationsAI</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Fournisseur</span> <span class="pl-k">import</span> <span class="pl-v">PollinationsAI</span>
 
 
 <span class="pl-k">class</span> <span class="pl-v">MyModel</span>(<span class="pl-v">BaseModel</span>):
@@ -584,7 +584,7 @@
 <p><strong>Model Initialization:</strong> We initialize the agent with the <code class="notranslate">PollinationsAI:openai</code> model, which may not have a built-in API for returning structured outputs. Instead, it relies on the <code class="notranslate">ToolSupportProvider</code> to format the output.</p>
 </li>
 <li>
-<p><strong>Custom Result Model:</strong> We define a custom Pydantic model (<code class="notranslate">MyModel</code>) to capture the expected output in a structured way (e.g., <code class="notranslate">city</code> and <code class="notranslate">country</code> fields). This helps ensure that even when the model doesn't support structured data, the agent can interpret and format it.</p>
+<p><strong>Custom Result Model:</strong> We define a custom Pydantic model (<code class="notranslate">MyModel</code>) to capture the expected output in a structured way (e.g., <code class="notranslate">city</code> et <code class="notranslate">country</code> fields). This helps ensure that even when the model doesn't support structured data, the agent can interpret and format it.</p>
 </li>
 <li>
 <p><strong>Debug Logging:</strong> The <code class="notranslate">g4f.debug.logging</code> is enabled to provide detailed logs for troubleshooting and monitoring the agent's execution.</p>
@@ -768,7 +768,7 @@ usage={<span class="pl-s"><span class="pl-pds">'</span>prompt_tokens<span class=
 (function () {
     "use strict";
     const locale = "fr";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

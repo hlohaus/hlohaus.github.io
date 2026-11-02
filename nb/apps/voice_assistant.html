@@ -798,7 +798,7 @@
         <div class="logo">
             <span class="logo-icon">🎙️</span>
             <div>
-                <div data-i18n="appTitle">Voice Assistant</div>
+                <div data-i18n="appTitle">Stemmeassistent</div>
                 <div class="subtitle" data-i18n="appSubtitle">Speak to write, write to speak</div>
             </div>
         </div>
@@ -878,11 +878,11 @@
                 </button>
                 <button class="btn btn-secondary" onclick="clearText()">
                     <span class="btn-icon">🗑️</span>
-                    <span data-i18n="clear">Clear</span>
+                    <span data-i18n="clear">Tøm</span>
                 </button>
                 <button class="btn btn-secondary" onclick="copyText()">
                     <span class="btn-icon">📋</span>
-                    <span data-i18n="copy">Copy</span>
+                    <span data-i18n="copy">Kopier</span>
                 </button>
             </div>
         </div>
@@ -1424,7 +1424,7 @@
 (function () {
     "use strict";
     const locale = "nb";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

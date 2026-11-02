@@ -475,7 +475,7 @@
           <input type="text" id="task-title-input" name="title" required autocomplete="off" />
         </div>
         <div class="form-group">
-          <label for="task-desc-input">Description</label>
+          <label for="task-desc-input">Mô tả</label>
           <textarea id="task-desc-input" name="description" rows="3" placeholder="Optional description..."></textarea>
         </div>
         <div class="form-row">
@@ -486,9 +486,9 @@
           <div class="form-group">
             <label for="task-priority-input">Priority</label>
             <select id="task-priority-input" name="priority" required>
-              <option value="low">Low</option>
-              <option value="medium" selected>Medium</option>
-              <option value="high">High</option>
+              <option value="low">Thấp</option>
+              <option value="medium" selected>Trung bình</option>
+              <option value="high">Cao</option>
             </select>
           </div>
         </div>
@@ -924,7 +924,7 @@
 (function () {
     "use strict";
     const locale = "vi";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

@@ -282,34 +282,34 @@
             <div class="brand-logo">
                 <i class="fa-solid fa-bolt"></i>
             </div>
-            <span class="brand-text">G4F Framework</span>
+            <span class="brand-text">G4F 框架</span>
         </a>
         <nav class="nav-links" role="navigation">
-            <a href="/">Home</a>
-            <a href="/chat/" title="Start Chat">Chat</a>
-            <a href="/providers/" title="AI Providers">Providers</a>
-            <a href="/stats/" title="Usage Statistics" class="active">Stats</a>
-            <a href="/docs/" title="Documentation">Docs</a>
+            <a href="/">首页</a>
+            <a href="/chat/" title="开始聊天">聊天</a>
+            <a href="/providers/" title="AI Providers">提供商</a>
+            <a href="/stats/" title="使用统计" class="active">统计</a>
+            <a href="/docs/" title="文档">文档</a>
             <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
         </nav>
     </header>
 
     <main class="main-container">
         <div class="page-header">
-            <h1>Usage Statistics</h1>
-            <p>Track requests, token usage, providers, and models over time.</p>
+            <h1>使用统计</h1>
+            <p>跟踪请求、令牌使用情况、提供商和模型随时间的变化。</p>
         </div>
 
         <div class="controls">
-            <label for="rangeSelect">Range:</label>
+            <label for="rangeSelect">范围：</label>
             <select id="rangeSelect">
-                <option value="1">Today</option>
-                <option value="7" selected>Last 7 days</option>
-                <option value="30">Last 30 days</option>
-                <option value="90">Last 90 days</option>
+                <option value="1">今天</option>
+                <option value="7" selected>最近7天</option>
+                <option value="30">最近30天</option>
+                <option value="90">最近90天</option>
             </select>
             <button class="btn" id="refreshBtn">
-                <i class="fas fa-sync-alt"></i> Refresh
+                <i class="fas fa-sync-alt"></i> 刷新
             </button>
         </div>
 
@@ -318,53 +318,53 @@
             <div class="stat-card">
                 <div class="icon"><i class="fas fa-comments"></i></div>
                 <div class="stat-value" id="totalRequests">—</div>
-                <div class="stat-label">Total Requests</div>
+                <div class="stat-label">总请求数</div>
             </div>
             <div class="stat-card">
                 <div class="icon"><i class="fas fa-language"></i></div>
                 <div class="stat-value" id="totalTokens">—</div>
-                <div class="stat-label">Total Tokens</div>
+                <div class="stat-label">总令牌数</div>
             </div>
             <div class="stat-card">
                 <div class="icon"><i class="fas fa-sign-in-alt"></i></div>
                 <div class="stat-value" id="totalPrompt">—</div>
-                <div class="stat-label">Prompt Tokens</div>
+                <div class="stat-label">提示令牌数</div>
             </div>
             <div class="stat-card">
                 <div class="icon"><i class="fas fa-sign-out-alt"></i></div>
                 <div class="stat-value" id="totalCompletion">—</div>
-                <div class="stat-label">Completion Tokens</div>
+                <div class="stat-label">完成令牌数</div>
             </div>
             <div class="stat-card">
                 <div class="icon"><i class="fas fa-server"></i></div>
                 <div class="stat-value" id="totalProviders">—</div>
-                <div class="stat-label">Providers Used</div>
+                <div class="stat-label">已使用的提供商</div>
             </div>
             <div class="stat-card">
                 <div class="icon"><i class="fas fa-microchip"></i></div>
                 <div class="stat-value" id="totalModels">—</div>
-                <div class="stat-label">Models Used</div>
+                <div class="stat-label">已使用的模型</div>
             </div>
             <div class="stat-card">
                 <div class="icon"><i class="fas fa-bolt"></i></div>
                 <div class="stat-value" id="cachedTokens">—</div>
-                <div class="stat-label">Cached Tokens</div>
+                <div class="stat-label">缓存令牌数</div>
             </div>
             <div class="stat-card">
                 <div class="icon"><i class="fas fa-cut"></i></div>
                 <div class="stat-value" id="savedTokens">—</div>
-                <div class="stat-label">Saved by Prompt Optimisation</div>
+                <div class="stat-label">通过提示优化节省的令牌数</div>
             </div>
             <div class="stat-card">
                 <div class="icon"><i class="fas fa-dollar-sign"></i></div>
                 <div class="stat-value" id="costSaved">—</div>
-                <div class="stat-label">Est. Cost Saved</div>
+                <div class="stat-label">预计节省成本</div>
             </div>
         </div>
 
         <!-- Daily activity chart -->
         <div class="chart-card">
-            <h2><i class="fas fa-chart-bar"></i> Daily Activity</h2>
+            <h2><i class="fas fa-chart-bar"></i> 每日活动</h2>
             <div class="chart-container">
                 <div class="bar-chart" id="dailyChart">
                     <div class="loading"><div class="spinner"></div></div>
@@ -374,16 +374,16 @@
 
         <!-- Provider breakdown -->
         <div class="table-card">
-            <h2><i class="fas fa-server"></i> Provider Breakdown</h2>
+            <h2><i class="fas fa-server"></i> 提供者分解</h2>
             <table id="providerTable">
                 <thead>
                     <tr>
-                        <th data-sort="name">Provider <span class="sort-arrow"></span></th>
-                        <th data-sort="requests">Requests <span class="sort-arrow"></span></th>
-                        <th data-sort="tokens">Total Tokens <span class="sort-arrow"></span></th>
-                        <th data-sort="prompt">Prompt <span class="sort-arrow"></span></th>
-                        <th data-sort="completion">Completion <span class="sort-arrow"></span></th>
-                        <th data-sort="cached">Cached <span class="sort-arrow"></span></th>
+                        <th data-sort="name">提供商 <span class="sort-arrow"></span></th>
+                        <th data-sort="requests">请求 <span class="sort-arrow"></span></th>
+                        <th data-sort="tokens">总令牌数 <span class="sort-arrow"></span></th>
+                        <th data-sort="prompt">提示 <span class="sort-arrow"></span></th>
+                        <th data-sort="completion">完成 <span class="sort-arrow"></span></th>
+                        <th data-sort="cached">缓存 <span class="sort-arrow"></span></th>
                     </tr>
                 </thead>
                 <tbody id="providerBody">
@@ -394,16 +394,16 @@
 
         <!-- Model breakdown -->
         <div class="table-card">
-            <h2><i class="fas fa-microchip"></i> Model Breakdown</h2>
+            <h2><i class="fas fa-microchip"></i> 模型分解</h2>
             <table id="modelTable">
                 <thead>
                     <tr>
-                        <th data-sort="name">Model <span class="sort-arrow"></span></th>
-                        <th data-sort="requests">Requests <span class="sort-arrow"></span></th>
-                        <th data-sort="tokens">Total Tokens <span class="sort-arrow"></span></th>
-                        <th data-sort="prompt">Prompt <span class="sort-arrow"></span></th>
-                        <th data-sort="completion">Completion <span class="sort-arrow"></span></th>
-                        <th data-sort="cached">Cached <span class="sort-arrow"></span></th>
+                        <th data-sort="name">模型 <span class="sort-arrow"></span></th>
+                        <th data-sort="requests">请求 <span class="sort-arrow"></span></th>
+                        <th data-sort="tokens">总令牌数 <span class="sort-arrow"></span></th>
+                        <th data-sort="prompt">提示 <span class="sort-arrow"></span></th>
+                        <th data-sort="completion">完成 <span class="sort-arrow"></span></th>
+                        <th data-sort="cached">缓存 <span class="sort-arrow"></span></th>
                     </tr>
                 </thead>
                 <tbody id="modelBody">
@@ -414,7 +414,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 G4F Framework. All Rights Reserved. | <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>
+        <p>&copy; 2026 G4F Framework. All Rights Reserved. | <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub仓库</a></p>
     </footer>
 
     <script>
@@ -730,7 +730,7 @@
 (function () {
     "use strict";
     const locale = "zh";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

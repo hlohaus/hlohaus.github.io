@@ -257,7 +257,7 @@
     <!-- Expense Input Form -->
     <form id="expense-form" aria-label="Add new expense form">
       <div>
-        <label for="description">Description</label>
+        <label for="description">विवरण</label>
         <input type="text" id="description" placeholder="e.g. Grocery" required />
       </div>
 
@@ -285,7 +285,7 @@
         <input type="date" id="date" required />
       </div>
 
-      <button type="submit" aria-label="Add Expense">Add</button>
+      <button type="submit" aria-label="Add Expense">जोड़ें</button>
     </form>
 
     <!-- Expense List -->
@@ -295,7 +295,7 @@
         <thead>
           <tr>
             <th scope="col">Date</th>
-            <th scope="col">Description</th>
+            <th scope="col">विवरण</th>
             <th scope="col">Category</th>
             <th scope="col" class="amount">Amount</th>
             <th scope="col" aria-label="Remove expense">Remove</th>
@@ -309,7 +309,7 @@
 
     <!-- Summary & Chart -->
     <section id="summary" aria-label="Expense summary and chart">
-      <h2>Summary</h2>
+      <h2>सारांश</h2>
       <p id="total-expense" aria-live="polite">Total: $0.00</p>
       <div id="chart-container" role="img" aria-label="Expense distribution chart by category">
         <canvas id="expense-chart" width="600" height="300" style="width:100%; height:300px;"></canvas>
@@ -652,7 +652,7 @@
 (function () {
     "use strict";
     const locale = "hi";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

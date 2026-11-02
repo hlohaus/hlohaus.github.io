@@ -147,12 +147,12 @@
 <div id="topbar">
   <div class="block">
     <label>Provider:
-      <select id="provider"><option disabled selected>Loading...</option></select>
+      <select id="provider"><option disabled selected>Nalaganje...</option></select>
     </label>
   </div>
   <div class="block">
     <label>Model:
-    <select id="modelSelect"><option value="" disabled selected>Loading...</option></select>
+    <select id="modelSelect"><option value="" disabled selected>Nalaganje...</option></select>
   </label>
   </div>
   <div class="block">
@@ -164,7 +164,7 @@
 
 <form id="form">
   <input type="text" id="input" placeholder="Ask something..." autocomplete="off" />
-  <button id="submit">Send</button>
+  <button id="submit">Pošlji</button>
 </form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/jsencrypt/bin/jsencrypt.min.js"></script>
@@ -309,7 +309,7 @@
 (function () {
     "use strict";
     const locale = "sl";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

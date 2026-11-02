@@ -140,7 +140,7 @@
         <h2>2. Nature of the Service — experimental AI proxy</h2>
         <ul>
             <li>The Service is an <strong>experimental, non-commercial aggregator</strong> that forwards your prompts to third-party AI endpoints ("providers") and returns their responses.</li>
-            <li>The Service is offered <strong>"as is"</strong> and <strong>"as available"</strong>, without any warranty of availability, correctness, quality, fitness for a particular purpose or non-infringement (§ 444 ff. BGB is waived to the legally permissible extent).</li>
+            <li>The Service is offered <strong>"as is"</strong> y <strong>"as available"</strong>, without any warranty of availability, correctness, quality, fitness for a particular purpose or non-infringement (§ 444 ff. BGB is waived to the legally permissible extent).</li>
             <li>There is <strong>no entitlement</strong> to availability, specific models, specific providers, response speed or quotas. The Operator may restrict, change or discontinue the Service at any time without notice.</li>
             <li>AI-generated content may be <strong>incomplete, outdated, biased or plainly wrong</strong> ("hallucinations"). Always verify important information independently.</li>
         </ul>
@@ -359,7 +359,7 @@
 (function () {
     "use strict";
     const locale = "es";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

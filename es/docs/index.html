@@ -495,7 +495,7 @@ Here you’ll find a clear overview, quick examples, and entry points to deeper 
 )
 <span class="pl-en">print</span>(<span class="pl-s1">response</span>.<span class="pl-c1">choices</span>[<span class="pl-c1">0</span>].<span class="pl-c1">message</span>.<span class="pl-c1">content</span>)</pre></div>
 <p><strong>Output:</strong></p>
-<pre class="notranslate"><code class="notranslate">Hello! How can I assist you today?
+<pre class="notranslate"><code class="notranslate">¡Hola! ¿Cómo puedo ayudarte hoy?
 </code></pre>
 <hr>
 <h3>🎨  Image Generation</h3>
@@ -717,7 +717,7 @@ Here you’ll find a clear overview, quick examples, and entry points to deeper 
 (function () {
     "use strict";
     const locale = "es";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

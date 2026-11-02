@@ -490,7 +490,7 @@ Authentication, API Keys, Cookies, <code class="notranslate">.har</code> files, 
 <p><strong>Example in Python:</strong></p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">os</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">Client</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">OpenaiAPI</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Szolgáltató</span> <span class="pl-k">import</span> <span class="pl-v">OpenaiAPI</span>
 <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">Client</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">OpenaiAPI</span>, <span class="pl-s1">api_key</span><span class="pl-c1">=</span><span class="pl-s1">os</span>.<span class="pl-c1">getenv</span>(<span class="pl-s">"OPENAI_API_KEY"</span>))</pre></div>
 <hr>
 <h2><strong>3. Cookie Configuration</strong></h2>
@@ -527,7 +527,7 @@ Authentication, API Keys, Cookies, <code class="notranslate">.har</code> files, 
 Some providers like <strong><code class="notranslate">OpenaiChat</code></strong> require a <code class="notranslate">.HAR</code> file to authenticate without an API key.</p>
 <h3><strong>Creating a <code class="notranslate">.HAR</code> File:</strong></h3>
 <ol>
-<li><strong>Login</strong> to the target provider (e.g., <a href="https://chatgpt.com/" rel="nofollow">https://chatgpt.com/</a>)</li>
+<li><strong>Bejelentkezés</strong> to the target provider (e.g., <a href="https://chatgpt.com/" rel="nofollow">https://chatgpt.com/</a>)</li>
 <li><strong>Open Developer Tools</strong> (Right-click → Inspect OR <code class="notranslate">F12</code>)</li>
 <li>Go to the <strong>Network</strong> tab</li>
 <li><strong>Reload</strong> the page to capture activity</li>
@@ -578,7 +578,7 @@ Cookies added: 16 from .google.com
 <ul>
 <li>🔒 Never hardcode credentials — use <code class="notranslate">.env</code> or environment variables</li>
 <li>🔄 Rotate keys every 90 days</li>
-<li>🛡 Secure <code class="notranslate">.har</code> and <code class="notranslate">.json</code> cookie files</li>
+<li>🛡 Secure <code class="notranslate">.har</code> és <code class="notranslate">.json</code> cookie files</li>
 <li>📊 Use rate limiting in production</li>
 </ul>
 <hr>
@@ -705,7 +705,7 @@ Cookies added: 16 from .google.com
 (function () {
     "use strict";
     const locale = "hu";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

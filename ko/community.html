@@ -66,50 +66,50 @@
     <header class="navbar" id="navbar" role="banner">
         <a href="/" class="logo">G4<span>F</span></a>
         <nav class="nav-links" role="navigation">
-            <a href="/">Home</a>
-            <a href="/docs/">Docs</a>
-            <a href="/members.html">Members</a>
-            <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">Discord</a>
-            <a href="/chat/" class="nav-cta">Get Started</a>
+            <a href="/">홈</a>
+            <a href="/docs/">문서</a>
+            <a href="/members.html">회원</a>
+            <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">디스코드</a>
+            <a href="/chat/" class="nav-cta">시작하기</a>
         </nav>
     </header>
 
     <main>
         <section class="page-head">
-            <span class="kicker">✦ Community</span>
-            <h1>Community Forum</h1>
-            <p>Ask a question, share an idea or help someone out. Join our Discord: <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">discord.gg/qXA4Wf4Fsm</a></p>
+            <span class="kicker">✦ 커뮤니티</span>
+            <h1>커뮤니티 포럼</h1>
+            <p>질문하기, 아이디어 공유하거나 다른 사람 βοgage. 디스코드에 가입하세요: <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">discord.gg/qXA4Wf4Fsm</a></p>
         </section>
 
         <section class="section">
             <div id="loginStatus" class="status"></div>
 
             <div class="post-form" id="postForm" style="display: none;">
-                <textarea id="postContent" placeholder="Ask a question or post to the Community..."></textarea>
-                <button id="postButton" class="btn" type="button">Post</button>
+                <textarea id="postContent" placeholder="질문을 하거나 커뮤니티에 게시해 보세요..."></textarea>
+                <button id="postButton" class="btn" type="button">게시</button>
             </div>
 
             <div class="section-header">
-                <span class="kicker">✦ Posts</span>
-                <h2>Latest Posts</h2>
+                <span class="kicker">✦ 게시물</span>
+                <h2>최신 게시물</h2>
             </div>
 
-            <div id="posts" class="muted">Loading posts...</div>
+            <div id="posts" class="muted">게시물을 불러오는 중...</div>
         </section>
     </main>
 
     <footer>
         <div class="footer-links">
-            <a href="/docs/">Documentation</a>
-            <a href="/chat/">Chat</a>
-            <a href="/members.html">Members</a>
-            <a href="/manifesto">Manifesto</a>
+            <a href="/docs/">문서</a>
+            <a href="/chat/">채팅</a>
+            <a href="/members.html">회원</a>
+            <a href="/manifesto">선언문</a>
             <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="/community">Community</a>
-            <a href="/privacy.html">Privacy Policy</a>
-            <a href="/terms.html">Terms of Service</a>
+            <a href="/community">커뮤니티</a>
+            <a href="/privacy.html">개인정보 보호정책</a>
+            <a href="/terms.html">서비스 약관</a>
         </div>
-        <p>© 2026 GPT4Free Project. Open source and free forever. ✨</p>
+        <p>© 2026 GPT4Free 프로젝트. 오픈 소스이며 영원히 무료입니다. ✨</p>
     </footer>
 
     <script>
@@ -456,7 +456,7 @@
 (function () {
     "use strict";
     const locale = "ko";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

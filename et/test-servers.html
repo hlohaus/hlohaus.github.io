@@ -356,10 +356,10 @@
     <nav class="navbar">
         <a href="/" class="logo">G4F</a>
         <div class="nav-links">
-            <a href="/stats.html">Stats</a>
+            <a href="/stats.html">Statistika</a>
             <a href="/test-servers.html">Server Tester</a>
-            <a href="/chat/">Chat</a>
-            <a href="/docs/">Docs</a>
+            <a href="/chat/">Vestlus</a>
+            <a href="/docs/">Dokumentatsioon</a>
         </div>
     </nav>
 
@@ -383,15 +383,15 @@
         <div class="progress-bar"><div id="progress"></div></div>
 
         <div class="summary">
-            <div class="stat-card total"><div class="value" id="statTotal">0</div><div class="label">Total</div></div>
-            <div class="stat-card ok"><div class="value" id="statOk">0</div><div class="label">Working</div></div>
+            <div class="stat-card total"><div class="value" id="statTotal">0</div><div class="label">Kokku</div></div>
+            <div class="stat-card ok"><div class="value" id="statOk">0</div><div class="label">Töötav</div></div>
             <div class="stat-card fail"><div class="value" id="statFail">0</div><div class="label">Not Working</div></div>
             <div class="stat-card pending"><div class="value" id="statPending">0</div><div class="label">Pending</div></div>
         </div>
 
         <div class="filter-row">
             <button class="secondary active" data-filter="all">All</button>
-            <button class="secondary" data-filter="ok">Working</button>
+            <button class="secondary" data-filter="ok">Töötav</button>
             <button class="secondary" data-filter="fail">Not Working</button>
             <button class="secondary" data-filter="pending">Pending</button>
         </div>
@@ -401,10 +401,10 @@
                 <tr>
                     <th>#</th>
                     <th>Status</th>
-                    <th>Label</th>
+                    <th>Silt</th>
                     <th>Server ID</th>
-                    <th>Base URL</th>
-                    <th>Models</th>
+                    <th>Baas-URL</th>
+                    <th>Mudelid</th>
                     <th>Model Used</th>
                     <th>Elapsed</th>
                     <th>Response / Error</th>
@@ -674,7 +674,7 @@
 (function () {
     "use strict";
     const locale = "et";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

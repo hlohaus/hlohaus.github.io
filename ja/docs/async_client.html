@@ -487,13 +487,13 @@
 <li><a href="#available-models-and-providers">Available Models and Providers</a></li>
 <li><a href="#error-handling-and-best-practices">Error Handling and Best Practices</a></li>
 <li><a href="#rate-limiting-and-api-usage">Rate Limiting and API Usage</a></li>
-<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#conclusion">結論</a></li>
 </ul>
 <h2>Introduction</h2>
 <p>The G4F AsyncClient API is an asynchronous version of the standard G4F Client API. It offers the same functionality as the synchronous API but with improved performance due to its asynchronous nature. This guide will walk you through the key features and usage of the G4F AsyncClient API.</p>
 <h2>Key Features</h2>
 <ul>
-<li><strong>Custom Providers</strong>: Use custom providers for enhanced flexibility.</li>
+<li><strong>カスタムプロバイダー</strong>: Use custom providers for enhanced flexibility.</li>
 <li><strong>ChatCompletion Interface</strong>: Interact with chat models through the ChatCompletion class.</li>
 <li><strong>Streaming Responses</strong>: Get responses iteratively as they are received.</li>
 <li><strong>Non-Streaming Responses</strong>: Generate complete responses in a single call.</li>
@@ -503,7 +503,7 @@
 <h3>Initializing the AsyncClient</h3>
 <p><strong>To use the G4F <code class="notranslate">AsyncClient</code>, create a new instance:</strong></p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">AsyncClient</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">OpenaiChat</span>, <span class="pl-v">Gemini</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">プロバイダー</span> <span class="pl-k">import</span> <span class="pl-v">OpenaiChat</span>, <span class="pl-v">Gemini</span>
 
 <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>(
     <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">OpenaiChat</span>,
@@ -514,7 +514,7 @@
 <p><strong>Here’s an improved example of creating chat completions:</strong></p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
     <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4o-mini"</span>,
-    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[
+    <span class="pl-s1">メッセージ</span><span class="pl-c1">=</span>[
         {
             <span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>,
             <span class="pl-s">"content"</span>: <span class="pl-s">"Say this is a test"</span>
@@ -544,7 +544,7 @@
 Specifies the AI model to be used for the task. Examples include <code class="notranslate">"gpt-4o"</code> for GPT-4 Optimized or <code class="notranslate">"gpt-4o-mini"</code> for a lightweight version. The choice of model determines the quality and speed of the response. Always ensure the selected model is supported by the provider.</p>
 </li>
 <li>
-<p><strong><code class="notranslate">messages</code></strong>:<br>
+<p><strong><code class="notranslate">メッセージ</code></strong>:<br>
 <strong>A list of dictionaries representing the conversation context. Each dictionary contains two keys:</strong><br>
 - <code class="notranslate">role</code>: Defines the role of the message sender, such as <code class="notranslate">"user"</code> (input from the user) or <code class="notranslate">"system"</code> (instructions to the AI).<br>
 - <code class="notranslate">content</code>: The actual text of the message.<br>
@@ -582,7 +582,7 @@ Specifies the AI model to be used for the task. Examples include <code class="no
     
     <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
         <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4o-mini"</span>,
-        <span class="pl-s1">messages</span><span class="pl-c1">=</span>[
+        <span class="pl-s1">メッセージ</span><span class="pl-c1">=</span>[
             {
                 <span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>,
                 <span class="pl-s">"content"</span>: <span class="pl-s">"Say this is a test"</span>
@@ -606,7 +606,7 @@ Specifies the AI model to be used for the task. Examples include <code class="no
 
     <span class="pl-s1">stream</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">stream</span>(
         <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4"</span>,
-        <span class="pl-s1">messages</span><span class="pl-c1">=</span>[
+        <span class="pl-s1">メッセージ</span><span class="pl-c1">=</span>[
             {
                 <span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>,
                 <span class="pl-s">"content"</span>: <span class="pl-s">"Say this is a test"</span>
@@ -616,7 +616,7 @@ Specifies the AI model to be used for the task. Examples include <code class="no
     )
 
     <span class="pl-k">async</span> <span class="pl-k">for</span> <span class="pl-s1">chunk</span> <span class="pl-c1">in</span> <span class="pl-s1">stream</span>:
-        <span class="pl-k">if</span> <span class="pl-s1">chunk</span>.<span class="pl-c1">choices</span> <span class="pl-c1">and</span> <span class="pl-s1">chunk</span>.<span class="pl-c1">choices</span>[<span class="pl-c1">0</span>].<span class="pl-c1">delta</span>.<span class="pl-c1">content</span>:
+        <span class="pl-k">if</span> <span class="pl-s1">chunk</span>.<span class="pl-c1">choices</span> <span class="pl-c1">と</span> <span class="pl-s1">chunk</span>.<span class="pl-c1">choices</span>[<span class="pl-c1">0</span>].<span class="pl-c1">delta</span>.<span class="pl-c1">content</span>:
             <span class="pl-en">print</span>(<span class="pl-s1">chunk</span>.<span class="pl-c1">choices</span>[<span class="pl-c1">0</span>].<span class="pl-c1">delta</span>.<span class="pl-c1">content</span>, <span class="pl-s1">end</span><span class="pl-c1">=</span><span class="pl-s">""</span>)
 
 <span class="pl-s1">asyncio</span>.<span class="pl-c1">run</span>(<span class="pl-en">main</span>())</pre></div>
@@ -625,22 +625,22 @@ Specifies the AI model to be used for the task. Examples include <code class="no
 <summary>Using a Vision Model</summary>
 <p><strong>Analyze an image and generate a description:</strong></p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">g4f</span>
-<span class="pl-k">import</span> <span class="pl-s1">requests</span>
+<span class="pl-k">import</span> <span class="pl-s1">リクエスト</span>
 <span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">AsyncClient</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">CopilotAccount</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">プロバイダー</span> <span class="pl-k">import</span> <span class="pl-v">CopilotAccount</span>
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main</span>():
     <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>(
         <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">CopilotAccount</span>
     )
 
-    <span class="pl-s1">image</span> <span class="pl-c1">=</span> <span class="pl-s1">requests</span>.<span class="pl-c1">get</span>(<span class="pl-s">"https://raw.githubusercontent.com/xtekky/gpt4free/refs/heads/main/docs/images/cat.jpeg"</span>, <span class="pl-s1">stream</span><span class="pl-c1">=</span><span class="pl-c1">True</span>).<span class="pl-c1">raw</span>
+    <span class="pl-s1">image</span> <span class="pl-c1">=</span> <span class="pl-s1">リクエスト</span>.<span class="pl-c1">get</span>(<span class="pl-s">"https://raw.githubusercontent.com/xtekky/gpt4free/refs/heads/main/docs/images/cat.jpeg"</span>, <span class="pl-s1">stream</span><span class="pl-c1">=</span><span class="pl-c1">True</span>).<span class="pl-c1">raw</span>
     <span class="pl-c"># Or: image = open("docs/images/cat.jpeg", "rb")</span>
 
     <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
-        <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">models</span>.<span class="pl-c1">default</span>,
-        <span class="pl-s1">messages</span><span class="pl-c1">=</span>[
+        <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">models</span>.<span class="pl-c1">デフォルト</span>,
+        <span class="pl-s1">メッセージ</span><span class="pl-c1">=</span>[
             {
                 <span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>,
                 <span class="pl-s">"content"</span>: <span class="pl-s">"What's in this image?"</span>
@@ -658,16 +658,16 @@ Specifies the AI model to be used for the task. Examples include <code class="no
 <p>Some providers in G4F support audio inputs in chat completions, allowing you to transcribe audio files by instructing the model accordingly. This example demonstrates how to use the <code class="notranslate">AsyncClient</code> to transcribe an audio file asynchronously:</p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">AsyncClient</span>
-<span class="pl-k">import</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span>
+<span class="pl-k">import</span> <span class="pl-s1">g4f</span>.<span class="pl-v">プロバイダー</span>
 <span class="pl-k">import</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">models</span>
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main</span>():
-    <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">Provider</span>.<span class="pl-c1">PollinationsAI</span>)  <span class="pl-c"># or g4f.Provider.Microsoft_Phi_4</span>
+    <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">プロバイダー</span>.<span class="pl-c1">PollinationsAI</span>)  <span class="pl-c"># or g4f.Provider.Microsoft_Phi_4</span>
 
-    <span class="pl-k">with</span> <span class="pl-en">open</span>(<span class="pl-s">"audio.wav"</span>, <span class="pl-s">"rb"</span>) <span class="pl-k">as</span> <span class="pl-s1">audio_file</span>:
+    <span class="pl-k">と</span> <span class="pl-en">open</span>(<span class="pl-s">"audio.wav"</span>, <span class="pl-s">"rb"</span>) <span class="pl-k">as</span> <span class="pl-s1">audio_file</span>:
         <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
-            <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">models</span>.<span class="pl-c1">default</span>,
-            <span class="pl-s1">messages</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Transcribe this audio"</span>}],
+            <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">models</span>.<span class="pl-c1">デフォルト</span>,
+            <span class="pl-s1">メッセージ</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Transcribe this audio"</span>}],
             <span class="pl-s1">media</span><span class="pl-c1">=</span>[[<span class="pl-s1">audio_file</span>, <span class="pl-s">"audio.wav"</span>]],
             <span class="pl-s1">modalities</span><span class="pl-c1">=</span>[<span class="pl-s">"text"</span>],
         )
@@ -679,11 +679,11 @@ Specifies the AI model to be used for the task. Examples include <code class="no
 <h4>Explanation</h4>
 <ul>
 <li><strong>Client Initialization</strong>: An <code class="notranslate">AsyncClient</code> instance is created with a provider that supports audio inputs, such as <code class="notranslate">PollinationsAI</code> or <code class="notranslate">Microsoft_Phi_4</code>.</li>
-<li><strong>File Handling</strong>: The audio file (<code class="notranslate">audio.wav</code>) is opened in binary read mode (<code class="notranslate">"rb"</code>) using a context manager (<code class="notranslate">with</code> statement) to ensure proper file closure after use.</li>
+<li><strong>File Handling</strong>: The audio file (<code class="notranslate">audio.wav</code>) is opened in binary read mode (<code class="notranslate">"rb"</code>) using a context manager (<code class="notranslate">と</code> statement) to ensure proper file closure after use.</li>
 <li><strong>API Call</strong>: The <code class="notranslate">chat.completions.create</code> method is called with:
 <ul>
 <li><code class="notranslate">model=g4f.models.default</code>: Uses the default model for the selected provider.</li>
-<li><code class="notranslate">messages</code>: A list containing a user message instructing the model to transcribe the audio.</li>
+<li><code class="notranslate">メッセージ</code>: A list containing a user message instructing the model to transcribe the audio.</li>
 <li><code class="notranslate">media</code>: A list of lists, where each inner list contains the file object and its name (<code class="notranslate">[[audio_file, "audio.wav"]]</code>).</li>
 <li><code class="notranslate">modalities=["text"]</code>: Specifies that the output should be text (the transcription).</li>
 </ul>
@@ -703,7 +703,7 @@ Specifies the AI model to be used for the task. Examples include <code class="no
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">g4f</span>
 <span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">AsyncClient</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">OpenaiAccount</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">プロバイダー</span> <span class="pl-k">import</span> <span class="pl-v">OpenaiAccount</span>
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main</span>():
     <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>(
@@ -711,11 +711,11 @@ Specifies the AI model to be used for the task. Examples include <code class="no
     )
 
     <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
-        <span class="pl-s1">messages</span><span class="pl-c1">=</span><span class="pl-s">"I was born on 01-01-1999."</span>,
+        <span class="pl-s1">メッセージ</span><span class="pl-c1">=</span><span class="pl-s">"I was born on 01-01-1999."</span>,
     )
 
     <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
-        <span class="pl-s1">messages</span><span class="pl-c1">=</span><span class="pl-s">"How old i am? I told you before."</span>,
+        <span class="pl-s1">メッセージ</span><span class="pl-c1">=</span><span class="pl-s">"How old i am? I told you before."</span>,
         <span class="pl-s1">conversation</span><span class="pl-c1">=</span><span class="pl-s1">response</span>.<span class="pl-c1">conversation</span>
     )
 
@@ -773,7 +773,7 @@ Specifies the AI model to be used for the task. Examples include <code class="no
 <p><strong>Create variations of an existing image:</strong></p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">AsyncClient</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">OpenaiChat</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">プロバイダー</span> <span class="pl-k">import</span> <span class="pl-v">OpenaiChat</span>
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main</span>():
     <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>(<span class="pl-s1">image_provider</span><span class="pl-c1">=</span><span class="pl-v">OpenaiChat</span>)
@@ -794,7 +794,7 @@ Specifies the AI model to be used for the task. Examples include <code class="no
 <p><strong>Example: Generate a video using a prompt</strong></p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">AsyncClient</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">HuggingFaceMedia</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">プロバイダー</span> <span class="pl-k">import</span> <span class="pl-v">HuggingFaceMedia</span>
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main</span>():
     <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>(
@@ -856,7 +856,7 @@ Specifies the AI model to be used for the task. Examples include <code class="no
         <span class="pl-c"># Get response from AI</span>
         <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">self</span>.<span class="pl-c1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
             <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4o-mini"</span>,
-            <span class="pl-s1">messages</span><span class="pl-c1">=</span><span class="pl-s1">self</span>.<span class="pl-c1">history</span>,
+            <span class="pl-s1">メッセージ</span><span class="pl-c1">=</span><span class="pl-s1">self</span>.<span class="pl-c1">history</span>,
             <span class="pl-s1">web_search</span><span class="pl-c1">=</span><span class="pl-c1">False</span>
         )
         
@@ -915,7 +915,7 @@ Specifies the AI model to be used for the task. Examples include <code class="no
 
     <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
         <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4"</span>,
-        <span class="pl-s1">messages</span><span class="pl-c1">=</span>[
+        <span class="pl-s1">メッセージ</span><span class="pl-c1">=</span>[
             {
                 <span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>,
                 <span class="pl-s">"content"</span>: <span class="pl-s">"Tell me about recent advancements in AI."</span>
@@ -952,14 +952,14 @@ Specifies the AI model to be used for the task. Examples include <code class="no
 <span class="pl-s1">g4f</span>.<span class="pl-c1">debug</span>.<span class="pl-c1">logging</span> <span class="pl-c1">=</span> <span class="pl-c1">True</span>
 <span class="pl-s1">g4f</span>.<span class="pl-c1">debug</span>.<span class="pl-c1">version_check</span> <span class="pl-c1">=</span> <span class="pl-c1">False</span>
 
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">RetryProvider</span>, <span class="pl-v">Phind</span>, <span class="pl-v">FreeChatgpt</span>, <span class="pl-v">Liaobots</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">プロバイダー</span> <span class="pl-k">import</span> <span class="pl-v">RetryProvider</span>, <span class="pl-v">Phind</span>, <span class="pl-v">FreeChatgpt</span>, <span class="pl-v">Liaobots</span>
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main</span>():
     <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-v">AsyncClient</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-en">RetryProvider</span>([<span class="pl-v">Phind</span>, <span class="pl-v">FreeChatgpt</span>, <span class="pl-v">Liaobots</span>], <span class="pl-s1">shuffle</span><span class="pl-c1">=</span><span class="pl-c1">False</span>)
     
     <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
         <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4o-mini"</span>,
-        <span class="pl-s1">messages</span><span class="pl-c1">=</span>[
+        <span class="pl-s1">メッセージ</span><span class="pl-c1">=</span>[
             {
                 <span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>,
                 <span class="pl-s">"content"</span>: <span class="pl-s">"Hello"</span>
@@ -981,8 +981,8 @@ Specifies the AI model to be used for the task. Examples include <code class="no
     <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>()
     
     <span class="pl-s1">task1</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
-        <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-c1">None</span>,
-        <span class="pl-s1">messages</span><span class="pl-c1">=</span>[
+        <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-c1">なし</span>,
+        <span class="pl-s1">メッセージ</span><span class="pl-c1">=</span>[
             {
                 <span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>,
                 <span class="pl-s">"content"</span>: <span class="pl-s">"Say this is a test"</span>
@@ -1011,7 +1011,7 @@ Specifies the AI model to be used for the task. Examples include <code class="no
 <h2>Available Models and Providers</h2>
 <p>The G4F AsyncClient supports a wide range of AI models and providers, allowing you to choose the best option for your specific use case.</p>
 <p><strong>Here's a brief overview of the available models and providers:</strong><br>
-<strong>Models</strong></p>
+<strong>モデル</strong></p>
 <ul>
 <li>GPT-3.5-Turbo</li>
 <li>GPT-4o-Mini</li>
@@ -1021,7 +1021,7 @@ Specifies the AI model to be used for the task. Examples include <code class="no
 <li>Claude (Anthropic)</li>
 <li>And more...</li>
 </ul>
-<p><strong>Providers</strong></p>
+<p><strong>プロバイダー</strong></p>
 <ul>
 <li>OpenAI</li>
 <li>Google (for Gemini)</li>
@@ -1030,14 +1030,14 @@ Specifies the AI model to be used for the task. Examples include <code class="no
 <li>Custom providers</li>
 </ul>
 <p><strong>To use a specific model or provider, specify it when creating the client or in the API call:</strong></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">Provider</span>.<span class="pl-c1">OpenaiChat</span>)
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">プロバイダー</span>.<span class="pl-c1">OpenaiChat</span>)
 
 <span class="pl-c"># or</span>
 
 <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
     <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4"</span>,
-    <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">Provider</span>.<span class="pl-c1">CopilotAccount</span>,
-    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[
+    <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">プロバイダー</span>.<span class="pl-c1">CopilotAccount</span>,
+    <span class="pl-s1">メッセージ</span><span class="pl-c1">=</span>[
         {
             <span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>,
             <span class="pl-s">"content"</span>: <span class="pl-s">"Hello, world!"</span>
@@ -1053,7 +1053,7 @@ Specifies the AI model to be used for the task. Examples include <code class="no
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">try</span>:
     <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
         <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4o-mini"</span>,
-        <span class="pl-s1">messages</span><span class="pl-c1">=</span>[
+        <span class="pl-s1">メッセージ</span><span class="pl-c1">=</span>[
             {
                 <span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>,
                 <span class="pl-s">"content"</span>: <span class="pl-s">"Hello, world!"</span>
@@ -1090,7 +1090,7 @@ Specifies the AI model to be used for the task. Examples include <code class="no
 <span class="pl-s1">rate_limit</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncLimiter</span>(<span class="pl-s1">max_rate</span><span class="pl-c1">=</span><span class="pl-c1">10</span>, <span class="pl-s1">time_period</span><span class="pl-c1">=</span><span class="pl-c1">1</span>)  <span class="pl-c"># 10 requests per second</span>
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">make_api_call</span>():
-    <span class="pl-k">async</span> <span class="pl-k">with</span> <span class="pl-s1">rate_limit</span>:
+    <span class="pl-k">async</span> <span class="pl-k">と</span> <span class="pl-s1">rate_limit</span>:
         <span class="pl-c"># Your API call here</span>
         <span class="pl-k">pass</span></pre></div>
 <ol start="2">
@@ -1116,7 +1116,7 @@ Specifies the AI model to be used for the task. Examples include <code class="no
 <span class="pl-k">def</span> <span class="pl-en">get_cached_response</span>(<span class="pl-s1">query</span>):
     <span class="pl-c"># Your API call here</span>
     <span class="pl-k">pass</span></pre></div>
-<h2>Conclusion</h2>
+<h2>結論</h2>
 <p>The G4F AsyncClient API provides a powerful and flexible way to interact with various AI models asynchronously. By leveraging its features and following best practices, you can build efficient and responsive applications that harness the power of AI for text generation, image analysis, and image creation.</p>
 <p>Remember to handle errors gracefully, implement rate limiting, and monitor your API usage to ensure optimal performance and reliability in your applications.</p>
 <hr>
@@ -1243,7 +1243,7 @@ Specifies the AI model to be used for the task. Examples include <code class="no
 (function () {
     "use strict";
     const locale = "ja";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

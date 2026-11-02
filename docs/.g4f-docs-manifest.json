@@ -15,6 +15,11 @@
       "html_sha256": "5c4a33a47abee4343de73bf25129e06b1440cdbbc51f649f7789a70c45504bb8",
       "markdown_sha256": "519ebb94466c0765a130409d8f6887481c590de238c112bea0f86fe3aec7aeb3"
     },
+    "browsing.md": {
+      "html": "browsing.html",
+      "html_sha256": "3c312985750346f63440a02d76f7dda1d63164d26ac9d45c7041c906413ab6bb",
+      "markdown_sha256": "13e2b97021672a5088875c4a0a3588c1e76dc947d47d6472cdf7208dc619801b"
+    },
     "build-workflow.md": {
       "html": "build-workflow.html",
       "html_sha256": "b9a16def4fcbf7dc6f206ef2c06578b6d50823f854a888936b5e250a71368cc2",
@@ -47,8 +52,8 @@
     },
     "sandbox-desktop.md": {
       "html": "sandbox-desktop.html",
-      "html_sha256": "49b7c2533888f51d0033fd1805cf61d69be3664ac7aa3dfde5910625372039f2",
-      "markdown_sha256": "4e45f86cba22821dfd55d2a4720cc7e12e14dcc99a5faf697cdcde58aece36c3"
+      "html_sha256": "c4db2e002671ce944e91625b674d455001164db1cb00585e012876f0272ac754",
+      "markdown_sha256": "593e67c561b089d1d4ddbfb0f9a78d96f918cefbfecd4443637853f5965f83ca"
     }
   },
   "schema": 1,

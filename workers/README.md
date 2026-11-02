@@ -58,6 +58,14 @@ https://ollama.g4f.space                 API worker -> Ollama module
 https://auth.g4f.space                   Auth / members worker
 ```
 
+### First-party members page
+
+Browsers that block third-party cookies cannot use the `auth.g4f.space`
+session cookie from `g4f.dev/members.html`. The auth worker therefore serves
+the members page at `https://auth.g4f.space/members.html` (fetched from the
+static g4f.dev page with a `<base>` for assets). The g4f.dev page probes
+`/members/api/cookie-check` and redirects there when cookies are blocked.
+
 ```bash
 curl https://g4f.space/api/ollama/models
 curl https://g4f.space/api/puter/models
@@ -90,6 +98,41 @@ callers are subject to their normal tier rate limits and receive the usual
 
 The JS client in `dist/js/` uses these paths through
 `dist/js/providers.json`. `https://g4f.space/v1` remains the default endpoint.
+
+### Success-rate statistics
+
+`GET /api/stats` (signed-in callers) aggregates `USAGE_DB.usage_logs` and
+`ERRORS_DB.error_logs` into per-server and per-model request counts, error
+counts, and success rates:
+
+```bash
+curl https://g4f.space/api/stats?hours=24 \
+  -H "Authorization: Bearer gfs_<session>"
+```
+
+```json
+{
+  "since": "2026-10-31T00:00:00.000Z",
+  "hours": 24,
+  "totals": { "requests": 100, "errors": 10, "error_count": 10, "success_rate": 0.9091 },
+  "servers": [
+    { "server": "custom:srv_abc", "requests": 100, "errors": 10, "error_count": 10, "success_rate": 0.9091 }
+  ],
+  "models": [
+    { "model": "gpt-4o", "requests": 100, "errors": 10, "error_count": 10, "success_rate": 0.9091 }
+  ],
+  "partial": false
+}
+```
+
+`hours` defaults to 24 and is capped at 336 (14 days, matching usage-log
+retention); `since` accepts an explicit ISO timestamp. The response is cached
+at the edge for 60 seconds and the aggregation runs as a `GROUP BY` in D1, so
+polling it does not stream raw log rows through the Worker.
+
+Errors are attributed to a server and model through the `context` JSON column
+(`{"server":"custom:<id>","model":"..."}`). Rows written before this tagging
+was added fall back to their pathname or `unknown`.
 
 ## First-time setup
 

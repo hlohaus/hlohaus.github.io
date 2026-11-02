@@ -473,7 +473,7 @@
 <li><a href="#example-results">Example Results</a></li>
 <li><a href="#code-examples">Code Examples</a></li>
 <li><a href="#troubleshooting">Troubleshooting</a></li>
-<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#conclusion">Заключение</a></li>
 </ol>
 <hr>
 <h2>Overview</h2>
@@ -489,7 +489,7 @@
 <markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
-<th>Provider</th>
+<th>Провайдер:</th>
 <th>Input Type</th>
 <th>Notes</th>
 </tr>
@@ -630,7 +630,7 @@
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
 <span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">AsyncClient</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">OpenaiAccount</span>, <span class="pl-v">CopilotAccount</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Провайдер:</span> <span class="pl-k">import</span> <span class="pl-v">OpenaiAccount</span>, <span class="pl-v">CopilotAccount</span>
 
 <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>()
 
@@ -657,7 +657,7 @@
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
 <span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">AsyncClient</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">HuggingSpace</span>, <span class="pl-v">Azure</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Провайдер:</span> <span class="pl-k">import</span> <span class="pl-v">HuggingSpace</span>, <span class="pl-v">Azure</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">cookies</span> <span class="pl-k">import</span> <span class="pl-s1">read_cookie_files</span>
 
 <span class="pl-c"># Read cookies and environment variables</span>
@@ -689,7 +689,7 @@
 <h3>URL-based Providers</h3>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">AsyncClient</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">PollinationsAI</span>, <span class="pl-v">Together</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Провайдер:</span> <span class="pl-k">import</span> <span class="pl-v">PollinationsAI</span>, <span class="pl-v">Together</span>
 
 <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>()
 
@@ -723,7 +723,7 @@
 <li><strong>Model Compatibility</strong>: Not all models support all features</li>
 </ul>
 <hr>
-<h2>Conclusion</h2>
+<h2>Заключение</h2>
 <p>GPT4Free offers flexible image variation generation through multiple providers. Key features include:</p>
 <ul>
 <li>Support for both local and remote images</li>
@@ -853,7 +853,7 @@
 (function () {
     "use strict";
     const locale = "ru";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

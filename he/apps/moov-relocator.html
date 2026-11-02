@@ -414,7 +414,7 @@
       <label class="config-label" for="anondropKeyInput">AnonDrop Key</label>
       <div class="config-row">
         <input type="text" id="anondropKeyInput" placeholder="Enter your AnonDrop key or leave blank to auto-register" autocomplete="off">
-        <button id="anondropSaveKeyBtn" class="small">Save</button>
+        <button id="anondropSaveKeyBtn" class="small">שמירה</button>
       </div>
       <p class="config-hint">Key is stored in localStorage. Used to upload relocated videos.</p>
     </div>
@@ -439,7 +439,7 @@
     <div class="toolbar">
       <div class="toolbar-left">
         <button id="processAllBtn" class="primary" disabled>Process All</button>
-        <button id="clearBtn" disabled>Clear</button>
+        <button id="clearBtn" disabled>נקה</button>
       </div>
       <span style="font-size:0.8rem;color:var(--muted)" id="summaryText"></span>
     </div>
@@ -991,7 +991,7 @@
 (function () {
     "use strict";
     const locale = "he";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

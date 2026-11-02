@@ -311,13 +311,13 @@
         
         <div class="selector-grid">
             <div class="form-group">
-                <label for="select-provider">Provider</label>
+                <label for="select-provider">Szolgáltató</label>
                 <select id="select-provider" class="form-select">
-                    <option value="">Loading providers...</option>
+                    <option value="">Szolgáltatók betöltése...</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="select-model">Model</label>
+                <label for="select-model">Modell</label>
                 <select id="select-model" class="form-select">
                     <option value="">Select a provider first</option>
                 </select>
@@ -338,7 +338,7 @@
         
         <div class="code-output">
             <div id="code-python" class="code-content active">
-                <button class="copy-btn" onclick="copyCode('python')">Copy</button>
+                <button class="copy-btn" onclick="copyCode('python')">Másolás</button>
 <pre><code id="code-python-content" class="language-python">from g4f.client import Client
 
 client = Client()
@@ -349,7 +349,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)</code></pre>
             </div>
             <div id="code-javascript" class="code-content">
-                <button class="copy-btn" onclick="copyCode('javascript')">Copy</button>
+                <button class="copy-btn" onclick="copyCode('javascript')">Másolás</button>
 <pre><code id="code-javascript-content" class="language-javascript">import { createClient } from 'https://g4f.dev/dist/js/providers.js';
 
 const client = createClient('default');
@@ -360,7 +360,7 @@ const result = await client.chat.completions.create({
 console.log(result.choices[0].message.content);</code></pre>
             </div>
             <div id="code-curl" class="code-content">
-                <button class="copy-btn" onclick="copyCode('curl')">Copy</button>
+                <button class="copy-btn" onclick="copyCode('curl')">Másolás</button>
 <pre><code id="code-curl-content" class="language-bash">curl https://g4f.space/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
@@ -372,7 +372,7 @@ console.log(result.choices[0].message.content);</code></pre>
     </div>
 
     <div class="section">
-        <h1>Live Providers</h1>
+        <h1>Élő szolgáltatók</h1>
         <small>JavaScript client library providers with integrated functionality</small>
         <div class="table" id="js-providers-table">
             <div>Loading JS Providers...</div>
@@ -431,7 +431,7 @@ print(response.json())
     </div>
 
     <div class="section">
-        <h2>Custom Providers</h2>
+        <h2>Egyéni szolgáltatók</h2>
         <small>Loaded from <a href="https://g4f.space/custom/api/servers" target="_blank">custom/api/servers</a> (with fallback to public)</small>
         <div class="table" id="custom-providers-table">
             <div>Loading Custom Providers...</div>
@@ -1143,7 +1143,7 @@ console.log(result.choices[0].message.content);`;
 (function () {
     "use strict";
     const locale = "hu";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

@@ -286,7 +286,7 @@ Open this single HTML file in any modern browser.
   </div>
 
   <div id="track-info">
-    <div id="track-title" aria-live="polite">Loading...</div>
+    <div id="track-title" aria-live="polite">Načítava sa...</div>
     <div id="track-artist"></div>
   </div>
 
@@ -631,7 +631,7 @@ Open this single HTML file in any modern browser.
 (function () {
     "use strict";
     const locale = "sk";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

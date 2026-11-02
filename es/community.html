@@ -66,7 +66,7 @@
     <header class="navbar" id="navbar" role="banner">
         <a href="/" class="logo">G4<span>F</span></a>
         <nav class="nav-links" role="navigation">
-            <a href="/">Home</a>
+            <a href="/">Inicio</a>
             <a href="/docs/">Docs</a>
             <a href="/members.html">Members</a>
             <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">Discord</a>
@@ -76,25 +76,25 @@
 
     <main>
         <section class="page-head">
-            <span class="kicker">✦ Community</span>
-            <h1>Community Forum</h1>
-            <p>Ask a question, share an idea or help someone out. Join our Discord: <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">discord.gg/qXA4Wf4Fsm</a></p>
+            <span class="kicker">✦ Comunidad</span>
+            <h1>Foro de la Comunidad</h1>
+            <p>Haz una pregunta, comparte una idea o ayuda a alguien. Únete a nuestro Discord: <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">discord.gg/qXA4Wf4Fsm</a></p>
         </section>
 
         <section class="section">
             <div id="loginStatus" class="status"></div>
 
             <div class="post-form" id="postForm" style="display: none;">
-                <textarea id="postContent" placeholder="Ask a question or post to the Community..."></textarea>
-                <button id="postButton" class="btn" type="button">Post</button>
+                <textarea id="postContent" placeholder="Haz una pregunta o publica en la Comunidad..."></textarea>
+                <button id="postButton" class="btn" type="button">Publicar</button>
             </div>
 
             <div class="section-header">
-                <span class="kicker">✦ Posts</span>
-                <h2>Latest Posts</h2>
+                <span class="kicker">✦ Publicaciones</span>
+                <h2>Últimas publicaciones</h2>
             </div>
 
-            <div id="posts" class="muted">Loading posts...</div>
+            <div id="posts" class="muted">Cargando publicaciones...</div>
         </section>
     </main>
 
@@ -456,7 +456,7 @@
 (function () {
     "use strict";
     const locale = "es";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

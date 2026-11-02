@@ -668,7 +668,7 @@ run shows progress instead of appearing idle:</p>
 <p>The JSON block is canonical. The board and recent-runs tables are regenerated
 from it every time the pipeline writes the file, so they are safe to read but
 not safe to edit. Human edits to the JSON block are picked up on the next run;
-prefer <code>add-task</code> and <code>plan</code> for changes.</p>
+prefer <code>add-task</code> и <code>plan</code> for changes.</p>
 <p>Task statuses:</p>
 <table>
 <thead>
@@ -728,7 +728,7 @@ models, then OVHcloud models as keyless fallbacks.</p>
 <thead>
 <tr>
 <th>Key</th>
-<th>Default</th>
+<th>По умолчанию</th>
 <th>Meaning</th>
 </tr>
 </thead>
@@ -858,7 +858,7 @@ journalctl --user -u dev-pipeline -f</code></pre>
 <ul><li><p><code>--dry-run</code> does not edit <code>AGENTS.md</code>, does not run checks, and does not invoke
 the agent. It does probe/list models unless a fresh cache exists, or unless
 <code>--fallback-only</code> is set.</p></li><li><p>Baseline checks run before the model is invoked. A broken checkout is marked
-<code>blocked</code> instead of burning model attempts on an unrelated failure.</p></li><li><p>Commits are opt-in (<code>--commit</code>); pushes require both <code>--commit</code> and <code>--push</code>.</p></li><li><p>The agent prompt forbids commits, pushes, paid services, and edits to the
+<code>blocked</code> instead of burning model attempts on an unrelated failure.</p></li><li><p>Commits are opt-in (<code>--commit</code>); pushes require both <code>--commit</code> и <code>--push</code>.</p></li><li><p>The agent prompt forbids commits, pushes, paid services, and edits to the
 pipeline state blocks.</p></li><li><p>A failed run leaves the working tree intact and records the failure for human
 review. There is no automatic revert.</p></li><li><p>Free quotas are shared. Keep <code>probe_limit</code> low and avoid tight loop intervals.</p></li></ul>
 <h2>Troubleshooting</h2>
@@ -1026,7 +1026,7 @@ autonomous task also verifies that the status store still round-trips.</p>
 (function () {
     "use strict";
     const locale = "ru";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

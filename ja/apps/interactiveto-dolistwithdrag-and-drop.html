@@ -237,7 +237,7 @@
       aria-required="true"
       aria-label="New to-do item"
     />
-    <button type="submit" id="add-btn" disabled aria-disabled="true" aria-label="Add to-do item">Add</button>
+    <button type="submit" id="add-btn" disabled aria-disabled="true" aria-label="Add to-do item">追加</button>
   </form>
   <ul id="todo-list" aria-live="polite" aria-relevant="additions removals" tabindex="0">
     <!-- List items injected here -->
@@ -527,7 +527,7 @@
 (function () {
     "use strict";
     const locale = "ja";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

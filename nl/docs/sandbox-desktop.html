@@ -463,7 +463,7 @@
         <main role="main" class="markdown-body entry-content" itemprop="text" itemscope itemtype="https://schema.org/TechArticle">
             <h1>Sandbox desktop</h1>
 <p>The sandbox desktop is a full Xfce session (TigerVNC + noVNC) with the g4f API
-and a one-click <strong>Install &amp; Open</strong> menu for coding agents, browsers, gateways,
+and a one-click menu for coding agents, browsers, gateways,
 local runtimes and assistants. Everything runs in one container and the API,
 the web desktop and the routed apps share a single published port.</p>
 <p>For the complete tool list and per-entry details, see
@@ -498,10 +498,16 @@ the individual tools. <code>g4f-sandbox --desktop install &lt;tool&gt;</code> in
 when it is first needed; <code>g4f-sandbox --desktop cli list</code> lists them.</p></li><li><p><strong>State is persistent</strong> under <code>~/.g4f-sandbox</code> (<code>--data-dir</code> to change it):
 cookies and media in API mode, <code>.config</code>/<code>.local</code> in desktop mode.</p></li><li><p><code>--app-dir DIR</code> mounts a checkout at <code>/app/gpt4free</code>; <code>--port</code>,
 <code>--vnc-port</code>, <code>--bind</code>, <code>--api-key</code>, <code>--pull</code>, <code>--no-pull</code>, <code>--engine</code>,
-<code>--recreate</code> and <code>--no-open</code> mirror the start script where they overlap.</p></li><li><p><strong>Termux/Android</strong> is detected automatically. The launcher runs the API
-natively with Termux's Python (no Docker), installs <code>g4f[slim]</code> on first run,
-and manages the process with <code>up</code>, <code>down</code>, <code>status</code> and <code>logs</code>. The desktop
-mode still requires Docker/Podman.</p></li></ul>
+<code>--recreate</code> en <code>--no-open</code> mirror the start script where they overlap.</p></li><li><p><strong>Termux/Android</strong> is detected automatically. The standalone
+<code>g4f-sandbox</code> launcher runs the API natively with Termux's Python (no
+Docker), installs <code>g4f[slim]</code> on first run, and manages the process with
+<code>up</code>, <code>down</code>, <code>status</code> en <code>logs</code>. <code>g4f-go sandbox</code> instead uses
+<a href="https://github.com/indigo-dc/udocker">udocker</a>, installed with pip and set up
+with <code>udocker install</code> on first use, so it runs the same slim and desktop
+images without root; the native backend remains available with `--backend
+termux<code>. </code>G4F_SANDBOX_UDOCKER_DIR` moves the udocker root (default
+<code>~/.udocker</code>) and <code>G4F_SANDBOX_UDOCKER_EXECMODE</code> selects the execution mode
+(<code>P1</code>, <code>P2</code>, <code>F1</code>-<code>F4</code>, <code>R1</code>-<code>R3</code>, <code>S1</code>).</p></li></ul>
 <p><code>g4f-go</code> embeds the same launcher (<code>g4f-go sandbox ...</code>) and adds
 <code>g4f-go sandbox-cli</code> for running <code>sandbox-cli</code> inside the desktop container.</p>
 <h3>Hosted Polli sandbox</h3>
@@ -597,7 +603,7 @@ Commands:
 </table>
 <p>The same settings are read from the environment when the options are not used:
 <code>G4F_APP_DIR</code>, <code>G4F_USER_ID</code>, <code>G4F_API_KEY</code>, <code>G4F_DOMAIN_SUFFIX</code>,
-<code>G4F_DOMAIN_ROUTER</code>, <code>SANDBOX_BIND_ADDR</code>, <code>SANDBOX_BLOCK_LOCAL_NETWORK</code> and
+<code>G4F_DOMAIN_ROUTER</code>, <code>SANDBOX_BIND_ADDR</code>, <code>SANDBOX_BLOCK_LOCAL_NETWORK</code> en
 <code>SANDBOX_FIREWALL_STRICT</code>.</p>
 <h2>App volume</h2>
 <p>The g4f app tree is bind-mounted at <code>/app/gpt4free</code>, the path the image's
@@ -634,7 +640,7 @@ clipboard and the VM clipboard:</p>
 <ul><li><p>Pasting with <code>Ctrl+V</code> (or the context menu) inside the noVNC window sends the
 text to the VM.</p></li><li><p>Text copied inside the VM is mirrored into the browser clipboard.</p></li><li><p>The noVNC clipboard panel (the clipboard button in the control bar) remains
 available, and is the fallback when the browser blocks the Async Clipboard
-API. Browsers only grant that API on secure origins: <code>http://127.0.0.1</code> and
+API. Browsers only grant that API on secure origins: <code>http://127.0.0.1</code> en
 <code>https://</code> work, a plain <code>http://</code> LAN address does not.</p></li></ul>
 <p><strong>Scaling.</strong> The client defaults to <code>resize=remote</code>: noVNC asks the VNC server
 to resize the desktop to the viewer's window, so the same session fills a
@@ -648,7 +654,7 @@ port (<code>5900</code>) is unaffected.</p>
 controls from the Remote Desktop viewer, because the stock noVNC control bar
 is awkward on a phone:</p>
 <ul><li><p><strong>Type</strong> opens a text field that sends the whole string to the VM, plus
-Enter, Backspace, Tab, Esc, arrow, navigation and F5/F11 keys.</p></li><li><p><strong>Ctrl</strong>, <strong>Alt</strong>, <strong>Shift</strong> and <strong>Win</strong> are sticky modifier buttons; tap one,
+Enter, Backspace, Tab, Esc, arrow, navigation and F5/F11 keys.</p></li><li><p><strong>Ctrl</strong>, <strong>Alt</strong>, <strong>Shift</strong> en <strong>Win</strong> are sticky modifier buttons; tap one,
 then a key or a shortcut, and tap it again to release it.</p></li><li><p><strong>Keys</strong> lists one-tap shortcuts (Alt+Tab, Ctrl+C/V/X/Z, Win+R, Alt+F4,
 PrintScreen, and the rest of the Remote Desktop set), pressing the modifiers
 around the key and releasing them in reverse.</p></li><li><p><strong>View/Control</strong> toggles noVNC's view-only mode, <strong>med</strong> cycles the JPEG
@@ -746,12 +752,12 @@ G4F_DOMAIN_SUFFIX=sandbox.test bin/start-sandbox-desktop.sh -d</code></pre>
 <pre><code class="language-bash">bin/start-sandbox-desktop.sh -d --no-domain-router   # G4F_DOMAIN_ROUTER=0</code></pre>
 <p>The router only forwards the known hostnames to their fixed local ports, so it
 cannot be used as an open proxy. Environment overrides are
-<code>G4F_DOMAIN_SUFFIX</code> and <code>G4F_DOMAIN_ROUTER</code> (both are also passed through the
+<code>G4F_DOMAIN_SUFFIX</code> en <code>G4F_DOMAIN_ROUTER</code> (both are also passed through the
 compose file).</p>
 <h2>Tray</h2>
 <p>The container's main process is <code>sandbox-tray</code>. It starts the g4f API as a
 child and places the <strong>g4f logo in the panel's notification area (top right)</strong>
-with <code>yad</code>. Right-click the logo for:</p>
+met <code>yad</code>. Right-click the logo for:</p>
 <ul><li><p>Open in Browser</p></li><li><p>Start/Stop Server</p></li><li><p><strong>Restart Server</strong></p></li><li><p>Update g4f Package</p></li><li><p>Change g4f Package Version…</p></li><li><p>Sandbox Settings…</p></li><li><p>Show Logs</p></li><li><p>Quit</p></li></ul>
 <p>The tray watches the sandbox settings file, so a key, model, provider or proxy
 change restarts the server automatically. Without a display, without <code>yad</code>, or
@@ -765,6 +771,9 @@ sandbox-cli list            list the known tools
 sandbox-cli settings        model, API key, HOME, provider and proxy
 sandbox-cli reset           clear the saved settings
 sandbox-cli package         show, update or pin the g4f package
+sandbox-cli update          update the g4f-go launcher itself
+sandbox-cli upgrade         update the g4f package in the runtime
+sandbox-cli uninstall       remove g4f-go and its managed data
 sandbox-cli urls            print the public URLs served by the API
 sandbox-cli hosts           print the /etc/hosts entries for the app domains
 sandbox-cli harness         pick a coding agent and a model from the g4f API
@@ -773,7 +782,13 @@ sandbox-cli polli-sandbox   create/connect/manage hosted Polli sandboxes</code><
 <code>pip install --user</code>, or Chrome's <code>.deb</code>), so the image stays small. The
 settings commands accept flags for scripting, for example
 <code>sandbox-cli settings --api-key &#x27;key&#x27; --model gpt-4o</code>,
-<code>sandbox-cli settings --show</code> and <code>sandbox-cli settings --json</code>.</p>
+<code>sandbox-cli settings --show</code> en <code>sandbox-cli settings --json</code>.</p>
+<p>The launcher and its Python runtime are owned by <code>g4f-go</code>, so the management
+commands forward to it: <code>sandbox-cli update</code> updates the <code>g4f-go</code> binary
+(<code>--check</code> reports without installing, <code>--version &lt;tag&gt;</code> picks a release),
+<code>sandbox-cli upgrade</code> updates the g4f package in the runtime, and
+<code>sandbox-cli uninstall</code> removes the launcher and its managed runtime, browser
+and caches (<code>--keep-binary</code>, <code>--keep-data</code> en <code>--dry-run</code> are passed through).</p>
 <h2>Polli sandbox install</h2>
 <p>A Polli sandbox is a headless Debian VM (E2B) reached as <code>&lt;id&gt;.polli</code> over
 ssh. The menu can install itself there:</p>
@@ -784,10 +799,10 @@ sandbox-cli polli-sandbox install-menu &lt;id&gt;
 sandbox-cli polli-sandbox install-menu &lt;id&gt; --desktop</code></pre>
 <p><code>install-menu</code> copies the menu assets (the CLI, <code>.desktop</code> entries, desktop
 directories, Xfce menu patch and icons) into the sandbox. With <code>--desktop</code> it
-also copies <code>g4f-go</code> and <code>/usr/share/novnc</code>, installs the Xfce/TigerVNC
+also copies <code>g4f-go</code> en <code>/usr/share/novnc</code>, installs the Xfce/TigerVNC
 packages there, patches the Applications menu, starts the desktop on
-<code>127.0.0.1:5900</code>, and starts <code>g4f-go api</code> on <code>127.0.0.1:8080</code> with
-<code>G4F_VNC_PORT=5900</code>, <code>G4F_NOVNC_DIR=/usr/share/novnc</code> and
+<code>127.0.0.1:5900</code>, and starts <code>g4f-go api</code> on <code>127.0.0.1:8080</code> met
+<code>G4F_VNC_PORT=5900</code>, <code>G4F_NOVNC_DIR=/usr/share/novnc</code> en
 <code>G4F_DOMAIN_ROUTER=0</code> (the sandbox has no app hostnames in <code>/etc/hosts</code>).</p>
 <p>The bootstrap prints the tunnels to open from your machine:</p>
 <pre><code class="language-bash">ssh -L 8080:127.0.0.1:8080 &lt;id&gt;.polli   # http://127.0.0.1:8080/desktop/
@@ -797,7 +812,7 @@ sandbox user's home; watch <code>/tmp/g4f-sandbox-api.log</code> inside the sand
 the page is not up yet. The applications menu carries the g4f categories
 (Media &gt; Polli, Coding Agents, …).</p>
 <h2>Applications menu</h2>
-<p>The image patches <code>/etc/xdg/menus/xfce-applications.menu</code> with
+<p>The image patches <code>/etc/xdg/menus/xfce-applications.menu</code> met
 <code>bin/patch-xfce-menu.py</code>, which:</p>
 <ul><li><p>inserts the g4f categories (g4f, Browsers, Files &amp; Editors, Coding Agents,
 Gateways, Chat UIs, Assistants, …) as their own top-level menus;</p></li><li><p>removes the stock <strong>Internet</strong> (XML name <code>Network</code>) and <strong>Development</strong>
@@ -811,7 +826,7 @@ it the container still starts with a warning. Set
 <code>SANDBOX_FIREWALL_STRICT=1</code> to make a firewall failure fatal. The filter
 blocks private/link-local/reserved networks, file-sharing protocols and
 crypto-mining ports while allowing public internet access and replies to
-host-initiated connections.</p></li><li><p>Keep <code>~/.config</code> and <code>~/.local</code> bind-mounted (see the README example) to
+host-initiated connections.</p></li><li><p>Keep <code>~/.config</code> en <code>~/.local</code> bind-mounted (see the README example) to
 preserve agent logins, caches and sandbox settings across container
 restarts. Do not mount over <code>/home/pn</code> itself: the embedded runtime lives in
 <code>/home/pn/.g4f</code>.</p></li><li><p>Logs: <code>bin/start-sandbox-desktop.sh logs -f</code>, or inside the container
@@ -938,7 +953,7 @@ restarts. Do not mount over <code>/home/pn</code> itself: the embedded runtime l
 (function () {
     "use strict";
     const locale = "nl";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

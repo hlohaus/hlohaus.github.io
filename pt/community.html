@@ -66,50 +66,50 @@
     <header class="navbar" id="navbar" role="banner">
         <a href="/" class="logo">G4<span>F</span></a>
         <nav class="nav-links" role="navigation">
-            <a href="/">Home</a>
-            <a href="/docs/">Docs</a>
-            <a href="/members.html">Members</a>
+            <a href="/">Início</a>
+            <a href="/docs/">Documentação</a>
+            <a href="/members.html">Membros</a>
             <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">Discord</a>
-            <a href="/chat/" class="nav-cta">Get Started</a>
+            <a href="/chat/" class="nav-cta">Começar</a>
         </nav>
     </header>
 
     <main>
         <section class="page-head">
-            <span class="kicker">✦ Community</span>
-            <h1>Community Forum</h1>
-            <p>Ask a question, share an idea or help someone out. Join our Discord: <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">discord.gg/qXA4Wf4Fsm</a></p>
+            <span class="kicker">✦ Comunidade</span>
+            <h1>Fórum da Comunidade</h1>
+            <p>Faça uma pergunta, compartilhe uma ideia ou ajude alguém. Junte-se ao nosso Discord: <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">discord.gg/qXA4Wf4Fsm</a></p>
         </section>
 
         <section class="section">
             <div id="loginStatus" class="status"></div>
 
             <div class="post-form" id="postForm" style="display: none;">
-                <textarea id="postContent" placeholder="Ask a question or post to the Community..."></textarea>
-                <button id="postButton" class="btn" type="button">Post</button>
+                <textarea id="postContent" placeholder="Faça uma pergunta ou publique na Comunidade..."></textarea>
+                <button id="postButton" class="btn" type="button">Publicar</button>
             </div>
 
             <div class="section-header">
-                <span class="kicker">✦ Posts</span>
-                <h2>Latest Posts</h2>
+                <span class="kicker">✦ Publicações</span>
+                <h2>Últimas Publicações</h2>
             </div>
 
-            <div id="posts" class="muted">Loading posts...</div>
+            <div id="posts" class="muted">Carregando publicações...</div>
         </section>
     </main>
 
     <footer>
         <div class="footer-links">
-            <a href="/docs/">Documentation</a>
-            <a href="/chat/">Chat</a>
-            <a href="/members.html">Members</a>
+            <a href="/docs/">Documentação</a>
+            <a href="/chat/">Conversa</a>
+            <a href="/members.html">Membros</a>
             <a href="/manifesto">Manifesto</a>
             <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="/community">Community</a>
-            <a href="/privacy.html">Privacy Policy</a>
-            <a href="/terms.html">Terms of Service</a>
+            <a href="/community">Comunidade</a>
+            <a href="/privacy.html">Política de Privacidade</a>
+            <a href="/terms.html">Termos de Serviço</a>
         </div>
-        <p>© 2026 GPT4Free Project. Open source and free forever. ✨</p>
+        <p>© 2026 Projeto GPT4Free. Código aberto e gratuito para sempre. ✨</p>
     </footer>
 
     <script>
@@ -456,7 +456,7 @@
 (function () {
     "use strict";
     const locale = "pt";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

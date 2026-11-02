@@ -545,11 +545,11 @@
             </button>
             <button id="saveNoteBtn" title="Save Note">
                 <i class="fas fa-save"></i>
-                <span>Save</span>
+                <span>Shrani</span>
             </button>
             <button id="deleteNoteBtn" title="Delete Note">
                 <i class="fas fa-trash"></i>
-                <span>Delete</span>
+                <span>Izbriši</span>
             </button>
         </div>
 
@@ -611,7 +611,7 @@
         </div>
 
         <div class="toolbar-group">
-            <button id="darkModeBtn" title="Toggle Dark Mode">
+            <button id="darkModeBtn" title="Preklopi temni načrt">
                 <i class="fas fa-moon"></i>
             </button>
             <button id="printBtn" title="Print Note">
@@ -696,13 +696,13 @@
                     />
                 </div>
                 <div class="form-group">
-                    <label for="newNoteTags">Tags (comma separated)</label>
+                    <label for="newNoteTags">Oznake (ločene z vejico)</label>
                     <input type="text" id="newNoteTags" placeholder="work, personal, ideas" />
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" id="cancelNewNote">Cancel</button>
-                <button class="btn btn-primary" id="createNewNote">Create</button>
+                <button class="btn btn-secondary" id="cancelNewNote">Prekliči</button>
+                <button class="btn btn-primary" id="createNewNote">Ustvari</button>
             </div>
         </div>
     </div>
@@ -718,8 +718,8 @@
                 <p>Are you sure you want to delete this note? This action cannot be undone.</p>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" id="cancelDeleteNote">Cancel</button>
-                <button class="btn btn-danger" id="confirmDeleteNote">Delete</button>
+                <button class="btn btn-secondary" id="cancelDeleteNote">Prekliči</button>
+                <button class="btn btn-danger" id="confirmDeleteNote">Izbriši</button>
             </div>
         </div>
     </div>
@@ -743,7 +743,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" id="cancelSearch">Cancel</button>
+                <button class="btn btn-secondary" id="cancelSearch">Prekliči</button>
                 <button class="btn btn-primary" id="findNext">Find Next</button>
             </div>
         </div>
@@ -1299,7 +1299,7 @@
 (function () {
     "use strict";
     const locale = "sl";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

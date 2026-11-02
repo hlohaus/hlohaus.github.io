@@ -494,7 +494,7 @@ flow.</p></li></ul>
 <p>Server-side copy covers the homepage, providers catalog, and static labels.
 Chat and playground content is mostly dynamic and relies on the runtime global
 translations. Static translations live in <code>g4f/gui/server/locale.py</code>; add a page
-to <code>PAGES</code> and <code>COPY</code> only when its visible copy can be translated.</p>
+to <code>PAGES</code> i <code>COPY</code> only when its visible copy can be translated.</p>
 <h2>Static GitHub Pages mirror</h2>
 <p>The public site at &lt;https://g4f.dev&gt; is statically hosted on GitHub Pages, so it
 cannot run the Flask middleware. <code>g4f.dev/scripts/build-locales.mjs</code> generates
@@ -644,7 +644,7 @@ diagnostic responses use <code>no-store</code>.</p>
 (function () {
     "use strict";
     const locale = "hr";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

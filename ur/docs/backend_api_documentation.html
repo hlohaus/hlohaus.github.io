@@ -576,7 +576,7 @@ GET /media/&lt;path:name&gt;
   <span class="pl-c1">body</span>: <span class="pl-c1">JSON</span><span class="pl-kos">.</span><span class="pl-en">stringify</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
     <span class="pl-c1">model</span>: <span class="pl-s">'gpt-3.5-turbo'</span><span class="pl-kos">,</span>
     <span class="pl-c1">provider</span>: <span class="pl-s">'OpenAI'</span><span class="pl-kos">,</span>
-    <span class="pl-c1">messages</span>: <span class="pl-kos">[</span>
+    <span class="pl-c1">پیغامات</span>: <span class="pl-kos">[</span>
       <span class="pl-kos">{</span><span class="pl-c1">role</span>: <span class="pl-s">'user'</span><span class="pl-kos">,</span> <span class="pl-c1">content</span>: <span class="pl-s">'What is artificial intelligence?'</span><span class="pl-kos">}</span>
     <span class="pl-kos">]</span>
   <span class="pl-kos">}</span><span class="pl-kos">)</span>
@@ -753,7 +753,7 @@ GET /media/&lt;path:name&gt;
 (function () {
     "use strict";
     const locale = "ur";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

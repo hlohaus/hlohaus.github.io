@@ -202,7 +202,7 @@
   </section>
   <form id="input-form" autocomplete="off" aria-label="Send message form">
     <input type="text" id="input-message" name="message" placeholder="Type your message…" aria-label="Message input" required minlength="1" maxlength="500" />
-    <button type="submit" id="send-btn" aria-label="Send message" disabled>Send</button>
+    <button type="submit" id="send-btn" aria-label="Send message" disabled>Dërgo</button>
   </form>
 </div>
 
@@ -323,7 +323,7 @@
 (function () {
     "use strict";
     const locale = "sq";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

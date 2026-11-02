@@ -535,7 +535,7 @@
 
 <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
     <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4o-mini"</span>,
-    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[
+    <span class="pl-s1">메시지</span><span class="pl-c1">=</span>[
         {
             <span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>,
             <span class="pl-s">"content"</span>: <span class="pl-s">"Say this is a test"</span>
@@ -685,7 +685,7 @@
 (function () {
     "use strict";
     const locale = "ko";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

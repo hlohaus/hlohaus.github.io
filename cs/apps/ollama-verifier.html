@@ -354,11 +354,11 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
       <tr>
         <th>#</th>
         <th>Instance URL</th>
-        <th>Models</th>
+        <th>Modely</th>
         <th>Verified</th>
         <th>Status</th>
         <th>Latency</th>
-        <th>Details</th>
+        <th>Podrobnosti</th>
       </tr>
     </thead>
     <tbody id="tableBody">
@@ -879,7 +879,7 @@ urlInput.dispatchEvent(new Event('input'));
 (function () {
     "use strict";
     const locale = "cs";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

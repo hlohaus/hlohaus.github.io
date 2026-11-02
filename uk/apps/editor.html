@@ -265,14 +265,14 @@
     <span class="status-dot" id="status-dot"></span>
     <h1>Code Editor</h1>
     <button id="wrap-btn" title="Toggle word wrap">↩</button>
-    <button id="settings-btn" title="Settings">⚙</button>
+    <button id="settings-btn" title="Налаштування">⚙</button>
   </header>
 
   <div id="main">
     <div id="sidebar-backdrop"></div>
     <aside id="sidebar">
       <div class="tree-toolbar">
-        <button id="refresh-btn" title="Refresh">🔄</button>
+        <button id="refresh-btn" title="Оновити">🔄</button>
         <button id="new-file-btn" title="New file">📄+</button>
         <button id="upload-btn" title="Upload from device">📤</button>
       </div>
@@ -288,7 +288,7 @@
         <span class="filename" id="filename-label"></span>
         <span id="lint-status"></span>
         <span class="toolbar-divider"></span>
-        <button id="save-btn" title="Save (Ctrl/Cmd+S)">💾<span class="btn-label"> Save</span></button>
+        <button id="save-btn" title="Save (Ctrl/Cmd+S)">💾<span class="btn-label"> Зберегти</span></button>
         <button id="search-btn" title="Search &amp; Replace (Ctrl/Cmd+F)">🔎<span class="btn-label"> Find</span></button>
         <button id="run-btn" title="Run / Preview (Ctrl/Cmd+E)">▶<span class="btn-label"> Run</span></button>
         <button id="download-btn" title="Download file">⬇</button>
@@ -298,7 +298,7 @@
         <div id="search-panel">
           <div class="sr-row">
             <input id="sr-find" type="text" placeholder="Find" />
-            <button id="sr-close" title="Close">✕</button>
+            <button id="sr-close" title="Закрити">✕</button>
           </div>
           <div class="sr-row">
             <input id="sr-replace" type="text" placeholder="Replace" />
@@ -322,8 +322,8 @@
       <aside id="preview-panel">
         <div class="preview-toolbar">
           <span class="title" id="preview-title">Preview</span>
-          <button id="preview-refresh" title="Refresh">🔄</button>
-          <button id="preview-open" title="Open in new tab">↗</button>
+          <button id="preview-refresh" title="Оновити">🔄</button>
+          <button id="preview-open" title="Відкрити в новій вкладці">↗</button>
           <button id="preview-close" title="Close preview">✕</button>
         </div>
         <iframe id="preview-iframe" sandbox="allow-scripts allow-modals allow-forms allow-popups allow-same-origin"></iframe>
@@ -362,8 +362,8 @@
   <h2>Indent unit (spaces)</h2>
   <input id="indent-unit-input" type="number" min="1" max="8" placeholder="2" />
   <div class="row">
-    <button id="settings-cancel">Cancel</button>
-    <button id="settings-save">Save</button>
+    <button id="settings-cancel">Скасувати</button>
+    <button id="settings-save">Зберегти</button>
   </div>
 </dialog>
 
@@ -371,8 +371,8 @@
   <h2>New file path (relative to workspace)</h2>
   <input id="new-file-input" type="text" placeholder="folder/example.js" />
   <div class="row">
-    <button id="new-file-cancel">Cancel</button>
-    <button id="new-file-create">Create</button>
+    <button id="new-file-cancel">Скасувати</button>
+    <button id="new-file-create">Створити</button>
   </div>
 </dialog>
 
@@ -386,7 +386,7 @@
   <h2>Extra arguments (JSON)</h2>
   <input id="run-args-input" type="text" placeholder='{"timeout": 30}' />
   <div class="row">
-    <button id="run-config-cancel">Cancel</button>
+    <button id="run-config-cancel">Скасувати</button>
     <button id="run-config-save">Run</button>
   </div>
 </dialog>
@@ -1385,7 +1385,7 @@ refreshTree();
 (function () {
     "use strict";
     const locale = "uk";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

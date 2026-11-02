@@ -538,7 +538,7 @@
 <span class="pl-c"># Simple request</span>
 <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
     <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"claude-3.5-sonnet"</span>,
-    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Hello!"</span>}]
+    <span class="pl-s1">wiadomości</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Hello!"</span>}]
 )
 <span class="pl-en">print</span>(<span class="pl-s1">response</span>.<span class="pl-c1">choices</span>[<span class="pl-c1">0</span>].<span class="pl-c1">message</span>.<span class="pl-c1">content</span>)</pre></div>
 <hr>
@@ -552,7 +552,7 @@
     
     <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
         <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"mixtral-8x7b"</span>,
-        <span class="pl-s1">messages</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Hello!"</span>}]
+        <span class="pl-s1">wiadomości</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Hello!"</span>}]
     )
     <span class="pl-en">print</span>(<span class="pl-s1">response</span>.<span class="pl-c1">choices</span>[<span class="pl-c1">0</span>].<span class="pl-c1">message</span>.<span class="pl-c1">content</span>)
 
@@ -560,7 +560,7 @@
 <hr>
 <h3><strong>Multiple Providers with API Keys</strong></h3>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">os</span>
-<span class="pl-k">import</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span>
+<span class="pl-k">import</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Dostawca</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">Client</span>
 
 <span class="pl-c"># Using environment variables</span>
@@ -570,10 +570,10 @@
 }
 
 <span class="pl-k">for</span> <span class="pl-s1">provider_name</span>, <span class="pl-s1">api_key</span> <span class="pl-c1">in</span> <span class="pl-s1">providers</span>.<span class="pl-c1">items</span>():
-    <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">Client</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-en">getattr</span>(<span class="pl-s1">g4f</span>.<span class="pl-c1">Provider</span>, <span class="pl-s1">provider_name</span>), <span class="pl-s1">api_key</span><span class="pl-c1">=</span><span class="pl-s1">api_key</span>)
+    <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">Client</span>(<span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-en">getattr</span>(<span class="pl-s1">g4f</span>.<span class="pl-c1">Dostawca</span>, <span class="pl-s1">provider_name</span>), <span class="pl-s1">api_key</span><span class="pl-c1">=</span><span class="pl-s1">api_key</span>)
     <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
         <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"claude-3.5-sonnet"</span>,
-        <span class="pl-s1">messages</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">f"Hello to <span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">provider_name</span><span class="pl-kos">}</span></span>!"</span>}]
+        <span class="pl-s1">wiadomości</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">f"Hello to <span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">provider_name</span><span class="pl-kos">}</span></span>!"</span>}]
     )
     <span class="pl-en">print</span>(<span class="pl-s">f"<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">provider_name</span><span class="pl-kos">}</span></span>: <span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">response</span>.<span class="pl-c1">choices</span>[<span class="pl-c1">0</span>].<span class="pl-c1">message</span>.<span class="pl-c1">content</span><span class="pl-kos">}</span></span>"</span>)</pre></div>
 <hr>
@@ -589,7 +589,7 @@
 </li>
 </ol>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">Client</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">Gemini</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Dostawca</span> <span class="pl-k">import</span> <span class="pl-v">Gemini</span>
 
 <span class="pl-c"># Using with cookies</span>
 <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">Client</span>(
@@ -597,7 +597,7 @@
 )
 <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
     <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">""</span>, <span class="pl-c"># Default model</span>
-    <span class="pl-s1">messages</span><span class="pl-c1">=</span><span class="pl-s">"Hello Google"</span>,
+    <span class="pl-s1">wiadomości</span><span class="pl-c1">=</span><span class="pl-s">"Hello Google"</span>,
     <span class="pl-s1">cookies</span><span class="pl-c1">=</span>{
         <span class="pl-s">"__Secure-1PSID"</span>: <span class="pl-s">"your_cookie_value_here"</span>,
         <span class="pl-s">"__Secure-1PSIDTS"</span>: <span class="pl-s">"your_cookie_value_here"</span>
@@ -612,7 +612,7 @@
 <span class="pl-s1">rate_limiter</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncLimiter</span>(<span class="pl-s1">max_rate</span><span class="pl-c1">=</span><span class="pl-c1">5</span>, <span class="pl-s1">time_period</span><span class="pl-c1">=</span><span class="pl-c1">1</span>)
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">make_request</span>():
-    <span class="pl-k">async</span> <span class="pl-k">with</span> <span class="pl-s1">rate_limiter</span>:
+    <span class="pl-k">async</span> <span class="pl-k">z</span> <span class="pl-s1">rate_limiter</span>:
         <span class="pl-k">return</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(...)</pre></div>
 <hr>
 <h3><strong>Error Handling</strong></h3>
@@ -630,7 +630,7 @@
 <markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
-<th>Provider</th>
+<th>Dostawca</th>
 <th>Auth Type</th>
 <th>Example Models</th>
 </tr>
@@ -638,7 +638,7 @@
 <tbody>
 <tr>
 <td>Anthropic</td>
-<td>API Key</td>
+<td>Klucz API</td>
 <td><code class="notranslate">claude-3.5-sonnet</code></td>
 </tr>
 <tr>
@@ -648,12 +648,12 @@
 </tr>
 <tr>
 <td>Groq</td>
-<td>API Key</td>
+<td>Klucz API</td>
 <td><code class="notranslate">mixtral-8x7b</code></td>
 </tr>
 <tr>
 <td>HuggingFace</td>
-<td>API Key</td>
+<td>Klucz API</td>
 <td><code class="notranslate">llama-3.1-70b</code></td>
 </tr>
 </tbody>
@@ -683,16 +683,16 @@
 <li>Navigate to <code class="notranslate">http://localhost:8080/chat/</code>.</li>
 <li>Use credentials:
 <ul>
-<li><strong>Username</strong>: Any value (e.g., <code class="notranslate">admin</code>).</li>
+<li><strong>Nazwa użytkownika</strong>: Any value (e.g., <code class="notranslate">admin</code>).</li>
 <li><strong>Password</strong>: Your <code class="notranslate">G4F_API_KEY</code>.</li>
 </ul>
 </li>
 </ol>
 <hr>
 <h3><strong>Programmatic Access</strong></h3>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">requests</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">Żądania</span>
 
-<span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">requests</span>.<span class="pl-c1">get</span>(
+<span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">Żądania</span>.<span class="pl-c1">get</span>(
     <span class="pl-s">"http://localhost:8080/chat/"</span>,
     <span class="pl-s1">auth</span><span class="pl-c1">=</span>(<span class="pl-s">"admin"</span>, <span class="pl-s">"your_password_here"</span>)
 )
@@ -875,7 +875,7 @@
 (function () {
     "use strict";
     const locale = "pl";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()

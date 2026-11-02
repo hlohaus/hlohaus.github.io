@@ -259,7 +259,7 @@
       <p>Your shortened URL:</p>
       <div class="short-url" tabindex="0" aria-label="Shortened URL, click the copy button to copy">
         <a href="#" target="_blank" rel="noopener noreferrer" id="short-url-link"></a>
-        <button class="btn-copy" type="button" id="copy-btn" aria-label="Copy shortened URL to clipboard">Copy</button>
+        <button class="btn-copy" type="button" id="copy-btn" aria-label="Copy shortened URL to clipboard">Kopieren</button>
       </div>
     </section>
   </main>
@@ -434,7 +434,7 @@
 (function () {
     "use strict";
     const locale = "de";
-    const supported = ["en", "es", "fr", "de"];
+    const supported = ["en","ar","bg","cs","da","de","el","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","kk","ko","nb","nl","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","ur","uz","vi","zh"];
     const match = location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i);
     const opened = match && supported.includes(match[1].toLowerCase())
         ? match[1].toLowerCase()
