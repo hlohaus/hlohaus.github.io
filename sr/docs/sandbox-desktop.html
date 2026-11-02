@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html data-color-mode="auto" data-light-theme="light" data-dark-theme="dark" lang="sr" dir="ltr">
 <head>
-<link rel="canonical" href="https://g4f.dev/sr/docs/sandbox-desktop.html">
+<meta property="og:locale" content="sr">
+    <meta property="og:url" content="https://g4f.dev/sr/docs/sandbox-desktop.html">
+    <link rel="canonical" href="https://g4f.dev/sr/docs/sandbox-desktop.html">
     <link rel="alternate" hreflang="en" href="https://g4f.dev/docs/sandbox-desktop.html">
     <link rel="alternate" hreflang="ar" href="https://g4f.dev/ar/docs/sandbox-desktop.html">
     <link rel="alternate" hreflang="bg" href="https://g4f.dev/bg/docs/sandbox-desktop.html">
@@ -54,7 +56,6 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Sandbox desktop | GPT4Free Documentation" />
     <meta property="og:description" content="GPT4Free documentation for Sandbox desktop. Free AI endpoints, examples, and comprehensive guides." />
-    <meta property="og:url" content="https://g4f.dev/docs/sandbox-desktop.html" />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
@@ -479,36 +480,33 @@ bin/start-sandbox-desktop.sh -d
 # Direct VNC:    127.0.0.1:5900</code></pre>
 <p>The script stores no state of its own. <code>docker compose</code> is used when available;
 pass <code>--no-compose</code> to use a direct <code>docker run</code> instead.</p>
-<h2>Standalone launcher (no checkout required)</h2>
-<p><a href="/sandbox-launcher/README.html"> 0 </a> builds a small standalone
-executable (<code>g4f-sandbox</code>) for Windows, Linux and macOS on amd64 and arm64. It
-requires only Docker or Podman and does not embed the image, so the download is
-a few MB and the image is pulled on demand.</p>
-<pre><code class="language-bash">g4f-sandbox                    # small API-only sandbox (latest-slim)
-g4f-sandbox --desktop          # full Xfce/VNC desktop, pulled on first use
-g4f-sandbox --desktop install chrome
-g4f-sandbox status
-g4f-sandbox down</code></pre>
+<h2>Sandbox launcher (<code>g4f-go sandbox</code>)</h2>
+<p>The <code>g4f-go</code> release binary includes the sandbox launcher. Download <code>g4f-go</code>
+for Windows, Linux, macOS or Termux (amd64/arm64); the <code>sandbox</code> subcommand
+requires only Docker, Podman or, on Termux/Android, udocker. It does not embed
+the image, so the download is a few MB and the image is pulled on demand.</p>
+<pre><code class="language-bash">g4f-go sandbox                    # small API-only sandbox (latest-slim)
+g4f-go sandbox --desktop          # full Xfce/VNC desktop, pulled on first use
+g4f-go sandbox --desktop install chrome
+g4f-go sandbox-cli list           # shorthand for `g4f-go sandbox --desktop cli`
+g4f-go sandbox status
+g4f-go sandbox down</code></pre>
 <ul><li><p><strong>API-only is the default.</strong> It uses the multi-arch <code>latest-slim</code> image and
 maps the API to <code>http://127.0.0.1:8080/</code>.</p></li><li><p><strong>The desktop image is opt-in.</strong> <code>--desktop</code> pulls
 <code>latest-sandbox-desktop</code> (linux/amd64 or linux/arm64, selected by Docker) and
 serves the desktop at <code>/desktop/</code>, with direct VNC on <code>5900</code>.</p></li><li><p><strong>Tools install on demand.</strong> The image ships the menu and <code>sandbox-cli</code>, not
-the individual tools. <code>g4f-sandbox --desktop install &lt;tool&gt;</code> installs one
-when it is first needed; <code>g4f-sandbox --desktop cli list</code> lists them.</p></li><li><p><strong>State is persistent</strong> under <code>~/.g4f-sandbox</code> (<code>--data-dir</code> to change it):
+the individual tools. <code>g4f-go sandbox --desktop install &lt;tool&gt;</code> installs one
+when it is first needed; <code>g4f-go sandbox --desktop cli list</code> lists them.</p></li><li><p><strong>State is persistent</strong> under <code>~/.g4f-sandbox</code> (<code>--data-dir</code> to change it):
 cookies and media in API mode, <code>.config</code>/<code>.local</code> in desktop mode.</p></li><li><p><code>--app-dir DIR</code> mounts a checkout at <code>/app/gpt4free</code>; <code>--port</code>,
 <code>--vnc-port</code>, <code>--bind</code>, <code>--api-key</code>, <code>--pull</code>, <code>--no-pull</code>, <code>--engine</code>,
-<code>--recreate</code> и <code>--no-open</code> mirror the start script where they overlap.</p></li><li><p><strong>Termux/Android</strong> is detected automatically. The standalone
-<code>g4f-sandbox</code> launcher runs the API natively with Termux's Python (no
-Docker), installs <code>g4f[slim]</code> on first run, and manages the process with
-<code>up</code>, <code>down</code>, <code>status</code> и <code>logs</code>. <code>g4f-go sandbox</code> instead uses
-<a href="https://github.com/indigo-dc/udocker">udocker</a>, installed with pip and set up
-with <code>udocker install</code> on first use, so it runs the same slim and desktop
-images without root; the native backend remains available with `--backend
-termux<code>. </code>G4F_SANDBOX_UDOCKER_DIR` moves the udocker root (default
-<code>~/.udocker</code>) and <code>G4F_SANDBOX_UDOCKER_EXECMODE</code> selects the execution mode
-(<code>P1</code>, <code>P2</code>, <code>F1</code>-<code>F4</code>, <code>R1</code>-<code>R3</code>, <code>S1</code>).</p></li></ul>
-<p><code>g4f-go</code> embeds the same launcher (<code>g4f-go sandbox ...</code>) and adds
-<code>g4f-go sandbox-cli</code> for running <code>sandbox-cli</code> inside the desktop container.</p>
+<code>--recreate</code> и <code>--no-open</code> mirror the start script where they overlap.</p></li><li><p><strong>Termux/Android</strong> is detected automatically. <code>g4f-go sandbox</code> uses
+<a href="https://github.com/indigo-dc/udocker">udocker</a>, the user-space container
+runner, so the same slim and desktop images run without root or a Docker
+daemon. udocker is installed with pip and set up with <code>udocker install</code> on
+first use. The older native Termux Python backend remains available with
+<code>--backend termux</code> (API only). <code>G4F_SANDBOX_UDOCKER_DIR</code> moves the udocker
+root (default <code>~/.udocker</code>) and <code>G4F_SANDBOX_UDOCKER_EXECMODE</code> selects the
+execution mode (<code>P1</code>, <code>P2</code>, <code>F1</code>-<code>F4</code>, <code>R1</code>-<code>R3</code>, <code>S1</code>).</p></li></ul>
 <h3>Hosted Polli sandbox</h3>
 <p><code>g4f-go polli-sandbox --desktop</code> installs the Pollinations CLI locally, creates
 a hosted Polli (E2B) sandbox, and installs <code>g4f-go</code>, <code>sandbox-cli</code>, Xfce,

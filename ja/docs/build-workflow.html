@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html data-color-mode="auto" data-light-theme="light" data-dark-theme="dark" lang="ja" dir="ltr">
 <head>
-<link rel="canonical" href="https://g4f.dev/ja/docs/build-workflow.html">
+<meta property="og:locale" content="ja">
+    <meta property="og:url" content="https://g4f.dev/ja/docs/build-workflow.html">
+    <link rel="canonical" href="https://g4f.dev/ja/docs/build-workflow.html">
     <link rel="alternate" hreflang="en" href="https://g4f.dev/docs/build-workflow.html">
     <link rel="alternate" hreflang="ar" href="https://g4f.dev/ar/docs/build-workflow.html">
     <link rel="alternate" hreflang="bg" href="https://g4f.dev/bg/docs/build-workflow.html">
@@ -54,7 +56,6 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Build Workflow Documentation | GPT4Free Documentation" />
     <meta property="og:description" content="GPT4Free documentation for Build Workflow Documentation. Free AI endpoints, examples, and comprehensive guides." />
-    <meta property="og:url" content="https://g4f.dev/docs/build-workflow.html" />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
@@ -465,7 +466,7 @@
 <h2>Workflow Overview</h2>
 <p>The <code>.github/workflows/build-packages.yml</code> workflow automatically builds multiple package formats when a version tag is pushed to the repository.</p>
 <h3>Supported Package Formats</h3>
-<ol><li><p><strong>PyPI Package</strong> - Python wheel and source distribution</p></li><li><p><strong>Windows Executable</strong> - Standalone .exe file built with Nuitka</p></li><li><p><strong>Linux Executable</strong> - Standalone binary for Linux systems built with Nuitka</p></li><li><p><strong>macOS Executable</strong> - Standalone binary for macOS systems built with Nuitka (x64 and ARM64)</p></li><li><p><strong>Sandbox Launcher</strong> - Small standalone <code>g4f-sandbox</code> executable for Windows, Linux and macOS (amd64 and arm64); it pulls the multi-arch sandbox image on demand instead of embedding it</p></li><li><p><strong>Debian Packages</strong> - .deb files for Ubuntu/Debian (amd64, arm64, armhf)</p></li><li><p><strong>WinGet Package</strong> - Windows Package Manager manifest</p></li><li><p><strong>Docker Images</strong> - Multi-architecture container images</p></li></ol>
+<ol><li><p><strong>PyPI Package</strong> - Python wheel and source distribution</p></li><li><p><strong>Windows Executable</strong> - Standalone .exe file built with Nuitka</p></li><li><p><strong>Linux Executable</strong> - Standalone binary for Linux systems built with Nuitka</p></li><li><p><strong>macOS Executable</strong> - Standalone binary for macOS systems built with Nuitka (x64 and ARM64)</p></li><li><p><strong>Debian Packages</strong> - .deb files for Ubuntu/Debian (amd64, arm64, armhf)</p></li><li><p><strong>WinGet Package</strong> - Windows Package Manager manifest</p></li><li><p><strong>Docker Images</strong> - Multi-architecture container images</p></li></ol>
 <h3>Triggering a Build</h3>
 <p>To trigger a build, push a version tag to the repository:</p>
 <pre><code class="language-bash">git tag v1.2.3
@@ -478,7 +479,7 @@ git push origin v1.2.3</code></pre>
 <h3>Package Locations</h3>
 <p>After a successful build, packages are available:</p>
 <ul><li><p><strong>GitHub Releases</strong>: All executables and packages as release assets</p>
-<ul><li><p>Python packages (wheel and source distribution)</p></li><li><p>Standalone executables for Windows, Linux, and macOS</p></li><li><p><code>g4f-sandbox</code> launcher zips for Windows, Linux, and macOS (amd64/arm64)</p></li><li><p>Debian packages for AMD64, ARM64, and ARMv7 architectures</p></li><li><p>WinGet manifest files</p></li></ul></li><li><p><strong>PyPI</strong>: <code>pip install g4f</code></p></li><li><p><strong>Docker Hub</strong>: <code>docker pull hlohaus789/g4f:latest</code></p></li><li><p><strong>WinGet</strong>: <code>winget install g4f</code> (after manifest approval)</p></li></ul>
+<ul><li><p>Python packages (wheel and source distribution)</p></li><li><p>Standalone executables for Windows, Linux, and macOS</p></li><li><p>Debian packages for AMD64, ARM64, and ARMv7 architectures</p></li><li><p>WinGet manifest files</p></li></ul></li><li><p><strong>PyPI</strong>: <code>pip install g4f</code></p></li><li><p><strong>Docker Hub</strong>: <code>docker pull hlohaus789/g4f:latest</code></p></li><li><p><strong>WinGet</strong>: <code>winget install g4f</code> (after manifest approval)</p></li></ul>
 <h3>Build Requirements</h3>
 <p>The workflow handles all dependencies automatically, but for local development:</p>
 <ul><li><p>Python 3.10+</p></li><li><p>Nuitka for executables (replaces PyInstaller)</p></li><li><p>Docker for container builds</p></li><li><p>dpkg-deb for Debian packages</p></li></ul>
