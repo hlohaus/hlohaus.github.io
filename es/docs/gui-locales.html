@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html data-color-mode="auto" data-light-theme="light" data-dark-theme="dark" lang="es" dir="ltr">
 <head>
-<base href="/docs/">
-    <link rel="canonical" href="https://g4f.dev/es/docs/gui-locales.html">
+<link rel="canonical" href="https://g4f.dev/es/docs/gui-locales.html">
     <link rel="alternate" hreflang="en" href="https://g4f.dev/docs/gui-locales.html">
     <link rel="alternate" hreflang="ar" href="https://g4f.dev/ar/docs/gui-locales.html">
     <link rel="alternate" hreflang="bg" href="https://g4f.dev/bg/docs/gui-locales.html">
@@ -473,10 +472,13 @@ playground receive locale-aware titles, descriptions, canonical links, and
 <code>hreflang</code> alternates. <code>/meta</code> (and <code>/es/meta</code>, <code>/fr/meta</code>, ...) returns the
 route map as JSON, and <code>/sitemap.xml</code> lists the localized landing pages.</p>
 <p>Locale HTML is post-processed after routing:</p>
-<ul><li><p><code>&lt;html lang&gt;</code> is set to the requested locale.</p></li><li><p>A <code>&lt;base href=&quot;/&lt;locale&gt;/&quot;&gt;</code> tag is inserted.</p></li><li><p>Every <code>href</code>, <code>src</code>, <code>action</code>, and <code>poster</code> that points inside the site is
-rewritten to a relative URL, resolved against the original page path. This
-keeps links and assets inside the locale prefix, including already-relative
-URLs such as <code>./manifest.webmanifest</code> or <code>js/store.js</code>.</p></li><li><p>Static copy is translated server-side with the same whitespace rules as
+<ul><li><p><code>&lt;html lang&gt;</code> is set to the requested locale.</p></li><li><p>Every <code>href</code>, <code>src</code>, <code>action</code>, and <code>poster</code> that points inside the site is
+rewritten to a root-absolute URL with the locale prefix, resolved against the
+original page path. This keeps links and assets inside the locale prefix,
+including already-relative URLs such as <code>./manifest.webmanifest</code> or
+<code>js/store.js</code>. No <code>&lt;base&gt;</code> element is injected: fragment-only links
+(<code>#login</code>) and <code>history.pushState(&quot;#settings&quot;)</code> must keep resolving against
+the current page, otherwise <code>/de/chat/</code> gets sent to <code>/de/</code>.</p></li><li><p>Static copy is translated server-side with the same whitespace rules as
 <code>framework.translate()</code>: text is collapsed and trimmed for lookup, and the
 original leading/trailing whitespace is preserved. Upstream SEO tags are
 replaced with one canonical set.</p></li><li><p>A small runtime bootstrap script applies the language of an explicitly
@@ -506,12 +508,12 @@ translation catalog (38 at the time of writing: <code>ar</code>, <code>bg</code>
 serves only <code>en</code>, <code>es</code>, <code>fr</code>, and <code>de</code>. Examples are <code>/fr/chat/</code>,
 <code>/ja/chat/</code>, and <code>/pt/docs/</code>.</p>
 <p>Each copy gets the locale <code>lang</code> attribute (<code>dir=&quot;rtl&quot;</code> for Arabic, Persian,
-Hebrew, and Urdu), a <code>&lt;base&gt;</code> pointing at the original page directory (so
-relative assets and manifests keep working without duplicating them), canonical
-and <code>hreflang</code> alternates for every generated language, and the same runtime
-translation bootstrap used by the GUI. Unprefixed URLs stay canonical for
-English, and <code>/en/...</code> is not generated; selecting English from a locale page
-returns to the unprefixed path.</p>
+Hebrew, and Urdu), root-absolute locale-prefixed links (relative assets and
+manifests are rewritten at build time instead of relying on a <code>&lt;base&gt;</code>),
+canonical and <code>hreflang</code> alternates for every generated language, and the same
+runtime translation bootstrap used by the GUI. Unprefixed URLs stay canonical
+for English, and <code>/en/...</code> is not generated; selecting English from a locale
+page returns to the unprefixed path.</p>
 <p>The GitHub Pages workflows run the generator before uploading the artifact, and
 the mirror sync commits the generated routes (they are gitignored in the source
 repository) so the mirror's own deploy publishes them.</p>
