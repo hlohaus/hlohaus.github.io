@@ -49,20 +49,20 @@
     <title>GUI 本地化和诊断路由 | GPT4Free 文档</title>
 
     <meta name="description" content="GPT4Free 关于 GUI 本地化和诊断路由的文档。包含免费 AI 端点、代码生成和 AI 模型集成的完整指南、示例和 API 参考。" />
-    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, GUI locale and diagnostics routes" />
+    <meta name="keywords" content="GPT4Free、G4F、AI 文档、免费 AI API、OpenAI 替代方案、JavaScript AI 客户端、Python AI 库、AI 集成、代码生成、GUI 本地化和诊断路由" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="GUI 本地化和诊断路由 | GPT4Free 文档" />
-    <meta property="og:description" content="GPT4Free documentation for GUI locale and diagnostics routes. Free AI endpoints, examples, and comprehensive guides." />
+    <meta property="og:description" content="GPT4Free 文档：GUI 本地化和诊断路由。免费 AI 接口、示例及全面指南。" />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="GUI 本地化和诊断路由 | GPT4Free 文档" />
-    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for GUI locale and diagnostics routes." />
+    <meta name="twitter:description" content="免费 AI 接口与 GUI 本地化和诊断路由的全面文档。" />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -512,9 +512,27 @@ serves only <code>en</code>, <code>es</code>, <code>fr</code>, and <code>de</cod
 Hebrew, and Urdu), root-absolute locale-prefixed links (relative assets and
 manifests are rewritten at build time instead of relying on a <code>&lt;base&gt;</code>),
 canonical and <code>hreflang</code> alternates for every generated language, and the same
-runtime translation bootstrap used by the GUI. Unprefixed URLs stay canonical
-for English, and <code>/en/...</code> is not generated; selecting English from a locale
-page returns to the unprefixed path.</p>
+runtime translation bootstrap used by the GUI. Before writing each page, the
+generator fetches the community translation package for that language and
+translates static text nodes plus visible attributes (<code>alt</code>, <code>title</code>,
+<code>placeholder</code>, <code>aria-label</code>, SEO <code>content</code>, and button values) at build time.
+That includes the document <code>&lt;title&gt;</code> and the SEO metadata (<code>description</code>,
+<code>keywords</code>, <code>og:title</code>, <code>og:description</code>, <code>twitter:title</code>, and
+<code>twitter:description</code>). The build also writes every English metadata string to
+<code>dist/js/snippets/meta.json</code>, so the community catalog can translate metadata
+the same way it translates UI copy. <code>og:url</code> 和 <code>og:locale</code> are rewritten to
+the current locale page instead of the English source URL. The runtime
+bootstrap then covers dynamic copy for all 38 API languages, not just the four
+languages the Flask GUI serves. Unprefixed URLs stay canonical for English, and
+<code>/en/...</code> is not generated; selecting English from a locale page returns to the
+unprefixed path.</p>
+<p>The build reads <code>https://beta.g4f.dev/challenge/translations?lang=&lt;lang&gt;</code> by
+default. Set <code>G4F_TRANSLATIONS_URL</code>, <code>--translations-url</code>, or
+<code>--translations-file</code> to use another source, or pass <code>--no-translations</code> for an
+offline build. A language whose package cannot be fetched is still generated
+and keeps the runtime bootstrap, so a temporary API outage never breaks the
+deployment. The language selection page lists every API language and links to
+the matching generated locale route.</p>
 <p>The GitHub Pages workflows run the generator before uploading the artifact, and
 the mirror sync commits the generated routes (they are gitignored in the source
 repository) so the mirror's own deploy publishes them.</p>
