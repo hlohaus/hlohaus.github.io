@@ -46,15 +46,15 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/language-selection.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>G4F - Language Selection</title>
+    <title>G4F - Språkval</title>
 
-    <meta name="description" content="Choose your language, load community translation packages and track UI translation progress for G4F." />
-    <meta name="keywords" content="G4F, GPT4Free, languages, translations, community, i18n" />
+    <meta name="description" content="Välj ditt språk, läs in gemenskapens översättningspaket och följ översättningsförloppet för användargränssnittet i G4F." />
+    <meta name="keywords" content="G4F, GPT4Free, språk, översättningar, gemenskap, i18n" />
     <meta name="author" content="GPT4Free Team" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="G4F - Language Selection" />
-    <meta property="og:description" content="Community UI translations: coverage per language, load packages, clear stores." />
+    <meta property="og:title" content="G4F - Språkval" />
+    <meta property="og:description" content="Gemenskapens användargränssnittsöversättningar: täckning per språk, läs in paket, rensa lagring." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <link rel="apple-touch-icon" sizes="180x180" href="/dist/img/g4f.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/dist/img/g4f-32x32.png" />
@@ -256,7 +256,7 @@
     </style>
     <script src="/dist/js/framework.js" defer></script>
 </head>
-<body class="translate">
+<body class="translate noads">
     <div class="wrap">
         <header>
             <h1>🌐 Språkval</h1>
@@ -701,36 +701,6 @@
                 }
                 toast(cleared ? tpl("Unloaded \"{0}\" — reload pages to re-translate", selected) : t("No language selected"), !cleared);
                 render();
-            } finally {
-                btn.disabled = false;
-            }
-        });
-
-        document.getElementById("clear-server").addEventListener("click", async (event) => {
-            const btn = event.currentTarget;
-            const key = document.getElementById("admin-key").value.trim();
-            if (!key) {
-                toast(t("Enter the admin key first"), true);
-                return;
-            }
-            if (!confirm(t("Clear the WHOLE community translation store on the server?"))) return;
-            btn.disabled = true;
-            try {
-                const res = await fetch(TRANSLATIONS_URL, {
-                    method: "DELETE",
-                    headers: { "Authorization": `Bearer ${key}` },
-                });
-                const data = await res.json().catch(() => ({}));
-                if (!res.ok) {
-                    toast(tpl("Server clear failed: {0}", data.error || res.status), true);
-                    return;
-                }
-                framework.clearTranslations();
-                framework.setSelectedLanguage(null);
-                toast(tpl("Server store cleared ({0} language(s))", data.count));
-                await refresh();
-            } catch (e) {
-                toast(String(e.message || e), true);
             } finally {
                 btn.disabled = false;
             }
