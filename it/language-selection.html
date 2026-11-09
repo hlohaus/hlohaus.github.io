@@ -46,15 +46,15 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/language-selection.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>G4F - Language Selection</title>
+    <title>G4F - Selezione della lingua</title>
 
-    <meta name="description" content="Choose your language, load community translation packages and track UI translation progress for G4F." />
-    <meta name="keywords" content="G4F, GPT4Free, languages, translations, community, i18n" />
+    <meta name="description" content="Scegli la tua lingua, carica i pacchetti di traduzione della community e monitora il progresso della traduzione dell'interfaccia per G4F." />
+    <meta name="keywords" content="G4F, GPT4Free, lingue, traduzioni, community, i18n" />
     <meta name="author" content="GPT4Free Team" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="G4F - Language Selection" />
-    <meta property="og:description" content="Community UI translations: coverage per language, load packages, clear stores." />
+    <meta property="og:title" content="G4F - Selezione della lingua" />
+    <meta property="og:description" content="Traduzioni UI della community: copertura per lingua, carica pacchetti, svuota gli store." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <link rel="apple-touch-icon" sizes="180x180" href="/dist/img/g4f.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/dist/img/g4f-32x32.png" />
@@ -259,32 +259,30 @@
 <body class="translate noads">
     <div class="wrap">
         <header>
-            <h1>🌐 Language Selection</h1>
-            <button id="refresh-btn" class="primary">Refresh</button>
-            <p class="subtitle">Community UI translations — coverage per language, load packages into your local store or clear them.</p>
+            <h1>🌐 Selezione della lingua</h1>
+            <button id="refresh-btn" class="primary">Aggiorna</button>
+            <p class="subtitle">Traduzioni UI della community — copertura per lingua, carica i pacchetti nel tuo store locale oppure cancellali.</p>
         </header>
 
         <section class="stats">
-            <div class="stat"><div class="value" id="stat-langs">–</div><div class="label">Languages started</div></div>
-            <div class="stat"><div class="value" id="stat-total">–</div><div class="label">UI snippets total</div></div>
-            <div class="stat"><div class="value" id="stat-mine">–</div><div class="label">Your language</div></div>
+            <div class="stat"><div class="value" id="stat-langs">–</div><div class="label">Lingue avviate</div></div>
+            <div class="stat"><div class="value" id="stat-total">–</div><div class="label">Snippet UI totali</div></div>
+            <div class="stat"><div class="value" id="stat-mine">–</div><div class="label">La tua lingua</div></div>
         </section>
 
         <section class="toolbar">
-            <button id="load-mine" class="primary">⬇️ Load my language</button>
-            <button id="clear-local" class="danger">🗑️ Unload selected language</button>
-            <span class="hint">Only one language package stays loaded — loading another unloads the previous one.</span>
+            <button id="load-mine" class="primary">⬇️ Carica la mia lingua</button>
+            <button id="clear-local" class="danger">🗑️ Scarica la lingua selezionata</button>
+            <span class="hint">Solo un pacchetto lingua rimane caricato — caricarne un altro scarica quello precedente.</span>
         </section>
 
         <section class="lang-list" id="lang-list">
-            <div class="loading">Loading languages…</div>
+            <div class="loading">Caricamento lingue…</div>
         </section>
 
         <footer>
-            Translations are contributed by the community via
-            <a href="https://g4f.dev/chat/">chat translation challenges</a> —
-            solve challenges with your local model to earn cakes and fill your language.
-            See the <a href="https://g4f.dev/docs/challenge-cakes">docs</a>.
+            Le traduzioni sono fornite dalla community tramite
+            <a href="https://g4f.dev/chat/">sfide di traduzione chat</a> — risolvi le sfide con il tuo modello locale per guadagnare torte e completare la tua lingua. Vedi la <a href="https://g4f.dev/docs/challenge-cakes">documentazione</a>.
         </footer>
     </div>
 

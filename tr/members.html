@@ -46,8 +46,8 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/members.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G4F - Members Area</title>
-    <meta name="description" content="GPT4Free Members Area - Manage your API keys, view usage stats, and access premium features." />
+    <title>G4F - Üye Alanı</title>
+    <meta name="description" content="GPT4Free Üye Alanı - API anahtarlarınızı yönetin, kullanım istatistiklerini görüntüleyin ve premium özelliklere erişin." />
     <link rel="icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="shortcut icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/dist/img/g4f.svg">
@@ -1344,14 +1344,14 @@
     <header class="navbar" role="banner" id="navbar">
         <a href="/" class="logo">G4<span>F</span></a>
         <nav class="nav-links" role="navigation">
-            <a href="/">Home</a>
-            <a href="/docs/" title="Documentation">Docs</a>
+            <a href="/">Ana Sayfa</a>
+            <a href="/docs/" title="Belgeler">Belgeler</a>
             <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
             <div class="user-info" id="navUserInfo" style="display: none;">
-                <img class="user-avatar" id="navAvatar" src="" alt="User avatar">
+                <img class="user-avatar" id="navAvatar" src="" alt="Kullanıcı avatarı">
                 <span id="navUsername"></span>
             </div>
-            <a href="/chat/" class="nav-cta">Start Chat</a>
+            <a href="/chat/" class="nav-cta">Sohbeti Başlat</a>
         </nav>
     </header>
 
@@ -1359,30 +1359,30 @@
         <div class="connection-error" id="connectionError" role="alert" hidden></div>
         <!-- Redirect Login Section (shown when redirect parameter is present) -->
         <section class="login-section" id="redirectLoginSection" style="display: none;">
-            <h1>Login Required</h1>
-            <p>Sign in to continue to your application. After signing in, you'll be redirected back with an API key.</p>
+            <h1>Giriş Gerekli</h1>
+            <p>Uygulamaya devam etmek için giriş yapın. Giriş yaptıktan sonra, bir API anahtarı ile geri yönlendirileceksiniz.</p>
             <p style="color: var(--secondary); font-size: 0.9rem;" id="redirectTarget"></p>
             
             <div class="login-buttons">
                 <button class="oauth-btn g4f" id="redirectLoginG4f">
-                    🔮 Sign in with G4F Account
+                    🔮 G4F Hesabı ile Oturum Aç
                 </button>
             </div>
         </section>
 
         <!-- Login Section (shown when not logged in) -->
         <section class="login-section" id="loginSection">
-            <h1>Members Area</h1>
-            <p>Sign in to access your dashboard, manage API keys, and view usage statistics.</p>
+            <h1>Üyeler Alanı</h1>
+            <p>Gösterge panelinize erişmek, API anahtarlarını yönetmek ve kullanım istatistiklerini görüntülemek için giriş yapın.</p>
             
             <div class="login-buttons">
                 <button class="oauth-btn g4f" id="loginG4f">
-                    🔮 Sign in with G4F Account
+                    🔮 G4F Hesabı ile Oturum Aç
                 </button>
             </div>
             
             <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(255,255,255,0.5);">
-                By signing in, you agree to our <a href="#" style="color: var(--secondary);">Terms of Service</a> and <a href="#" style="color: var(--secondary);">Privacy Policy</a>.
+                Giriş yaparak, bizim <a href="#" style="color: var(--secondary);">Hizmet Şartlarını</a> ve <a href="#" style="color: var(--secondary);">Gizlilik Politikası</a>.
             </p>
         </section>
 
@@ -1391,25 +1391,25 @@
         <div class="discord-upgrade-banner" id="discordUpgradeBanner" hidden>
             <div class="discord-banner-icon"><i class="fab fa-discord" aria-hidden="true"></i></div>
             <div class="discord-banner-content">
-                <h2 id="discordUpgradeTitle">Unlock the Free tier instantly</h2>
+                <h2 id="discordUpgradeTitle">Ücretsiz katmanı anında açın</h2>
                 <p id="discordUpgradeText">
-                    Connect Discord and join the G4F support server — we will verify your membership and upgrade your account right away.
+                    Discord'a bağlanın ve G4F destek sunucusuna katılın — üyeliğinizi doğrulayacağız ve hesabınızı hemen yükselteceğiz.
                 </p>
                 <div class="discord-steps" id="discordUpgradeSteps">
-                    <span class="discord-step" data-step="connect"><i class="fas fa-circle" aria-hidden="true"></i> Connect Discord</span>
-                    <span class="discord-step" data-step="join"><i class="fas fa-circle" aria-hidden="true"></i> Join support server</span>
-                    <span class="discord-step" data-step="upgrade"><i class="fas fa-circle" aria-hidden="true"></i> Upgrade to Free</span>
+                    <span class="discord-step" data-step="connect"><i class="fas fa-circle" aria-hidden="true"></i> Discord'a Bağlan</span>
+                    <span class="discord-step" data-step="join"><i class="fas fa-circle" aria-hidden="true"></i> Destek sunucusuna katıl</span>
+                    <span class="discord-step" data-step="upgrade"><i class="fas fa-circle" aria-hidden="true"></i> Ücretsiz'e Yükselt</span>
                 </div>
             </div>
             <div class="discord-banner-actions">
                 <a class="btn-discord btn" id="discordConnectBtn" href="#" rel="noopener">
-                    <i class="fab fa-discord"></i> Connect Discord
+                    <i class="fab fa-discord"></i> Discord'a Bağlan
                 </a>
                 <a class="btn btn-secondary" id="discordJoinBtn" href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-arrow-up-right-from-square"></i> Join Support Server
+                    <i class="fas fa-arrow-up-right-from-square"></i> Destek Sunucusuna Katıl
                 </a>
                 <button class="btn" id="discordVerifyBtn" type="button">
-                    <i class="fas fa-check"></i> Verify &amp; Upgrade
+                    <i class="fas fa-check"></i> Doğrula ve Yükselt
                 </button>
             </div>
         </div>
@@ -1418,38 +1418,38 @@
         <section class="dashboard" id="dashboard">
             <div class="welcome-header">
                 <div>
-                    <h1>Welcome back, <span id="userName">User</span>! 👋</h1>
-                    <p style="margin: 0; color: rgba(255,255,255,0.6);">Manage your API keys and monitor your usage</p>
+                    <h1>Tekrar hoş geldiniz, <span id="userName">Kullanıcı</span>! 👋</h1>
+                    <p style="margin: 0; color: rgba(255,255,255,0.6);">API anahtarlarınızı yönetin ve kullanımınızı izleyin</p>
                 </div>
                 <button class="logout-btn" id="logoutBtn">
-                    <i class="fas fa-sign-out-alt"></i> Sign Out
+                    <i class="fas fa-sign-out-alt"></i> Oturumu Kapat
                 </button>
             </div>
 
             <div class="dashboard-grid">
                 <!-- Usage Stats Card -->
                 <div class="card">
-                    <h2><span class="icon">📊</span> Usage Statistics</h2>
+                    <h2><span class="icon">📊</span> Kullanım İstatistikleri</h2>
                     <div class="stats-grid">
                         <div class="stat-item">
                             <div class="stat-value" id="statRequests">0</div>
-                            <div class="stat-label">API Requests</div>
+                            <div class="stat-label">API İstekleri</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statTokens">0</div>
-                            <div class="stat-label">Tokens Used</div>
+                            <div class="stat-label">Kullanılan Token'lar</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statImages">0</div>
-                            <div class="stat-label">Images Generated</div>
+                            <div class="stat-label">Oluşturulan Görseller</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statChats">0</div>
-                            <div class="stat-label">Chat Sessions</div>
+                            <div class="stat-label">Sohbet Oturumları</div>
                         </div>
-                        <div class="stat-item" title="Credits earned by baking proof-of-work cakes. Each baked cake = $0.05.">
+                        <div class="stat-item" title="İşlenmiş proof-of-work kekleriyle kazanılan krediler. Her bir işlenmiş kek = $0.05.">
                             <div class="stat-value" id="statCredits">$0.00</div>
-                            <div class="stat-label">Cake Credits</div>
+                            <div class="stat-label">Cake Kredileri</div>
                         </div>
                     </div>
                     <div class="usage-chart">
@@ -1467,43 +1467,43 @@
                 
                 <!-- API Key Card -->
                 <div class="card">
-                    <h2><span class="icon">🔑</span> API Key</h2>
+                    <h2><span class="icon">🔑</span> API Anahtarı</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Use this key to authenticate your API requests
+                        API isteklerinizi doğrulamak için bu anahtarı kullanın
                     </p>
                     <div class="api-key-container">
                         <div class="api-key-display">
-                            <input type="password" class="api-key-input" id="apiKeyInput" readonly placeholder="Click 'Generate' to create an API key">
-                            <button class="btn btn-secondary btn-small" id="toggleKeyBtn" title="Show/Hide">
+                            <input type="password" class="api-key-input" id="apiKeyInput" readonly placeholder="Bir API anahtarı oluşturmak için 'Oluştur' düğmesine tıklayın">
+                            <button class="btn btn-secondary btn-small" id="toggleKeyBtn" title="Göster/Gizle">
                                 <i class="fas fa-eye"></i>
                             </button>
-                            <button class="btn btn-secondary btn-small" id="copyKeyBtn" title="Copy">
+                            <button class="btn btn-secondary btn-small" id="copyKeyBtn" title="Kopyala">
                                 <i class="fas fa-copy"></i>
                             </button>
                         </div>
-                        <p>Expires: <span id="apiKeyExpires">-</span></p>
+                        <p>Son Geçerlilik: <span id="apiKeyExpires">-</span></p>
                         <button class="btn" id="generateKeyBtn" style="width: 100%;">
-                            <i class="fas fa-sync-alt"></i> Generate New Key
+                            <i class="fas fa-sync-alt"></i> Yeni Anahtar Oluştur
                         </button>
-                        <div class="base-url-label" style="margin-top: 1rem;">Base URL</div>
+                        <div class="base-url-label" style="margin-top: 1rem;">Temel URL</div>
                         <div class="base-url" id="baseUrl">https://g4f.space/v1</div>
                     </div>
                 </div>
                 
                 <!-- Account Info Card -->
                 <div class="card">
-                    <h2><span class="icon">👤</span> Account Information</h2>
+                    <h2><span class="icon">👤</span> Hesap Bilgileri</h2>
                     <div class="account-info">
                         <div class="info-row">
-                            <span class="info-label">Username</span>
+                            <span class="info-label">Kullanıcı Adı</span>
                             <span class="info-value" id="accountUsername">-</span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Email</span>
+                            <span class="info-label">E-posta</span>
                             <span class="info-value" id="accountEmail">-</span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Provider</span>
+                            <span class="info-label">Sağlayıcı</span>
                             <span class="info-value" id="accountProvider">
                                 <span class="provider-badge github">
                                     <i class="fab fa-github"></i> GitHub
@@ -1513,20 +1513,20 @@
                         <div class="info-row">
                             <span class="info-label">Plan</span>
                             <span class="info-value">
-                                <span class="badge free" id="accountPlan">Free</span>
+                                <span class="badge free" id="accountPlan">Ücretsiz</span>
                             </span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Tier Limits</span>
+                            <span class="info-label">Seviye Limitleri</span>
                             <span class="info-value">
                                 <div class="tier-limits" id="tier-limits-row">
-                                    <span id="max-tokens-text" title="Tokens: loading..."><i class="fa-solid fa-coins" aria-hidden="true"></i> —</span>
-                                    <span id="max-requests-text" title="Requests: loading..."><i class="fa-solid fa-list" aria-hidden="true"></i> —</span>
+                                    <span id="max-tokens-text" title="Jetonlar: yükleniyor..."><i class="fa-solid fa-coins" aria-hidden="true"></i> —</span>
+                                    <span id="max-requests-text" title="İstekler: yükleniyor..."><i class="fa-solid fa-list" aria-hidden="true"></i> —</span>
                                 </div>
                             </span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Member Since</span>
+                            <span class="info-label">Üyelik Tarihi</span>
                             <span class="info-value" id="accountJoined">-</span>
                         </div>
                     </div>
@@ -1534,13 +1534,13 @@
                 
                 <!-- Recent Activity Card -->
                 <div class="card">
-                    <h2><span class="icon">⚡</span> Recent Activity</h2>
+                    <h2><span class="icon">⚡</span> Son Aktiviteler</h2>
                     <ul class="activity-list" id="activityList">
                         <li class="activity-item">
                             <div class="activity-icon chat">💬</div>
                             <div class="activity-details">
-                                <div class="activity-title">Chat session started</div>
-                                <div class="activity-time">No activity yet</div>
+                                <div class="activity-title">Sohbet oturumu başladı</div>
+                                <div class="activity-time">Henüz aktivite yok</div>
                             </div>
                         </li>
                     </ul>
@@ -1548,25 +1548,25 @@
                 
                 <!-- Custom Servers Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🖥️</span> Custom Servers</h2>
+                    <h2><span class="icon">🖥️</span> Özel Sunucular</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Add your own AI servers for model routing. Tokens are counted per server.
+                        Model yönlendirmesi için kendi AI sunucunuzu ekleyin. Her sunucu için belirteçler sayılır.
                     </p>
                     
                     <!-- Server List -->
                     <div id="serversList" class="servers-list">
                         <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">
-                            Loading servers...
+                            Sunucular yükleniyor...
                         </p>
                     </div>
                     
                     <!-- Add Server Button -->
                     <div style="display: flex; gap: 1rem; margin-top: 1rem;">
                         <button class="btn" id="addServerBtn" style="flex: 1;">
-                            <i class="fas fa-plus"></i> Add Server
+                            <i class="fas fa-plus"></i> Servis Ekle
                         </button>
                         <button class="oauth-btn puter" id="addPuterServerBtn" style="flex: 1;">
-                            🤖 Add Puter
+                            🤖 Puter Ekle
                         </button>
                     </div>
                 </div>
@@ -1575,47 +1575,47 @@
                 <div class="modal" id="serverModal" style="display: none;">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 id="serverModalTitle">Add New Server</h3>
+                            <h3 id="serverModalTitle">Yeni Sunucu Ekle</h3>
                             <button class="modal-close" id="closeServerModal">&times;</button>
                         </div>
                         <form id="serverForm">
                             <div class="form-group">
-                                <label for="serverLabel">Label</label>
-                                <input type="text" id="serverLabel" class="form-input" placeholder="My Custom Server" required>
+                                <label for="serverLabel">Etiket</label>
+                                <input type="text" id="serverLabel" class="form-input" placeholder="Özel Sunucum" required>
                             </div>
                             <div class="form-group">
-                                <label for="serverBaseUrl">Base URL</label>
+                                <label for="serverBaseUrl">Temel URL</label>
                                 <input type="url" id="serverBaseUrl" class="form-input" placeholder="https://api.example.com/v1" required>
-                                <small style="color: rgba(255,255,255,0.5);">OpenAI-compatible API endpoint</small>
+                                <small style="color: rgba(255,255,255,0.5);">OpenAI uyumlu API uç noktası</small>
                             </div>
                             <div class="form-group">
-                                <label for="serverApiKeys">API Keys (one per line)</label>
+                                <label for="serverApiKeys">API Anahtarları (her satıra bir tane)</label>
                                 <textarea id="serverApiKeys" class="form-input" rows="3" placeholder="sk-xxx...&#10;sk-yyy..."></textarea>
-                                <small style="color: rgba(255,255,255,0.5);">Multiple keys for load balancing. Leave empty if no auth required.</small>
+                                <small style="color: rgba(255,255,255,0.5);">Yük dengelemesi için birden fazla anahtar. Kimlik doğrulama gerekmiyorsa boş bırakın.</small>
                             </div>
                             <div class="form-group">
-                                <label for="serverModels">Allowed Models (one per line, optional)</label>
+                                <label for="serverModels">İzin Verilen Modeller (her satıra bir tane, isteğe bağlı)</label>
                                 <textarea id="serverModels" class="form-input" rows="3" placeholder="gpt-4&#10;gpt-3.5-turbo"></textarea>
-                                <small style="color: rgba(255,255,255,0.5);">Leave empty to allow all models. Will auto-detect from server.</small>
+                                <small style="color: rgba(255,255,255,0.5);">Tüm modelleri izin vermek için boş bırakın. Sunucudan otomatik olarak algılanacaktır.</small>
                             </div>
                             <div class="form-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="serverAutoUpdateModels" checked>
-                                    <span>Auto-update allowed models list from server</span>
+                                    <span>İzin verilen modeller listesini sunucudan otomatik güncelle</span>
                                 </label>
-                                <small style="color: rgba(255,255,255,0.5);">When enabled, the allowed models list is automatically refreshed from the server's /models endpoint.</small>
+                                <small style="color: rgba(255,255,255,0.5);">Etkinleştirildiğinde, izin verilen modeller listesi sunucunun /models uç noktasından otomatik olarak yenilenir.</small>
                             </div>
                             <div class="form-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="serverPublic">
-                                    <span>Make server public (visible to other users)</span>
+                                    <span>Sunucuyu herkese açık yap (diğer kullanıcılar tarafından görülebilir)</span>
                                 </label>
                             </div>
                             <div id="serverValidation" class="validation-status" style="display: none;"></div>
                             <div class="form-actions">
-                                <button type="button" class="btn btn-secondary" id="cancelServerBtn">Cancel</button>
+                                <button type="button" class="btn btn-secondary" id="cancelServerBtn">İptal</button>
                                 <button type="submit" class="btn" id="saveServerBtn">
-                                    <i class="fas fa-check"></i> Save Server
+                                    <i class="fas fa-check"></i> Sunucuyu Kaydet
                                 </button>
                             </div>
                             <input type="hidden" id="editServerId" value="">
@@ -1626,16 +1626,16 @@
                 <!-- API Keys Management Card -->
                 <div class="card" style="grid-column: 1 / -1;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                        <h2 style="margin: 0;"><span class="icon">🗝️</span> Manage API Keys</h2>
+                        <h2 style="margin: 0;"><span class="icon">🗝️</span> API Anahtarlarını Yönet</h2>
                         <button class="btn btn-small" id="addApiKeyBtn">
-                            <i class="fas fa-plus"></i> New Key
+                            <i class="fas fa-plus"></i> Yeni Anahtar
                         </button>
                     </div>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Create and manage multiple API keys for different applications or environments.
+                        Farklı uygulamalar veya ortamlar için birden fazla API anahtarı oluşturun ve yönetin.
                     </p>
                     <div id="apiKeysList" class="api-keys-list">
-                        <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">Loading API keys...</p>
+                        <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">API anahtarları yükleniyor...</p>
                     </div>
                 </div>
 
@@ -1643,45 +1643,45 @@
                 <div class="modal" id="apiKeyModal" style="display: none;">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 id="apiKeyModalTitle">Create API Key</h3>
+                            <h3 id="apiKeyModalTitle">API Anahtarı Oluştur</h3>
                             <button class="modal-close" id="closeApiKeyModalBtn">&times;</button>
                         </div>
 
                         <!-- Shown after successful create / rotate -->
                         <div id="apiKeyNewDisplay" style="display: none;">
                             <div class="validation-status success" style="margin-bottom: 1rem;">
-                                <i class="fas fa-check-circle"></i> Key ready — copy it now, it won't be shown again.
+                                <i class="fas fa-check-circle"></i> Anahtar hazır — şimdi kopyalayın, tekrar gösterilmeyecek.
                             </div>
                             <div class="api-key-display">
                                 <input type="text" class="api-key-input" id="newApiKeyValue" readonly>
-                                <button class="btn btn-secondary btn-small" id="copyNewApiKeyBtn" title="Copy">
+                                <button class="btn btn-secondary btn-small" id="copyNewApiKeyBtn" title="Kopyala">
                                     <i class="fas fa-copy"></i>
                                 </button>
                             </div>
                             <div class="form-actions">
-                                <button class="btn" id="doneApiKeyBtn"><i class="fas fa-check"></i> Done</button>
+                                <button class="btn" id="doneApiKeyBtn"><i class="fas fa-check"></i> Tamamlandı</button>
                             </div>
                         </div>
 
                         <!-- Create / Edit form -->
                         <form id="apiKeyForm">
                             <div class="form-group">
-                                <label for="apiKeyName">Name / Label</label>
-                                <input type="text" id="apiKeyName" class="form-input" placeholder="e.g. My App, Production, Testing" maxlength="80" required>
+                                <label for="apiKeyName">İsim / Etiket</label>
+                                <input type="text" id="apiKeyName" class="form-input" placeholder="örn. Benim Uygulamam, Üretim, Test" maxlength="80" required>
                             </div>
                             <div class="form-group" id="apiKeyExpiryGroup">
-                                <label for="apiKeyExpiry">Expiry</label>
+                                <label for="apiKeyExpiry">Son Kullanma Tarihi</label>
                                 <select id="apiKeyExpiry" class="form-input">
-                                    <option value="30">30 days</option>
-                                    <option value="90" selected>90 days</option>
-                                    <option value="365">1 year</option>
-                                    <option value="0">No expiry</option>
+                                    <option value="30">30 gün</option>
+                                    <option value="90" selected>90 gün</option>
+                                    <option value="365">1 yıl</option>
+                                    <option value="0">Son kullanma tarihi yok</option>
                                 </select>
                             </div>
                             <div class="form-actions">
-                                <button type="button" class="btn btn-secondary" id="cancelApiKeyModalBtn">Cancel</button>
+                                <button type="button" class="btn btn-secondary" id="cancelApiKeyModalBtn">İptal</button>
                                 <button type="submit" class="btn" id="saveApiKeyBtn">
-                                    <i class="fas fa-plus"></i> Create Key
+                                    <i class="fas fa-plus"></i> Anahtar Oluştur
                                 </button>
                             </div>
                             </form>
@@ -1690,53 +1690,53 @@
 
                 <!-- Quick Links Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🚀</span> Quick Actions</h2>
+                    <h2><span class="icon">🚀</span> Hızlı Eylemler</h2>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
                         <button class="btn">
-                            <i class="fas fa-comments"></i> <a href="/chat/">Open Chat</a>
+                            <i class="fas fa-comments"></i> <a href="/chat/">Sohbeti Aç</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fas fa-book"></i> <a href="/docs/">API Documentation</a>
+                            <i class="fas fa-book"></i> <a href="/docs/">API Belgeleri</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fas fa-heart"></i> <a href="https://github.com/sponsors/hlohaus" target="_blank">Become a Sponsor</a>
+                            <i class="fas fa-heart"></i> <a href="https://github.com/sponsors/hlohaus" target="_blank">Sponsor Olun</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fab fa-github"></i> <a href="https://github.com/xtekky/gpt4free" target="_blank">View on GitHub</a>
+                            <i class="fab fa-github"></i> <a href="https://github.com/xtekky/gpt4free" target="_blank">GitHub'da Görüntüle</a>
                         </button>
                     </div>
                 </div>
 
                 <!-- Cross-Device Secret Sync Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🔐</span> Cross-Device Secret Sync</h2>
+                    <h2><span class="icon">🔐</span> Aygıtlar Arası Gizli Senkronizasyon</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Your workspace secret enables encrypted conversation sync across devices. This device automatically confirms requests from your other logged-in devices.
+                        Çalışma alanı gizli anahtarınız, cihazlar arasında şifrelenmiş konuşma senkronizasyonunu sağlar. Bu cihaz, diğer giriş yapmış cihazlarınızdan gelen istekleri otomatik olarak onaylar.
                     </p>
                     <div id="secretSyncStatus" style="padding: 0.75rem 1rem; border-radius: 8px; background: rgba(255,255,255,0.05); margin-bottom: 1rem; font-size: 0.9rem;">
-                        <span class="loading"></span> Checking workspace secret...
+                        <span class="loading"></span> Çalışma alanı gizli anahtarı kontrol ediliyor...
                     </div>
                     <button class="btn btn-secondary" id="secretRequestBtn" style="display: none;">
-                        <i class="fa-solid fa-satellite-dish"></i> Request Secret from Online Device
+                        <i class="fa-solid fa-satellite-dish"></i> Çevrimiçi Cihazdan Gizli Anahtar İste
                     </button>
                 </div>
 
                 <!-- Danger Zone Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">⚠️</span> Danger Zone</h2>
+                    <h2><span class="icon">⚠️</span> Tehlikeli Bölge</h2>
                     <div id="dangerZoneContent" class="danger-zone">
                         <div id="scheduledDeletionNotice" class="deletion-countdown" style="display: none;">
-                            <strong>⏳ Account deletion scheduled</strong>
-                            <span id="deletionCountdownText">Your account will be deleted in...</span>
+                            <strong>⏳ Hesap silme işlemi planlandı</strong>
+                            <span id="deletionCountdownText">Hesabınız şu sürede silinecek...</span>
                         </div>
-                        <h3>Delete Account</h3>
-                        <p>Permanently delete your account, API keys, and all associated data. A 24-hour grace period applies — you can cancel during this time.</p>
+                        <h3>Hesabı Sil</h3>
+                        <p>Hesabınızı, API anahtarlarınızı ve tüm ilişkili verilerinizi kalıcı olarak silin. 24 saatlik bir erteleme süresi uygulanır — bu süre zarfında iptal edebilirsiniz.</p>
                         <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                             <button class="btn-danger" id="deleteAccountBtn">
-                                <i class="fas fa-trash"></i> Delete Account
+                                <i class="fas fa-trash"></i> Hesabı Sil
                             </button>
                             <button class="btn btn-secondary" id="cancelDeleteAccountBtn" style="display: none;">
-                                <i class="fas fa-undo"></i> Cancel Deletion
+                                <i class="fas fa-undo"></i> Silmeyi İptal Et
                             </button>
                         </div>
                     </div>
@@ -1747,16 +1747,16 @@
 
     <footer>
         <div class="footer-links">
-            <a href="/docs/">Documentation</a>
-            <a href="/chat/">Chat</a>
-            <a href="/members.html">Members</a>
-            <a href="/manifesto">Manifesto</a>
+            <a href="/docs/">Belgeler</a>
+            <a href="/chat/">Sohbet</a>
+            <a href="/members.html">Üyeler</a>
+            <a href="/manifesto">Beyan</a>
             <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="/community">Community</a>
-            <a href="/privacy.html">Privacy Policy</a>
-            <a href="/terms.html">Terms of Service</a>
+            <a href="/community">Topluluk</a>
+            <a href="/privacy.html">Gizlilik Politikası</a>
+            <a href="/terms.html">Hizmet Şartlarını</a>
         </div>
-        <p>© 2026 GPT4Free Project. All rights reserved.</p>
+        <p>© 2026 GPT4Free Projesi. Tüm hakları saklıdır.</p>
     </footer>
 
     <!-- Toast Notification -->

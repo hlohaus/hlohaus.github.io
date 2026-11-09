@@ -46,8 +46,8 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/test-servers.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G4F - Server Tester</title>
-    <meta name="description" content="Test all public g4f.space custom servers and identify working providers." />
+    <title>G4F - サーバーテスター</title>
+    <meta name="description" content="公式 g4f.space カスタムサーバー全てテストして、機能するプロバイダーを特定します。" />
     <link rel="icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="shortcut icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/dist/img/g4f.svg">
@@ -357,16 +357,16 @@
     <nav class="navbar">
         <a href="/" class="logo">G4F</a>
         <div class="nav-links">
-            <a href="/stats.html">Stats</a>
+            <a href="/stats.html">統計</a>
             <a href="/test-servers.html">Server Tester</a>
-            <a href="/chat/">Chat</a>
-            <a href="/docs/">Docs</a>
+            <a href="/chat/">チャット</a>
+            <a href="/docs/">ドキュメント</a>
         </div>
     </nav>
 
     <div class="main-container">
         <h1>Server Tester</h1>
-        <p class="subtitle">Test all public g4f.space custom servers and identify working providers.</p>
+        <p class="subtitle">公式 g4f.space カスタムサーバー全てテストして、機能するプロバイダーを特定します。</p>
 
         <div class="controls">
             <input type="password" id="apiKey" placeholder="G4F_SPACE_API_KEY (optional)" />
@@ -384,15 +384,15 @@
         <div class="progress-bar"><div id="progress"></div></div>
 
         <div class="summary">
-            <div class="stat-card total"><div class="value" id="statTotal">0</div><div class="label">Total</div></div>
-            <div class="stat-card ok"><div class="value" id="statOk">0</div><div class="label">Working</div></div>
+            <div class="stat-card total"><div class="value" id="statTotal">0</div><div class="label">合計</div></div>
+            <div class="stat-card ok"><div class="value" id="statOk">0</div><div class="label">動作中</div></div>
             <div class="stat-card fail"><div class="value" id="statFail">0</div><div class="label">Not Working</div></div>
             <div class="stat-card pending"><div class="value" id="statPending">0</div><div class="label">Pending</div></div>
         </div>
 
         <div class="filter-row">
             <button class="secondary active" data-filter="all">All</button>
-            <button class="secondary" data-filter="ok">Working</button>
+            <button class="secondary" data-filter="ok">動作中</button>
             <button class="secondary" data-filter="fail">Not Working</button>
             <button class="secondary" data-filter="pending">Pending</button>
         </div>
@@ -402,10 +402,10 @@
                 <tr>
                     <th>#</th>
                     <th>Status</th>
-                    <th>Label</th>
+                    <th>ラベル</th>
                     <th>Server ID</th>
-                    <th>Base URL</th>
-                    <th>Models</th>
+                    <th>ベースURL</th>
+                    <th>モデル</th>
                     <th>Model Used</th>
                     <th>Elapsed</th>
                     <th>Response / Error</th>

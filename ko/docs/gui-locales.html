@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/gui-locales.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GUI locale and diagnostics routes | GPT4Free Documentation</title>
+    <title>GUI 로캘 및 진단 경로 | GPT4Free 문서</title>
 
-    <meta name="description" content="GPT4Free documentation for GUI locale and diagnostics routes. Complete guides, examples, and API reference for free AI endpoints, code generation, and AI model integration." />
-    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, GUI locale and diagnostics routes" />
+    <meta name="description" content="GUI 로캘 및 진단 경로에 대한 GPT4Free 문서. 무료 AI 엔드포인트, 코드 생성 및 AI 모델 통합을 위한 완전한 가이드, 예제 및 API 참조." />
+    <meta name="keywords" content="GPT4Free, G4F, AI 문서, 무료 AI API, OpenAI 대안, JavaScript AI 클라이언트, Python AI 라이브러리, AI 통합, 코드 생성, GUI 로케일 및 진단 경로" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="GUI locale and diagnostics routes | GPT4Free Documentation" />
-    <meta property="og:description" content="GPT4Free documentation for GUI locale and diagnostics routes. Free AI endpoints, examples, and comprehensive guides." />
+    <meta property="og:title" content="GUI 로캘 및 진단 경로 | GPT4Free 문서" />
+    <meta property="og:description" content="GUI 로케일 및 진단 경로를 위한 GPT4Free 문서. 무료 AI 엔드포인트, 예제 및 포괄적인 가이드." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="GUI locale and diagnostics routes | GPT4Free Documentation" />
-    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for GUI locale and diagnostics routes." />
+    <meta name="twitter:title" content="GUI 로캘 및 진단 경로 | GPT4Free 문서" />
+    <meta name="twitter:description" content="GUI 로케일 및 진단 경로를 위한 무료 AI 엔드포인트 및 포괄적인 문서." />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -497,7 +497,7 @@ flow.</p></li></ul>
 <p>Server-side copy covers the homepage, providers catalog, and static labels.
 Chat and playground content is mostly dynamic and relies on the runtime global
 translations. Static translations live in <code>g4f/gui/server/locale.py</code>; add a page
-to <code>PAGES</code> and <code>COPY</code> only when its visible copy can be translated.</p>
+to <code>PAGES</code> 및 <code>COPY</code> only when its visible copy can be translated.</p>
 <h2>Static GitHub Pages mirror</h2>
 <p>The public site at &lt;https://g4f.dev&gt; is statically hosted on GitHub Pages, so it
 cannot run the Flask middleware. <code>g4f.dev/scripts/build-locales.mjs</code> generates
@@ -520,7 +520,7 @@ That includes the document <code>&lt;title&gt;</code> and the SEO metadata (<cod
 <code>keywords</code>, <code>og:title</code>, <code>og:description</code>, <code>twitter:title</code>, and
 <code>twitter:description</code>). The build also writes every English metadata string to
 <code>dist/js/snippets/meta.json</code>, so the community catalog can translate metadata
-the same way it translates UI copy. <code>og:url</code> and <code>og:locale</code> are rewritten to
+the same way it translates UI copy. <code>og:url</code> 및 <code>og:locale</code> are rewritten to
 the current locale page instead of the English source URL. The runtime
 bootstrap then covers dynamic copy for all 38 API languages, not just the four
 languages the Flask GUI serves. Unprefixed URLs stay canonical for English, and

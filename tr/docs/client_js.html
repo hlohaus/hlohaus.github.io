@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/client_js.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GPT4Free.js Client Documentation</title>
+    <title>GPT4Free.js İstemci Belgeleri</title>
 
-    <meta name="description" content="GPT4Free documentation for GPT4Free.js Client Documentation. Complete guides, examples, and API reference for free AI endpoints, code generation, and AI model integration." />
-    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, GPT4Free.js Client Documentation" />
+    <meta name="description" content="GPT4Free.js İstemci Belgeleri için GPT4Free belgeleri. Ücretsiz AI uç noktaları, kod üretimi ve AI model entegrasyonu için eksiksiz kılavuzlar, örnekler ve API referansı." />
+    <meta name="keywords" content="GPT4Free, G4F, AI belgeleri, ücretsiz AI API, OpenAI alternatifi, JavaScript AI istemcisi, Python AI kütüphanesi, AI entegrasyonu, kod üretimi, GPT4Free.js İstemci Belgeleri" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="GPT4Free.js Client Documentation | GPT4Free Documentation" />
-    <meta property="og:description" content="GPT4Free documentation for GPT4Free.js Client Documentation. Free AI endpoints, examples, and comprehensive guides." />
+    <meta property="og:title" content="GPT4Free.js İstemci Belgeleri | GPT4Free Belgeleri" />
+    <meta property="og:description" content="GPT4Free.js İstemci Belgeleri için GPT4Free belgeleri. Ücretsiz AI uç noktaları, örnekler ve kapsamlı kılavuzlar." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="GPT4Free.js Client Documentation | GPT4Free Documentation" />
-    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for GPT4Free.js Client Documentation." />
+    <meta name="twitter:title" content="GPT4Free.js İstemci Belgeleri | GPT4Free Belgeleri" />
+    <meta name="twitter:description" content="GPT4Free.js İstemci Belgeleri için ücretsiz AI uç noktaları ve kapsamlı belgeler." />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -461,7 +461,7 @@
         </nav>
 
         <main role="main" class="markdown-body entry-content" itemprop="text" itemscope itemtype="https://schema.org/TechArticle">
-<h1>GPT4Free.js Client Documentation</h1>
+<h1>GPT4Free.js İstemci Belgeleri</h1>
 <h2>Overview</h2>
 <p>This JavaScript library provides a flexible interface to interact with <strong>multiple AI model providers</strong> via unified APIs. It supports:</p>
 <ul>
@@ -481,7 +481,7 @@
 <h3>NPM</h3>
 <div class="highlight highlight-source-shell"><pre class="notranslate">npm install @gpt4free/g4f.dev</pre></div>
 <hr>
-<h2>Providers</h2>
+<h2>Sağlayıcılar</h2>
 <p>You can initialize a client using one of the following providers:</p>
 <div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-kos">{</span> <span class="pl-v">Client</span><span class="pl-kos">,</span> <span class="pl-v">PollinationsAI</span><span class="pl-kos">,</span> <span class="pl-v">DeepInfra</span><span class="pl-kos">,</span> <span class="pl-v">Together</span><span class="pl-kos">,</span> <span class="pl-v">Puter</span><span class="pl-kos">,</span> <span class="pl-v">HuggingFace</span> <span class="pl-kos">}</span> <span class="pl-k">from</span> <span class="pl-s">'@gpt4free/g4f.dev'</span><span class="pl-kos">;</span>
 
@@ -508,7 +508,7 @@
 <h3>Regular Completion</h3>
 <div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span><span class="pl-kos">.</span><span class="pl-c1">chat</span><span class="pl-kos">.</span><span class="pl-c1">completions</span><span class="pl-kos">.</span><span class="pl-en">create</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
   <span class="pl-c1">model</span>: <span class="pl-s">'gpt-4.1'</span><span class="pl-kos">,</span>
-  <span class="pl-c1">messages</span>: <span class="pl-kos">[</span>
+  <span class="pl-c1">mesajlar</span>: <span class="pl-kos">[</span>
     <span class="pl-kos">{</span> <span class="pl-c1">role</span>: <span class="pl-s">'system'</span><span class="pl-kos">,</span> <span class="pl-c1">content</span>: <span class="pl-s">'You are a helpful assistant.'</span> <span class="pl-kos">}</span><span class="pl-kos">,</span>
     <span class="pl-kos">{</span> <span class="pl-c1">role</span>: <span class="pl-s">'user'</span><span class="pl-kos">,</span> <span class="pl-c1">content</span>: <span class="pl-s">'Tell me a joke.'</span> <span class="pl-kos">}</span>
   <span class="pl-kos">]</span>
@@ -516,7 +516,7 @@
 <h3>Streaming Completion</h3>
 <div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">stream</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span><span class="pl-kos">.</span><span class="pl-c1">chat</span><span class="pl-kos">.</span><span class="pl-c1">completions</span><span class="pl-kos">.</span><span class="pl-en">create</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
   <span class="pl-c1">model</span>: <span class="pl-s">'gpt-4.1'</span><span class="pl-kos">,</span>
-  <span class="pl-c1">messages</span>: <span class="pl-kos">[</span>...<span class="pl-kos">]</span><span class="pl-kos">,</span>
+  <span class="pl-c1">mesajlar</span>: <span class="pl-kos">[</span>...<span class="pl-kos">]</span><span class="pl-kos">,</span>
   <span class="pl-c1">stream</span>: <span class="pl-c1">true</span>
 <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
 
@@ -538,7 +538,7 @@
 <h2>Audio Modality Support</h2>
 <div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span><span class="pl-kos">.</span><span class="pl-c1">chat</span><span class="pl-kos">.</span><span class="pl-c1">completions</span><span class="pl-kos">.</span><span class="pl-en">create</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
   <span class="pl-c1">model</span>: <span class="pl-s">'gpt-4o-audio'</span><span class="pl-kos">,</span>
-  <span class="pl-c1">messages</span>: <span class="pl-kos">[</span>...<span class="pl-kos">]</span><span class="pl-kos">,</span>
+  <span class="pl-c1">mesajlar</span>: <span class="pl-kos">[</span>...<span class="pl-kos">]</span><span class="pl-kos">,</span>
   <span class="pl-c1">audio</span>: <span class="pl-kos">{</span>
     <span class="pl-c1">voice</span>: <span class="pl-s">'alloy'</span><span class="pl-kos">,</span>
     <span class="pl-c1">format</span>: <span class="pl-s">'mp3'</span>
@@ -557,7 +557,7 @@
 
 <span class="pl-c">// Example usage: Fetch and log models for each provider</span>
 <span class="pl-k">const</span> <span class="pl-s1">providerModels</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span><span class="pl-kos">}</span><span class="pl-kos">;</span>
-<span class="pl-k">for</span> <span class="pl-kos">(</span><span class="pl-k">const</span> <span class="pl-s1">key</span> <span class="pl-k">of</span> <span class="pl-v">Object</span><span class="pl-kos">.</span><span class="pl-en">keys</span><span class="pl-kos">(</span><span class="pl-s1">providers</span><span class="pl-kos">)</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+<span class="pl-k">for</span> <span class="pl-kos">(</span><span class="pl-k">const</span> <span class="pl-s1">key</span> <span class="pl-k">of</span> <span class="pl-v">Object</span><span class="pl-kos">.</span><span class="pl-en">anahtarlar</span><span class="pl-kos">(</span><span class="pl-s1">providers</span><span class="pl-kos">)</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">'Provider:'</span><span class="pl-kos">,</span> <span class="pl-s1">key</span><span class="pl-kos">,</span> <span class="pl-s1">providers</span><span class="pl-kos">[</span><span class="pl-s1">key</span><span class="pl-kos">]</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
     <span class="pl-k">try</span> <span class="pl-kos">{</span>
         <span class="pl-k">const</span> <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">createClient</span><span class="pl-kos">(</span><span class="pl-s1">key</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
@@ -593,8 +593,8 @@
 <tr>
 <th>Option</th>
 <th>Type</th>
-<th>Description</th>
-<th>Default</th>
+<th>Açıklama</th>
+<th>Varsayılan</th>
 </tr>
 </thead>
 <tbody>

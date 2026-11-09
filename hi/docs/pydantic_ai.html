@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/pydantic_ai.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>PydanticAI Integration with G4F Client</title>
+    <title>G4F क्लाइंट के साथ PydanticAI एकीकरण</title>
 
-    <meta name="description" content="GPT4Free documentation for PydanticAI Integration with G4F Client. Complete guides, examples, and API reference for free AI endpoints, code generation, and AI model integration." />
-    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, PydanticAI Integration with G4F Client" />
+    <meta name="description" content="G4F क्लाइंट के साथ PydanticAI एकीकरण के लिए GPT4Free दस्तावेज़ीकरण। मुफ्त AI एंडपॉइंट, कोड जनरेशन और AI मॉडल एकीकरण के लिए पूर्ण मार्गदर्शिकाएँ, उदाहरण और API संदर्भ।" />
+    <meta name="keywords" content="GPT4Free, G4F, AI दस्तावेज़ीकरण, मुफ्त AI API, OpenAI विकल्प, JavaScript AI क्लाइंट, Python AI लाइब्रेरी, AI एकीकरण, कोड जनरेशन, G4F क्लाइंट के साथ PydanticAI एकीकरण" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="PydanticAI Integration with G4F Client | GPT4Free Documentation" />
-    <meta property="og:description" content="GPT4Free documentation for PydanticAI Integration with G4F Client. Free AI endpoints, examples, and comprehensive guides." />
+    <meta property="og:title" content="G4F क्लाइंट के साथ PydanticAI एकीकरण | GPT4Free दस्तावेज़ीकरण" />
+    <meta property="og:description" content="G4F क्लाइंट के साथ PydanticAI एकीकरण के लिए GPT4Free दस्तावेज़ीकरण। मुफ्त AI एंडपॉइंट, उदाहरण और व्यापक मार्गदर्शिकाएँ।" />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="PydanticAI Integration with G4F Client | GPT4Free Documentation" />
-    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for PydanticAI Integration with G4F Client." />
+    <meta name="twitter:title" content="G4F क्लाइंट के साथ PydanticAI एकीकरण | GPT4Free दस्तावेज़ीकरण" />
+    <meta name="twitter:description" content="G4F क्लाइंट के साथ PydanticAI एकीकरण के लिए मुफ्त AI एंडपॉइंट और व्यापक दस्तावेज़ीकरण।" />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -462,7 +462,7 @@
         </nav>
 
         <main role="main" class="markdown-body entry-content" itemprop="text" itemscope itemtype="https://schema.org/TechArticle">
-<h2>PydanticAI Integration with G4F Client</h2>
+<h2>G4F क्लाइंट के साथ PydanticAI एकीकरण</h2>
 <p>This README provides an overview of how to integrate PydanticAI with the G4F client to create an agent that interacts with a language model. With this setup, you'll be able to apply patches to use PydanticAI with G4F, enable debugging, and run simple agent-based interactions synchronously. However, please note that tool calls within AI requests are currently <strong>not fully supported</strong> in this environment.</p>
 <h2>Requirements</h2>
 <p>Before starting, make sure you have the following Python dependencies installed:</p>
@@ -488,10 +488,10 @@
 <p>This will log detailed information about the internal processes and interactions.</p>
 <h3>3. Create a Simple Agent</h3>
 <p>Now you are ready to create a simple agent that can interact with the LLM. The agent is initialized with a model, and you can also define a system prompt. Here's an example where a basic agent is created with the model <code class="notranslate">g4f:Gemini:Gemini</code> and a simple system prompt:</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pydantic_ai</span> <span class="pl-k">import</span> <span class="pl-v">Agent</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pydantic_ai</span> <span class="pl-k">import</span> <span class="pl-v">एजेंट</span>
 
 <span class="pl-c"># Define the agent</span>
-<span class="pl-s1">agent</span> <span class="pl-c1">=</span> <span class="pl-en">Agent</span>(
+<span class="pl-s1">agent</span> <span class="pl-c1">=</span> <span class="pl-en">एजेंट</span>(
     <span class="pl-s">'g4f:Gemini:Gemini'</span>, <span class="pl-c"># g4f:provider:model_name or g4f:model_name</span>
     <span class="pl-s1">system_prompt</span><span class="pl-c1">=</span><span class="pl-s">'Be concise, reply with one sentence.'</span>,
 )</pre></div>
@@ -510,10 +510,10 @@
 <p>For example, you can process your query or interact with external systems before passing the data to the agent.</p>
 <hr>
 <h3>Simple Example without <code class="notranslate">patch_infer_model</code></h3>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pydantic_ai</span> <span class="pl-k">import</span> <span class="pl-v">Agent</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pydantic_ai</span> <span class="pl-k">import</span> <span class="pl-v">एजेंट</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">integration</span>.<span class="pl-s1">pydantic_ai</span> <span class="pl-k">import</span> <span class="pl-v">AIModel</span>
 
-<span class="pl-s1">agent</span> <span class="pl-c1">=</span> <span class="pl-en">Agent</span>(
+<span class="pl-s1">agent</span> <span class="pl-c1">=</span> <span class="pl-en">एजेंट</span>(
     <span class="pl-en">AIModel</span>(<span class="pl-s">"gpt-4o"</span>),
 )
 
@@ -523,17 +523,17 @@
 <hr>
 <h3>Full Example with Tool Calls:</h3>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pydantic</span> <span class="pl-k">import</span> <span class="pl-v">BaseModel</span>
-<span class="pl-k">from</span> <span class="pl-s1">pydantic_ai</span> <span class="pl-k">import</span> <span class="pl-v">Agent</span>
+<span class="pl-k">from</span> <span class="pl-s1">pydantic_ai</span> <span class="pl-k">import</span> <span class="pl-v">एजेंट</span>
 <span class="pl-k">from</span> <span class="pl-s1">pydantic_ai</span>.<span class="pl-s1">models</span> <span class="pl-k">import</span> <span class="pl-v">ModelSettings</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">integration</span>.<span class="pl-s1">pydantic_ai</span> <span class="pl-k">import</span> <span class="pl-v">AIModel</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">PollinationsAI</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">प्रदाता</span> <span class="pl-k">import</span> <span class="pl-v">PollinationsAI</span>
 
 
 <span class="pl-k">class</span> <span class="pl-v">MyModel</span>(<span class="pl-v">BaseModel</span>):
     <span class="pl-s1">city</span>: <span class="pl-smi">str</span>
     <span class="pl-s1">country</span>: <span class="pl-smi">str</span>
 
-<span class="pl-s1">agent</span> <span class="pl-c1">=</span> <span class="pl-en">Agent</span>(<span class="pl-en">AIModel</span>(
+<span class="pl-s1">agent</span> <span class="pl-c1">=</span> <span class="pl-en">एजेंट</span>(<span class="pl-en">AIModel</span>(
     <span class="pl-s">"gpt-4o"</span>, <span class="pl-c"># Specify the provider and model</span>
     <span class="pl-v">PollinationsAI</span> <span class="pl-c"># Use a supported provider to handle tool-based response formatting</span>
 ), <span class="pl-s1">result_type</span><span class="pl-c1">=</span><span class="pl-v">MyModel</span>, <span class="pl-s1">model_settings</span><span class="pl-c1">=</span><span class="pl-en">ModelSettings</span>(<span class="pl-s1">temperature</span><span class="pl-c1">=</span><span class="pl-c1">0</span>))
@@ -548,7 +548,7 @@
 <p>For models/providers that do not fully support tool calls or lack a direct API for structured output, the <code class="notranslate">ToolSupportProvider</code> can be used to bridge the gap. This provider ensures that the agent properly formats the response, even when the model itself doesn't have built-in support for structured outputs. It does so by leveraging a tool list and creating a response format when only one tool is used.</p>
 <h3>Example for Models/Providers without Tool Support (Single Tool Usage)</h3>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pydantic</span> <span class="pl-k">import</span> <span class="pl-v">BaseModel</span>
-<span class="pl-k">from</span> <span class="pl-s1">pydantic_ai</span> <span class="pl-k">import</span> <span class="pl-v">Agent</span>
+<span class="pl-k">from</span> <span class="pl-s1">pydantic_ai</span> <span class="pl-k">import</span> <span class="pl-v">एजेंट</span>
 <span class="pl-k">from</span> <span class="pl-s1">pydantic_ai</span>.<span class="pl-s1">models</span> <span class="pl-k">import</span> <span class="pl-v">ModelSettings</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">integration</span>.<span class="pl-s1">pydantic_ai</span> <span class="pl-k">import</span> <span class="pl-v">AIModel</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">providers</span>.<span class="pl-s1">tool_support</span> <span class="pl-k">import</span> <span class="pl-v">ToolSupportProvider</span>
@@ -562,7 +562,7 @@
     <span class="pl-s1">country</span>: <span class="pl-smi">str</span>
 
 <span class="pl-c"># Create the agent for a model with tool support (using one tool)</span>
-<span class="pl-s1">agent</span> <span class="pl-c1">=</span> <span class="pl-en">Agent</span>(<span class="pl-en">AIModel</span>(
+<span class="pl-s1">agent</span> <span class="pl-c1">=</span> <span class="pl-en">एजेंट</span>(<span class="pl-en">AIModel</span>(
     <span class="pl-s">"OpenaiChat:gpt-4o"</span>, <span class="pl-c"># Specify the provider and model</span>
     <span class="pl-v">ToolSupportProvider</span> <span class="pl-c"># Use ToolSupportProvider to handle tool-based response formatting</span>
 ), <span class="pl-s1">result_type</span><span class="pl-c1">=</span><span class="pl-v">MyModel</span>, <span class="pl-s1">model_settings</span><span class="pl-c1">=</span><span class="pl-en">ModelSettings</span>(<span class="pl-s1">temperature</span><span class="pl-c1">=</span><span class="pl-c1">0</span>))
@@ -584,7 +584,7 @@
 <p><strong>Model Initialization:</strong> We initialize the agent with the <code class="notranslate">PollinationsAI:openai</code> model, which may not have a built-in API for returning structured outputs. Instead, it relies on the <code class="notranslate">ToolSupportProvider</code> to format the output.</p>
 </li>
 <li>
-<p><strong>Custom Result Model:</strong> We define a custom Pydantic model (<code class="notranslate">MyModel</code>) to capture the expected output in a structured way (e.g., <code class="notranslate">city</code> and <code class="notranslate">country</code> fields). This helps ensure that even when the model doesn't support structured data, the agent can interpret and format it.</p>
+<p><strong>Custom Result Model:</strong> We define a custom Pydantic model (<code class="notranslate">MyModel</code>) to capture the expected output in a structured way (e.g., <code class="notranslate">city</code> और <code class="notranslate">country</code> fields). This helps ensure that even when the model doesn't support structured data, the agent can interpret and format it.</p>
 </li>
 <li>
 <p><strong>Debug Logging:</strong> The <code class="notranslate">g4f.debug.logging</code> is enabled to provide detailed logs for troubleshooting and monitoring the agent's execution.</p>
@@ -623,7 +623,7 @@ usage={<span class="pl-s"><span class="pl-pds">'</span>prompt_tokens<span class=
     <span class="pl-s1">api_key</span><span class="pl-c1">=</span><span class="pl-s">""</span>  <span class="pl-c"># Optionally add your API key here</span>
 )
 
-<span class="pl-s1">messages</span> <span class="pl-c1">=</span> [
+<span class="pl-s1">संदेश</span> <span class="pl-c1">=</span> [
     {<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"2 🦜 2"</span>},
     {<span class="pl-s">"role"</span>: <span class="pl-s">"assistant"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"4 🦜"</span>},
     {<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"2 🦜 3"</span>},
@@ -631,11 +631,11 @@ usage={<span class="pl-s"><span class="pl-pds">'</span>prompt_tokens<span class=
     {<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"3 🦜 4"</span>},
 ]
 
-<span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">llm</span>.<span class="pl-c1">invoke</span>(<span class="pl-s1">messages</span>)
+<span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">llm</span>.<span class="pl-c1">invoke</span>(<span class="pl-s1">संदेश</span>)
 <span class="pl-k">assert</span>(<span class="pl-s1">response</span>.<span class="pl-c1">content</span> <span class="pl-c1">==</span> <span class="pl-s">"7 🦜"</span>)</pre></div>
 <p>This example shows how to use LangChain's <code class="notranslate">ChatAI</code> integration to create a conversational agent with a G4F model. The interaction takes place with the given messages and the agent processes them step-by-step to return the expected output.</p>
 <hr>
-<h2>Conclusion</h2>
+<h2>निष्कर्ष</h2>
 <p>By following these steps, you have successfully integrated G4F models into PydanticAI, created an agent, and enabled debugging. This allows you to conduct conversations with the language model, pass system prompts, and retrieve responses synchronously.</p>
 <h3>Notes:</h3>
 <ul>

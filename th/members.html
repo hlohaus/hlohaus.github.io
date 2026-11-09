@@ -46,8 +46,8 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/members.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G4F - Members Area</title>
-    <meta name="description" content="GPT4Free Members Area - Manage your API keys, view usage stats, and access premium features." />
+    <title>G4F - พื้นที่สมาชิก</title>
+    <meta name="description" content="พื้นที่สมาชิก GPT4Free - จัดการคีย์ API ของคุณ, ดูสถิติการใช้งาน, และเข้าถึงคุณลักษณะพิเศษ" />
     <link rel="icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="shortcut icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/dist/img/g4f.svg">
@@ -1344,14 +1344,14 @@
     <header class="navbar" role="banner" id="navbar">
         <a href="/" class="logo">G4<span>F</span></a>
         <nav class="nav-links" role="navigation">
-            <a href="/">Home</a>
-            <a href="/docs/" title="Documentation">Docs</a>
+            <a href="/">หน้าแรก</a>
+            <a href="/docs/" title="เอกสาร">เอกสาร</a>
             <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
             <div class="user-info" id="navUserInfo" style="display: none;">
-                <img class="user-avatar" id="navAvatar" src="" alt="User avatar">
+                <img class="user-avatar" id="navAvatar" src="" alt="รูปโปรไฟล์ผู้ใช้">
                 <span id="navUsername"></span>
             </div>
-            <a href="/chat/" class="nav-cta">Start Chat</a>
+            <a href="/chat/" class="nav-cta">เริ่มแชท</a>
         </nav>
     </header>
 
@@ -1359,30 +1359,30 @@
         <div class="connection-error" id="connectionError" role="alert" hidden></div>
         <!-- Redirect Login Section (shown when redirect parameter is present) -->
         <section class="login-section" id="redirectLoginSection" style="display: none;">
-            <h1>Login Required</h1>
-            <p>Sign in to continue to your application. After signing in, you'll be redirected back with an API key.</p>
+            <h1>กรุณาเข้าสู่ระบบ</h1>
+            <p>เข้าสู่ระบบเพื่อใช้งานแอปพลิเคชันของคุณ หลังจากเข้าสู่ระบบ คุณจะถูกเปลี่ยนเส้นทางกลับพร้อมคีย์ API</p>
             <p style="color: var(--secondary); font-size: 0.9rem;" id="redirectTarget"></p>
             
             <div class="login-buttons">
                 <button class="oauth-btn g4f" id="redirectLoginG4f">
-                    🔮 Sign in with G4F Account
+                    🔮 เข้าสู่ระบบด้วยบัญชี G4F
                 </button>
             </div>
         </section>
 
         <!-- Login Section (shown when not logged in) -->
         <section class="login-section" id="loginSection">
-            <h1>Members Area</h1>
-            <p>Sign in to access your dashboard, manage API keys, and view usage statistics.</p>
+            <h1>พื้นที่สมาชิก</h1>
+            <p>เข้าสู่ระบบเพื่อเข้าถึงแดชบอร์ด จัดการคีย์ API และดูสถิติการใช้งานของคุณ</p>
             
             <div class="login-buttons">
                 <button class="oauth-btn g4f" id="loginG4f">
-                    🔮 Sign in with G4F Account
+                    🔮 เข้าสู่ระบบด้วยบัญชี G4F
                 </button>
             </div>
             
             <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(255,255,255,0.5);">
-                By signing in, you agree to our <a href="#" style="color: var(--secondary);">Terms of Service</a> and <a href="#" style="color: var(--secondary);">Privacy Policy</a>.
+                การเข้าสู่ระบบถือว่าคุณยอมรับ <a href="#" style="color: var(--secondary);">ข้อกำหนดการให้บริการ</a> และ <a href="#" style="color: var(--secondary);">นโยบายความเป็นส่วนตัว</a>.
             </p>
         </section>
 
@@ -1391,25 +1391,25 @@
         <div class="discord-upgrade-banner" id="discordUpgradeBanner" hidden>
             <div class="discord-banner-icon"><i class="fab fa-discord" aria-hidden="true"></i></div>
             <div class="discord-banner-content">
-                <h2 id="discordUpgradeTitle">Unlock the Free tier instantly</h2>
+                <h2 id="discordUpgradeTitle">ปลดล็อกระดับฟรีทันที</h2>
                 <p id="discordUpgradeText">
-                    Connect Discord and join the G4F support server — we will verify your membership and upgrade your account right away.
+                    เชื่อมต่อ Discord และเข้าร่วมเซิร์ฟเวอร์สนับสนุน G4F — เราจะตรวจสอบการเป็นสมาชิกและอัปเกรดบัญชีของคุณทันที
                 </p>
                 <div class="discord-steps" id="discordUpgradeSteps">
-                    <span class="discord-step" data-step="connect"><i class="fas fa-circle" aria-hidden="true"></i> Connect Discord</span>
-                    <span class="discord-step" data-step="join"><i class="fas fa-circle" aria-hidden="true"></i> Join support server</span>
-                    <span class="discord-step" data-step="upgrade"><i class="fas fa-circle" aria-hidden="true"></i> Upgrade to Free</span>
+                    <span class="discord-step" data-step="connect"><i class="fas fa-circle" aria-hidden="true"></i> เชื่อมต่อ Discord</span>
+                    <span class="discord-step" data-step="join"><i class="fas fa-circle" aria-hidden="true"></i> เข้าร่วมเซิร์ฟเวอร์สนับสนุน</span>
+                    <span class="discord-step" data-step="upgrade"><i class="fas fa-circle" aria-hidden="true"></i> อัปเกรดเป็นระดับฟรี</span>
                 </div>
             </div>
             <div class="discord-banner-actions">
                 <a class="btn-discord btn" id="discordConnectBtn" href="#" rel="noopener">
-                    <i class="fab fa-discord"></i> Connect Discord
+                    <i class="fab fa-discord"></i> เชื่อมต่อ Discord
                 </a>
                 <a class="btn btn-secondary" id="discordJoinBtn" href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-arrow-up-right-from-square"></i> Join Support Server
+                    <i class="fas fa-arrow-up-right-from-square"></i> เข้าร่วมเซิร์ฟเวอร์สนับสนุน
                 </a>
                 <button class="btn" id="discordVerifyBtn" type="button">
-                    <i class="fas fa-check"></i> Verify &amp; Upgrade
+                    <i class="fas fa-check"></i> ยืนยันและอัปเกรด
                 </button>
             </div>
         </div>
@@ -1418,38 +1418,38 @@
         <section class="dashboard" id="dashboard">
             <div class="welcome-header">
                 <div>
-                    <h1>Welcome back, <span id="userName">User</span>! 👋</h1>
-                    <p style="margin: 0; color: rgba(255,255,255,0.6);">Manage your API keys and monitor your usage</p>
+                    <h1>ยินดีต้อนรับกลับ, <span id="userName">ผู้ใช้</span>! 👋</h1>
+                    <p style="margin: 0; color: rgba(255,255,255,0.6);">จัดการคีย์ API ของคุณ และตรวจสอบการใช้งานของคุณ</p>
                 </div>
                 <button class="logout-btn" id="logoutBtn">
-                    <i class="fas fa-sign-out-alt"></i> Sign Out
+                    <i class="fas fa-sign-out-alt"></i> ออกจากระบบ
                 </button>
             </div>
 
             <div class="dashboard-grid">
                 <!-- Usage Stats Card -->
                 <div class="card">
-                    <h2><span class="icon">📊</span> Usage Statistics</h2>
+                    <h2><span class="icon">📊</span> สถิติการใช้งาน</h2>
                     <div class="stats-grid">
                         <div class="stat-item">
                             <div class="stat-value" id="statRequests">0</div>
-                            <div class="stat-label">API Requests</div>
+                            <div class="stat-label">คำขอ API</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statTokens">0</div>
-                            <div class="stat-label">Tokens Used</div>
+                            <div class="stat-label">โทเค็นที่ใช้</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statImages">0</div>
-                            <div class="stat-label">Images Generated</div>
+                            <div class="stat-label">รูปภาพที่สร้าง</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statChats">0</div>
-                            <div class="stat-label">Chat Sessions</div>
+                            <div class="stat-label">แชตเซสชัน</div>
                         </div>
-                        <div class="stat-item" title="Credits earned by baking proof-of-work cakes. Each baked cake = $0.05.">
+                        <div class="stat-item" title="เครดิตที่ได้จากการเบคเค้กพิสูจน์งาน แต่ละเค้กที่เบคมีมูลค่า 0.05 ดอลลาร์">
                             <div class="stat-value" id="statCredits">$0.00</div>
-                            <div class="stat-label">Cake Credits</div>
+                            <div class="stat-label">เครดิตเค้ก</div>
                         </div>
                     </div>
                     <div class="usage-chart">
@@ -1467,43 +1467,43 @@
                 
                 <!-- API Key Card -->
                 <div class="card">
-                    <h2><span class="icon">🔑</span> API Key</h2>
+                    <h2><span class="icon">🔑</span> คีย์ API</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Use this key to authenticate your API requests
+                        ใช้คีย์นี้เพื่อยืนยันตัวตนคำขอ API ของคุณ
                     </p>
                     <div class="api-key-container">
                         <div class="api-key-display">
-                            <input type="password" class="api-key-input" id="apiKeyInput" readonly placeholder="Click 'Generate' to create an API key">
-                            <button class="btn btn-secondary btn-small" id="toggleKeyBtn" title="Show/Hide">
+                            <input type="password" class="api-key-input" id="apiKeyInput" readonly placeholder="คลิก 'สร้าง' เพื่อสร้างคีย์ API">
+                            <button class="btn btn-secondary btn-small" id="toggleKeyBtn" title="แสดง/ซ่อน">
                                 <i class="fas fa-eye"></i>
                             </button>
-                            <button class="btn btn-secondary btn-small" id="copyKeyBtn" title="Copy">
+                            <button class="btn btn-secondary btn-small" id="copyKeyBtn" title="คัดลอก">
                                 <i class="fas fa-copy"></i>
                             </button>
                         </div>
-                        <p>Expires: <span id="apiKeyExpires">-</span></p>
+                        <p>หมดอายุ: <span id="apiKeyExpires">-</span></p>
                         <button class="btn" id="generateKeyBtn" style="width: 100%;">
-                            <i class="fas fa-sync-alt"></i> Generate New Key
+                            <i class="fas fa-sync-alt"></i> สร้างคีย์ใหม่
                         </button>
-                        <div class="base-url-label" style="margin-top: 1rem;">Base URL</div>
+                        <div class="base-url-label" style="margin-top: 1rem;">URL พื้นฐาน</div>
                         <div class="base-url" id="baseUrl">https://g4f.space/v1</div>
                     </div>
                 </div>
                 
                 <!-- Account Info Card -->
                 <div class="card">
-                    <h2><span class="icon">👤</span> Account Information</h2>
+                    <h2><span class="icon">👤</span> ข้อมูลบัญชี</h2>
                     <div class="account-info">
                         <div class="info-row">
-                            <span class="info-label">Username</span>
+                            <span class="info-label">ชื่อผู้ใช้</span>
                             <span class="info-value" id="accountUsername">-</span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Email</span>
+                            <span class="info-label">อีเมล</span>
                             <span class="info-value" id="accountEmail">-</span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Provider</span>
+                            <span class="info-label">ผู้ให้บริการ</span>
                             <span class="info-value" id="accountProvider">
                                 <span class="provider-badge github">
                                     <i class="fab fa-github"></i> GitHub
@@ -1511,22 +1511,22 @@
                             </span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Plan</span>
+                            <span class="info-label">แพ็กเกจ</span>
                             <span class="info-value">
-                                <span class="badge free" id="accountPlan">Free</span>
+                                <span class="badge free" id="accountPlan">ฟรี</span>
                             </span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Tier Limits</span>
+                            <span class="info-label">ข้อจำกัดตามระดับ</span>
                             <span class="info-value">
                                 <div class="tier-limits" id="tier-limits-row">
-                                    <span id="max-tokens-text" title="Tokens: loading..."><i class="fa-solid fa-coins" aria-hidden="true"></i> —</span>
-                                    <span id="max-requests-text" title="Requests: loading..."><i class="fa-solid fa-list" aria-hidden="true"></i> —</span>
+                                    <span id="max-tokens-text" title="โทเคน: กำลังโหลด..."><i class="fa-solid fa-coins" aria-hidden="true"></i> —</span>
+                                    <span id="max-requests-text" title="คำขอ: กำลังโหลด..."><i class="fa-solid fa-list" aria-hidden="true"></i> —</span>
                                 </div>
                             </span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Member Since</span>
+                            <span class="info-label">เป็นสมาชิกตั้งแต่</span>
                             <span class="info-value" id="accountJoined">-</span>
                         </div>
                     </div>
@@ -1534,13 +1534,13 @@
                 
                 <!-- Recent Activity Card -->
                 <div class="card">
-                    <h2><span class="icon">⚡</span> Recent Activity</h2>
+                    <h2><span class="icon">⚡</span> กิจกรรมล่าสุด</h2>
                     <ul class="activity-list" id="activityList">
                         <li class="activity-item">
                             <div class="activity-icon chat">💬</div>
                             <div class="activity-details">
-                                <div class="activity-title">Chat session started</div>
-                                <div class="activity-time">No activity yet</div>
+                                <div class="activity-title">เริ่มต้นเซสชันแชท</div>
+                                <div class="activity-time">ยังไม่มีกิจกรรม</div>
                             </div>
                         </li>
                     </ul>
@@ -1548,25 +1548,25 @@
                 
                 <!-- Custom Servers Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🖥️</span> Custom Servers</h2>
+                    <h2><span class="icon">🖥️</span> เซิร์ฟเวอร์แบบกำหนดเอง</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Add your own AI servers for model routing. Tokens are counted per server.
+                        เพิ่มเซิร์ฟเวอร์ AI ของคุณเองเพื่อกำหนดเส้นทางของโมเดล โทเค็นจะถูกนับแยกตามเซิร์ฟเวอร์
                     </p>
                     
                     <!-- Server List -->
                     <div id="serversList" class="servers-list">
                         <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">
-                            Loading servers...
+                            กำลังโหลดเซิร์ฟเวอร์...
                         </p>
                     </div>
                     
                     <!-- Add Server Button -->
                     <div style="display: flex; gap: 1rem; margin-top: 1rem;">
                         <button class="btn" id="addServerBtn" style="flex: 1;">
-                            <i class="fas fa-plus"></i> Add Server
+                            <i class="fas fa-plus"></i> เพิ่มเซิร์ฟเวอร์
                         </button>
                         <button class="oauth-btn puter" id="addPuterServerBtn" style="flex: 1;">
-                            🤖 Add Puter
+                            🤖 เพิ่ม Puter
                         </button>
                     </div>
                 </div>
@@ -1575,47 +1575,47 @@
                 <div class="modal" id="serverModal" style="display: none;">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 id="serverModalTitle">Add New Server</h3>
+                            <h3 id="serverModalTitle">เพิ่มเซิร์ฟเวอร์ใหม่</h3>
                             <button class="modal-close" id="closeServerModal">&times;</button>
                         </div>
                         <form id="serverForm">
                             <div class="form-group">
-                                <label for="serverLabel">Label</label>
-                                <input type="text" id="serverLabel" class="form-input" placeholder="My Custom Server" required>
+                                <label for="serverLabel">ป้ายกำกับ</label>
+                                <input type="text" id="serverLabel" class="form-input" placeholder="เซิร์ฟเวอร์แบบกำหนดเองของฉัน" required>
                             </div>
                             <div class="form-group">
-                                <label for="serverBaseUrl">Base URL</label>
+                                <label for="serverBaseUrl">URL พื้นฐาน</label>
                                 <input type="url" id="serverBaseUrl" class="form-input" placeholder="https://api.example.com/v1" required>
-                                <small style="color: rgba(255,255,255,0.5);">OpenAI-compatible API endpoint</small>
+                                <small style="color: rgba(255,255,255,0.5);">จุดสิ้นสุด API ที่เข้ากันได้กับ OpenAI</small>
                             </div>
                             <div class="form-group">
-                                <label for="serverApiKeys">API Keys (one per line)</label>
+                                <label for="serverApiKeys">คีย์ API (หนึ่งรายการต่อบรรทัด)</label>
                                 <textarea id="serverApiKeys" class="form-input" rows="3" placeholder="sk-xxx...&#10;sk-yyy..."></textarea>
-                                <small style="color: rgba(255,255,255,0.5);">Multiple keys for load balancing. Leave empty if no auth required.</small>
+                                <small style="color: rgba(255,255,255,0.5);">หลายคีย์สำหรับการกระจายภาระ เว้นว่างไว้หากไม่จำเป็นต้องยืนยันตัวตน</small>
                             </div>
                             <div class="form-group">
-                                <label for="serverModels">Allowed Models (one per line, optional)</label>
+                                <label for="serverModels">โมเดลที่อนุญาต (หนึ่งรายการต่อบรรทัด ไม่บังคับ)</label>
                                 <textarea id="serverModels" class="form-input" rows="3" placeholder="gpt-4&#10;gpt-3.5-turbo"></textarea>
-                                <small style="color: rgba(255,255,255,0.5);">Leave empty to allow all models. Will auto-detect from server.</small>
+                                <small style="color: rgba(255,255,255,0.5);">เว้นว่างไว้เพื่ออนุญาตทุกโมเดล ระบบจะตรวจจับอัตโนมัติจากเซิร์ฟเวอร์</small>
                             </div>
                             <div class="form-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="serverAutoUpdateModels" checked>
-                                    <span>Auto-update allowed models list from server</span>
+                                    <span>อัปเดตรายชื่อโมเดลที่อนุญาตจากเซิร์ฟเวอร์โดยอัตโนมัติ</span>
                                 </label>
-                                <small style="color: rgba(255,255,255,0.5);">When enabled, the allowed models list is automatically refreshed from the server's /models endpoint.</small>
+                                <small style="color: rgba(255,255,255,0.5);">เมื่อเปิดใช้งาน รายชื่อโมเดลที่อนุญาตจะถูกรีเฟรชจากจุดสิ้นสุด /models ของเซิร์ฟเวอร์โดยอัตโนมัติ</small>
                             </div>
                             <div class="form-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="serverPublic">
-                                    <span>Make server public (visible to other users)</span>
+                                    <span>ทำให้เซิร์ฟเวอร์เป็นแบบสาธณะ (มองเห็นได้โดยผู้ใช้อื่น)</span>
                                 </label>
                             </div>
                             <div id="serverValidation" class="validation-status" style="display: none;"></div>
                             <div class="form-actions">
-                                <button type="button" class="btn btn-secondary" id="cancelServerBtn">Cancel</button>
+                                <button type="button" class="btn btn-secondary" id="cancelServerBtn">ยกเลิก</button>
                                 <button type="submit" class="btn" id="saveServerBtn">
-                                    <i class="fas fa-check"></i> Save Server
+                                    <i class="fas fa-check"></i> บันทึกเซิร์ฟเวอร์
                                 </button>
                             </div>
                             <input type="hidden" id="editServerId" value="">
@@ -1626,16 +1626,16 @@
                 <!-- API Keys Management Card -->
                 <div class="card" style="grid-column: 1 / -1;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                        <h2 style="margin: 0;"><span class="icon">🗝️</span> Manage API Keys</h2>
+                        <h2 style="margin: 0;"><span class="icon">🗝️</span> จัดการคีย์ API</h2>
                         <button class="btn btn-small" id="addApiKeyBtn">
-                            <i class="fas fa-plus"></i> New Key
+                            <i class="fas fa-plus"></i> คีย์ใหม่
                         </button>
                     </div>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Create and manage multiple API keys for different applications or environments.
+                        สร้างและจัดการคีย์ API หลายตัวสำหรับแอปพลิเคชันหรือสภาพแวดล้อมที่แตกต่างกัน
                     </p>
                     <div id="apiKeysList" class="api-keys-list">
-                        <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">Loading API keys...</p>
+                        <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">กำลังโหลดคีย์ API...</p>
                     </div>
                 </div>
 
@@ -1643,45 +1643,45 @@
                 <div class="modal" id="apiKeyModal" style="display: none;">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 id="apiKeyModalTitle">Create API Key</h3>
+                            <h3 id="apiKeyModalTitle">สร้างคีย์ API</h3>
                             <button class="modal-close" id="closeApiKeyModalBtn">&times;</button>
                         </div>
 
                         <!-- Shown after successful create / rotate -->
                         <div id="apiKeyNewDisplay" style="display: none;">
                             <div class="validation-status success" style="margin-bottom: 1rem;">
-                                <i class="fas fa-check-circle"></i> Key ready — copy it now, it won't be shown again.
+                                <i class="fas fa-check-circle"></i> คีย์พร้อมใช้งาน — คัดลอกทันที เนื่องจากจะไม่แสดงอีกครั้ง
                             </div>
                             <div class="api-key-display">
                                 <input type="text" class="api-key-input" id="newApiKeyValue" readonly>
-                                <button class="btn btn-secondary btn-small" id="copyNewApiKeyBtn" title="Copy">
+                                <button class="btn btn-secondary btn-small" id="copyNewApiKeyBtn" title="คัดลอก">
                                     <i class="fas fa-copy"></i>
                                 </button>
                             </div>
                             <div class="form-actions">
-                                <button class="btn" id="doneApiKeyBtn"><i class="fas fa-check"></i> Done</button>
+                                <button class="btn" id="doneApiKeyBtn"><i class="fas fa-check"></i> เสร็จสิ้น</button>
                             </div>
                         </div>
 
                         <!-- Create / Edit form -->
                         <form id="apiKeyForm">
                             <div class="form-group">
-                                <label for="apiKeyName">Name / Label</label>
-                                <input type="text" id="apiKeyName" class="form-input" placeholder="e.g. My App, Production, Testing" maxlength="80" required>
+                                <label for="apiKeyName">ชื่อ / ป้ายชื่อ</label>
+                                <input type="text" id="apiKeyName" class="form-input" placeholder="เช่น My App, Production, Testing" maxlength="80" required>
                             </div>
                             <div class="form-group" id="apiKeyExpiryGroup">
-                                <label for="apiKeyExpiry">Expiry</label>
+                                <label for="apiKeyExpiry">หมดอายุ</label>
                                 <select id="apiKeyExpiry" class="form-input">
-                                    <option value="30">30 days</option>
-                                    <option value="90" selected>90 days</option>
-                                    <option value="365">1 year</option>
-                                    <option value="0">No expiry</option>
+                                    <option value="30">30 วัน</option>
+                                    <option value="90" selected>90 วัน</option>
+                                    <option value="365">1 ปี</option>
+                                    <option value="0">ไม่มีวันหมดอายุ</option>
                                 </select>
                             </div>
                             <div class="form-actions">
-                                <button type="button" class="btn btn-secondary" id="cancelApiKeyModalBtn">Cancel</button>
+                                <button type="button" class="btn btn-secondary" id="cancelApiKeyModalBtn">ยกเลิก</button>
                                 <button type="submit" class="btn" id="saveApiKeyBtn">
-                                    <i class="fas fa-plus"></i> Create Key
+                                    <i class="fas fa-plus"></i> สร้างคีย์
                                 </button>
                             </div>
                             </form>
@@ -1690,53 +1690,53 @@
 
                 <!-- Quick Links Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🚀</span> Quick Actions</h2>
+                    <h2><span class="icon">🚀</span> การดำเนินการด่วน</h2>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
                         <button class="btn">
-                            <i class="fas fa-comments"></i> <a href="/chat/">Open Chat</a>
+                            <i class="fas fa-comments"></i> <a href="/chat/">เปิดแชท</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fas fa-book"></i> <a href="/docs/">API Documentation</a>
+                            <i class="fas fa-book"></i> <a href="/docs/">เอกสารประกอบ API</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fas fa-heart"></i> <a href="https://github.com/sponsors/hlohaus" target="_blank">Become a Sponsor</a>
+                            <i class="fas fa-heart"></i> <a href="https://github.com/sponsors/hlohaus" target="_blank">เป็นผู้สนับสนุน</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fab fa-github"></i> <a href="https://github.com/xtekky/gpt4free" target="_blank">View on GitHub</a>
+                            <i class="fab fa-github"></i> <a href="https://github.com/xtekky/gpt4free" target="_blank">ดูบน GitHub</a>
                         </button>
                     </div>
                 </div>
 
                 <!-- Cross-Device Secret Sync Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🔐</span> Cross-Device Secret Sync</h2>
+                    <h2><span class="icon">🔐</span> ซิงโครไนซ์ข้อมูลลับข้ามอุปกรณ์</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Your workspace secret enables encrypted conversation sync across devices. This device automatically confirms requests from your other logged-in devices.
+                        ข้อมูลลับของเวิร์กสเปซช่วยให้ซิงก์การสนทนาที่เข้ารหัสระหว่างอุปกรณ์ได้ อุปกรณ์นี้จะยืนยันคำขอจากอุปกรณ์อื่นของคุณที่เข้าสู่ระบบอยู่โดยอัตโนมัติ
                     </p>
                     <div id="secretSyncStatus" style="padding: 0.75rem 1rem; border-radius: 8px; background: rgba(255,255,255,0.05); margin-bottom: 1rem; font-size: 0.9rem;">
-                        <span class="loading"></span> Checking workspace secret...
+                        <span class="loading"></span> กำลังตรวจสอบข้อมูลลับของเวิร์กสเปซ...
                     </div>
                     <button class="btn btn-secondary" id="secretRequestBtn" style="display: none;">
-                        <i class="fa-solid fa-satellite-dish"></i> Request Secret from Online Device
+                        <i class="fa-solid fa-satellite-dish"></i> ขอข้อมูลลับจากอุปกรณ์ที่ออนไลน์
                     </button>
                 </div>
 
                 <!-- Danger Zone Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">⚠️</span> Danger Zone</h2>
+                    <h2><span class="icon">⚠️</span> โซนอันตราย</h2>
                     <div id="dangerZoneContent" class="danger-zone">
                         <div id="scheduledDeletionNotice" class="deletion-countdown" style="display: none;">
-                            <strong>⏳ Account deletion scheduled</strong>
-                            <span id="deletionCountdownText">Your account will be deleted in...</span>
+                            <strong>⏳ การลบบัญชีได้ถูกวางแผนไว้</strong>
+                            <span id="deletionCountdownText">บัญชีของคุณจะถูกลบใน...</span>
                         </div>
-                        <h3>Delete Account</h3>
-                        <p>Permanently delete your account, API keys, and all associated data. A 24-hour grace period applies — you can cancel during this time.</p>
+                        <h3>ลบบัญชี</h3>
+                        <p>ลบบัญชีของคุณอย่างถาวร รวมถึง API keys และข้อมูลที่เกี่ยวข้องทั้งหมด มีระยะเวลาสิ้นสุด 24 ชั่วโมง — คุณสามารถยกเลิกได้ในช่วงเวลานี้</p>
                         <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                             <button class="btn-danger" id="deleteAccountBtn">
-                                <i class="fas fa-trash"></i> Delete Account
+                                <i class="fas fa-trash"></i> ลบบัญชี
                             </button>
                             <button class="btn btn-secondary" id="cancelDeleteAccountBtn" style="display: none;">
-                                <i class="fas fa-undo"></i> Cancel Deletion
+                                <i class="fas fa-undo"></i> ยกเลิกการลบ
                             </button>
                         </div>
                     </div>
@@ -1747,16 +1747,16 @@
 
     <footer>
         <div class="footer-links">
-            <a href="/docs/">Documentation</a>
-            <a href="/chat/">Chat</a>
-            <a href="/members.html">Members</a>
-            <a href="/manifesto">Manifesto</a>
+            <a href="/docs/">เอกสาร</a>
+            <a href="/chat/">แชท</a>
+            <a href="/members.html">สมาชิก</a>
+            <a href="/manifesto">แถลงการณ์</a>
             <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="/community">Community</a>
-            <a href="/privacy.html">Privacy Policy</a>
-            <a href="/terms.html">Terms of Service</a>
+            <a href="/community">ชุมชน</a>
+            <a href="/privacy.html">นโยบายความเป็นส่วนตัว</a>
+            <a href="/terms.html">ข้อกำหนดการให้บริการ</a>
         </div>
-        <p>© 2026 GPT4Free Project. All rights reserved.</p>
+        <p>© 2026 โครงการ GPT4Free สงวนลิขสิทธิ์</p>
     </footer>
 
     <!-- Toast Notification -->

@@ -48,21 +48,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>G4F Chat - Conversational AI that Listens, Learns, and Challenges</title>
+    <title>G4F चैट - सुनने, सीखने और चुनौती देने वाला संवादात्मक AI</title>
 
     <!-- Improved meta description with relevant keywords -->
-    <meta name="description" content="G4F Chat is an advanced conversational AI platform designed to listen, learn, and challenge your ideas effectively. Experience AI-powered chat with private conversations, customizable settings, and multiple providers." />
+    <meta name="description" content="G4F चैट एक उन्नत संवाद एआई प्लेटफ़ॉर्म है जो आपके विचारों को प्रभावी रूप से सुनने, सीखने और चुनौती देने के लिए डिज़ाइन किया गया है। निजी संवादों, अनुकूलन योग्य सेटिंग्स और कई प्रदाताओं के साथ एआई-संचालित चैट का अनुभव करें।" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="G4F Chat - Conversational AI that Listens, Learns, and Challenges" />
-    <meta property="og:description" content="Engage with G4F Chat's AI system for dynamic, private, and customizable conversations powered by cutting-edge technology." />
+    <meta property="og:title" content="G4F चैट - सुनने, सीखने और चुनौती देने वाला संवादात्मक AI" />
+    <meta property="og:description" content="कटिंग-एज टेक्नोलॉजी द्वारा संचालित गतिशील, निजी और अनुकूलन योग्य संवादों के लिए G4F चैट के एआई सिस्टम के साथ संलग्न हों।" />
     <meta property="og:image" content="/dist/img/g4f.svg" />
     <meta property="og:type" content="website" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="G4F Chat - Conversational AI that Listens, Learns, and Challenges" />
-    <meta name="twitter:description" content="Use G4F Chat for private and customizable AI-driven chat experiences, supporting multiple AI providers and seamless communication." />
+    <meta name="twitter:title" content="G4F चैट - सुनने, सीखने और चुनौती देने वाला संवादात्मक AI" />
+    <meta name="twitter:description" content="निजी और अनुकूलन योग्य एआई-संचालित चैट अनुभवों के लिए G4F चैट का उपयोग करें, जो कई एआई प्रदाताओं का समर्थन करता है और निर्बाध संचार प्रदान करता है।" />
     <meta name="twitter:image" content="/dist/img/g4f.svg" />
 
     <!-- Canonical URL to avoid duplicate content issues -->
@@ -115,18 +115,18 @@
                             <i class="fa-solid fa-user" aria-hidden="true"></i>
                             <span id="user-tier-text" class="notranslate">Guest</span>
                         </div>
-                        <a id="sidebar-login-btn" class="tier-auth-btn" href="#" onclick="event.preventDefault(); window.location.href='/members.html?redirect='+encodeURIComponent(location.href);" title="Login to Members Area">
+                        <a id="sidebar-login-btn" class="tier-auth-btn" href="#" onclick="event.preventDefault(); window.location.href='/members.html?redirect='+encodeURIComponent(location.href);" title="सदस्य क्षेत्र में लॉग इन करें">
                             <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i>
-                            <span>Login</span>
+                            <span>लॉगिन</span>
                         </a>
-                        <button id="sidebar-logout-btn" class="tier-auth-btn hidden" onclick="cloudSyncLogout()" title="Logout">
+                        <button id="sidebar-logout-btn" class="tier-auth-btn hidden" onclick="cloudSyncLogout()" title="लॉग आउट">
                             <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>
-                            <span>Logout</span>
+                            <span>लॉग आउट</span>
                         </button>
                     </div>
                     <div class="tier-limits hidden" id="tier-limits-row">
-                        <span id="max-tokens-text" title="Tokens remaining/limit"><i class="fa-solid fa-coins" aria-hidden="true"></i> -</span>
-                        <span id="max-requests-text" title="Requests remaining/limit"><i class="fa-solid fa-list" aria-hidden="true"></i> -</span>
+                        <span id="max-tokens-text" title="टोकन शेष/सीमा"><i class="fa-solid fa-coins" aria-hidden="true"></i> -</span>
+                        <span id="max-requests-text" title="अनुरोध शेष/सीमा"><i class="fa-solid fa-list" aria-hidden="true"></i> -</span>
                     </div>
                 </div>
                 <div id="discord-upgrade-banner" class="discord-upgrade-banner hidden" role="region" aria-label="Discord free tier upgrade">
@@ -150,11 +150,11 @@
                 <nav class="top" aria-label="Conversation actions">
                     <button class="new_convo" onclick="new_conversation()" aria-label="Start a new conversation" tabindex="0">
                         <i class="fa-regular fa-plus" aria-hidden="true"></i>
-                        <span>New Conversation</span>
+                        <span>नई बातचीत</span>
                     </button>
                     <button class="new_convo" onclick="new_conversation(true)" aria-label="Start a private conversation" tabindex="0">
                         <i class="fa-solid fa-user-secret" aria-hidden="true"></i>
-                        <span>Private Conversation</span>
+                        <span>निजी बातचीत</span>
                     </button>
                     <br><br>
                     <div id="box_conversations" class="conversations" role="region" aria-live="polite" aria-label="List of conversations"></div>
@@ -162,16 +162,16 @@
                 <section class="bottom_buttons" aria-label="Support and links">
                     <button onclick="open_settings();" aria-label="Open settings">
                         <i class="fa-solid fa-gear" aria-hidden="true"></i>
-                        <span>Open Settings</span>
+                        <span>सेटिंग्स खोलें</span>
                     </button>
                     <div class="info" role="region" aria-label="Support Discord">
                         <i class="fa fa-question-circle" aria-hidden="true"></i>
                         <span class="convo-title">
-                            support ~ 
+                            सहायता ~ 
                             <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">discord.gg/qXA4Wf4Fsm</a>
                         </span>
                     </div>
-                    <div class="info" role="region" aria-label="GitHub Repository">
+                    <div class="info" role="region" aria-label="GitHub रिपॉजिटरी">
                         <i class="fa-brands fa-github" aria-hidden="true"></i>
                         <span class="convo-title">
                             github ~ 
@@ -193,23 +193,23 @@
                     <button class="settings-back-button" onclick="open_settings();" aria-label="Back to main interface">
                         <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                     </button>
-                     <h2>Settings</h2>
+                     <h2>सेटिंग्स</h2>
                 </header>
                 <form>
                   <div class="field">
-                      <span class="label">Disable Conversation History</span>
+                      <span class="label">संवाद इतिहास अक्षम करें</span>
                       <input type="checkbox" id="history" aria-checked="false" />
-                      <label for="history" class="toogle" title="Improve response time or fix large conversation issues"></label>
+                      <label for="history" class="toogle" title="प्रतिक्रिया समय बेहतर करें या बड़ी बातचीत की समस्याओं को ठीक करें"></label>
                   </div>
                   <div class="field">
-                      <span class="label">Download Generated Media</span>
+                      <span class="label">जनरेट किए गए मीडिया डाउनलोड करें</span>
                       <input type="checkbox" id="download_media" checked aria-checked="true" />
-                      <label for="download_media" class="toogle" title="Download and save generated images, audios, and videos"></label>
+                      <label for="download_media" class="toogle" title="जनरेट की गई छवियाँ, ऑडियो और वीडियो डाउनलोड और सहेजें"></label>
                   </div>
                   <div class="field">
-                      <span class="label">Enable Dark Mode</span>
+                      <span class="label">डार्क मोड सक्षम करें</span>
                       <input type="checkbox" id="darkMode" checked />
-                      <label for="darkMode" class="toogle" title="Toggle Dark Mode"></label>
+                      <label for="darkMode" class="toogle" title="डार्क मोड टॉगल करें"></label>
                   </div>
                   <div class="field">
                       <span class="label">Enable Model Search</span>
@@ -227,60 +227,60 @@
                       <label for="searchByProvider" class="toogle" title="Enable searching for models by provider name"></label>
                   </div>
                   <div class="field">
-                      <span class="label">Report Errors</span>
+                      <span class="label">त्रुटियाँ रिपोर्ट करें</span>
                       <input type="checkbox" id="report_error" checked aria-checked="true" />
-                      <label for="report_error" class="toogle" title="Send error reports"></label>
+                      <label for="report_error" class="toogle" title="त्रुटि रिपोर्ट भेजें"></label>
                   </div>
                   <div class="field">
-                      <span class="label">Count Words and Tokens</span>
+                      <span class="label">शब्द और टोकन गिनें</span>
                       <input type="checkbox" id="countTokens" checked aria-checked="true" />
-                      <label for="countTokens" class="toogle" title="Enable word and token counting"></label>
+                      <label for="countTokens" class="toogle" title="शब्द और टोकन गिनती सक्षम करें"></label>
                   </div>
                   <div class="field">
-                      <span class="label">Automatic Orientation (16:9 or 9:16)</span>
+                      <span class="label">स्वचालित ओरिएंटेशन (16:9 या 9:16)</span>
                       <input type="checkbox" id="automaticOrientation" checked aria-checked="true" />
-                      <label for="automaticOrientation" class="toogle" title="Auto-orient generated media"></label>
+                      <label for="automaticOrientation" class="toogle" title="जनरेट किए गए मीडिया को स्वतः ओरिएंट करें"></label>
                   </div>
                   <div class="field box">
-                      <label for="systemPrompt" class="label">System Prompt</label>
-                      <textarea id="systemPrompt" placeholder="You are a helpful assistant." aria-describedby="systemPrompt-desc" data-example="You can use this prompt to customize AI behavior, e.g., to enable image generation by using specified syntax."></textarea>
+                      <label for="systemPrompt" class="label">सिस्टम प्रॉम्प्ट</label>
+                      <textarea id="systemPrompt" placeholder="आप एक सहायक सहायक हैं।" aria-describedby="systemPrompt-desc" data-example="You can use this prompt to customize AI behavior, e.g., to enable image generation by using specified syntax."></textarea>
                       <small id="systemPrompt-desc">Customize the AI's system prompt to personalize responses.</small>
                   </div>
                   <div class="field box">
-                      <label for="recognition-language" class="label" title="Set preferred language for speech recognition">Speech Recognition Language</label>
-                      <input type="text" id="recognition-language" value="" placeholder="Default: navigator.language" />
+                      <label for="recognition-language" class="label" title="वाणी पहचान के लिए पसंदीदा भाषा सेट करें">वाणी पहचान भाषा</label>
+                      <input type="text" id="recognition-language" value="" placeholder="डिफ़ॉल्ट: navigator.language" />
                   </div>
 
                   <div class="field box hidden">
-                      <label for="Custom-api_base" class="label">Custom Provider Base URL</label>
+                      <label for="Custom-api_base" class="label">कस्टम प्रोवाइडर बेस यूआरएल</label>
                       <input type="url" id="Custom-api_base" name="Custom[api_base]" placeholder="http://localhost:8080/v1" autocomplete="off" />
                   </div>
                   <div class="field box hidden">
-                      <label for="Custom-api_key" class="label">Custom Provider API Key</label>
-                      <input type="text" id="Custom-api_key" name="Custom[api_key]" placeholder="API key" autocomplete="off" />
+                      <label for="Custom-api_key" class="label">कस्टम प्रोवाइडर एपीआई कुंजी</label>
+                      <input type="text" id="Custom-api_key" name="Custom[api_key]" placeholder="एपीआई कुंजी" autocomplete="off" />
                   </div>
 
                   <div class="bottom_buttons">
                       <button type="button" onclick="delete_conversations()" aria-label="Clear all conversations">
                           <i class="fa-solid fa-trash" aria-hidden="true"></i>
-                          <span>Clear Conversations</span>
+                          <span>वार्तालाप साफ़ करें</span>
                       </button>
                       <button type="button" onclick="save_storage()" aria-label="Export conversations">
                           <i class="fa-solid fa-download" aria-hidden="true"></i>
-                          <span>Export Conversations</span>
+                          <span>संवाद निर्यात करें</span>
                       </button>
                       <button type="button" onclick="save_storage(true)" aria-label="Export settings">
                           <i class="fa-solid fa-pencil" aria-hidden="true"></i>
-                          <span>Export Settings</span>
+                          <span>सेटिंग्स निर्यात करें</span>
                       </button>
                       <button type="button" onclick="this.querySelector('.fa-spin').classList.remove('hidden'); framework.translateAll().then(() => {this.querySelector('.fa-spin').classList.add('hidden')}).catch(() => {this.querySelector('.fa-spin').classList.add('hidden')})" aria-label="Translate user interface">
                           <i class="fa-solid fa-language" aria-hidden="true"></i>
-                          <span>Translate UI</span>
+                          <span>इंटरफ़ेस अनुवाद करें</span>
                           <i class="fas fa-spinner fa-spin hidden" aria-hidden="true"></i>
                       </button>
                       <button type="button" onclick="deleteTranslations() && window.location.reload()" aria-label="Delete translations">
                           <i class="fa-solid fa-trash" aria-hidden="true"></i>
-                          <span>Delete Translations</span>
+                          <span>अनुवाद हटाएँ</span>
                       </button>
                   </div>
                 </form>
@@ -292,7 +292,7 @@
             <div class="bottom_buttons">
                 <button id="close_provider_forms" type="button" aria-label="Close provider forms">
                     <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
-                    <span>Close</span>
+                    <span>बंद करें</span>
                 </button>
             </div>
         </section>
@@ -303,14 +303,14 @@
                 <button class="mobile-sidebar-toggle" aria-label="Toggle sidebar menu">
                     <i class="fa-solid fa-bars" aria-hidden="true"></i>
                 </button>
-                <h2 class="convo-title" id="conversationTitle">New Conversation</h2>
+                <h2 class="convo-title" id="conversationTitle">नई बातचीत</h2>
                 <button class="new_convo_icon" onclick="new_conversation()" aria-label="Start new conversation">
                     <i class="fa-regular fa-plus" aria-hidden="true"></i>
                 </button>
             </header>
 
-            <label for="chatPrompt" class="sr-only">System prompt textarea</label>
-            <textarea id="chatPrompt" class="box" placeholder="System prompt" aria-multiline="true" rows="3"></textarea>
+            <label for="chatPrompt" class="sr-only">सिस्टम प्रॉम्प्ट टेक्स्ट एरिया</label>
+            <textarea id="chatPrompt" class="box" placeholder="सिस्टम प्रॉम्प्ट" aria-multiline="true" rows="3"></textarea>
 
             <button class="slide-header" aria-label="Collapse chat header">
                 <i class="fa-solid fa-angles-up" aria-hidden="true"></i>
@@ -327,11 +327,11 @@
                     <div class="input-area">
                         <a id="download" aria-hidden="true"></a><!-- Download Button -->
 
-                        <label for="userInput" class="sr-only">Type your message</label>
+                        <label for="userInput" class="sr-only">अपना संदेश टाइप करें</label>
                         <textarea
                           id="userInput"
                           class="box"
-                          placeholder="Type a message..."
+                          placeholder="एक संदेश टाइप करें..."
                           cols="30"
                           rows="4"
                           style="white-space: pre-wrap;resize: none;"
@@ -341,22 +341,22 @@
                         <div class="send-buttons" role="group" aria-label="Send message buttons">
                             <button id="addButton" aria-label="Add message" type="button">
                                 <i class="fa-solid fa-square-plus" aria-hidden="true"></i>
-                                <span>Add</span>
+                                <span>जोड़ें</span>
                             </button>
 
                             <button id="sendButton" aria-label="Send message" type="submit">
                                 <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
-                                <span>Send</span>
+                                <span>भेजें</span>
                             </button>
                         </div>
 
                         <button class="micro-label" for="micro" aria-label="Microphone toggle">
-                            <small class="sr-only">Toggle microphone for audio input.</small>
+                            <small class="sr-only">ऑडियो इनपुट के लिए माइक्रोफ़ोन टॉगल करें।</small>
                             <i class="fa-solid fa-microphone-slash" aria-hidden="true"></i>
                         </button>
 
-                        <button id="search" aria-label="Enable web search">
-                            <small class="sr-only">Enable web search</small>
+                        <button id="search" aria-label="वेब खोज सक्षम करें">
+                            <small class="sr-only">वेब खोज सक्षम करें</small>
                             <i class="fa-solid fa-search" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -371,13 +371,13 @@
                     </div>
                     <div class="stop_generating stop_generating-hidden" role="region" aria-live="assertive">
                         <button id="cancelButton" aria-label="Stop generating response">
-                            <span>Stop Generating</span>
+                            <span>उत्पादन रोकें</span>
                             <i class="fa-solid fa-stop" aria-hidden="true"></i>
                         </button>
                     </div>
                     <div class="regenerate" role="region" aria-live="polite">
                         <button id="regenerateButton" aria-label="Regenerate last response">
-                            <span>Regenerate</span>
+                            <span>पुनः उत्पन्न करें</span>
                             <i class="fa-solid fa-rotate" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -400,7 +400,7 @@
                         <br>
                     </label>
 
-                    <label class="image-select" for="image" title="Select image file">
+                    <label class="image-select" for="image" title="छवि फ़ाइल चुनें">
                         <small id="imageHelp" class="sr-only">Select an image file.</small>
                         <input
                           type="file"
@@ -415,16 +415,16 @@
                         <br>
                     </label>
                     <br>
-                    <label class="capture-audio" for="audio" title="Record audio">
-                        <button id="record-audio" type="button" aria-label="Record audio">
-                            <span>Record audio</span>
+                    <label class="capture-audio" for="audio" title="ऑडियो रिकॉर्ड करें">
+                        <button id="record-audio" type="button" aria-label="ऑडियो रिकॉर्ड करें">
+                            <span>ऑडियो रिकॉर्ड करें</span>
                             <i class="fa-solid fa-microphone" aria-hidden="true"></i>
                         </button>
                     </label>
-                    <label class="add-link" for="link" title="Add link">
-                        <button id="add-link" type="button" aria-label="Add link">
+                    <label class="add-link" for="link" title="लिंक जोड़ें">
+                        <button id="add-link" type="button" aria-label="लिंक जोड़ें">
                             <i class="fa-solid fa-link" aria-hidden="true"></i>
-                            <span>Add link</span>
+                            <span>लिंक जोड़ें</span>
                         </button>
                     </label>
                     <button class="close" type="button" aria-label="Close media selector">
@@ -436,21 +436,21 @@
 
                 <nav class="chat-buttons" role="navigation" aria-label="Chat options">
                     <div class="field">
-                        <label for="model" class="sr-only">Select AI Model</label>
+                        <label for="model" class="sr-only">एआई मॉडल चुनें</label>
                         <select name="model" id="model" aria-describedby="modelHelp"></select>
-                        <small id="modelHelp" class="sr-only">Select AI model to use for conversations.</small>
+                        <small id="modelHelp" class="sr-only">बातचीत के लिए उपयोग करने के लिए एआई मॉडल चुनें।</small>
                     </div>
                     <div class="field">
-                        <button id="open_picker" type="button" aria-label="Open provider and model picker" title="Browse all providers & models">
+                        <button id="open_picker" type="button" aria-label="Open provider and model picker" title="सभी प्रदाता और मॉडल ब्राउज़ करें">
                             <i class="fa-solid fa-table-list" aria-hidden="true"></i>
                         </button>
                     </div>
                     <div class="field">
-                        <label for="provider" class="sr-only">Select Provider</label>
+                        <label for="provider" class="sr-only">प्रदाता चुनें</label>
                         <select name="provider" id="provider" aria-describedby="providerHelp">
-                            <option value="AnyProvider">Provider: Auto</option>
+                            <option value="AnyProvider">प्रदाता: स्वचालित</option>
                         </select>
-                        <small id="providerHelp" class="sr-only">Select AI provider for conversations.</small>
+                        <small id="providerHelp" class="sr-only">बातचीत के लिए AI प्रदाता चुनें।</small>
                     </div>
                     <div class="field">
                         <button id="pin" type="button" aria-label="Pin conversation">
@@ -468,13 +468,13 @@
                 <button class="log-back-button" onclick="open_settings();" aria-label="Back to settings">
                     <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                 </button>
-                <h2>Logs</h2>
+                <h2>लॉग</h2>
             </header>
         </section>
 
         <!-- Highlight.js iframe container-->
         <div class="hljs-iframe-container hidden" aria-hidden="true">
-            <iframe class="hljs-iframe" title="Code syntax preview"></iframe>
+            <iframe class="hljs-iframe" title="कोड सिंटैक्स पूर्वावलोकन"></iframe>
         </div>
     </div>
 

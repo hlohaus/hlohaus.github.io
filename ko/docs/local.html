@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/local.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>G4F - Local Usage Guide</title>
+    <title>G4F 로컬 사용 가이드</title>
 
-    <meta name="description" content="GPT4Free documentation for G4F - Local Usage Guide. Complete guides, examples, and API reference for free AI endpoints, code generation, and AI model integration." />
-    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, G4F - Local Usage Guide" />
+    <meta name="description" content="G4F 로컬 사용 가이드를 위한 GPT4Free 문서. 무료 AI 엔드포인트, 코드 생성, AI 모델 통합에 대한 완전한 가이드, 예제 및 API 참조." />
+    <meta name="keywords" content="GPT4Free, G4F, AI 문서, 무료 AI API, OpenAI 대체재, JavaScript AI 클라이언트, Python AI 라이브러리, AI 통합, 코드 생성, G4F 로컬 사용 가이드" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="G4F - Local Usage Guide | GPT4Free Documentation" />
-    <meta property="og:description" content="GPT4Free documentation for G4F - Local Usage Guide. Free AI endpoints, examples, and comprehensive guides." />
+    <meta property="og:title" content="G4F 로컬 사용 가이드 | GPT4Free 문서" />
+    <meta property="og:description" content="G4F 로컬 사용 가이드를 위한 GPT4Free 문서. 무료 AI 엔드포인트, 예제 및 종합 가이드." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="G4F - Local Usage Guide | GPT4Free Documentation" />
-    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for G4F - Local Usage Guide." />
+    <meta name="twitter:title" content="G4F 로컬 사용 가이드 | GPT4Free 문서" />
+    <meta name="twitter:description" content="무료 AI 엔드포인트 및 G4F 로컬 사용 가이드에 대한 종합 문서." />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -461,7 +461,7 @@
         </nav>
 
         <main role="main" class="markdown-body entry-content" itemprop="text" itemscope itemtype="https://schema.org/TechArticle">
-<h2>G4F - Local Usage Guide</h2>
+<h2>G4F 로컬 사용 가이드</h2>
 <h3>Table of Contents</h3>
 <ol>
 <li><a href="#introduction">Introduction</a></li>
@@ -487,7 +487,7 @@
 <span class="pl-s1">client</span>   <span class="pl-c1">=</span> <span class="pl-en">LocalClient</span>()
 <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
     <span class="pl-s1">model</span>    <span class="pl-c1">=</span> <span class="pl-s">'orca-mini-3b'</span>,
-    <span class="pl-s1">messages</span> <span class="pl-c1">=</span> [{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"hi"</span>}],
+    <span class="pl-s1">메시지</span> <span class="pl-c1">=</span> [{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"hi"</span>}],
     <span class="pl-s1">stream</span>   <span class="pl-c1">=</span> <span class="pl-c1">True</span>
 )
 
@@ -511,37 +511,37 @@
         <span class="pl-ent">"path"</span>: <span class="pl-s"><span class="pl-pds">"</span>mistral-7b-instruct-v0.1.Q4_0.gguf<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"ram"</span>: <span class="pl-s"><span class="pl-pds">"</span>8<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"prompt"</span>: <span class="pl-s"><span class="pl-pds">"</span>[INST] %1 [/INST]<span class="pl-pds">"</span></span>,
-        <span class="pl-ent">"system"</span>: <span class="pl-ii">None</span>
+        <span class="pl-ent">"system"</span>: <span class="pl-ii">없음</span>
     },
     <span class="pl-ent">"gpt4all-falcon"</span>: {
         <span class="pl-ent">"path"</span>: <span class="pl-s"><span class="pl-pds">"</span>gpt4all-falcon-newbpe-q4_0.gguf<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"ram"</span>: <span class="pl-s"><span class="pl-pds">"</span>8<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"prompt"</span>: <span class="pl-s"><span class="pl-pds">"</span>### Instruction:<span class="pl-cce">\n</span>%1<span class="pl-cce">\n</span>### Response:<span class="pl-cce">\n</span><span class="pl-pds">"</span></span>,
-        <span class="pl-ent">"system"</span>: <span class="pl-ii">None</span>
+        <span class="pl-ent">"system"</span>: <span class="pl-ii">없음</span>
     },
     <span class="pl-ent">"orca-2"</span>: {
         <span class="pl-ent">"path"</span>: <span class="pl-s"><span class="pl-pds">"</span>orca-2-13b.Q4_0.gguf<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"ram"</span>: <span class="pl-s"><span class="pl-pds">"</span>16<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"prompt"</span>: <span class="pl-ii">None,</span>
-        <span class="pl-ent">"system"</span>: <span class="pl-ii">None</span>
+        <span class="pl-ent">"system"</span>: <span class="pl-ii">없음</span>
     },
     <span class="pl-ent">"wizardlm-13b"</span>: {
         <span class="pl-ent">"path"</span>: <span class="pl-s"><span class="pl-pds">"</span>wizardlm-13b-v1.2.Q4_0.gguf<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"ram"</span>: <span class="pl-s"><span class="pl-pds">"</span>16<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"prompt"</span>: <span class="pl-ii">None,</span>
-        <span class="pl-ent">"system"</span>: <span class="pl-ii">None</span>
+        <span class="pl-ent">"system"</span>: <span class="pl-ii">없음</span>
     },
     <span class="pl-ent">"nous-hermes-llama2"</span>: {
         <span class="pl-ent">"path"</span>: <span class="pl-s"><span class="pl-pds">"</span>nous-hermes-llama2-13b.Q4_0.gguf<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"ram"</span>: <span class="pl-s"><span class="pl-pds">"</span>16<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"prompt"</span>: <span class="pl-s"><span class="pl-pds">"</span>### Instruction:<span class="pl-cce">\n</span>%1<span class="pl-cce">\n</span>### Response:<span class="pl-cce">\n</span><span class="pl-pds">"</span></span>,
-        <span class="pl-ent">"system"</span>: <span class="pl-ii">None</span>
+        <span class="pl-ent">"system"</span>: <span class="pl-ii">없음</span>
     },
     <span class="pl-ent">"gpt4all-13b-snoozy"</span>: {
         <span class="pl-ent">"path"</span>: <span class="pl-s"><span class="pl-pds">"</span>gpt4all-13b-snoozy-q4_0.gguf<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"ram"</span>: <span class="pl-s"><span class="pl-pds">"</span>16<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"prompt"</span>: <span class="pl-ii">None,</span>
-        <span class="pl-ent">"system"</span>: <span class="pl-ii">None</span>
+        <span class="pl-ent">"system"</span>: <span class="pl-ii">없음</span>
     },
     <span class="pl-ent">"mpt-7b-chat"</span>: {
         <span class="pl-ent">"path"</span>: <span class="pl-s"><span class="pl-pds">"</span>mpt-7b-chat-newbpe-q4_0.gguf<span class="pl-pds">"</span></span>,
@@ -559,25 +559,25 @@
         <span class="pl-ent">"path"</span>: <span class="pl-s"><span class="pl-pds">"</span>replit-code-v1_5-3b-newbpe-q4_0.gguf<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"ram"</span>: <span class="pl-s"><span class="pl-pds">"</span>4<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"prompt"</span>: <span class="pl-s"><span class="pl-pds">"</span>%1<span class="pl-pds">"</span></span>,
-        <span class="pl-ent">"system"</span>: <span class="pl-ii">None</span>
+        <span class="pl-ent">"system"</span>: <span class="pl-ii">없음</span>
     },
     <span class="pl-ent">"starcoder"</span>: {
         <span class="pl-ent">"path"</span>: <span class="pl-s"><span class="pl-pds">"</span>starcoder-newbpe-q4_0.gguf<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"ram"</span>: <span class="pl-s"><span class="pl-pds">"</span>4<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"prompt"</span>: <span class="pl-s"><span class="pl-pds">"</span>%1<span class="pl-pds">"</span></span>,
-        <span class="pl-ent">"system"</span>: <span class="pl-ii">None</span>
+        <span class="pl-ent">"system"</span>: <span class="pl-ii">없음</span>
     },
     <span class="pl-ent">"rift-coder-7b"</span>: {
         <span class="pl-ent">"path"</span>: <span class="pl-s"><span class="pl-pds">"</span>rift-coder-v0-7b-q4_0.gguf<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"ram"</span>: <span class="pl-s"><span class="pl-pds">"</span>8<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"prompt"</span>: <span class="pl-s"><span class="pl-pds">"</span>%1<span class="pl-pds">"</span></span>,
-        <span class="pl-ent">"system"</span>: <span class="pl-ii">None</span>
+        <span class="pl-ent">"system"</span>: <span class="pl-ii">없음</span>
     },
     <span class="pl-ent">"all-MiniLM-L6-v2"</span>: {
         <span class="pl-ent">"path"</span>: <span class="pl-s"><span class="pl-pds">"</span>all-MiniLM-L6-v2-f16.gguf<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"ram"</span>: <span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>,
         <span class="pl-ent">"prompt"</span>: <span class="pl-ii">None,</span>
-        <span class="pl-ent">"system"</span>: <span class="pl-ii">None</span>
+        <span class="pl-ent">"system"</span>: <span class="pl-ii">없음</span>
     },
     <span class="pl-ent">"mistral-7b-german"</span>: {
         <span class="pl-ent">"path"</span>: <span class="pl-s"><span class="pl-pds">"</span>em_german_mistral_v01.Q4_0.gguf<span class="pl-pds">"</span></span>,

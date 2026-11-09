@@ -46,7 +46,7 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/home.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G4F - Framework & Tools Hub</title>
+    <title>G4F - Centrum frameworků a nástrojů</title>
     <link rel="icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="shortcut icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="manifest" href="/dist/img/site.webmanifest">
@@ -543,10 +543,10 @@
         </button>
         <div class="nav-actions" id="nav-actions">
             <nav class="nav-links">
-                <a href="/">Home</a>
+                <a href="/">Domů</a>
                 <a href="/chat/">Chat</a>
-                <a href="/providers/">Providers</a>
-                <a href="/stats/">Stats</a>
+                <a href="/providers/">Poskytovatelé</a>
+                <a href="/stats/">Statistiky</a>
             </nav>
             <a class="connect-status" id="connect_status" href="#" target="_blank" rel="noopener" title="Connected backend URL">
                 <i class="fa-solid fa-plug"></i>
@@ -555,11 +555,11 @@
             </a>
             <div class="status-badge" id="backend-status-badge">
                 <span class="status-dot"></span>
-                <span id="backend-status-text">Backend Active</span>
+                <span id="backend-status-text">Backend aktivní</span>
             </div>
             <button class="btn-toggle-sidebar" id="toggle-sidebar-btn">
                 <i class="fa-solid fa-cubes"></i>
-                <span>Providers</span>
+                <span>Poskytovatelé</span>
             </button>
         </div>
     </nav>
@@ -569,16 +569,16 @@
         <main class="content-area">
             <!-- Hero Header -->
             <section class="hero">
-                <h1 class="hero-title">G4F AI Tools & Dashboard</h1>
+                <h1 class="hero-title">G4F AI nástroje a řídicí panel</h1>
                 <p class="hero-subtitle">
-                    Access high-performance AI tools, web search, real-time backend logs, model status, and multi-provider endpoints.
+                    Přístup k vysoce výkonným AI nástrojům, webovému vyhledávání, protokolům backendu v reálném čase, stavu modelů a koncovým bodům více poskytovatelů.
                 </p>
 
                 <!-- Search & Quick Query Box -->
                 <form action="/chat/" method="GET" class="search-box">
-                    <input type="text" name="prompt" class="search-input" id="search-query-input" placeholder="Ask AI or enter prompt to jump straight into chat..." autocomplete="off">
+                    <input type="text" name="prompt" class="search-input" id="search-query-input" placeholder="Zeptejte se AI nebo zadejte prompt a přejděte rovnou do chatu..." autocomplete="off">
                     <button type="submit" class="search-btn">
-                        <i class="fa-solid fa-paper-plane"></i> Launch
+                        <i class="fa-solid fa-paper-plane"></i> Spustit
                     </button>
                 </form>
             </section>
@@ -587,7 +587,7 @@
             <section>
                 <div class="section-header">
                     <h2 class="section-title">
-                        <i class="fa-solid fa-toolbox"></i> Backend Tools & Modules
+                        <i class="fa-solid fa-toolbox"></i> Backendové nástroje a moduly
                     </h2>
                 </div>
 
@@ -599,13 +599,13 @@
                                 <div class="card-icon">
                                     <i class="fa-solid fa-globe"></i>
                                 </div>
-                                <span class="card-badge">Web Search</span>
+                                <span class="card-badge">Vyhledávání na webu</span>
                             </div>
-                            <h3 class="card-title">AI Web Browser</h3>
-                            <p class="card-desc">Search the live web with AI assistance, scrape pages, summarize news, and extract real-time web context.</p>
+                            <h3 class="card-title">AI webový prohlížeč</h3>
+                            <p class="card-desc">Vyhledávejte živý web s pomocí AI, sbírejte stránky, shrňujte zprávy a extrahujte kontext v reálném čase.</p>
                         </div>
                         <div class="card-action">
-                            <span>Open Browser</span>
+                            <span>Otevřít prohlížeč</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -617,13 +617,13 @@
                                 <div class="card-icon">
                                     <i class="fa-solid fa-terminal"></i>
                                 </div>
-                                <span class="card-badge">Inspector</span>
+                                <span class="card-badge">Inspektor</span>
                             </div>
-                            <h3 class="card-title">Backend Logs</h3>
-                            <p class="card-desc">Inspect real-time API logs, track prompt executions, audit incoming requests, and view system trace logs.</p>
+                            <h3 class="card-title">Záznamy backendu</h3>
+                            <p class="card-desc">Inspehrujte záznamy API v reálném čase, sledujte provádění promptů, auditujte příchozí požadavky a zobrazujte systémové trasovací záznamy.</p>
                         </div>
                         <div class="card-action">
-                            <span>View Logs</span>
+                            <span>Zobrazit záznamy</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -635,13 +635,13 @@
                                 <div class="card-icon">
                                     <i class="fa-solid fa-chart-pie"></i>
                                 </div>
-                                <span class="card-badge">Analytics</span>
+                                <span class="card-badge">Analytika</span>
                             </div>
-                            <h3 class="card-title">Usage & Statistics</h3>
-                            <p class="card-desc">Detailed request breakdown, token usage stats, top model performance metrics, and usage history charts.</p>
+                            <h3 class="card-title">Použití a statistiky</h3>
+                            <p class="card-desc">Podrobný přehled požadavků, statistiky použití tokenů, nejlepší metriky výkonu modelů a grafy historie použití.</p>
                         </div>
                         <div class="card-action">
-                            <span>View Stats</span>
+                            <span>Zobrazit statistiky</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -653,13 +653,13 @@
                                 <div class="card-icon">
                                     <i class="fa-solid fa-server"></i>
                                 </div>
-                                <span class="card-badge">Health Monitor</span>
+                                <span class="card-badge">Monitor zdraví</span>
                             </div>
-                            <h3 class="card-title">System & Provider Status</h3>
-                            <p class="card-desc">Real-time availability monitoring, quota limits, working model endpoints, and service health check.</p>
+                            <h3 class="card-title">Stav systému a poskytovatelů</h3>
+                            <p class="card-desc">Sledování dostupnosti v reálném čase, limity kvót, funkční koncové body modelů a kontrola zdraví služby.</p>
                         </div>
                         <div class="card-action">
-                            <span>Check Status</span>
+                            <span>Zkontrolovat stav</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -671,13 +671,13 @@
                                 <div class="card-icon">
                                     <i class="fa-solid fa-layer-group"></i>
                                 </div>
-                                <span class="card-badge">Catalog</span>
+                                <span class="card-badge">Katalog</span>
                             </div>
-                            <h3 class="card-title">AI Providers Catalog</h3>
-                            <p class="card-desc">Explore 100+ supported free & auth-based AI provider integrations, supported vision models, and streaming capabilities.</p>
+                            <h3 class="card-title">Katalog poskytovatelů AI</h3>
+                            <p class="card-desc">Prozkoumejte více než 100 podporovaných integrací poskytovatelů AI zdarma a na základě ověření, podporované modely pro zpracování obrazu a schopnosti streamování.</p>
                         </div>
                         <div class="card-action">
-                            <span>Explore Providers</span>
+                            <span>Prozkoumat poskytovatele</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -689,13 +689,13 @@
                                 <div class="card-icon">
                                     <i class="fa-solid fa-comments"></i>
                                 </div>
-                                <span class="card-badge">Chat Interface</span>
+                                <span class="card-badge">Rozhraní chatu</span>
                             </div>
-                            <h3 class="card-title">G4F Chat Assistant</h3>
-                            <p class="card-desc">Full-featured conversational UI supporting multi-model switches, custom prompts, code highlighting, and session memory.</p>
+                            <h3 class="card-title">G4F chatový asistent</h3>
+                            <p class="card-desc">Plnohodnotné konverzační rozhraní podporující přepínání mezi více modely, vlastní výzvy, zvýrazňování kódu a paměť relace.</p>
                         </div>
                         <div class="card-action">
-                            <span>Start Chat</span>
+                            <span>Začít chat</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -707,13 +707,13 @@
                                 <div class="card-icon">
                                     <i class="fa-solid fa-wand-magic-sparkles"></i>
                                 </div>
-                                <span class="card-badge">Generative</span>
+                                <span class="card-badge">Generativní</span>
                             </div>
-                            <h3 class="card-title">AI Image Studio</h3>
-                            <p class="card-desc">Generate images using Flux, Stable Diffusion, Pollinations, and DALL-E models with custom aspect ratios.</p>
+                            <h3 class="card-title">AI Studio obrázků</h3>
+                            <p class="card-desc">Generujte obrázky pomocí modelů Flux, Stable Diffusion, Pollinations a DALL-E s vlastním poměrem stran.</p>
                         </div>
                         <div class="card-action">
-                            <span>Create Images</span>
+                            <span>Vytvořit obrázky</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -725,13 +725,13 @@
                                 <div class="card-icon">
                                     <i class="fa-solid fa-shapes"></i>
                                 </div>
-                                <span class="card-badge">Mini-Apps</span>
+                                <span class="card-badge">Miniaplikace</span>
                             </div>
-                            <h3 class="card-title">Web Apps & Utilities</h3>
-                            <p class="card-desc">Collection of interactive web utilities including model testers, code previewers, games, and developer tools.</p>
+                            <h3 class="card-title">Webové aplikace a nástroje</h3>
+                            <p class="card-desc">Sbírka interaktivních webových nástrojů včetně testovačů modelů, náhledů kódu, her a vývojářských nástrojů.</p>
                         </div>
                         <div class="card-action">
-                            <span>Open Apps Hub</span>
+                            <span>Otevřít centrum aplikací</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -745,11 +745,11 @@
                                 </div>
                                 <span class="card-badge">REST API</span>
                             </div>
-                            <h3 class="card-title">OpenAI-Compatible API</h3>
-                            <p class="card-desc">Connect external applications like LangChain, AutoGen, and Continue using standard `/v1/chat/completions` endpoints.</p>
+                            <h3 class="card-title">API kompatibilní s OpenAI</h3>
+                            <p class="card-desc">Připojte externí aplikace jako LangChain, AutoGen a Continue pomocí standardních koncových bodů `/v1/chat/completions`.</p>
                         </div>
                         <div class="card-action">
-                            <span>View API Docs</span>
+                            <span>Zobrazit dokumentaci API</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -762,22 +762,22 @@
             <div class="sidebar-header">
                 <div class="sidebar-title">
                     <i class="fa-solid fa-server" style="color: var(--accent-light);"></i>
-                    <span>Providers Catalog</span>
+                    <span>Katalog poskytovatelů</span>
                 </div>
-                <span class="card-badge" id="sidebar-provider-count">0 Active</span>
+                <span class="card-badge" id="sidebar-provider-count">0 aktivních</span>
             </div>
             <div class="sidebar-search">
-                <input type="text" id="sidebar-filter-input" class="sidebar-search-input" placeholder="Filter providers...">
+                <input type="text" id="sidebar-filter-input" class="sidebar-search-input" placeholder="Filtrovat poskytovatele...">
             </div>
             <div class="sidebar-body" id="sidebar-providers-list">
-                <div style="text-align:center; padding: 2rem; color: var(--text-muted);">Loading providers...</div>
+                <div style="text-align:center; padding: 2rem; color: var(--text-muted);">Načítání poskytovatelů...</div>
             </div>
         </aside>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 G4F Framework. All Rights Reserved. | <a href="https://github.com/xtekky/gpt4free" target="_blank">GitHub Repository</a></p>
+        <p>&copy; 2026 G4F Framework. All Rights Reserved. | <a href="https://github.com/xtekky/gpt4free" target="_blank">GitHub úložiště</a></p>
     </footer>
 
     <script>

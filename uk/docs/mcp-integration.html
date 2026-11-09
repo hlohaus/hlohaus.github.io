@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/mcp-integration.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MCP Server Integration</title>
+    <title>Інтеграція сервера MCP</title>
 
-    <meta name="description" content="GPT4Free documentation for MCP Server Integration. Complete guides, examples, and API reference for free AI endpoints, code generation, and AI model integration." />
-    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, MCP Server Integration" />
+    <meta name="description" content="Документація GPT4Free для інтеграції з сервером MCP. Повні посібники, приклади та довідка API для безкоштовних кінцевих точок штучного інтелекту, генерації коду та інтеграції моделей штучного інтелекту." />
+    <meta name="keywords" content="GPT4Free, G4F, документація штучного інтелекту, безкоштовний API штучного інтелекту, альтернатива OpenAI, клієнт JavaScript для штучного інтелекту, бібліотека Python для штучного інтелекту, інтеграція штучного інтелекту, генерація коду, інтеграція сервера MCP" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="MCP Server Integration | GPT4Free Documentation" />
-    <meta property="og:description" content="GPT4Free documentation for MCP Server Integration. Free AI endpoints, examples, and comprehensive guides." />
+    <meta property="og:title" content="Інтеграція сервера MCP | Документація GPT4Free" />
+    <meta property="og:description" content="Документація GPT4Free для інтеграції сервера MCP. Безкоштовні кінцеві точки штучного інтелекту, приклади та комплексні посібники." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MCP Server Integration | GPT4Free Documentation" />
-    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for MCP Server Integration." />
+    <meta name="twitter:title" content="Інтеграція сервера MCP | Документація GPT4Free" />
+    <meta name="twitter:description" content="Безкоштовні кінцеві точки штучного інтелекту та комплексна документація для інтеграції сервера MCP." />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -461,9 +461,9 @@
         </nav>
 
         <main role="main" class="markdown-body entry-content" itemprop="text" itemscope itemtype="https://schema.org/TechArticle">
-<h1>MCP Server Integration</h1>
+<h1>Інтеграція сервера MCP</h1>
 <p>This implementation adds support for Model Context Protocol (MCP) servers in the G4F chat interface, allowing the AI assistant to use external tools.</p>
-<h2>Features</h2>
+<h2>Функції</h2>
 <ul>
 <li><strong>MCP Server Management</strong>: Add, remove, and enable/disable MCP servers</li>
 <li><strong>Tool Discovery</strong>: Automatically fetch available tools from MCP servers</li>
@@ -627,14 +627,14 @@ Lists all available tools from the server.
 </ol>
 <h3>Storage</h3>
 <ul>
-<li><strong>MCP Servers</strong>: Stored in <code class="notranslate">localStorage</code> as <code class="notranslate">mcp_servers</code></li>
+<li><strong>MCP-сервери</strong>: Stored in <code class="notranslate">localStorage</code> as <code class="notranslate">mcp_servers</code></li>
 <li><strong>Selected Tools</strong>: Stored in <code class="notranslate">localStorage</code> as <code class="notranslate">mcp_selected_tools</code></li>
 </ul>
 <h3>API Integration</h3>
 <p>The implementation uses the existing OpenAI-compatible tools API:</p>
 <div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-kos">{</span>
   <span class="pl-c1">model</span>: <span class="pl-s">"auto"</span><span class="pl-kos">,</span>
-  <span class="pl-c1">messages</span>: <span class="pl-kos">[</span>...<span class="pl-kos">]</span><span class="pl-kos">,</span>
+  <span class="pl-c1">повідомлення</span>: <span class="pl-kos">[</span>...<span class="pl-kos">]</span><span class="pl-kos">,</span>
   <span class="pl-c1">tools</span>: <span class="pl-kos">[</span>
     <span class="pl-kos">{</span>
       <span class="pl-c1">type</span>: <span class="pl-s">"function"</span><span class="pl-kos">,</span>

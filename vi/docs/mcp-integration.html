@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/mcp-integration.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MCP Server Integration</title>
+    <title>Tích hợp máy chủ MCP</title>
 
-    <meta name="description" content="GPT4Free documentation for MCP Server Integration. Complete guides, examples, and API reference for free AI endpoints, code generation, and AI model integration." />
-    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, MCP Server Integration" />
+    <meta name="description" content="Tài liệu GPT4Free cho Tích hợp máy chủ MCP. Các hướng dẫn hoàn chỉnh, ví dụ và tài liệu tham khảo API cho các điểm cuối AI miễn phí, tạo mã và tích hợp mô hình AI." />
+    <meta name="keywords" content="GPT4Free, G4F, tài liệu AI, API AI miễn phí, thay thế OpenAI, máy khách AI JavaScript, thư viện AI Python, tích hợp AI, tạo mã, tích hợp máy chủ MCP" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="MCP Server Integration | GPT4Free Documentation" />
-    <meta property="og:description" content="GPT4Free documentation for MCP Server Integration. Free AI endpoints, examples, and comprehensive guides." />
+    <meta property="og:title" content="Tích hợp máy chủ MCP | Tài liệu GPT4Free" />
+    <meta property="og:description" content="Tài liệu GPT4Free cho tích hợp máy chủ MCP. Các điểm cuối AI miễn phí, ví dụ và hướng dẫn chi tiết." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MCP Server Integration | GPT4Free Documentation" />
-    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for MCP Server Integration." />
+    <meta name="twitter:title" content="Tích hợp máy chủ MCP | Tài liệu GPT4Free" />
+    <meta name="twitter:description" content="Các điểm cuối AI miễn phí và tài liệu chi tiết cho tích hợp máy chủ MCP." />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -461,9 +461,9 @@
         </nav>
 
         <main role="main" class="markdown-body entry-content" itemprop="text" itemscope itemtype="https://schema.org/TechArticle">
-<h1>MCP Server Integration</h1>
+<h1>Tích hợp máy chủ MCP</h1>
 <p>This implementation adds support for Model Context Protocol (MCP) servers in the G4F chat interface, allowing the AI assistant to use external tools.</p>
-<h2>Features</h2>
+<h2>Tính năng</h2>
 <ul>
 <li><strong>MCP Server Management</strong>: Add, remove, and enable/disable MCP servers</li>
 <li><strong>Tool Discovery</strong>: Automatically fetch available tools from MCP servers</li>
@@ -627,14 +627,14 @@ Lists all available tools from the server.
 </ol>
 <h3>Storage</h3>
 <ul>
-<li><strong>MCP Servers</strong>: Stored in <code class="notranslate">localStorage</code> as <code class="notranslate">mcp_servers</code></li>
+<li><strong>Máy chủ MCP</strong>: Stored in <code class="notranslate">localStorage</code> as <code class="notranslate">mcp_servers</code></li>
 <li><strong>Selected Tools</strong>: Stored in <code class="notranslate">localStorage</code> as <code class="notranslate">mcp_selected_tools</code></li>
 </ul>
 <h3>API Integration</h3>
 <p>The implementation uses the existing OpenAI-compatible tools API:</p>
 <div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-kos">{</span>
   <span class="pl-c1">model</span>: <span class="pl-s">"auto"</span><span class="pl-kos">,</span>
-  <span class="pl-c1">messages</span>: <span class="pl-kos">[</span>...<span class="pl-kos">]</span><span class="pl-kos">,</span>
+  <span class="pl-c1">tin nhắn</span>: <span class="pl-kos">[</span>...<span class="pl-kos">]</span><span class="pl-kos">,</span>
   <span class="pl-c1">tools</span>: <span class="pl-kos">[</span>
     <span class="pl-kos">{</span>
       <span class="pl-c1">type</span>: <span class="pl-s">"function"</span><span class="pl-kos">,</span>

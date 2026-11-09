@@ -46,8 +46,8 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/members.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G4F - Members Area</title>
-    <meta name="description" content="GPT4Free Members Area - Manage your API keys, view usage stats, and access premium features." />
+    <title>G4F — Личный кабинет</title>
+    <meta name="description" content="Личный кабинет GPT4Free — управляйте ключами API, просматривайте статистику использования и получайте доступ к премиум-функциям." />
     <link rel="icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="shortcut icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/dist/img/g4f.svg">
@@ -1344,14 +1344,14 @@
     <header class="navbar" role="banner" id="navbar">
         <a href="/" class="logo">G4<span>F</span></a>
         <nav class="nav-links" role="navigation">
-            <a href="/">Home</a>
-            <a href="/docs/" title="Documentation">Docs</a>
+            <a href="/">Главная</a>
+            <a href="/docs/" title="Документация">Документация</a>
             <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
             <div class="user-info" id="navUserInfo" style="display: none;">
-                <img class="user-avatar" id="navAvatar" src="" alt="User avatar">
+                <img class="user-avatar" id="navAvatar" src="" alt="Аватар пользователя">
                 <span id="navUsername"></span>
             </div>
-            <a href="/chat/" class="nav-cta">Start Chat</a>
+            <a href="/chat/" class="nav-cta">Начать чат</a>
         </nav>
     </header>
 
@@ -1359,30 +1359,30 @@
         <div class="connection-error" id="connectionError" role="alert" hidden></div>
         <!-- Redirect Login Section (shown when redirect parameter is present) -->
         <section class="login-section" id="redirectLoginSection" style="display: none;">
-            <h1>Login Required</h1>
-            <p>Sign in to continue to your application. After signing in, you'll be redirected back with an API key.</p>
+            <h1>Требуется вход</h1>
+            <p>Войдите, чтобы продолжить работу с приложением. После входа вы будете перенаправлены обратно с API‑ключом.</p>
             <p style="color: var(--secondary); font-size: 0.9rem;" id="redirectTarget"></p>
             
             <div class="login-buttons">
                 <button class="oauth-btn g4f" id="redirectLoginG4f">
-                    🔮 Sign in with G4F Account
+                    🔮 Войти через аккаунт G4F
                 </button>
             </div>
         </section>
 
         <!-- Login Section (shown when not logged in) -->
         <section class="login-section" id="loginSection">
-            <h1>Members Area</h1>
-            <p>Sign in to access your dashboard, manage API keys, and view usage statistics.</p>
+            <h1>Зона участников</h1>
+            <p>Войдите, чтобы получить доступ к панели управления, управлять API‑ключами и просматривать статистику использования.</p>
             
             <div class="login-buttons">
                 <button class="oauth-btn g4f" id="loginG4f">
-                    🔮 Sign in with G4F Account
+                    🔮 Войти через аккаунт G4F
                 </button>
             </div>
             
             <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(255,255,255,0.5);">
-                By signing in, you agree to our <a href="#" style="color: var(--secondary);">Terms of Service</a> and <a href="#" style="color: var(--secondary);">Privacy Policy</a>.
+                Войдя, вы соглашаетесь с нашими <a href="#" style="color: var(--secondary);">Условия использования</a> и <a href="#" style="color: var(--secondary);">Политика конфиденциальности</a>.
             </p>
         </section>
 
@@ -1391,25 +1391,25 @@
         <div class="discord-upgrade-banner" id="discordUpgradeBanner" hidden>
             <div class="discord-banner-icon"><i class="fab fa-discord" aria-hidden="true"></i></div>
             <div class="discord-banner-content">
-                <h2 id="discordUpgradeTitle">Unlock the Free tier instantly</h2>
+                <h2 id="discordUpgradeTitle">Разблокируйте бесплатный уровень мгновенно</h2>
                 <p id="discordUpgradeText">
-                    Connect Discord and join the G4F support server — we will verify your membership and upgrade your account right away.
+                    Подключите Discord и присоединитесь к серверу поддержки G4F — мы сразу подтвердим вашу принадлежность и обновим ваш аккаунт.
                 </p>
                 <div class="discord-steps" id="discordUpgradeSteps">
-                    <span class="discord-step" data-step="connect"><i class="fas fa-circle" aria-hidden="true"></i> Connect Discord</span>
-                    <span class="discord-step" data-step="join"><i class="fas fa-circle" aria-hidden="true"></i> Join support server</span>
-                    <span class="discord-step" data-step="upgrade"><i class="fas fa-circle" aria-hidden="true"></i> Upgrade to Free</span>
+                    <span class="discord-step" data-step="connect"><i class="fas fa-circle" aria-hidden="true"></i> Подключить Discord</span>
+                    <span class="discord-step" data-step="join"><i class="fas fa-circle" aria-hidden="true"></i> Присоединиться к серверу поддержки</span>
+                    <span class="discord-step" data-step="upgrade"><i class="fas fa-circle" aria-hidden="true"></i> Обновить до Бесплатного</span>
                 </div>
             </div>
             <div class="discord-banner-actions">
                 <a class="btn-discord btn" id="discordConnectBtn" href="#" rel="noopener">
-                    <i class="fab fa-discord"></i> Connect Discord
+                    <i class="fab fa-discord"></i> Подключить Discord
                 </a>
                 <a class="btn btn-secondary" id="discordJoinBtn" href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-arrow-up-right-from-square"></i> Join Support Server
+                    <i class="fas fa-arrow-up-right-from-square"></i> Присоединиться к серверу поддержки
                 </a>
                 <button class="btn" id="discordVerifyBtn" type="button">
-                    <i class="fas fa-check"></i> Verify &amp; Upgrade
+                    <i class="fas fa-check"></i> Проверить и обновить
                 </button>
             </div>
         </div>
@@ -1418,38 +1418,38 @@
         <section class="dashboard" id="dashboard">
             <div class="welcome-header">
                 <div>
-                    <h1>Welcome back, <span id="userName">User</span>! 👋</h1>
-                    <p style="margin: 0; color: rgba(255,255,255,0.6);">Manage your API keys and monitor your usage</p>
+                    <h1>С возвращением, <span id="userName">Пользователь</span>! 👋</h1>
+                    <p style="margin: 0; color: rgba(255,255,255,0.6);">Управляйте своими API‑ключами и отслеживайте их использование</p>
                 </div>
                 <button class="logout-btn" id="logoutBtn">
-                    <i class="fas fa-sign-out-alt"></i> Sign Out
+                    <i class="fas fa-sign-out-alt"></i> Выйти
                 </button>
             </div>
 
             <div class="dashboard-grid">
                 <!-- Usage Stats Card -->
                 <div class="card">
-                    <h2><span class="icon">📊</span> Usage Statistics</h2>
+                    <h2><span class="icon">📊</span> Статистика использования</h2>
                     <div class="stats-grid">
                         <div class="stat-item">
                             <div class="stat-value" id="statRequests">0</div>
-                            <div class="stat-label">API Requests</div>
+                            <div class="stat-label">Запросы к API</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statTokens">0</div>
-                            <div class="stat-label">Tokens Used</div>
+                            <div class="stat-label">Использовано токенов</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statImages">0</div>
-                            <div class="stat-label">Images Generated</div>
+                            <div class="stat-label">Сгенерировано изображений</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statChats">0</div>
-                            <div class="stat-label">Chat Sessions</div>
+                            <div class="stat-label">Чат-сессии</div>
                         </div>
-                        <div class="stat-item" title="Credits earned by baking proof-of-work cakes. Each baked cake = $0.05.">
+                        <div class="stat-item" title="Кредиты, заработанные путем выпечки proof-of-work тортов. Каждый испеченный торт = $0.05.">
                             <div class="stat-value" id="statCredits">$0.00</div>
-                            <div class="stat-label">Cake Credits</div>
+                            <div class="stat-label">Кредиты Cake</div>
                         </div>
                     </div>
                     <div class="usage-chart">
@@ -1467,43 +1467,43 @@
                 
                 <!-- API Key Card -->
                 <div class="card">
-                    <h2><span class="icon">🔑</span> API Key</h2>
+                    <h2><span class="icon">🔑</span> API-ключ</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Use this key to authenticate your API requests
+                        Используйте этот ключ для аутентификации ваших запросов к API
                     </p>
                     <div class="api-key-container">
                         <div class="api-key-display">
-                            <input type="password" class="api-key-input" id="apiKeyInput" readonly placeholder="Click 'Generate' to create an API key">
-                            <button class="btn btn-secondary btn-small" id="toggleKeyBtn" title="Show/Hide">
+                            <input type="password" class="api-key-input" id="apiKeyInput" readonly placeholder="Нажмите «Создать», чтобы создать API-ключ">
+                            <button class="btn btn-secondary btn-small" id="toggleKeyBtn" title="Показать/Скрыть">
                                 <i class="fas fa-eye"></i>
                             </button>
-                            <button class="btn btn-secondary btn-small" id="copyKeyBtn" title="Copy">
+                            <button class="btn btn-secondary btn-small" id="copyKeyBtn" title="Копировать">
                                 <i class="fas fa-copy"></i>
                             </button>
                         </div>
-                        <p>Expires: <span id="apiKeyExpires">-</span></p>
+                        <p>Истекает: <span id="apiKeyExpires">-</span></p>
                         <button class="btn" id="generateKeyBtn" style="width: 100%;">
-                            <i class="fas fa-sync-alt"></i> Generate New Key
+                            <i class="fas fa-sync-alt"></i> Создать новый ключ
                         </button>
-                        <div class="base-url-label" style="margin-top: 1rem;">Base URL</div>
+                        <div class="base-url-label" style="margin-top: 1rem;">Базовый URL</div>
                         <div class="base-url" id="baseUrl">https://g4f.space/v1</div>
                     </div>
                 </div>
                 
                 <!-- Account Info Card -->
                 <div class="card">
-                    <h2><span class="icon">👤</span> Account Information</h2>
+                    <h2><span class="icon">👤</span> Информация об аккаунте</h2>
                     <div class="account-info">
                         <div class="info-row">
-                            <span class="info-label">Username</span>
+                            <span class="info-label">Имя пользователя:</span>
                             <span class="info-value" id="accountUsername">-</span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Email</span>
+                            <span class="info-label">Электронная почта</span>
                             <span class="info-value" id="accountEmail">-</span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Provider</span>
+                            <span class="info-label">Провайдер:</span>
                             <span class="info-value" id="accountProvider">
                                 <span class="provider-badge github">
                                     <i class="fab fa-github"></i> GitHub
@@ -1511,22 +1511,22 @@
                             </span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Plan</span>
+                            <span class="info-label">План:</span>
                             <span class="info-value">
-                                <span class="badge free" id="accountPlan">Free</span>
+                                <span class="badge free" id="accountPlan">Бесплатный:</span>
                             </span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Tier Limits</span>
+                            <span class="info-label">Ограничения тарифа:</span>
                             <span class="info-value">
                                 <div class="tier-limits" id="tier-limits-row">
-                                    <span id="max-tokens-text" title="Tokens: loading..."><i class="fa-solid fa-coins" aria-hidden="true"></i> —</span>
-                                    <span id="max-requests-text" title="Requests: loading..."><i class="fa-solid fa-list" aria-hidden="true"></i> —</span>
+                                    <span id="max-tokens-text" title="Токены: загрузка..."><i class="fa-solid fa-coins" aria-hidden="true"></i> —</span>
+                                    <span id="max-requests-text" title="Запросы: загрузка..."><i class="fa-solid fa-list" aria-hidden="true"></i> —</span>
                                 </div>
                             </span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Member Since</span>
+                            <span class="info-label">Пользователь с:</span>
                             <span class="info-value" id="accountJoined">-</span>
                         </div>
                     </div>
@@ -1534,13 +1534,13 @@
                 
                 <!-- Recent Activity Card -->
                 <div class="card">
-                    <h2><span class="icon">⚡</span> Recent Activity</h2>
+                    <h2><span class="icon">⚡</span> Недавняя активность</h2>
                     <ul class="activity-list" id="activityList">
                         <li class="activity-item">
                             <div class="activity-icon chat">💬</div>
                             <div class="activity-details">
-                                <div class="activity-title">Chat session started</div>
-                                <div class="activity-time">No activity yet</div>
+                                <div class="activity-title">Чат-сессия начата</div>
+                                <div class="activity-time">Пока нет активности</div>
                             </div>
                         </li>
                     </ul>
@@ -1548,25 +1548,25 @@
                 
                 <!-- Custom Servers Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🖥️</span> Custom Servers</h2>
+                    <h2><span class="icon">🖥️</span> Пользовательские серверы</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Add your own AI servers for model routing. Tokens are counted per server.
+                        Добавьте свои собственные серверы ИИ для маршрутизации моделей. Токены считаются по каждому серверу.
                     </p>
                     
                     <!-- Server List -->
                     <div id="serversList" class="servers-list">
                         <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">
-                            Loading servers...
+                            Загрузка серверов...
                         </p>
                     </div>
                     
                     <!-- Add Server Button -->
                     <div style="display: flex; gap: 1rem; margin-top: 1rem;">
                         <button class="btn" id="addServerBtn" style="flex: 1;">
-                            <i class="fas fa-plus"></i> Add Server
+                            <i class="fas fa-plus"></i> Добавить сервер
                         </button>
                         <button class="oauth-btn puter" id="addPuterServerBtn" style="flex: 1;">
-                            🤖 Add Puter
+                            🤖 Добавить Puter
                         </button>
                     </div>
                 </div>
@@ -1575,47 +1575,47 @@
                 <div class="modal" id="serverModal" style="display: none;">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 id="serverModalTitle">Add New Server</h3>
+                            <h3 id="serverModalTitle">Добавить новый сервер</h3>
                             <button class="modal-close" id="closeServerModal">&times;</button>
                         </div>
                         <form id="serverForm">
                             <div class="form-group">
-                                <label for="serverLabel">Label</label>
-                                <input type="text" id="serverLabel" class="form-input" placeholder="My Custom Server" required>
+                                <label for="serverLabel">Метка</label>
+                                <input type="text" id="serverLabel" class="form-input" placeholder="Мой пользовательский сервер" required>
                             </div>
                             <div class="form-group">
-                                <label for="serverBaseUrl">Base URL</label>
+                                <label for="serverBaseUrl">Базовый URL</label>
                                 <input type="url" id="serverBaseUrl" class="form-input" placeholder="https://api.example.com/v1" required>
-                                <small style="color: rgba(255,255,255,0.5);">OpenAI-compatible API endpoint</small>
+                                <small style="color: rgba(255,255,255,0.5);">Конечная точка API, совместимого с OpenAI</small>
                             </div>
                             <div class="form-group">
-                                <label for="serverApiKeys">API Keys (one per line)</label>
+                                <label for="serverApiKeys">Ключи API (по одному на строку)</label>
                                 <textarea id="serverApiKeys" class="form-input" rows="3" placeholder="sk-xxx...&#10;sk-yyy..."></textarea>
-                                <small style="color: rgba(255,255,255,0.5);">Multiple keys for load balancing. Leave empty if no auth required.</small>
+                                <small style="color: rgba(255,255,255,0.5);">Несколько ключей для балансировки нагрузки. Оставьте пустым, если аутентификация не требуется.</small>
                             </div>
                             <div class="form-group">
-                                <label for="serverModels">Allowed Models (one per line, optional)</label>
+                                <label for="serverModels">Разрешенные модели (по одной на строку, необязательно)</label>
                                 <textarea id="serverModels" class="form-input" rows="3" placeholder="gpt-4&#10;gpt-3.5-turbo"></textarea>
-                                <small style="color: rgba(255,255,255,0.5);">Leave empty to allow all models. Will auto-detect from server.</small>
+                                <small style="color: rgba(255,255,255,0.5);">Оставьте пустым, чтобы разрешить все модели. Будет автоматически определено с сервера.</small>
                             </div>
                             <div class="form-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="serverAutoUpdateModels" checked>
-                                    <span>Auto-update allowed models list from server</span>
+                                    <span>Автоматическое обновление списка разрешенных моделей с сервера</span>
                                 </label>
-                                <small style="color: rgba(255,255,255,0.5);">When enabled, the allowed models list is automatically refreshed from the server's /models endpoint.</small>
+                                <small style="color: rgba(255,255,255,0.5);">При включении список разрешенных моделей автоматически обновляется с эндпоинта /models сервера.</small>
                             </div>
                             <div class="form-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="serverPublic">
-                                    <span>Make server public (visible to other users)</span>
+                                    <span>Сделать сервер публичным (видимым другим пользователям)</span>
                                 </label>
                             </div>
                             <div id="serverValidation" class="validation-status" style="display: none;"></div>
                             <div class="form-actions">
-                                <button type="button" class="btn btn-secondary" id="cancelServerBtn">Cancel</button>
+                                <button type="button" class="btn btn-secondary" id="cancelServerBtn">Отмена</button>
                                 <button type="submit" class="btn" id="saveServerBtn">
-                                    <i class="fas fa-check"></i> Save Server
+                                    <i class="fas fa-check"></i> Сохранить сервер
                                 </button>
                             </div>
                             <input type="hidden" id="editServerId" value="">
@@ -1626,16 +1626,16 @@
                 <!-- API Keys Management Card -->
                 <div class="card" style="grid-column: 1 / -1;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                        <h2 style="margin: 0;"><span class="icon">🗝️</span> Manage API Keys</h2>
+                        <h2 style="margin: 0;"><span class="icon">🗝️</span> Управление API-ключами</h2>
                         <button class="btn btn-small" id="addApiKeyBtn">
-                            <i class="fas fa-plus"></i> New Key
+                            <i class="fas fa-plus"></i> Новый ключ
                         </button>
                     </div>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Create and manage multiple API keys for different applications or environments.
+                        Создавайте и управляйте несколькими API-ключами для разных приложений или сред.
                     </p>
                     <div id="apiKeysList" class="api-keys-list">
-                        <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">Loading API keys...</p>
+                        <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">Загрузка API-ключей...</p>
                     </div>
                 </div>
 
@@ -1643,45 +1643,45 @@
                 <div class="modal" id="apiKeyModal" style="display: none;">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 id="apiKeyModalTitle">Create API Key</h3>
+                            <h3 id="apiKeyModalTitle">Создать API-ключ</h3>
                             <button class="modal-close" id="closeApiKeyModalBtn">&times;</button>
                         </div>
 
                         <!-- Shown after successful create / rotate -->
                         <div id="apiKeyNewDisplay" style="display: none;">
                             <div class="validation-status success" style="margin-bottom: 1rem;">
-                                <i class="fas fa-check-circle"></i> Key ready — copy it now, it won't be shown again.
+                                <i class="fas fa-check-circle"></i> Ключ готов — скопируйте его сейчас, он больше не будет показан.
                             </div>
                             <div class="api-key-display">
                                 <input type="text" class="api-key-input" id="newApiKeyValue" readonly>
-                                <button class="btn btn-secondary btn-small" id="copyNewApiKeyBtn" title="Copy">
+                                <button class="btn btn-secondary btn-small" id="copyNewApiKeyBtn" title="Копировать">
                                     <i class="fas fa-copy"></i>
                                 </button>
                             </div>
                             <div class="form-actions">
-                                <button class="btn" id="doneApiKeyBtn"><i class="fas fa-check"></i> Done</button>
+                                <button class="btn" id="doneApiKeyBtn"><i class="fas fa-check"></i> Готово</button>
                             </div>
                         </div>
 
                         <!-- Create / Edit form -->
                         <form id="apiKeyForm">
                             <div class="form-group">
-                                <label for="apiKeyName">Name / Label</label>
-                                <input type="text" id="apiKeyName" class="form-input" placeholder="e.g. My App, Production, Testing" maxlength="80" required>
+                                <label for="apiKeyName">Имя / Метка</label>
+                                <input type="text" id="apiKeyName" class="form-input" placeholder="например, Мое приложение, Производство, Тестирование" maxlength="80" required>
                             </div>
                             <div class="form-group" id="apiKeyExpiryGroup">
-                                <label for="apiKeyExpiry">Expiry</label>
+                                <label for="apiKeyExpiry">Срок действия</label>
                                 <select id="apiKeyExpiry" class="form-input">
-                                    <option value="30">30 days</option>
-                                    <option value="90" selected>90 days</option>
-                                    <option value="365">1 year</option>
-                                    <option value="0">No expiry</option>
+                                    <option value="30">30 дней</option>
+                                    <option value="90" selected>90 дней</option>
+                                    <option value="365">1 год</option>
+                                    <option value="0">Без срока действия</option>
                                 </select>
                             </div>
                             <div class="form-actions">
-                                <button type="button" class="btn btn-secondary" id="cancelApiKeyModalBtn">Cancel</button>
+                                <button type="button" class="btn btn-secondary" id="cancelApiKeyModalBtn">Отмена</button>
                                 <button type="submit" class="btn" id="saveApiKeyBtn">
-                                    <i class="fas fa-plus"></i> Create Key
+                                    <i class="fas fa-plus"></i> Создать ключ
                                 </button>
                             </div>
                             </form>
@@ -1690,53 +1690,53 @@
 
                 <!-- Quick Links Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🚀</span> Quick Actions</h2>
+                    <h2><span class="icon">🚀</span> Быстрые действия</h2>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
                         <button class="btn">
-                            <i class="fas fa-comments"></i> <a href="/chat/">Open Chat</a>
+                            <i class="fas fa-comments"></i> <a href="/chat/">Открыть чат</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fas fa-book"></i> <a href="/docs/">API Documentation</a>
+                            <i class="fas fa-book"></i> <a href="/docs/">Документация API</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fas fa-heart"></i> <a href="https://github.com/sponsors/hlohaus" target="_blank">Become a Sponsor</a>
+                            <i class="fas fa-heart"></i> <a href="https://github.com/sponsors/hlohaus" target="_blank">Стать спонсором</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fab fa-github"></i> <a href="https://github.com/xtekky/gpt4free" target="_blank">View on GitHub</a>
+                            <i class="fab fa-github"></i> <a href="https://github.com/xtekky/gpt4free" target="_blank">Просмотреть на GitHub</a>
                         </button>
                     </div>
                 </div>
 
                 <!-- Cross-Device Secret Sync Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🔐</span> Cross-Device Secret Sync</h2>
+                    <h2><span class="icon">🔐</span> Синхронизация секретов между устройствами</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Your workspace secret enables encrypted conversation sync across devices. This device automatically confirms requests from your other logged-in devices.
+                        Ваш секрет рабочей области позволяет синхронизировать зашифрованные беседы между устройствами. Это устройство автоматически подтверждает запросы от других ваших устройств.
                     </p>
                     <div id="secretSyncStatus" style="padding: 0.75rem 1rem; border-radius: 8px; background: rgba(255,255,255,0.05); margin-bottom: 1rem; font-size: 0.9rem;">
-                        <span class="loading"></span> Checking workspace secret...
+                        <span class="loading"></span> Проверка секрета рабочей области...
                     </div>
                     <button class="btn btn-secondary" id="secretRequestBtn" style="display: none;">
-                        <i class="fa-solid fa-satellite-dish"></i> Request Secret from Online Device
+                        <i class="fa-solid fa-satellite-dish"></i> Запросить секрет с онлайн-устройства
                     </button>
                 </div>
 
                 <!-- Danger Zone Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">⚠️</span> Danger Zone</h2>
+                    <h2><span class="icon">⚠️</span> Зона риска</h2>
                     <div id="dangerZoneContent" class="danger-zone">
                         <div id="scheduledDeletionNotice" class="deletion-countdown" style="display: none;">
-                            <strong>⏳ Account deletion scheduled</strong>
-                            <span id="deletionCountdownText">Your account will be deleted in...</span>
+                            <strong>⏳ Удаление аккаунта запланировано</strong>
+                            <span id="deletionCountdownText">Ваш аккаунт будет удален в...:</span>
                         </div>
-                        <h3>Delete Account</h3>
-                        <p>Permanently delete your account, API keys, and all associated data. A 24-hour grace period applies — you can cancel during this time.</p>
+                        <h3>Удалить аккаунт</h3>
+                        <p>Деструктивно удалить аккаунт, API ключи и все связанное данные. Приятный 24-ч. период — вы можете отменить это в течение этого времени.</p>
                         <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                             <button class="btn-danger" id="deleteAccountBtn">
-                                <i class="fas fa-trash"></i> Delete Account
+                                <i class="fas fa-trash"></i> Удалить аккаунт
                             </button>
                             <button class="btn btn-secondary" id="cancelDeleteAccountBtn" style="display: none;">
-                                <i class="fas fa-undo"></i> Cancel Deletion
+                                <i class="fas fa-undo"></i> Отменить удаление
                             </button>
                         </div>
                     </div>
@@ -1747,16 +1747,16 @@
 
     <footer>
         <div class="footer-links">
-            <a href="/docs/">Documentation</a>
-            <a href="/chat/">Chat</a>
-            <a href="/members.html">Members</a>
-            <a href="/manifesto">Manifesto</a>
+            <a href="/docs/">Документация</a>
+            <a href="/chat/">Чат</a>
+            <a href="/members.html">Участники</a>
+            <a href="/manifesto">Манифест</a>
             <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="/community">Community</a>
-            <a href="/privacy.html">Privacy Policy</a>
-            <a href="/terms.html">Terms of Service</a>
+            <a href="/community">Сообщество</a>
+            <a href="/privacy.html">Политика конфиденциальности</a>
+            <a href="/terms.html">Условия использования</a>
         </div>
-        <p>© 2026 GPT4Free Project. All rights reserved.</p>
+        <p>© 2026 Проект GPT4Free. Все права защищены.</p>
     </footer>
 
     <!-- Toast Notification -->

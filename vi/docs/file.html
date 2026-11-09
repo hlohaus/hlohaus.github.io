@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/file.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>G4F - File API Documentation with Web Download and Enhanced File Support</title>
+    <title>G4F - Tài liệu API Tệp với Tải xuống Web và Hỗ trợ Tệp Nâng cao</title>
 
-    <meta name="description" content="GPT4Free documentation for G4F - File API Documentation with Web Download and Enhanced File Support. Complete guides, examples, and API reference for free AI endpoints, code generation, and AI model integration." />
-    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, G4F - File API Documentation with Web Download and Enhanced File Support" />
+    <meta name="description" content="Tài liệu GPT4Free dành cho G4F - Tài liệu API Tệp với Tải xuống Web và Hỗ trợ Tệp Nâng cao. Hướng dẫn đầy đủ, ví dụ và tài liệu tham khảo API cho các điểm cuối AI miễn phí, tạo mã và tích hợp mô hình AI." />
+    <meta name="keywords" content="GPT4Free, G4F, tài liệu AI, API AI miễn phí, thay thế OpenAI, ứng dụng AI JavaScript, thư viện AI Python, tích hợp AI, tạo mã, G4F - Tài liệu API Tệp với Tải xuống Web và Hỗ trợ Tệp Nâng cao" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="G4F - File API Documentation with Web Download and Enhanced File Support | GPT4Free Documentation" />
-    <meta property="og:description" content="GPT4Free documentation for G4F - File API Documentation with Web Download and Enhanced File Support. Free AI endpoints, examples, and comprehensive guides." />
+    <meta property="og:title" content="G4F - Tài liệu API Tệp với Tải xuống Web và Hỗ trợ Tệp Nâng cao | Tài liệu GPT4Free" />
+    <meta property="og:description" content="Tài liệu GPT4Free dành cho G4F - Tài liệu API Tệp với Tải xuống Web và Hỗ trợ Tệp Nâng cao. Các điểm cuối AI miễn phí, ví dụ và hướng dẫn toàn diện." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="G4F - File API Documentation with Web Download and Enhanced File Support | GPT4Free Documentation" />
-    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for G4F - File API Documentation with Web Download and Enhanced File Support." />
+    <meta name="twitter:title" content="G4F - Tài liệu API Tệp với Tải xuống Web và Hỗ trợ Tệp Nâng cao | Tài liệu GPT4Free" />
+    <meta name="twitter:description" content="Các điểm cuối AI miễn phí và tài liệu toàn diện dành cho G4F - Tài liệu API Tệp với Tải xuống Web và Hỗ trợ Tệp Nâng cao." />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -461,7 +461,7 @@
         </nav>
 
         <main role="main" class="markdown-body entry-content" itemprop="text" itemscope itemtype="https://schema.org/TechArticle">
-<h2>G4F - File API Documentation with Web Download and Enhanced File Support</h2>
+<h2>G4F - Tài liệu API Tệp với Tải xuống Web và Hỗ trợ Tệp Nâng cao</h2>
 <p>This document details the enhanced G4F File API, allowing users to upload files, download files from web URLs, and process a wider range of file types for integration with language models.</p>
 <p><strong>Key Improvements:</strong></p>
 <ul>
@@ -502,12 +502,12 @@
 </li>
 </ul>
 <p><strong>Example Usage (Python):</strong></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">requests</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">yêu cầu</span>
 <span class="pl-k">import</span> <span class="pl-s1">uuid</span>
 <span class="pl-k">import</span> <span class="pl-s1">json</span>
 
-<span class="pl-k">def</span> <span class="pl-en">upload_and_process</span>(<span class="pl-s1">files_or_urls</span>, <span class="pl-s1">bucket_id</span><span class="pl-c1">=</span><span class="pl-c1">None</span>):
-    <span class="pl-k">if</span> <span class="pl-s1">bucket_id</span> <span class="pl-c1">is</span> <span class="pl-c1">None</span>:
+<span class="pl-k">def</span> <span class="pl-en">upload_and_process</span>(<span class="pl-s1">files_or_urls</span>, <span class="pl-s1">bucket_id</span><span class="pl-c1">=</span><span class="pl-c1">Không có</span>):
+    <span class="pl-k">if</span> <span class="pl-s1">bucket_id</span> <span class="pl-c1">is</span> <span class="pl-c1">Không có</span>:
         <span class="pl-s1">bucket_id</span> <span class="pl-c1">=</span> <span class="pl-en">str</span>(<span class="pl-s1">uuid</span>.<span class="pl-c1">uuid4</span>())
     
     <span class="pl-k">if</span> <span class="pl-en">isinstance</span>(<span class="pl-s1">files_or_urls</span>, <span class="pl-s1">list</span>): <span class="pl-c">#URLs</span>
@@ -517,7 +517,7 @@
     <span class="pl-k">else</span>:
         <span class="pl-k">raise</span> <span class="pl-en">ValueError</span>(<span class="pl-s">"files_or_urls must be a list of URLs or a dictionary of files"</span>)
 
-    <span class="pl-s1">upload_response</span> <span class="pl-c1">=</span> <span class="pl-s1">requests</span>.<span class="pl-c1">post</span>(<span class="pl-s">f'http://localhost:8080/backend-api/v2/files/<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">bucket_id</span><span class="pl-kos">}</span></span>'</span>, <span class="pl-s1">files</span><span class="pl-c1">=</span><span class="pl-s1">files</span>)
+    <span class="pl-s1">upload_response</span> <span class="pl-c1">=</span> <span class="pl-s1">yêu cầu</span>.<span class="pl-c1">post</span>(<span class="pl-s">f'http://localhost:8080/backend-api/v2/files/<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">bucket_id</span><span class="pl-kos">}</span></span>'</span>, <span class="pl-s1">files</span><span class="pl-c1">=</span><span class="pl-s1">files</span>)
 
     <span class="pl-k">if</span> <span class="pl-s1">upload_response</span>.<span class="pl-c1">status_code</span> <span class="pl-c1">==</span> <span class="pl-c1">200</span>:
         <span class="pl-s1">upload_data</span> <span class="pl-c1">=</span> <span class="pl-s1">upload_response</span>.<span class="pl-c1">json</span>()
@@ -525,7 +525,7 @@
     <span class="pl-k">else</span>:
         <span class="pl-en">print</span>(<span class="pl-s">f"Upload failed: <span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">upload_response</span>.<span class="pl-c1">status_code</span><span class="pl-kos">}</span></span> - <span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">upload_response</span>.<span class="pl-c1">text</span><span class="pl-kos">}</span></span>"</span>)
 
-    <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">requests</span>.<span class="pl-c1">get</span>(<span class="pl-s">f'http://localhost:8080/backend-api/v2/files/<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">bucket_id</span><span class="pl-kos">}</span></span>'</span>, <span class="pl-s1">stream</span><span class="pl-c1">=</span><span class="pl-c1">True</span>, <span class="pl-s1">headers</span><span class="pl-c1">=</span>{<span class="pl-s">'Accept'</span>: <span class="pl-s">'text/event-stream'</span>})
+    <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">yêu cầu</span>.<span class="pl-c1">get</span>(<span class="pl-s">f'http://localhost:8080/backend-api/v2/files/<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">bucket_id</span><span class="pl-kos">}</span></span>'</span>, <span class="pl-s1">stream</span><span class="pl-c1">=</span><span class="pl-c1">True</span>, <span class="pl-s1">headers</span><span class="pl-c1">=</span>{<span class="pl-s">'Accept'</span>: <span class="pl-s">'text/event-stream'</span>})
     <span class="pl-k">for</span> <span class="pl-s1">line</span> <span class="pl-c1">in</span> <span class="pl-s1">response</span>.<span class="pl-c1">iter_lines</span>():
       <span class="pl-k">if</span> <span class="pl-s1">line</span>:
           <span class="pl-s1">line</span> <span class="pl-c1">=</span> <span class="pl-s1">line</span>.<span class="pl-c1">decode</span>(<span class="pl-s">'utf-8'</span>)
@@ -579,7 +579,7 @@
 <p><strong>Example Usage (JavaScript):</strong></p>
 <div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">uuid</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-k">return</span> <span class="pl-kos">(</span><span class="pl-kos">[</span><span class="pl-c1">1e7</span><span class="pl-kos">]</span><span class="pl-c1">+</span><span class="pl-c1">-</span><span class="pl-c1">1e3</span><span class="pl-c1">+</span><span class="pl-c1">-</span><span class="pl-c1">4e3</span><span class="pl-c1">+</span><span class="pl-c1">-</span><span class="pl-c1">8e3</span><span class="pl-c1">+</span><span class="pl-c1">-</span><span class="pl-c1">1e11</span><span class="pl-kos">)</span><span class="pl-kos">.</span><span class="pl-en">replace</span><span class="pl-kos">(</span><span class="pl-pds"><span class="pl-c1">/</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-c1">1</span><span class="pl-c1">8</span><span class="pl-kos">]</span><span class="pl-c1">/</span>g</span><span class="pl-kos">,</span> <span class="pl-s1">c</span> <span class="pl-c1">=&gt;</span>
-      <span class="pl-kos">(</span><span class="pl-s1">c</span> <span class="pl-c1">^</span> <span class="pl-s1">crypto</span><span class="pl-kos">.</span><span class="pl-en">getRandomValues</span><span class="pl-kos">(</span><span class="pl-k">new</span> <span class="pl-v">Uint8Array</span><span class="pl-kos">(</span><span class="pl-c1">1</span><span class="pl-kos">)</span><span class="pl-kos">)</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span> <span class="pl-c1">&amp;</span> <span class="pl-c1">15</span> <span class="pl-c1">&gt;&gt;</span> <span class="pl-s1">c</span> <span class="pl-c1">/</span> <span class="pl-c1">4</span><span class="pl-kos">)</span><span class="pl-kos">.</span><span class="pl-en">toString</span><span class="pl-kos">(</span><span class="pl-c1">16</span><span class="pl-kos">)</span>
+      <span class="pl-kos">(</span><span class="pl-s1">c</span> <span class="pl-c1">^</span> <span class="pl-s1">crypto</span><span class="pl-kos">.</span><span class="pl-en">getRandomValues</span><span class="pl-kos">(</span><span class="pl-k">new</span> <span class="pl-v">Uint8Array</span><span class="pl-kos">(</span><span class="pl-c1">1</span><span class="pl-kos">)</span><span class="pl-kos">)</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span> <span class="pl-c1">&amp;</span> <span class="pl-c1">15</span> <span class="pl-c1">&gt;&gt;</span> <span class="pl-s1">c</span> <span class="pl-c1">/</span> <span class="pl-c1">4</span><span class="pl-kos">)</span><span class="pl-kos">.</span><span class="pl-en">function toString() { [native code] }</span><span class="pl-kos">(</span><span class="pl-c1">16</span><span class="pl-kos">)</span>
     <span class="pl-kos">)</span><span class="pl-kos">;</span>
 <span class="pl-kos">}</span>
 
@@ -587,7 +587,7 @@
     <span class="pl-k">let</span> <span class="pl-s1">bucket_id</span> <span class="pl-c1">=</span> <span class="pl-en">uuid</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// Use a random generated key for your bucket</span>
 
     <span class="pl-k">let</span> <span class="pl-s1">formData</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">FormData</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
-    <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-k">typeof</span> <span class="pl-s1">data</span> <span class="pl-c1">===</span> <span class="pl-s">"object"</span> <span class="pl-c1">&amp;&amp;</span> <span class="pl-s1">data</span><span class="pl-kos">.</span><span class="pl-c1">constructor</span> <span class="pl-c1">===</span> <span class="pl-v">Array</span><span class="pl-kos">)</span> <span class="pl-kos">{</span> <span class="pl-c">//URLs</span>
+    <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-k">typeof</span> <span class="pl-s1">data</span> <span class="pl-c1">===</span> <span class="pl-s">"object"</span> <span class="pl-c1">&amp;&amp;</span> <span class="pl-s1">data</span><span class="pl-kos">.</span><span class="pl-c1">function Object() { [native code] }</span> <span class="pl-c1">===</span> <span class="pl-v">Array</span><span class="pl-kos">)</span> <span class="pl-kos">{</span> <span class="pl-c">//URLs</span>
         <span class="pl-k">const</span> <span class="pl-s1">blob</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">Blob</span><span class="pl-kos">(</span><span class="pl-kos">[</span><span class="pl-c1">JSON</span><span class="pl-kos">.</span><span class="pl-en">stringify</span><span class="pl-kos">(</span><span class="pl-s1">data</span><span class="pl-kos">)</span><span class="pl-kos">]</span><span class="pl-kos">,</span> <span class="pl-kos">{</span> <span class="pl-c1">type</span>: <span class="pl-s">'application/json'</span> <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
         <span class="pl-k">const</span> <span class="pl-s1">file</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">File</span><span class="pl-kos">(</span><span class="pl-kos">[</span><span class="pl-s1">blob</span><span class="pl-kos">]</span><span class="pl-kos">,</span> <span class="pl-s">'downloads.json'</span><span class="pl-kos">,</span> <span class="pl-kos">{</span> <span class="pl-c1">type</span>: <span class="pl-s">'application/json'</span> <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// Create File object</span>
         <span class="pl-s1">formData</span><span class="pl-kos">.</span><span class="pl-en">append</span><span class="pl-kos">(</span><span class="pl-s">'files'</span><span class="pl-kos">,</span> <span class="pl-s1">file</span><span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// Append as a file</span>
@@ -668,11 +668,11 @@
 <div class="highlight highlight-source-shell"><pre class="notranslate">pip install markitdown[all]</pre></div>
 <hr>
 <h3>🐍 Example Usage (Python)</h3>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">requests</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">yêu cầu</span>
 
 <span class="pl-k">def</span> <span class="pl-en">convert_with_markitdown</span>(<span class="pl-s1">file_path</span>):
-    <span class="pl-k">with</span> <span class="pl-en">open</span>(<span class="pl-s1">file_path</span>, <span class="pl-s">'rb'</span>) <span class="pl-k">as</span> <span class="pl-s1">file</span>:
-        <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">requests</span>.<span class="pl-c1">post</span>(<span class="pl-s">'http://localhost:8080/api/markitdown'</span>, <span class="pl-s1">files</span><span class="pl-c1">=</span>{<span class="pl-s">'file'</span>: <span class="pl-s1">file</span>})
+    <span class="pl-k">với</span> <span class="pl-en">open</span>(<span class="pl-s1">file_path</span>, <span class="pl-s">'rb'</span>) <span class="pl-k">as</span> <span class="pl-s1">file</span>:
+        <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">yêu cầu</span>.<span class="pl-c1">post</span>(<span class="pl-s">'http://localhost:8080/api/markitdown'</span>, <span class="pl-s1">files</span><span class="pl-c1">=</span>{<span class="pl-s">'file'</span>: <span class="pl-s1">file</span>})
         <span class="pl-k">if</span> <span class="pl-s1">response</span>.<span class="pl-c1">status_code</span> <span class="pl-c1">==</span> <span class="pl-c1">200</span>:
             <span class="pl-s1">data</span> <span class="pl-c1">=</span> <span class="pl-s1">response</span>.<span class="pl-c1">json</span>()
             <span class="pl-k">return</span> <span class="pl-s1">data</span>[<span class="pl-s">'text'</span>]
@@ -697,7 +697,7 @@
             <span class="pl-c1">body</span>: <span class="pl-s1">formData</span>
         <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
 
-        <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-c1">!</span><span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-c1">ok</span><span class="pl-kos">)</span> <span class="pl-k">throw</span> <span class="pl-k">new</span> <span class="pl-v">Error</span><span class="pl-kos">(</span><span class="pl-s">`HTTP <span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-c1">status</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+        <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-c1">!</span><span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-c1">ok</span><span class="pl-kos">)</span> <span class="pl-k">throw</span> <span class="pl-k">new</span> <span class="pl-v">Lỗi</span><span class="pl-kos">(</span><span class="pl-s">`HTTP <span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-c1">status</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
 
         <span class="pl-k">const</span> <span class="pl-s1">data</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-en">json</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
         <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">"Converted Text:"</span><span class="pl-kos">,</span> <span class="pl-s1">data</span><span class="pl-kos">.</span><span class="pl-c1">text</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
@@ -729,7 +729,7 @@
 }</pre></div>
 <p>Example in Python:</p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
-    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[
+    <span class="pl-s1">tin nhắn</span><span class="pl-c1">=</span>[
         {
             <span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>,
             <span class="pl-s">"content"</span>: [

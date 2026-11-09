@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/image_editing.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GPT4Free Image Editing Variation Documentation</title>
+    <title>Dokumentacja edycji obrazów i wariacji GPT4Free</title>
 
-    <meta name="description" content="Learn how to use GPT4Free's Image Editing Variation feature to generate image variations using multiple AI providers. Includes code examples, file upload usage, troubleshooting, and example outputs." />
-    <meta name="keywords" content="GPT4Free, image editing, AI image variation, AI providers, PollinationsAI, Together, HuggingSpace, Azure, OpenAI, Copilot, image upload, AI image generation" />
+    <meta name="description" content="Dowiedz się, jak używać funkcji edycji obrazów i wariacji GPT4Free do generowania wariacji obrazów przy użyciu wielu dostawców AI. Zawiera przykłady kodu, użycie przesyłania plików, rozwiązywanie problemów i przykładowe wyniki." />
+    <meta name="keywords" content="GPT4Free, edycja obrazów, wariacja obrazu AI, dostawcy AI, PollinationsAI, Together, HuggingSpace, Azure, OpenAI, Copilot, przesyłanie obrazów, generowanie obrazów AI" />
     <meta name="author" content="GPT4Free Team"/>
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="GPT4Free Image Editing Variation Documentation | GPT4Free Documentation" />
-    <meta property="og:description" content="GPT4Free documentation for GPT4Free Image Editing Variation Documentation. Free AI endpoints, examples, and comprehensive guides." />
+    <meta property="og:title" content="Dokumentacja edycji obrazów i wariacji GPT4Free | Dokumentacja GPT4Free" />
+    <meta property="og:description" content="Dokumentacja GPT4Free dla dokumentacji edycji obrazów i wariacji GPT4Free. Darmowe punkty końcowe AI, przykłady i kompleksowe przewodniki." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="GPT4Free Image Editing Variation Documentation | GPT4Free Documentation" />
-    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for GPT4Free Image Editing Variation Documentation." />
+    <meta name="twitter:title" content="Dokumentacja edycji obrazów i wariacji GPT4Free | Dokumentacja GPT4Free" />
+    <meta name="twitter:description" content="Darmowe punkty końcowe AI i kompleksowa dokumentacja dla dokumentacji edycji obrazów i wariacji GPT4Free." />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -462,7 +462,7 @@
         </nav>
 
         <main role="main" class="markdown-body entry-content" itemprop="text" itemscope itemtype="https://schema.org/TechArticle">
-<h2>GPT4Free Image Editing Variation Documentation</h2>
+<h2>Dokumentacja edycji obrazów i wariacji GPT4Free</h2>
 <p>This guide explains how to use the image editing variation feature in <strong>GPT4Free (g4f.dev)</strong>. It covers generating variations of images using different providers, handling local file uploads, and showcasing example results.</p>
 <hr>
 <h2>Table of Contents</h2>
@@ -473,7 +473,7 @@
 <li><a href="#example-results">Example Results</a></li>
 <li><a href="#code-examples">Code Examples</a></li>
 <li><a href="#troubleshooting">Troubleshooting</a></li>
-<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#conclusion">Podsumowanie</a></li>
 </ol>
 <hr>
 <h2>Overview</h2>
@@ -489,7 +489,7 @@
 <markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
-<th>Provider</th>
+<th>Dostawca</th>
 <th>Input Type</th>
 <th>Notes</th>
 </tr>
@@ -497,12 +497,12 @@
 <tbody>
 <tr>
 <td><strong>PollinationsAI</strong></td>
-<td>URL</td>
+<td>Adres URL</td>
 <td>Uses <code class="notranslate">flux-kontext</code> model</td>
 </tr>
 <tr>
 <td><strong>Together</strong></td>
-<td>URL</td>
+<td>Adres URL</td>
 <td>Uses <code class="notranslate">flux-kontext-pro</code> model</td>
 </tr>
 <tr>
@@ -630,7 +630,7 @@
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
 <span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">AsyncClient</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">OpenaiAccount</span>, <span class="pl-v">CopilotAccount</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Dostawca</span> <span class="pl-k">import</span> <span class="pl-v">OpenaiAccount</span>, <span class="pl-v">CopilotAccount</span>
 
 <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>()
 
@@ -657,7 +657,7 @@
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
 <span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">AsyncClient</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">HuggingSpace</span>, <span class="pl-v">Azure</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Dostawca</span> <span class="pl-k">import</span> <span class="pl-v">HuggingSpace</span>, <span class="pl-v">Azure</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">cookies</span> <span class="pl-k">import</span> <span class="pl-s1">read_cookie_files</span>
 
 <span class="pl-c"># Read cookies and environment variables</span>
@@ -689,7 +689,7 @@
 <h3>URL-based Providers</h3>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
 <span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-s1">client</span> <span class="pl-k">import</span> <span class="pl-v">AsyncClient</span>
-<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Provider</span> <span class="pl-k">import</span> <span class="pl-v">PollinationsAI</span>, <span class="pl-v">Together</span>
+<span class="pl-k">from</span> <span class="pl-s1">g4f</span>.<span class="pl-v">Dostawca</span> <span class="pl-k">import</span> <span class="pl-v">PollinationsAI</span>, <span class="pl-v">Together</span>
 
 <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">AsyncClient</span>()
 
@@ -723,7 +723,7 @@
 <li><strong>Model Compatibility</strong>: Not all models support all features</li>
 </ul>
 <hr>
-<h2>Conclusion</h2>
+<h2>Podsumowanie</h2>
 <p>GPT4Free offers flexible image variation generation through multiple providers. Key features include:</p>
 <ul>
 <li>Support for both local and remote images</li>
