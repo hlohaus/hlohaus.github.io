@@ -46,8 +46,8 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/members.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G4F - Περιοχή Μελών</title>
-    <meta name="description" content="GPT4Free Περιοχή Μελών - Διαχειριστείτε τα κλειδιά API σας, δείτε στατιστικά χρήσης και αποκτήστε πρόσβαση σε προχωρημένες δυνατότητες." />
+    <title>G4F - Members Area</title>
+    <meta name="description" content="GPT4Free Members Area - Manage your API keys, view usage stats, and access premium features." />
     <link rel="icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="shortcut icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/dist/img/g4f.svg">
@@ -1344,14 +1344,14 @@
     <header class="navbar" role="banner" id="navbar">
         <a href="/" class="logo">G4<span>F</span></a>
         <nav class="nav-links" role="navigation">
-            <a href="/">Αρχική</a>
-            <a href="/docs/" title="Βοήθεια">Τεκμηρίωση</a>
+            <a href="/">Home</a>
+            <a href="/docs/" title="Documentation">Docs</a>
             <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
             <div class="user-info" id="navUserInfo" style="display: none;">
-                <img class="user-avatar" id="navAvatar" src="" alt="Προφίλ">
+                <img class="user-avatar" id="navAvatar" src="" alt="User avatar">
                 <span id="navUsername"></span>
             </div>
-            <a href="/chat/" class="nav-cta">Ξεκίνα συζήτηση</a>
+            <a href="/chat/" class="nav-cta">Start Chat</a>
         </nav>
     </header>
 
@@ -1359,30 +1359,30 @@
         <div class="connection-error" id="connectionError" role="alert" hidden></div>
         <!-- Redirect Login Section (shown when redirect parameter is present) -->
         <section class="login-section" id="redirectLoginSection" style="display: none;">
-            <h1>Απαιτείται Σύνδεση</h1>
-            <p>Συνδεθείτε για να συνεχίσετε στην εφαρμογή σας. Μετά τη σύνδεση, θα ανακατευθυνθείτε πίσω με ένα κλειδί API.</p>
+            <h1>Login Required</h1>
+            <p>Sign in to continue to your application. After signing in, you'll be redirected back with an API key.</p>
             <p style="color: var(--secondary); font-size: 0.9rem;" id="redirectTarget"></p>
             
             <div class="login-buttons">
                 <button class="oauth-btn g4f" id="redirectLoginG4f">
-                    🔮 Είσοδος με λογαριασμό G4F
+                    🔮 Sign in with G4F Account
                 </button>
             </div>
         </section>
 
         <!-- Login Section (shown when not logged in) -->
         <section class="login-section" id="loginSection">
-            <h1>Περιοχή Μελών</h1>
-            <p>Συνδεθείτε για να έχετε πρόσβαση στο ταμπλό σας, να διαχειριστείτε τα κλειδιά API και να δείτε τις στατιστικές χρήσης.</p>
+            <h1>Members Area</h1>
+            <p>Sign in to access your dashboard, manage API keys, and view usage statistics.</p>
             
             <div class="login-buttons">
                 <button class="oauth-btn g4f" id="loginG4f">
-                    🔮 Είσοδος με λογαριασμό G4F
+                    🔮 Sign in with G4F Account
                 </button>
             </div>
             
             <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(255,255,255,0.5);">
-                Με τη σύνδεση σας, συμφωνείτε με τους <a href="#" style="color: var(--secondary);">Όρους Υπηρεσίας</a> και <a href="#" style="color: var(--secondary);">Πολιτική Απορρήτου</a>.
+                By signing in, you agree to our <a href="#" style="color: var(--secondary);">Terms of Service</a> and <a href="#" style="color: var(--secondary);">Privacy Policy</a>.
             </p>
         </section>
 
@@ -1391,19 +1391,19 @@
         <div class="discord-upgrade-banner" id="discordUpgradeBanner" hidden>
             <div class="discord-banner-icon"><i class="fab fa-discord" aria-hidden="true"></i></div>
             <div class="discord-banner-content">
-                <h2 id="discordUpgradeTitle">ΑνHECK unlock the Free tier instantly</h2>
+                <h2 id="discordUpgradeTitle">Unlock the Free tier instantly</h2>
                 <p id="discordUpgradeText">
-                    Συνδέστε το Discord και ενταχθείτε στον διακομιστή υποστήριξης G4F — θα επαληθεύσουμε την συμμετοχή σας και θα αναβαθμίσουμε τον λογαριασμό σας αμέσως.
+                    Connect Discord and join the G4F support server — we will verify your membership and upgrade your account right away.
                 </p>
                 <div class="discord-steps" id="discordUpgradeSteps">
-                    <span class="discord-step" data-step="connect"><i class="fas fa-circle" aria-hidden="true"></i> Flexible lifestyle and personal growth</span>
+                    <span class="discord-step" data-step="connect"><i class="fas fa-circle" aria-hidden="true"></i> Connect Discord</span>
                     <span class="discord-step" data-step="join"><i class="fas fa-circle" aria-hidden="true"></i> Join support server</span>
                     <span class="discord-step" data-step="upgrade"><i class="fas fa-circle" aria-hidden="true"></i> Upgrade to Free</span>
                 </div>
             </div>
             <div class="discord-banner-actions">
                 <a class="btn-discord btn" id="discordConnectBtn" href="#" rel="noopener">
-                    <i class="fab fa-discord"></i> Flexible lifestyle and personal growth
+                    <i class="fab fa-discord"></i> Connect Discord
                 </a>
                 <a class="btn btn-secondary" id="discordJoinBtn" href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-arrow-up-right-from-square"></i> Join Support Server
@@ -1418,38 +1418,38 @@
         <section class="dashboard" id="dashboard">
             <div class="welcome-header">
                 <div>
-                    <h1>Καλώς ήρθες, <span id="userName">Χρήστης</span>! 👋</h1>
-                    <p style="margin: 0; color: rgba(255,255,255,0.6);">Διαχειριστείτε τα κλειδιά API σας και παρακολουθήστε τη χρήση σας</p>
+                    <h1>Welcome back, <span id="userName">User</span>! 👋</h1>
+                    <p style="margin: 0; color: rgba(255,255,255,0.6);">Manage your API keys and monitor your usage</p>
                 </div>
                 <button class="logout-btn" id="logoutBtn">
-                    <i class="fas fa-sign-out-alt"></i> Αποσύνδεση
+                    <i class="fas fa-sign-out-alt"></i> Sign Out
                 </button>
             </div>
 
             <div class="dashboard-grid">
                 <!-- Usage Stats Card -->
                 <div class="card">
-                    <h2><span class="icon">📊</span> Στατιστικά χρήσης</h2>
+                    <h2><span class="icon">📊</span> Usage Statistics</h2>
                     <div class="stats-grid">
                         <div class="stat-item">
                             <div class="stat-value" id="statRequests">0</div>
-                            <div class="stat-label">Αιτήσεις API</div>
+                            <div class="stat-label">API Requests</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statTokens">0</div>
-                            <div class="stat-label">Tokens που χρησιμοποιήθηκαν</div>
+                            <div class="stat-label">Tokens Used</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statImages">0</div>
-                            <div class="stat-label">Εικόνες που δημιουργήθηκαν</div>
+                            <div class="stat-label">Images Generated</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statChats">0</div>
-                            <div class="stat-label">Συνεδρίες συνομιλιών</div>
+                            <div class="stat-label">Chat Sessions</div>
                         </div>
-                        <div class="stat-item" title="Μονάδες που κερδίζονται με το ψήσιμο κέικ proof-of-work. Κάθε ψημένο κέικ = 0,05 $.">
+                        <div class="stat-item" title="Credits earned by baking proof-of-work cakes. Each baked cake = $0.05.">
                             <div class="stat-value" id="statCredits">$0.00</div>
-                            <div class="stat-label">Μονάδες Cake</div>
+                            <div class="stat-label">Cake Credits</div>
                         </div>
                     </div>
                     <div class="usage-chart">
@@ -1467,35 +1467,35 @@
                 
                 <!-- API Key Card -->
                 <div class="card">
-                    <h2><span class="icon">🔑</span> Κλειδί API</h2>
+                    <h2><span class="icon">🔑</span> API Key</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Χρησιμοποιήστε αυτό το κλειδί για να πιστοποιήσετε τις αιτήσεις API σας
+                        Use this key to authenticate your API requests
                     </p>
                     <div class="api-key-container">
                         <div class="api-key-display">
-                            <input type="password" class="api-key-input" id="apiKeyInput" readonly placeholder="Κάντε κλικ στο 'Δημιουργία' για να δημιουργήσετε ένα κλειδί API">
-                            <button class="btn btn-secondary btn-small" id="toggleKeyBtn" title="Εμφάνιση/Απόκρυψη">
+                            <input type="password" class="api-key-input" id="apiKeyInput" readonly placeholder="Click 'Generate' to create an API key">
+                            <button class="btn btn-secondary btn-small" id="toggleKeyBtn" title="Show/Hide">
                                 <i class="fas fa-eye"></i>
                             </button>
-                            <button class="btn btn-secondary btn-small" id="copyKeyBtn" title="Αντιγραφή">
+                            <button class="btn btn-secondary btn-small" id="copyKeyBtn" title="Copy">
                                 <i class="fas fa-copy"></i>
                             </button>
                         </div>
-                        <p>Λήγει: <span id="apiKeyExpires">-</span></p>
+                        <p>Expires: <span id="apiKeyExpires">-</span></p>
                         <button class="btn" id="generateKeyBtn" style="width: 100%;">
-                            <i class="fas fa-sync-alt"></i> Δημιουργία Νέου Κλειδιού
+                            <i class="fas fa-sync-alt"></i> Generate New Key
                         </button>
-                        <div class="base-url-label" style="margin-top: 1rem;">Βασική Διεύθυνση URL</div>
+                        <div class="base-url-label" style="margin-top: 1rem;">Base URL</div>
                         <div class="base-url" id="baseUrl">https://g4f.space/v1</div>
                     </div>
                 </div>
                 
                 <!-- Account Info Card -->
                 <div class="card">
-                    <h2><span class="icon">👤</span> Πληροφορίες λογαριασμού</h2>
+                    <h2><span class="icon">👤</span> Account Information</h2>
                     <div class="account-info">
                         <div class="info-row">
-                            <span class="info-label">Όνομα Χρήστη</span>
+                            <span class="info-label">Username</span>
                             <span class="info-value" id="accountUsername">-</span>
                         </div>
                         <div class="info-row">
@@ -1503,7 +1503,7 @@
                             <span class="info-value" id="accountEmail">-</span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Πάροχος</span>
+                            <span class="info-label">Provider</span>
                             <span class="info-value" id="accountProvider">
                                 <span class="provider-badge github">
                                     <i class="fab fa-github"></i> GitHub
@@ -1511,22 +1511,22 @@
                             </span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Πλάνο</span>
+                            <span class="info-label">Plan</span>
                             <span class="info-value">
-                                <span class="badge free" id="accountPlan">Δωρεάν</span>
+                                <span class="badge free" id="accountPlan">Free</span>
                             </span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Όρια Επίπεδου</span>
+                            <span class="info-label">Tier Limits</span>
                             <span class="info-value">
                                 <div class="tier-limits" id="tier-limits-row">
-                                    <span id="max-tokens-text" title="Token: φόρτωση..."><i class="fa-solid fa-coins" aria-hidden="true"></i> —</span>
-                                    <span id="max-requests-text" title="Αιτήματα: φόρτωση..."><i class="fa-solid fa-list" aria-hidden="true"></i> —</span>
+                                    <span id="max-tokens-text" title="Tokens: loading..."><i class="fa-solid fa-coins" aria-hidden="true"></i> —</span>
+                                    <span id="max-requests-text" title="Requests: loading..."><i class="fa-solid fa-list" aria-hidden="true"></i> —</span>
                                 </div>
                             </span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Μέλος Από</span>
+                            <span class="info-label">Member Since</span>
                             <span class="info-value" id="accountJoined">-</span>
                         </div>
                     </div>
@@ -1534,13 +1534,13 @@
                 
                 <!-- Recent Activity Card -->
                 <div class="card">
-                    <h2><span class="icon">⚡</span> Πρόσφατη Δραστηριότητα</h2>
+                    <h2><span class="icon">⚡</span> Recent Activity</h2>
                     <ul class="activity-list" id="activityList">
                         <li class="activity-item">
                             <div class="activity-icon chat">💬</div>
                             <div class="activity-details">
-                                <div class="activity-title">Η συνομιλία ξεκίνησε</div>
-                                <div class="activity-time">Δεν υπάρχει ακόμη δραστηριότητα</div>
+                                <div class="activity-title">Chat session started</div>
+                                <div class="activity-time">No activity yet</div>
                             </div>
                         </li>
                     </ul>
@@ -1548,25 +1548,25 @@
                 
                 <!-- Custom Servers Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🖥️</span> Προσαρμοσμένοι διακομιστές</h2>
+                    <h2><span class="icon">🖥️</span> Custom Servers</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Προσθέστε τους δικούς σας διακομιστές AI για δρομολόγηση μοντέλων. Τα tokens μετρούνται ανά διακομιστή.
+                        Add your own AI servers for model routing. Tokens are counted per server.
                     </p>
                     
                     <!-- Server List -->
                     <div id="serversList" class="servers-list">
                         <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">
-                            Φόρτωση διακομιστών...
+                            Loading servers...
                         </p>
                     </div>
                     
                     <!-- Add Server Button -->
                     <div style="display: flex; gap: 1rem; margin-top: 1rem;">
                         <button class="btn" id="addServerBtn" style="flex: 1;">
-                            <i class="fas fa-plus"></i> Προσθήκη Διακομιστή
+                            <i class="fas fa-plus"></i> Add Server
                         </button>
                         <button class="oauth-btn puter" id="addPuterServerBtn" style="flex: 1;">
-                            🤖 Προσθήκη Puter
+                            🤖 Add Puter
                         </button>
                     </div>
                 </div>
@@ -1575,47 +1575,47 @@
                 <div class="modal" id="serverModal" style="display: none;">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 id="serverModalTitle">Προσθήκη νέου διακομιστή</h3>
+                            <h3 id="serverModalTitle">Add New Server</h3>
                             <button class="modal-close" id="closeServerModal">&times;</button>
                         </div>
                         <form id="serverForm">
                             <div class="form-group">
-                                <label for="serverLabel">Ετικέτα</label>
-                                <input type="text" id="serverLabel" class="form-input" placeholder="Ο Προσαρμοσμένος Μου Διακομιστής" required>
+                                <label for="serverLabel">Label</label>
+                                <input type="text" id="serverLabel" class="form-input" placeholder="My Custom Server" required>
                             </div>
                             <div class="form-group">
-                                <label for="serverBaseUrl">Βασική Διεύθυνση URL</label>
+                                <label for="serverBaseUrl">Base URL</label>
                                 <input type="url" id="serverBaseUrl" class="form-input" placeholder="https://api.example.com/v1" required>
-                                <small style="color: rgba(255,255,255,0.5);">Τερματικό σημείο API συμβατό με OpenAI</small>
+                                <small style="color: rgba(255,255,255,0.5);">OpenAI-compatible API endpoint</small>
                             </div>
                             <div class="form-group">
-                                <label for="serverApiKeys">Κλειδιά API (ένα ανά γραμμή)</label>
+                                <label for="serverApiKeys">API Keys (one per line)</label>
                                 <textarea id="serverApiKeys" class="form-input" rows="3" placeholder="sk-xxx...&#10;sk-yyy..."></textarea>
-                                <small style="color: rgba(255,255,255,0.5);">Πολλαπλά κλειδιά για ισορροπία φόρτου. Αφήστε κενό αν δεν απαιτείται αυθεντικοποίηση.</small>
+                                <small style="color: rgba(255,255,255,0.5);">Multiple keys for load balancing. Leave empty if no auth required.</small>
                             </div>
                             <div class="form-group">
-                                <label for="serverModels">Επιτρεπόμενα Μοντέλα (ένα ανά γραμμή, προαιρετικά)</label>
+                                <label for="serverModels">Allowed Models (one per line, optional)</label>
                                 <textarea id="serverModels" class="form-input" rows="3" placeholder="gpt-4&#10;gpt-3.5-turbo"></textarea>
-                                <small style="color: rgba(255,255,255,0.5);">Αφήστε κενό για να επιτρέπονται όλα τα μοντέλα. Θα εντοπιστεί αυτόματα από τον διακομιστή.</small>
+                                <small style="color: rgba(255,255,255,0.5);">Leave empty to allow all models. Will auto-detect from server.</small>
                             </div>
                             <div class="form-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="serverAutoUpdateModels" checked>
-                                    <span>Αυτόματη ενημέρωση της λίστας επιτρεπόμενων μοντέλων από τον διακομιστή</span>
+                                    <span>Auto-update allowed models list from server</span>
                                 </label>
-                                <small style="color: rgba(255,255,255,0.5);">Όταν είναι ενεργοποιημένο, η λίστα επιτρεπόμενων μοντέλων ενημερώνεται αυτόματα από το endpoint /models του διακομιστή.</small>
+                                <small style="color: rgba(255,255,255,0.5);">When enabled, the allowed models list is automatically refreshed from the server's /models endpoint.</small>
                             </div>
                             <div class="form-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="serverPublic">
-                                    <span>Κάνε τον διακομιστή δημόσιο (ορατό σε άλλους χρήστες)</span>
+                                    <span>Make server public (visible to other users)</span>
                                 </label>
                             </div>
                             <div id="serverValidation" class="validation-status" style="display: none;"></div>
                             <div class="form-actions">
-                                <button type="button" class="btn btn-secondary" id="cancelServerBtn">Ακύρωση</button>
+                                <button type="button" class="btn btn-secondary" id="cancelServerBtn">Cancel</button>
                                 <button type="submit" class="btn" id="saveServerBtn">
-                                    <i class="fas fa-check"></i> Αποθήκευση Διακομιστή
+                                    <i class="fas fa-check"></i> Save Server
                                 </button>
                             </div>
                             <input type="hidden" id="editServerId" value="">
@@ -1626,16 +1626,16 @@
                 <!-- API Keys Management Card -->
                 <div class="card" style="grid-column: 1 / -1;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                        <h2 style="margin: 0;"><span class="icon">🗝️</span> Διαχείριση κλειδιών API</h2>
+                        <h2 style="margin: 0;"><span class="icon">🗝️</span> Manage API Keys</h2>
                         <button class="btn btn-small" id="addApiKeyBtn">
-                            <i class="fas fa-plus"></i> Νέο Κλειδί
+                            <i class="fas fa-plus"></i> New Key
                         </button>
                     </div>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Δημιουργήστε και διαχειριστείτε πολλαπλά κλειδιά API για διαφορετικές εφαρμογές ή περιβάλλοντα.
+                        Create and manage multiple API keys for different applications or environments.
                     </p>
                     <div id="apiKeysList" class="api-keys-list">
-                        <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">Φόρτωση κλειδιών API...</p>
+                        <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">Loading API keys...</p>
                     </div>
                 </div>
 
@@ -1643,45 +1643,45 @@
                 <div class="modal" id="apiKeyModal" style="display: none;">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 id="apiKeyModalTitle">Δημιουργία κλειδιού API</h3>
+                            <h3 id="apiKeyModalTitle">Create API Key</h3>
                             <button class="modal-close" id="closeApiKeyModalBtn">&times;</button>
                         </div>
 
                         <!-- Shown after successful create / rotate -->
                         <div id="apiKeyNewDisplay" style="display: none;">
                             <div class="validation-status success" style="margin-bottom: 1rem;">
-                                <i class="fas fa-check-circle"></i> Κλειδί έτοιμο — αντιγράψτε το τώρα, δεν θα εμφανιστεί ξανά.
+                                <i class="fas fa-check-circle"></i> Key ready — copy it now, it won't be shown again.
                             </div>
                             <div class="api-key-display">
                                 <input type="text" class="api-key-input" id="newApiKeyValue" readonly>
-                                <button class="btn btn-secondary btn-small" id="copyNewApiKeyBtn" title="Αντιγραφή">
+                                <button class="btn btn-secondary btn-small" id="copyNewApiKeyBtn" title="Copy">
                                     <i class="fas fa-copy"></i>
                                 </button>
                             </div>
                             <div class="form-actions">
-                                <button class="btn" id="doneApiKeyBtn"><i class="fas fa-check"></i> Ολοκλήρωση</button>
+                                <button class="btn" id="doneApiKeyBtn"><i class="fas fa-check"></i> Done</button>
                             </div>
                         </div>
 
                         <!-- Create / Edit form -->
                         <form id="apiKeyForm">
                             <div class="form-group">
-                                <label for="apiKeyName">Όνομα / Ετικέτα</label>
-                                <input type="text" id="apiKeyName" class="form-input" placeholder="π.χ. Η Εφαρμογή μου, Παραγωγή, Δοκιμή" maxlength="80" required>
+                                <label for="apiKeyName">Name / Label</label>
+                                <input type="text" id="apiKeyName" class="form-input" placeholder="e.g. My App, Production, Testing" maxlength="80" required>
                             </div>
                             <div class="form-group" id="apiKeyExpiryGroup">
-                                <label for="apiKeyExpiry">Λήξη</label>
+                                <label for="apiKeyExpiry">Expiry</label>
                                 <select id="apiKeyExpiry" class="form-input">
-                                    <option value="30">30 ημέρες</option>
-                                    <option value="90" selected>90 ημέρες</option>
-                                    <option value="365">1 χρόνο</option>
-                                    <option value="0">Χωρίς λήξη</option>
+                                    <option value="30">30 days</option>
+                                    <option value="90" selected>90 days</option>
+                                    <option value="365">1 year</option>
+                                    <option value="0">No expiry</option>
                                 </select>
                             </div>
                             <div class="form-actions">
-                                <button type="button" class="btn btn-secondary" id="cancelApiKeyModalBtn">Ακύρωση</button>
+                                <button type="button" class="btn btn-secondary" id="cancelApiKeyModalBtn">Cancel</button>
                                 <button type="submit" class="btn" id="saveApiKeyBtn">
-                                    <i class="fas fa-plus"></i> Δημιουργία Κλειδιού
+                                    <i class="fas fa-plus"></i> Create Key
                                 </button>
                             </div>
                             </form>
@@ -1690,53 +1690,53 @@
 
                 <!-- Quick Links Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🚀</span> Γρήγορες ενέργειες</h2>
+                    <h2><span class="icon">🚀</span> Quick Actions</h2>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
                         <button class="btn">
-                            <i class="fas fa-comments"></i> <a href="/chat/">Άνοιγμα συνομιλίας</a>
+                            <i class="fas fa-comments"></i> <a href="/chat/">Open Chat</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fas fa-book"></i> <a href="/docs/">Τεκμηρίωση API</a>
+                            <i class="fas fa-book"></i> <a href="/docs/">API Documentation</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fas fa-heart"></i> <a href="https://github.com/sponsors/hlohaus" target="_blank">Γίνετε χορηγός</a>
+                            <i class="fas fa-heart"></i> <a href="https://github.com/sponsors/hlohaus" target="_blank">Become a Sponsor</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fab fa-github"></i> <a href="https://github.com/xtekky/gpt4free" target="_blank">Προβολή στο GitHub</a>
+                            <i class="fab fa-github"></i> <a href="https://github.com/xtekky/gpt4free" target="_blank">View on GitHub</a>
                         </button>
                     </div>
                 </div>
 
                 <!-- Cross-Device Secret Sync Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🔐</span> Συγχρονισμός μυστικών μεταξύ συσκευών</h2>
+                    <h2><span class="icon">🔐</span> Cross-Device Secret Sync</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Το μυστικό χώρου εργασίας σας ενεργοποιεί τη συγχρονισμένη κρυπτογραφημένη συνομιλία μεταξύ συσκευών. Αυτή η συσκευή επιβεβαιώνει αυτόματα αιτήματα από άλλες συνδεδεμένες συσκευές σας.
+                        Your workspace secret enables encrypted conversation sync across devices. This device automatically confirms requests from your other logged-in devices.
                     </p>
                     <div id="secretSyncStatus" style="padding: 0.75rem 1rem; border-radius: 8px; background: rgba(255,255,255,0.05); margin-bottom: 1rem; font-size: 0.9rem;">
-                        <span class="loading"></span> Ελέγχω το μυστικό χώρου εργασίας...
+                        <span class="loading"></span> Checking workspace secret...
                     </div>
                     <button class="btn btn-secondary" id="secretRequestBtn" style="display: none;">
-                        <i class="fa-solid fa-satellite-dish"></i> Αίτημα Μυστικού από Συνδεδεμένη Συσκευή
+                        <i class="fa-solid fa-satellite-dish"></i> Request Secret from Online Device
                     </button>
                 </div>
 
                 <!-- Danger Zone Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">⚠️</span> Ζώνη Κινδύνου</h2>
+                    <h2><span class="icon">⚠️</span> Danger Zone</h2>
                     <div id="dangerZoneContent" class="danger-zone">
                         <div id="scheduledDeletionNotice" class="deletion-countdown" style="display: none;">
-                            <strong>⏳ Η διαγραφή του λογαριασμού προγραμματίστηκε</strong>
-                            <span id="deletionCountdownText">Ο λογαριασμός σας θα διαγραφεί σε...</span>
+                            <strong>⏳ Account deletion scheduled</strong>
+                            <span id="deletionCountdownText">Your account will be deleted in...</span>
                         </div>
-                        <h3>Διαγραφή Λογαριασμού</h3>
-                        <p>Διαγράψτε οριστικά τον λογαριασμό σας, τους κλειδιά API και όλα τα συνδεδεμένα δεδομένα. Εφαρμόζεται περίοδος χάριτος 24 ωρών — μπορείτε να ακυρώσετε κατά τη διάρκεια αυτής της περιόδου.</p>
+                        <h3>Delete Account</h3>
+                        <p>Permanently delete your account, API keys, and all associated data. A 24-hour grace period applies — you can cancel during this time.</p>
                         <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                             <button class="btn-danger" id="deleteAccountBtn">
-                                <i class="fas fa-trash"></i> Διαγραφή Λογαριασμού
+                                <i class="fas fa-trash"></i> Delete Account
                             </button>
                             <button class="btn btn-secondary" id="cancelDeleteAccountBtn" style="display: none;">
-                                <i class="fas fa-undo"></i> Ακύρωση Διαγραφής
+                                <i class="fas fa-undo"></i> Cancel Deletion
                             </button>
                         </div>
                     </div>
@@ -1747,16 +1747,16 @@
 
     <footer>
         <div class="footer-links">
-            <a href="/docs/">Βοήθεια</a>
-            <a href="/chat/">Συνομιλία</a>
-            <a href="/members.html">Μέλη</a>
-            <a href="/manifesto">Δήλωση</a>
+            <a href="/docs/">Documentation</a>
+            <a href="/chat/">Chat</a>
+            <a href="/members.html">Members</a>
+            <a href="/manifesto">Manifesto</a>
             <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="/community">Κοινότητα</a>
-            <a href="/privacy.html">Πολιτική Απορρήτου</a>
-            <a href="/terms.html">Όρους Υπηρεσίας</a>
+            <a href="/community">Community</a>
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
         </div>
-        <p>© 2026 GPT4Free Project. Όλα τα δικαιώματα διατηρούνται.</p>
+        <p>© 2026 GPT4Free Project. All rights reserved.</p>
     </footer>
 
     <!-- Toast Notification -->

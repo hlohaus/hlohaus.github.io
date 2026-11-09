@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/backend_api_documentation.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>G4F - توثيق واجهة برمجة التطبيقات الخلفية</title>
+    <title>G4F - Backend API Documentation</title>
 
-    <meta name="description" content="توثيق GPT4Free لـ G4F - توثيق واجهة برمجة التطبيقات الخلفية. أدلة كاملة، وأمثلة، ومرجع واجهة برمجة التطبيقات لنقاط نهاية مجانية للذكاء الاصطناعي، وتوليد الكود، وتكامل نماذج الذكاء الاصطناعي." />
-    <meta name="keywords" content="توثيق GPT4Free, G4F, الذكاء الاصطناعي, واجهة برمجة تطبيقات ذكاء اصطناعي مجانية, بديل OpenAI, عميل JavaScript للذكاء الاصطناعي, مكتبة Python للذكاء الاصطناعي, تكامل الذكاء الاصطناعي, توليد الكود, توثيق واجهة برمجة التطبيقات الخلفية لـ G4F" />
+    <meta name="description" content="GPT4Free documentation for G4F - Backend API Documentation. Complete guides, examples, and API reference for free AI endpoints, code generation, and AI model integration." />
+    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, G4F - Backend API Documentation" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="G4F - توثيق واجهة برمجة التطبيقات الخلفية | توثيق GPT4Free" />
-    <meta property="og:description" content="توثيق GPT4Free لـ G4F - توثيق واجهة برمجة التطبيقات الخلفية. نقاط نهاية الذكاء الاصطناعي المجانية، الأمثلة، والدليل الشامل." />
+    <meta property="og:title" content="G4F - Backend API Documentation | GPT4Free Documentation" />
+    <meta property="og:description" content="GPT4Free documentation for G4F - Backend API Documentation. Free AI endpoints, examples, and comprehensive guides." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="G4F - توثيق واجهة برمجة التطبيقات الخلفية | توثيق GPT4Free" />
-    <meta name="twitter:description" content="نقاط نهاية الذكاء الاصطناعي المجانية والتوثيق الشامل لواجهة برمجة التطبيقات الخلفية لـ G4F." />
+    <meta name="twitter:title" content="G4F - Backend API Documentation | GPT4Free Documentation" />
+    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for G4F - Backend API Documentation." />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -461,7 +461,7 @@
         </nav>
 
         <main role="main" class="markdown-body entry-content" itemprop="text" itemscope itemtype="https://schema.org/TechArticle">
-<h1>G4F - توثيق واجهة برمجة التطبيقات الخلفية</h1>
+<h1>G4F - Backend API Documentation</h1>
 <h2>Overview</h2>
 <p>This documentation covers the <code class="notranslate">backend_api.py</code> module in the GPT4Free project, which serves as the core backend API handler for the web interface. It provides endpoints for interacting with language models, managing files, handling conversations, and processing media.</p>
 <h2>API Endpoints</h2>
@@ -576,7 +576,7 @@ GET /media/&lt;path:name&gt;
   <span class="pl-c1">body</span>: <span class="pl-c1">JSON</span><span class="pl-kos">.</span><span class="pl-en">stringify</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
     <span class="pl-c1">model</span>: <span class="pl-s">'gpt-3.5-turbo'</span><span class="pl-kos">,</span>
     <span class="pl-c1">provider</span>: <span class="pl-s">'OpenAI'</span><span class="pl-kos">,</span>
-    <span class="pl-c1">رسائل</span>: <span class="pl-kos">[</span>
+    <span class="pl-c1">messages</span>: <span class="pl-kos">[</span>
       <span class="pl-kos">{</span><span class="pl-c1">role</span>: <span class="pl-s">'user'</span><span class="pl-kos">,</span> <span class="pl-c1">content</span>: <span class="pl-s">'What is artificial intelligence?'</span><span class="pl-kos">}</span>
     <span class="pl-kos">]</span>
   <span class="pl-kos">}</span><span class="pl-kos">)</span>

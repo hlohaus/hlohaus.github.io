@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/legacy.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>G4F - लेगेसी API</title>
+    <title>G4F - Legacy API</title>
 
-    <meta name="description" content="G4F - लेगेसी API के लिए GPT4Free दस्तावेज़ीकरण। मुफ्त AI एंडपॉइंट्स, कोड जनरेशन और AI मॉडल एकीकरण के लिए पूर्ण गाइड, उदाहरण और API संदर्भ।" />
-    <meta name="keywords" content="GPT4Free, G4F, AI दस्तावेज़ीकरण, मुफ्त AI API, OpenAI विकल्प, JavaScript AI क्लाइंट, Python AI लाइब्रेरी, AI एकीकरण, कोड जनरेशन, G4F - लेगेसी API" />
+    <meta name="description" content="GPT4Free documentation for G4F - Legacy API. Complete guides, examples, and API reference for free AI endpoints, code generation, and AI model integration." />
+    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, G4F - Legacy API" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="G4F - लेगेसी API | GPT4Free दस्तावेज़ीकरण" />
-    <meta property="og:description" content="G4F - लेगसी API के लिए GPT4Free दस्तावेज़। मुफ्त AI एंडपॉइंट्स, उदाहरण और व्यापक मार्गदर्शिकाएँ।" />
+    <meta property="og:title" content="G4F - Legacy API | GPT4Free Documentation" />
+    <meta property="og:description" content="GPT4Free documentation for G4F - Legacy API. Free AI endpoints, examples, and comprehensive guides." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="G4F - लेगेसी API | GPT4Free दस्तावेज़ीकरण" />
-    <meta name="twitter:description" content="G4F - लेगसी API के लिए मुफ्त AI एंडपॉइंट्स और व्यापक दस्तावेज़।" />
+    <meta name="twitter:title" content="G4F - Legacy API | GPT4Free Documentation" />
+    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for G4F - Legacy API." />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -461,19 +461,19 @@
         </nav>
 
         <main role="main" class="markdown-body entry-content" itemprop="text" itemscope itemtype="https://schema.org/TechArticle">
-<h2>G4F - लेगेसी API</h2>
+<h2>G4F - Legacy API</h2>
 <h4>ChatCompletion</h4>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">g4f</span>
 
 <span class="pl-s1">g4f</span>.<span class="pl-c1">debug</span>.<span class="pl-c1">logging</span> <span class="pl-c1">=</span> <span class="pl-c1">True</span>  <span class="pl-c"># Enable debug logging</span>
 <span class="pl-s1">g4f</span>.<span class="pl-c1">debug</span>.<span class="pl-c1">version_check</span> <span class="pl-c1">=</span> <span class="pl-c1">False</span>  <span class="pl-c"># Disable automatic version checking</span>
-<span class="pl-en">print</span>(<span class="pl-s1">g4f</span>.<span class="pl-c1">प्रदाता</span>.<span class="pl-c1">Gemini</span>.<span class="pl-c1">params</span>)  <span class="pl-c"># Print supported args for Gemini</span>
+<span class="pl-en">print</span>(<span class="pl-s1">g4f</span>.<span class="pl-c1">Provider</span>.<span class="pl-c1">Gemini</span>.<span class="pl-c1">params</span>)  <span class="pl-c"># Print supported args for Gemini</span>
 
 <span class="pl-c"># Using automatic a provider for the given model</span>
 <span class="pl-c">## Streamed completion</span>
 <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">g4f</span>.<span class="pl-c1">ChatCompletion</span>.<span class="pl-c1">create</span>(
     <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4o"</span>,
-    <span class="pl-s1">संदेश</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Hello"</span>}],
+    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Hello"</span>}],
     <span class="pl-s1">stream</span><span class="pl-c1">=</span><span class="pl-c1">True</span>,
 )
 <span class="pl-k">for</span> <span class="pl-s1">message</span> <span class="pl-c1">in</span> <span class="pl-s1">response</span>:
@@ -482,25 +482,25 @@
 <span class="pl-c">## Normal response</span>
 <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">g4f</span>.<span class="pl-c1">ChatCompletion</span>.<span class="pl-c1">create</span>(
     <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">models</span>.<span class="pl-c1">gpt_4</span>,
-    <span class="pl-s1">संदेश</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Hello"</span>}],
+    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Hello"</span>}],
 )  <span class="pl-c"># Alternative model setting</span>
 
 <span class="pl-en">print</span>(<span class="pl-s1">response</span>)</pre></div>
-<h5>प्रोवाइडर</h5>
+<h5>Providers</h5>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">g4f</span>
 
 <span class="pl-c"># Print all available providers</span>
 <span class="pl-en">print</span>([
     <span class="pl-s1">provider</span>.<span class="pl-c1">__name__</span>
-    <span class="pl-k">for</span> <span class="pl-s1">provider</span> <span class="pl-c1">in</span> <span class="pl-s1">g4f</span>.<span class="pl-c1">प्रदाता</span>.<span class="pl-c1">__providers__</span>
+    <span class="pl-k">for</span> <span class="pl-s1">provider</span> <span class="pl-c1">in</span> <span class="pl-s1">g4f</span>.<span class="pl-c1">Provider</span>.<span class="pl-c1">__providers__</span>
     <span class="pl-k">if</span> <span class="pl-s1">provider</span>.<span class="pl-c1">working</span>
 ])
 
 <span class="pl-c"># Execute with a specific provider</span>
 <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">g4f</span>.<span class="pl-c1">ChatCompletion</span>.<span class="pl-c1">create</span>(
     <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4o"</span>,
-    <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">प्रदाता</span>.<span class="pl-c1">Copilot</span>,
-    <span class="pl-s1">संदेश</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Hello"</span>}],
+    <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">Provider</span>.<span class="pl-c1">Copilot</span>,
+    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Hello"</span>}],
     <span class="pl-s1">stream</span><span class="pl-c1">=</span><span class="pl-c1">True</span>,
 )
 <span class="pl-k">for</span> <span class="pl-s1">message</span> <span class="pl-c1">in</span> <span class="pl-s1">response</span>:
@@ -516,9 +516,9 @@
 
 <span class="pl-c"># Setting up the request for image creation</span>
 <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">g4f</span>.<span class="pl-c1">ChatCompletion</span>.<span class="pl-c1">create</span>(
-    <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">models</span>.<span class="pl-c1">डिफ़ॉल्ट</span>, <span class="pl-c"># Using the default model</span>
-    <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">प्रदाता</span>.<span class="pl-c1">Gemini</span>, <span class="pl-c"># Specifying the provider as Gemini</span>
-    <span class="pl-s1">संदेश</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Create an image like this"</span>}],
+    <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">models</span>.<span class="pl-c1">default</span>, <span class="pl-c"># Using the default model</span>
+    <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">Provider</span>.<span class="pl-c1">Gemini</span>, <span class="pl-c"># Specifying the provider as Gemini</span>
+    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Create an image like this"</span>}],
     <span class="pl-s1">image</span><span class="pl-c1">=</span><span class="pl-en">open</span>(<span class="pl-s">"images/g4f.png"</span>, <span class="pl-s">"rb"</span>), <span class="pl-c"># Image input can be a data URI, bytes, PIL Image, or IO object</span>
     <span class="pl-s1">image_name</span><span class="pl-c1">=</span><span class="pl-s">"g4f.png"</span> <span class="pl-c"># Optional: specifying the filename</span>
 )
@@ -530,9 +530,9 @@
 
 <span class="pl-c"># Get image links from response</span>
 <span class="pl-k">for</span> <span class="pl-s1">chunk</span> <span class="pl-c1">in</span> <span class="pl-s1">g4f</span>.<span class="pl-c1">ChatCompletion</span>.<span class="pl-c1">create</span>(
-    <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">models</span>.<span class="pl-c1">डिफ़ॉल्ट</span>, <span class="pl-c"># Using the default model</span>
-    <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">प्रदाता</span>.<span class="pl-c1">OpenaiChat</span>, <span class="pl-c"># Specifying the provider as OpenaiChat</span>
-    <span class="pl-s1">संदेश</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Create images with dogs"</span>}],
+    <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">models</span>.<span class="pl-c1">default</span>, <span class="pl-c"># Using the default model</span>
+    <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">Provider</span>.<span class="pl-c1">OpenaiChat</span>, <span class="pl-c"># Specifying the provider as OpenaiChat</span>
+    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Create images with dogs"</span>}],
     <span class="pl-s1">stream</span><span class="pl-c1">=</span><span class="pl-c1">True</span>,
     <span class="pl-s1">ignore_stream</span><span class="pl-c1">=</span><span class="pl-c1">True</span>
 ):
@@ -545,16 +545,16 @@
 <span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
 
 <span class="pl-s1">_providers</span> <span class="pl-c1">=</span> [
-    <span class="pl-s1">g4f</span>.<span class="pl-c1">प्रदाता</span>.<span class="pl-c1">Copilot</span>,
-    <span class="pl-s1">g4f</span>.<span class="pl-c1">प्रदाता</span>.<span class="pl-c1">PollinationsAI</span>,
-    <span class="pl-s1">g4f</span>.<span class="pl-c1">प्रदाता</span>.<span class="pl-c1">Gemini</span>,
+    <span class="pl-s1">g4f</span>.<span class="pl-c1">Provider</span>.<span class="pl-c1">Copilot</span>,
+    <span class="pl-s1">g4f</span>.<span class="pl-c1">Provider</span>.<span class="pl-c1">PollinationsAI</span>,
+    <span class="pl-s1">g4f</span>.<span class="pl-c1">Provider</span>.<span class="pl-c1">Gemini</span>,
 ]
 
-<span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">run_provider</span>(<span class="pl-s1">provider</span>: <span class="pl-s1">g4f</span>.<span class="pl-c1">प्रदाता</span>.<span class="pl-c1">BaseProvider</span>):
+<span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">run_provider</span>(<span class="pl-s1">provider</span>: <span class="pl-s1">g4f</span>.<span class="pl-c1">Provider</span>.<span class="pl-c1">BaseProvider</span>):
     <span class="pl-k">try</span>:
         <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">g4f</span>.<span class="pl-c1">ChatCompletion</span>.<span class="pl-c1">create_async</span>(
-            <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">models</span>.<span class="pl-c1">डिफ़ॉल्ट</span>,
-            <span class="pl-s1">संदेश</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Hello"</span>}],
+            <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">models</span>.<span class="pl-c1">default</span>,
+            <span class="pl-s1">messages</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Hello"</span>}],
             <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">provider</span>,
         )
         <span class="pl-en">print</span>(<span class="pl-s">f"<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">provider</span>.<span class="pl-c1">__name__</span><span class="pl-kos">}</span></span>:"</span>, <span class="pl-s1">response</span>)
@@ -573,8 +573,8 @@
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">g4f</span>
 
 <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">g4f</span>.<span class="pl-c1">ChatCompletion</span>.<span class="pl-c1">create</span>(
-    <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">models</span>.<span class="pl-c1">डिफ़ॉल्ट</span>,
-    <span class="pl-s1">संदेश</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Hello"</span>}],
+    <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">models</span>.<span class="pl-c1">default</span>,
+    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Hello"</span>}],
     <span class="pl-s1">proxy</span><span class="pl-c1">=</span><span class="pl-s">"http://host:port"</span>,
     <span class="pl-c"># or socks5://user:pass@host:port</span>
     <span class="pl-s1">timeout</span><span class="pl-c1">=</span><span class="pl-c1">120</span>,  <span class="pl-c"># in secs</span>

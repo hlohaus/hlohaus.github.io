@@ -46,15 +46,15 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/language-selection.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>G4F - اختيار اللغة</title>
+    <title>G4F - Language Selection</title>
 
-    <meta name="description" content="اختر لغتك، وحمّل حزم الترجمة من المجتمع، وتتبع تقدم ترجمة واجهة G4F." />
-    <meta name="keywords" content="G4F، GPT4Free، لغات، ترجمات، مجتمع، i18n" />
+    <meta name="description" content="Choose your language, load community translation packages and track UI translation progress for G4F." />
+    <meta name="keywords" content="G4F, GPT4Free, languages, translations, community, i18n" />
     <meta name="author" content="GPT4Free Team" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="G4F - اختيار اللغة" />
-    <meta property="og:description" content="ترجمات واجهة المستخدم من المجتمع: التغطية لكل لغة، وتحميل الحزم، ومسح المخازن." />
+    <meta property="og:title" content="G4F - Language Selection" />
+    <meta property="og:description" content="Community UI translations: coverage per language, load packages, clear stores." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <link rel="apple-touch-icon" sizes="180x180" href="/dist/img/g4f.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/dist/img/g4f-32x32.png" />
@@ -259,30 +259,32 @@
 <body class="translate noads">
     <div class="wrap">
         <header>
-            <h1>🌐 اختيار اللغة</h1>
-            <button id="refresh-btn" class="primary">تحديث</button>
-            <p class="subtitle">ترجمات واجهة المجتمع — التغطية لكل لغة، يمكنك تحميل الحزم إلى مخزنك المحلي أو مسحها.</p>
+            <h1>🌐 Language Selection</h1>
+            <button id="refresh-btn" class="primary">Refresh</button>
+            <p class="subtitle">Community UI translations — coverage per language, load packages into your local store or clear them.</p>
         </header>
 
         <section class="stats">
-            <div class="stat"><div class="value" id="stat-langs">–</div><div class="label">اللغات التي تم البدء بها</div></div>
-            <div class="stat"><div class="value" id="stat-total">–</div><div class="label">إجمالي مقتطفات واجهة المستخدم</div></div>
-            <div class="stat"><div class="value" id="stat-mine">–</div><div class="label">لغتك</div></div>
+            <div class="stat"><div class="value" id="stat-langs">–</div><div class="label">Languages started</div></div>
+            <div class="stat"><div class="value" id="stat-total">–</div><div class="label">UI snippets total</div></div>
+            <div class="stat"><div class="value" id="stat-mine">–</div><div class="label">Your language</div></div>
         </section>
 
         <section class="toolbar">
-            <button id="load-mine" class="primary">⬇️ تحميل لغتي</button>
-            <button id="clear-local" class="danger">🗑️ إلغاء تحميل اللغة المحددة</button>
-            <span class="hint">تظل حزمة لغة واحدة محملة فقط — تحميل أخرى إلغاء تحميل السابقة.</span>
+            <button id="load-mine" class="primary">⬇️ Load my language</button>
+            <button id="clear-local" class="danger">🗑️ Unload selected language</button>
+            <span class="hint">Only one language package stays loaded — loading another unloads the previous one.</span>
         </section>
 
         <section class="lang-list" id="lang-list">
-            <div class="loading">جاري التحميل...</div>
+            <div class="loading">Loading languages…</div>
         </section>
 
         <footer>
-            الترجمات مساهمة من مجتمع عبر
-            <a href="https://g4f.dev/chat/">توzion الترجمة في الدردشة</a> — حلا বৃ فيه التحديات مع موديلها المحلي لكسب كيكات وامل örtك. ابحث عن <a href="https://g4f.dev/docs/challenge-cakes">cionario شمس</a>.
+            Translations are contributed by the community via
+            <a href="https://g4f.dev/chat/">chat translation challenges</a> —
+            solve challenges with your local model to earn cakes and fill your language.
+            See the <a href="https://g4f.dev/docs/challenge-cakes">docs</a>.
         </footer>
     </div>
 

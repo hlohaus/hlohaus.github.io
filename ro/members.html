@@ -46,8 +46,8 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/members.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G4F - Zona membrilor</title>
-    <meta name="description" content="Zona membrilor GPT4Free - Gestionează-ți cheile API, vezi statisticile de utilizare și accesează funcționalități premium." />
+    <title>G4F - Members Area</title>
+    <meta name="description" content="GPT4Free Members Area - Manage your API keys, view usage stats, and access premium features." />
     <link rel="icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="shortcut icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/dist/img/g4f.svg">
@@ -1344,14 +1344,14 @@
     <header class="navbar" role="banner" id="navbar">
         <a href="/" class="logo">G4<span>F</span></a>
         <nav class="nav-links" role="navigation">
-            <a href="/">Acasă</a>
-            <a href="/docs/" title="Documentație">Documentație</a>
+            <a href="/">Home</a>
+            <a href="/docs/" title="Documentation">Docs</a>
             <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
             <div class="user-info" id="navUserInfo" style="display: none;">
-                <img class="user-avatar" id="navAvatar" src="" alt="Avatar utilizator">
+                <img class="user-avatar" id="navAvatar" src="" alt="User avatar">
                 <span id="navUsername"></span>
             </div>
-            <a href="/chat/" class="nav-cta">Începeți Chat</a>
+            <a href="/chat/" class="nav-cta">Start Chat</a>
         </nav>
     </header>
 
@@ -1359,30 +1359,30 @@
         <div class="connection-error" id="connectionError" role="alert" hidden></div>
         <!-- Redirect Login Section (shown when redirect parameter is present) -->
         <section class="login-section" id="redirectLoginSection" style="display: none;">
-            <h1>Autentificare necesară</h1>
-            <p>Autentificați-vă pentru a continua în aplicația dvs. După autentificare, veți fi redirecționat înapoi cu o cheie API.</p>
+            <h1>Login Required</h1>
+            <p>Sign in to continue to your application. After signing in, you'll be redirected back with an API key.</p>
             <p style="color: var(--secondary); font-size: 0.9rem;" id="redirectTarget"></p>
             
             <div class="login-buttons">
                 <button class="oauth-btn g4f" id="redirectLoginG4f">
-                    🔮 Autentifică-te cu contul G4F
+                    🔮 Sign in with G4F Account
                 </button>
             </div>
         </section>
 
         <!-- Login Section (shown when not logged in) -->
         <section class="login-section" id="loginSection">
-            <h1>Zona membrilor</h1>
-            <p>Autentificați-vă pentru a accesa panoul dvs. de control, a gestiona cheile API și a vizualiza statisticile de utilizare.</p>
+            <h1>Members Area</h1>
+            <p>Sign in to access your dashboard, manage API keys, and view usage statistics.</p>
             
             <div class="login-buttons">
                 <button class="oauth-btn g4f" id="loginG4f">
-                    🔮 Autentifică-te cu contul G4F
+                    🔮 Sign in with G4F Account
                 </button>
             </div>
             
             <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(255,255,255,0.5);">
-                Prin autentificare, sunteți de acord cu <a href="#" style="color: var(--secondary);">Termenii de serviciu</a> și <a href="#" style="color: var(--secondary);">Politica de Confidențialitate</a>.
+                By signing in, you agree to our <a href="#" style="color: var(--secondary);">Terms of Service</a> and <a href="#" style="color: var(--secondary);">Privacy Policy</a>.
             </p>
         </section>
 
@@ -1391,25 +1391,25 @@
         <div class="discord-upgrade-banner" id="discordUpgradeBanner" hidden>
             <div class="discord-banner-icon"><i class="fab fa-discord" aria-hidden="true"></i></div>
             <div class="discord-banner-content">
-                <h2 id="discordUpgradeTitle">Deblochează tier-ul gratuit instant</h2>
+                <h2 id="discordUpgradeTitle">Unlock the Free tier instantly</h2>
                 <p id="discordUpgradeText">
-                    Conectează-te la Discord și alătură-te serverului de suport G4F — vom verifica apartenența și îți va actualiza contul imediat.
+                    Connect Discord and join the G4F support server — we will verify your membership and upgrade your account right away.
                 </p>
                 <div class="discord-steps" id="discordUpgradeSteps">
-                    <span class="discord-step" data-step="connect"><i class="fas fa-circle" aria-hidden="true"></i> Conectează Discord</span>
-                    <span class="discord-step" data-step="join"><i class="fas fa-circle" aria-hidden="true"></i> Alătură-te serverului de suport</span>
-                    <span class="discord-step" data-step="upgrade"><i class="fas fa-circle" aria-hidden="true"></i> Upgrade la gratuit</span>
+                    <span class="discord-step" data-step="connect"><i class="fas fa-circle" aria-hidden="true"></i> Connect Discord</span>
+                    <span class="discord-step" data-step="join"><i class="fas fa-circle" aria-hidden="true"></i> Join support server</span>
+                    <span class="discord-step" data-step="upgrade"><i class="fas fa-circle" aria-hidden="true"></i> Upgrade to Free</span>
                 </div>
             </div>
             <div class="discord-banner-actions">
                 <a class="btn-discord btn" id="discordConnectBtn" href="#" rel="noopener">
-                    <i class="fab fa-discord"></i> Conectează Discord
+                    <i class="fab fa-discord"></i> Connect Discord
                 </a>
                 <a class="btn btn-secondary" id="discordJoinBtn" href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-arrow-up-right-from-square"></i> Alătură-te serverului de suport
+                    <i class="fas fa-arrow-up-right-from-square"></i> Join Support Server
                 </a>
                 <button class="btn" id="discordVerifyBtn" type="button">
-                    <i class="fas fa-check"></i> Verifică și actualizează
+                    <i class="fas fa-check"></i> Verify &amp; Upgrade
                 </button>
             </div>
         </div>
@@ -1418,38 +1418,38 @@
         <section class="dashboard" id="dashboard">
             <div class="welcome-header">
                 <div>
-                    <h1>Bine ai revenit, <span id="userName">Utilizator</span>! 👋</h1>
-                    <p style="margin: 0; color: rgba(255,255,255,0.6);">Gestionați-vă cheile API și monitorizați-vă utilizarea</p>
+                    <h1>Welcome back, <span id="userName">User</span>! 👋</h1>
+                    <p style="margin: 0; color: rgba(255,255,255,0.6);">Manage your API keys and monitor your usage</p>
                 </div>
                 <button class="logout-btn" id="logoutBtn">
-                    <i class="fas fa-sign-out-alt"></i> Deconectare
+                    <i class="fas fa-sign-out-alt"></i> Sign Out
                 </button>
             </div>
 
             <div class="dashboard-grid">
                 <!-- Usage Stats Card -->
                 <div class="card">
-                    <h2><span class="icon">📊</span> Statistici de utilizare</h2>
+                    <h2><span class="icon">📊</span> Usage Statistics</h2>
                     <div class="stats-grid">
                         <div class="stat-item">
                             <div class="stat-value" id="statRequests">0</div>
-                            <div class="stat-label">Cereri API</div>
+                            <div class="stat-label">API Requests</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statTokens">0</div>
-                            <div class="stat-label">Token-uri utilizate</div>
+                            <div class="stat-label">Tokens Used</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statImages">0</div>
-                            <div class="stat-label">Imagini generate</div>
+                            <div class="stat-label">Images Generated</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="statChats">0</div>
-                            <div class="stat-label">Sesiuni de chat</div>
+                            <div class="stat-label">Chat Sessions</div>
                         </div>
-                        <div class="stat-item" title="Credite câștigate prin gătirea de torturi proof-of-work. Fiecare tort gătit = $0.05.">
+                        <div class="stat-item" title="Credits earned by baking proof-of-work cakes. Each baked cake = $0.05.">
                             <div class="stat-value" id="statCredits">$0.00</div>
-                            <div class="stat-label">Credite Cake</div>
+                            <div class="stat-label">Cake Credits</div>
                         </div>
                     </div>
                     <div class="usage-chart">
@@ -1467,43 +1467,43 @@
                 
                 <!-- API Key Card -->
                 <div class="card">
-                    <h2><span class="icon">🔑</span> Cheie API</h2>
+                    <h2><span class="icon">🔑</span> API Key</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Folosiți această cheie pentru a autentifica cererile API
+                        Use this key to authenticate your API requests
                     </p>
                     <div class="api-key-container">
                         <div class="api-key-display">
-                            <input type="password" class="api-key-input" id="apiKeyInput" readonly placeholder="Faceți clic pe 'Generează' pentru a crea o cheie API">
-                            <button class="btn btn-secondary btn-small" id="toggleKeyBtn" title="Arată/Ascunde">
+                            <input type="password" class="api-key-input" id="apiKeyInput" readonly placeholder="Click 'Generate' to create an API key">
+                            <button class="btn btn-secondary btn-small" id="toggleKeyBtn" title="Show/Hide">
                                 <i class="fas fa-eye"></i>
                             </button>
-                            <button class="btn btn-secondary btn-small" id="copyKeyBtn" title="Copiază">
+                            <button class="btn btn-secondary btn-small" id="copyKeyBtn" title="Copy">
                                 <i class="fas fa-copy"></i>
                             </button>
                         </div>
-                        <p>Expiră: <span id="apiKeyExpires">-</span></p>
+                        <p>Expires: <span id="apiKeyExpires">-</span></p>
                         <button class="btn" id="generateKeyBtn" style="width: 100%;">
-                            <i class="fas fa-sync-alt"></i> Generează o cheie nouă
+                            <i class="fas fa-sync-alt"></i> Generate New Key
                         </button>
-                        <div class="base-url-label" style="margin-top: 1rem;">URL de bază</div>
+                        <div class="base-url-label" style="margin-top: 1rem;">Base URL</div>
                         <div class="base-url" id="baseUrl">https://g4f.space/v1</div>
                     </div>
                 </div>
                 
                 <!-- Account Info Card -->
                 <div class="card">
-                    <h2><span class="icon">👤</span> Informații cont</h2>
+                    <h2><span class="icon">👤</span> Account Information</h2>
                     <div class="account-info">
                         <div class="info-row">
-                            <span class="info-label">Nume de utilizator</span>
+                            <span class="info-label">Username</span>
                             <span class="info-value" id="accountUsername">-</span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">E-mail</span>
+                            <span class="info-label">Email</span>
                             <span class="info-value" id="accountEmail">-</span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Furnizor</span>
+                            <span class="info-label">Provider</span>
                             <span class="info-value" id="accountProvider">
                                 <span class="provider-badge github">
                                     <i class="fab fa-github"></i> GitHub
@@ -1513,20 +1513,20 @@
                         <div class="info-row">
                             <span class="info-label">Plan</span>
                             <span class="info-value">
-                                <span class="badge free" id="accountPlan">Gratuit</span>
+                                <span class="badge free" id="accountPlan">Free</span>
                             </span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Limite de nivel</span>
+                            <span class="info-label">Tier Limits</span>
                             <span class="info-value">
                                 <div class="tier-limits" id="tier-limits-row">
-                                    <span id="max-tokens-text" title="Tokenuri: se încarcă..."><i class="fa-solid fa-coins" aria-hidden="true"></i> —</span>
-                                    <span id="max-requests-text" title="Cereri: se încarcă..."><i class="fa-solid fa-list" aria-hidden="true"></i> —</span>
+                                    <span id="max-tokens-text" title="Tokens: loading..."><i class="fa-solid fa-coins" aria-hidden="true"></i> —</span>
+                                    <span id="max-requests-text" title="Requests: loading..."><i class="fa-solid fa-list" aria-hidden="true"></i> —</span>
                                 </div>
                             </span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Membru de la</span>
+                            <span class="info-label">Member Since</span>
                             <span class="info-value" id="accountJoined">-</span>
                         </div>
                     </div>
@@ -1534,13 +1534,13 @@
                 
                 <!-- Recent Activity Card -->
                 <div class="card">
-                    <h2><span class="icon">⚡</span> Activitate recentă</h2>
+                    <h2><span class="icon">⚡</span> Recent Activity</h2>
                     <ul class="activity-list" id="activityList">
                         <li class="activity-item">
                             <div class="activity-icon chat">💬</div>
                             <div class="activity-details">
-                                <div class="activity-title">Sesiune de chat pornită</div>
-                                <div class="activity-time">Nicio activitate încă</div>
+                                <div class="activity-title">Chat session started</div>
+                                <div class="activity-time">No activity yet</div>
                             </div>
                         </li>
                     </ul>
@@ -1548,25 +1548,25 @@
                 
                 <!-- Custom Servers Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🖥️</span> Servere Personalizate</h2>
+                    <h2><span class="icon">🖥️</span> Custom Servers</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Adaugă propriile servere AI pentru rutarea modelelor. Numărătoarea tokenilor se face per server.
+                        Add your own AI servers for model routing. Tokens are counted per server.
                     </p>
                     
                     <!-- Server List -->
                     <div id="serversList" class="servers-list">
                         <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">
-                            Se încarcă serverele...
+                            Loading servers...
                         </p>
                     </div>
                     
                     <!-- Add Server Button -->
                     <div style="display: flex; gap: 1rem; margin-top: 1rem;">
                         <button class="btn" id="addServerBtn" style="flex: 1;">
-                            <i class="fas fa-plus"></i> Adaugă server
+                            <i class="fas fa-plus"></i> Add Server
                         </button>
                         <button class="oauth-btn puter" id="addPuterServerBtn" style="flex: 1;">
-                            🤖 Adaugă Puter
+                            🤖 Add Puter
                         </button>
                     </div>
                 </div>
@@ -1575,47 +1575,47 @@
                 <div class="modal" id="serverModal" style="display: none;">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 id="serverModalTitle">Adaugă server nou</h3>
+                            <h3 id="serverModalTitle">Add New Server</h3>
                             <button class="modal-close" id="closeServerModal">&times;</button>
                         </div>
                         <form id="serverForm">
                             <div class="form-group">
-                                <label for="serverLabel">Etichetă</label>
-                                <input type="text" id="serverLabel" class="form-input" placeholder="Serverul meu personalizat" required>
+                                <label for="serverLabel">Label</label>
+                                <input type="text" id="serverLabel" class="form-input" placeholder="My Custom Server" required>
                             </div>
                             <div class="form-group">
-                                <label for="serverBaseUrl">URL de bază</label>
+                                <label for="serverBaseUrl">Base URL</label>
                                 <input type="url" id="serverBaseUrl" class="form-input" placeholder="https://api.example.com/v1" required>
-                                <small style="color: rgba(255,255,255,0.5);">Punct final API compatibil OpenAI</small>
+                                <small style="color: rgba(255,255,255,0.5);">OpenAI-compatible API endpoint</small>
                             </div>
                             <div class="form-group">
-                                <label for="serverApiKeys">Chei API (una pe linie)</label>
+                                <label for="serverApiKeys">API Keys (one per line)</label>
                                 <textarea id="serverApiKeys" class="form-input" rows="3" placeholder="sk-xxx...&#10;sk-yyy..."></textarea>
-                                <small style="color: rgba(255,255,255,0.5);">Mai multe chei pentru echilibrarea încărcăturii. Lăsați gol dacă nu este necesară autentificarea.</small>
+                                <small style="color: rgba(255,255,255,0.5);">Multiple keys for load balancing. Leave empty if no auth required.</small>
                             </div>
                             <div class="form-group">
-                                <label for="serverModels">Modele permise (unul pe linie, opțional)</label>
+                                <label for="serverModels">Allowed Models (one per line, optional)</label>
                                 <textarea id="serverModels" class="form-input" rows="3" placeholder="gpt-4&#10;gpt-3.5-turbo"></textarea>
-                                <small style="color: rgba(255,255,255,0.5);">Lăsați gol pentru a permite toate modelele. Se va detecta automat de la server.</small>
+                                <small style="color: rgba(255,255,255,0.5);">Leave empty to allow all models. Will auto-detect from server.</small>
                             </div>
                             <div class="form-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="serverAutoUpdateModels" checked>
-                                    <span>Actualizare automată a listei de modele permise de pe server</span>
+                                    <span>Auto-update allowed models list from server</span>
                                 </label>
-                                <small style="color: rgba(255,255,255,0.5);">Când este activat, lista de modele permise este actualizată automat din endpoint-ul /models al serverului.</small>
+                                <small style="color: rgba(255,255,255,0.5);">When enabled, the allowed models list is automatically refreshed from the server's /models endpoint.</small>
                             </div>
                             <div class="form-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="serverPublic">
-                                    <span>Faceți serverul public (vizibil pentru alți utilizatori)</span>
+                                    <span>Make server public (visible to other users)</span>
                                 </label>
                             </div>
                             <div id="serverValidation" class="validation-status" style="display: none;"></div>
                             <div class="form-actions">
-                                <button type="button" class="btn btn-secondary" id="cancelServerBtn">Anulează</button>
+                                <button type="button" class="btn btn-secondary" id="cancelServerBtn">Cancel</button>
                                 <button type="submit" class="btn" id="saveServerBtn">
-                                    <i class="fas fa-check"></i> Salvează Serverul
+                                    <i class="fas fa-check"></i> Save Server
                                 </button>
                             </div>
                             <input type="hidden" id="editServerId" value="">
@@ -1626,16 +1626,16 @@
                 <!-- API Keys Management Card -->
                 <div class="card" style="grid-column: 1 / -1;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                        <h2 style="margin: 0;"><span class="icon">🗝️</span> Gestionați cheile API</h2>
+                        <h2 style="margin: 0;"><span class="icon">🗝️</span> Manage API Keys</h2>
                         <button class="btn btn-small" id="addApiKeyBtn">
-                            <i class="fas fa-plus"></i> Cheie nouă
+                            <i class="fas fa-plus"></i> New Key
                         </button>
                     </div>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Creați și gestionați mai multe chei API pentru diferite aplicații sau medii.
+                        Create and manage multiple API keys for different applications or environments.
                     </p>
                     <div id="apiKeysList" class="api-keys-list">
-                        <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">Se încarcă cheile API...</p>
+                        <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 2rem;">Loading API keys...</p>
                     </div>
                 </div>
 
@@ -1643,45 +1643,45 @@
                 <div class="modal" id="apiKeyModal" style="display: none;">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 id="apiKeyModalTitle">Creați o cheie API</h3>
+                            <h3 id="apiKeyModalTitle">Create API Key</h3>
                             <button class="modal-close" id="closeApiKeyModalBtn">&times;</button>
                         </div>
 
                         <!-- Shown after successful create / rotate -->
                         <div id="apiKeyNewDisplay" style="display: none;">
                             <div class="validation-status success" style="margin-bottom: 1rem;">
-                                <i class="fas fa-check-circle"></i> Cheie gata — copiați-o acum, nu va mai fi afișată.
+                                <i class="fas fa-check-circle"></i> Key ready — copy it now, it won't be shown again.
                             </div>
                             <div class="api-key-display">
                                 <input type="text" class="api-key-input" id="newApiKeyValue" readonly>
-                                <button class="btn btn-secondary btn-small" id="copyNewApiKeyBtn" title="Copiază">
+                                <button class="btn btn-secondary btn-small" id="copyNewApiKeyBtn" title="Copy">
                                     <i class="fas fa-copy"></i>
                                 </button>
                             </div>
                             <div class="form-actions">
-                                <button class="btn" id="doneApiKeyBtn"><i class="fas fa-check"></i> Gata</button>
+                                <button class="btn" id="doneApiKeyBtn"><i class="fas fa-check"></i> Done</button>
                             </div>
                         </div>
 
                         <!-- Create / Edit form -->
                         <form id="apiKeyForm">
                             <div class="form-group">
-                                <label for="apiKeyName">Nume / Etichetă</label>
-                                <input type="text" id="apiKeyName" class="form-input" placeholder="ex. Aplicația mea, Producție, Testare" maxlength="80" required>
+                                <label for="apiKeyName">Name / Label</label>
+                                <input type="text" id="apiKeyName" class="form-input" placeholder="e.g. My App, Production, Testing" maxlength="80" required>
                             </div>
                             <div class="form-group" id="apiKeyExpiryGroup">
-                                <label for="apiKeyExpiry">Expirare</label>
+                                <label for="apiKeyExpiry">Expiry</label>
                                 <select id="apiKeyExpiry" class="form-input">
-                                    <option value="30">30 de zile</option>
-                                    <option value="90" selected>90 de zile</option>
-                                    <option value="365">1 an</option>
-                                    <option value="0">Fără expirare</option>
+                                    <option value="30">30 days</option>
+                                    <option value="90" selected>90 days</option>
+                                    <option value="365">1 year</option>
+                                    <option value="0">No expiry</option>
                                 </select>
                             </div>
                             <div class="form-actions">
-                                <button type="button" class="btn btn-secondary" id="cancelApiKeyModalBtn">Anulează</button>
+                                <button type="button" class="btn btn-secondary" id="cancelApiKeyModalBtn">Cancel</button>
                                 <button type="submit" class="btn" id="saveApiKeyBtn">
-                                    <i class="fas fa-plus"></i> Creați o cheie
+                                    <i class="fas fa-plus"></i> Create Key
                                 </button>
                             </div>
                             </form>
@@ -1690,53 +1690,53 @@
 
                 <!-- Quick Links Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🚀</span> Acțiuni rapide</h2>
+                    <h2><span class="icon">🚀</span> Quick Actions</h2>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
                         <button class="btn">
-                            <i class="fas fa-comments"></i> <a href="/chat/">Deschide chat</a>
+                            <i class="fas fa-comments"></i> <a href="/chat/">Open Chat</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fas fa-book"></i> <a href="/docs/">Documentație API</a>
+                            <i class="fas fa-book"></i> <a href="/docs/">API Documentation</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fas fa-heart"></i> <a href="https://github.com/sponsors/hlohaus" target="_blank">Devenire sponsor</a>
+                            <i class="fas fa-heart"></i> <a href="https://github.com/sponsors/hlohaus" target="_blank">Become a Sponsor</a>
                         </button>
                         <button class="btn btn-secondary">
-                            <i class="fab fa-github"></i> <a href="https://github.com/xtekky/gpt4free" target="_blank">Vezi pe GitHub</a>
+                            <i class="fab fa-github"></i> <a href="https://github.com/xtekky/gpt4free" target="_blank">View on GitHub</a>
                         </button>
                     </div>
                 </div>
 
                 <!-- Cross-Device Secret Sync Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">🔐</span> Sincronizare secretă între dispozitive</h2>
+                    <h2><span class="icon">🔐</span> Cross-Device Secret Sync</h2>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-size: 0.9rem;">
-                        Secretul spațiului de lucru permite sincronizarea conversațiilor criptate între dispozitive. Acest dispozitiv confirmă automat cererile de la celelalte dispozitive logate.
+                        Your workspace secret enables encrypted conversation sync across devices. This device automatically confirms requests from your other logged-in devices.
                     </p>
                     <div id="secretSyncStatus" style="padding: 0.75rem 1rem; border-radius: 8px; background: rgba(255,255,255,0.05); margin-bottom: 1rem; font-size: 0.9rem;">
-                        <span class="loading"></span> Se verifică secretul spațiului de lucru...
+                        <span class="loading"></span> Checking workspace secret...
                     </div>
                     <button class="btn btn-secondary" id="secretRequestBtn" style="display: none;">
-                        <i class="fa-solid fa-satellite-dish"></i> Solicită secretul de la un dispozitiv online
+                        <i class="fa-solid fa-satellite-dish"></i> Request Secret from Online Device
                     </button>
                 </div>
 
                 <!-- Danger Zone Card -->
                 <div class="card" style="grid-column: 1 / -1;">
-                    <h2><span class="icon">⚠️</span> Zonă Pericol</h2>
+                    <h2><span class="icon">⚠️</span> Danger Zone</h2>
                     <div id="dangerZoneContent" class="danger-zone">
                         <div id="scheduledDeletionNotice" class="deletion-countdown" style="display: none;">
-                            <strong>⏳ Ștergerea contului este programată</strong>
-                            <span id="deletionCountdownText">Contul tău va fi șters în...</span>
+                            <strong>⏳ Account deletion scheduled</strong>
+                            <span id="deletionCountdownText">Your account will be deleted in...</span>
                         </div>
-                        <h3>Șterge Contul</h3>
-                        <p>Șterge definitiv contul tău, cheile API și toate datele asociate. Se aplică o perioadă de grație de 24 de ore — poți anula în timpul acestei perioade.</p>
+                        <h3>Delete Account</h3>
+                        <p>Permanently delete your account, API keys, and all associated data. A 24-hour grace period applies — you can cancel during this time.</p>
                         <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                             <button class="btn-danger" id="deleteAccountBtn">
-                                <i class="fas fa-trash"></i> Șterge Contul
+                                <i class="fas fa-trash"></i> Delete Account
                             </button>
                             <button class="btn btn-secondary" id="cancelDeleteAccountBtn" style="display: none;">
-                                <i class="fas fa-undo"></i> Anulează Ștergerea
+                                <i class="fas fa-undo"></i> Cancel Deletion
                             </button>
                         </div>
                     </div>
@@ -1747,16 +1747,16 @@
 
     <footer>
         <div class="footer-links">
-            <a href="/docs/">Documentație</a>
+            <a href="/docs/">Documentation</a>
             <a href="/chat/">Chat</a>
-            <a href="/members.html">Membri</a>
-            <a href="/manifesto">Manifest</a>
+            <a href="/members.html">Members</a>
+            <a href="/manifesto">Manifesto</a>
             <a href="https://github.com/xtekky/gpt4free" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="/community">Comunitate</a>
-            <a href="/privacy.html">Politica de Confidențialitate</a>
-            <a href="/terms.html">Termenii de serviciu</a>
+            <a href="/community">Community</a>
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
         </div>
-        <p>© 2026 Proiectul GPT4Free. Toate drepturile rezervate.</p>
+        <p>© 2026 GPT4Free Project. All rights reserved.</p>
     </footer>
 
     <!-- Toast Notification -->

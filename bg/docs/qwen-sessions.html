@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/qwen-sessions.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Сесии на Qwen Chat | Документация на GPT4Free</title>
+    <title>Qwen Chat sessions | GPT4Free Documentation</title>
 
-    <meta name="description" content="Документация на GPT4Free за сесии на Qwen Chat. Пълни ръководства, примери и референция на API за безплатни AI крайни точки, генериране на код и интеграция на AI модели." />
-    <meta name="keywords" content="GPT4Free, G4F, документация за AI, безплатен AI API, алтернатива на OpenAI, JavaScript AI клиент, Python AI библиотека, интеграция на AI, генериране на код, сесии на Qwen Chat" />
+    <meta name="description" content="GPT4Free documentation for Qwen Chat sessions. Complete guides, examples, and API reference for free AI endpoints, code generation, and AI model integration." />
+    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, Qwen Chat sessions" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Сесии на Qwen Chat | Документация на GPT4Free" />
-    <meta property="og:description" content="Документация за GPT4Free за сесии Qwen Chat. безплатни AI крайници, примери и подробни Étiги за безплатни AI края." />
+    <meta property="og:title" content="Qwen Chat sessions | GPT4Free Documentation" />
+    <meta property="og:description" content="GPT4Free documentation for Qwen Chat sessions. Free AI endpoints, examples, and comprehensive guides." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Сесии на Qwen Chat | Документация на GPT4Free" />
-    <meta name="twitter:description" content="Безплатни AI крайници и подробна документация за сесии Qwen Chat." />
+    <meta name="twitter:title" content="Qwen Chat sessions | GPT4Free Documentation" />
+    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for Qwen Chat sessions." />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -508,7 +508,7 @@ async def ask(prompt):
 <p><code>cookies</code> accepts a dictionary or browser/HAR records with domain, path and
 expiry. <code>QwenAuth(cookies=cookies)</code> automatically reads <code>refresh_token</code> from
 those cookies. <code>auth.refresh_token</code> returns the current usable refresh cookie,
-including replacements from <code>Set-Cookie</code>, or <code>Няма</code> when absent, expired or out
+including replacements from <code>Set-Cookie</code>, or <code>None</code> when absent, expired or out
 of scope. <code>headers</code> accepts the provider's supported browser fingerprint headers.</p>
 <p>Reuse <code>auth_session</code> to retain rotating credentials across calls and separate
 <code>asyncio.run()</code> invocations. Do not combine it with <code>token</code>, <code>api_key</code>,
@@ -517,8 +517,8 @@ with an unrelated HAR account. <code>auth.get_cookies()</code> exports current r
 <code>auth.clear()</code> ends the session.</p>
 <h2>Fingerprint and request behavior</h2>
 <p><code>_read_browser_fingerprint</code> waits up to 30 seconds for initialized Baxia, then
-reads <code>baxiaCommon.getUA(completion_url)</code> и <code>baxiaCommon.version</code>. It returns
-<code>bx-ua</code> and optional <code>bx-v</code>, rejecting empty values and <code>по подразбиране</code> placeholders.
+reads <code>baxiaCommon.getUA(completion_url)</code> and <code>baxiaCommon.version</code>. It returns
+<code>bx-ua</code> and optional <code>bx-v</code>, rejecting empty values and <code>default</code> placeholders.
 It neither reads <code>bx-umidtoken</code> nor waits for the UID module. When no saved
 <code>bx-umidtoken</code> header exists, request preparation uses the existing midtoken
 service path. Neither token has a measured fixed lifetime.</p>
@@ -541,7 +541,7 @@ not upload-storage or fingerprint-service hosts. Credential-bearing requests
 disable redirects by default.</p></li><li><p>Stream parsing handles text, reasoning, image/tool results, citations, usage
 and finish events. A completed thinking or tool phase does not end the response.</p></li><li><p><code>get_models(auth_session=auth)</code> uses the available token without forcing a
 refresh. <code>get_quota</code> accepts generation's session options and uses chat creation.</p></li></ul>
-<p>For image editing, pass <code>chat_type=&quot;image_edit&quot;</code> и <code>media</code>.
+<p>For image editing, pass <code>chat_type=&quot;image_edit&quot;</code> and <code>media</code>.
 <code>thinking_mode=&quot;Auto&quot;</code> enables planning and tool use; <code>qwen_image_model</code> can
 select a supported image model. Earlier live text tests verified browser SDK
 extraction and direct requests without seed messages. They do not establish that

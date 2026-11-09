@@ -46,7 +46,7 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/apps/editor.html">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-<title>Kod Düzenleyici</title>
+<title>Code Editor</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" />
 <style>
   :root {
@@ -264,16 +264,16 @@
   <header>
     <button id="menu-btn" title="Toggle file tree">☰</button>
     <span class="status-dot" id="status-dot"></span>
-    <h1>Kod Düzenleyici</h1>
+    <h1>Code Editor</h1>
     <button id="wrap-btn" title="Toggle word wrap">↩</button>
-    <button id="settings-btn" title="Ayarlar">⚙</button>
+    <button id="settings-btn" title="Settings">⚙</button>
   </header>
 
   <div id="main">
     <div id="sidebar-backdrop"></div>
     <aside id="sidebar">
       <div class="tree-toolbar">
-        <button id="refresh-btn" title="Yenile">🔄</button>
+        <button id="refresh-btn" title="Refresh">🔄</button>
         <button id="new-file-btn" title="New file">📄+</button>
         <button id="upload-btn" title="Upload from device">📤</button>
       </div>
@@ -289,7 +289,7 @@
         <span class="filename" id="filename-label"></span>
         <span id="lint-status"></span>
         <span class="toolbar-divider"></span>
-        <button id="save-btn" title="Save (Ctrl/Cmd+S)">💾<span class="btn-label"> Kaydet</span></button>
+        <button id="save-btn" title="Save (Ctrl/Cmd+S)">💾<span class="btn-label"> Save</span></button>
         <button id="search-btn" title="Search &amp; Replace (Ctrl/Cmd+F)">🔎<span class="btn-label"> Find</span></button>
         <button id="run-btn" title="Run / Preview (Ctrl/Cmd+E)">▶<span class="btn-label"> Run</span></button>
         <button id="download-btn" title="Download file">⬇</button>
@@ -299,7 +299,7 @@
         <div id="search-panel">
           <div class="sr-row">
             <input id="sr-find" type="text" placeholder="Find" />
-            <button id="sr-close" title="Kapat">✕</button>
+            <button id="sr-close" title="Close">✕</button>
           </div>
           <div class="sr-row">
             <input id="sr-replace" type="text" placeholder="Replace" />
@@ -323,8 +323,8 @@
       <aside id="preview-panel">
         <div class="preview-toolbar">
           <span class="title" id="preview-title">Preview</span>
-          <button id="preview-refresh" title="Yenile">🔄</button>
-          <button id="preview-open" title="Yeni sekmede aç">↗</button>
+          <button id="preview-refresh" title="Refresh">🔄</button>
+          <button id="preview-open" title="Open in new tab">↗</button>
           <button id="preview-close" title="Close preview">✕</button>
         </div>
         <iframe id="preview-iframe" sandbox="allow-scripts allow-modals allow-forms allow-popups allow-same-origin"></iframe>
@@ -363,8 +363,8 @@
   <h2>Indent unit (spaces)</h2>
   <input id="indent-unit-input" type="number" min="1" max="8" placeholder="2" />
   <div class="row">
-    <button id="settings-cancel">İptal</button>
-    <button id="settings-save">Kaydet</button>
+    <button id="settings-cancel">Cancel</button>
+    <button id="settings-save">Save</button>
   </div>
 </dialog>
 
@@ -372,8 +372,8 @@
   <h2>New file path (relative to workspace)</h2>
   <input id="new-file-input" type="text" placeholder="folder/example.js" />
   <div class="row">
-    <button id="new-file-cancel">İptal</button>
-    <button id="new-file-create">Oluştur</button>
+    <button id="new-file-cancel">Cancel</button>
+    <button id="new-file-create">Create</button>
   </div>
 </dialog>
 
@@ -387,7 +387,7 @@
   <h2>Extra arguments (JSON)</h2>
   <input id="run-args-input" type="text" placeholder='{"timeout": 30}' />
   <div class="row">
-    <button id="run-config-cancel">İptal</button>
+    <button id="run-config-cancel">Cancel</button>
     <button id="run-config-save">Run</button>
   </div>
 </dialog>

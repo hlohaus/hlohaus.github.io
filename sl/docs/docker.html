@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/docker.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>G4F - Namestitev Dockerja</title>
+    <title>G4F - Docker Setup</title>
 
-    <meta name="description" content="Dokumentacija GPT4Free za G4F - Namestitev Dockerja. Popolni vodniki, primeri in referenca API-ja za proste AI končne točke, generiranje kode in integracijo AI modelov." />
-    <meta name="keywords" content="GPT4Free, G4F, dokumentacija AI, prosta AI API, OpenAI alternativa, JavaScript AI odjemalec, Python AI knjižnica, integracija AI, generiranje kode, G4F - Namestitev Dockerja" />
+    <meta name="description" content="GPT4Free documentation for G4F - Docker Setup. Complete guides, examples, and API reference for free AI endpoints, code generation, and AI model integration." />
+    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, G4F - Docker Setup" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="G4F - Namestitev Dockerja | Dokumentacija GPT4Free" />
-    <meta property="og:description" content="Dokumentacija GPT4Free za G4F - Namestitev Dockerja. Prosti AI končni točki, primeri in obsežni vodniki." />
+    <meta property="og:title" content="G4F - Docker Setup | GPT4Free Documentation" />
+    <meta property="og:description" content="GPT4Free documentation for G4F - Docker Setup. Free AI endpoints, examples, and comprehensive guides." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="G4F - Namestitev Dockerja | Dokumentacija GPT4Free" />
-    <meta name="twitter:description" content="Prosti AI končni točki in obsežna dokumentacija za G4F - Namestitev Dockerja." />
+    <meta name="twitter:title" content="G4F - Docker Setup | GPT4Free Documentation" />
+    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for G4F - Docker Setup." />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -461,7 +461,7 @@
         </nav>
 
         <main role="main" class="markdown-body entry-content" itemprop="text" itemscope itemtype="https://schema.org/TechArticle">
-<h2>G4F - Namestitev Dockerja</h2>
+<h2>G4F - Docker Setup</h2>
 <h2>Table of Contents</h2>
 <ul>
 <li><a href="#prerequisites">Prerequisites</a></li>
@@ -529,7 +529,7 @@
 <div class="highlight highlight-source-shell"><pre class="notranslate">curl -X POST -H <span class="pl-s"><span class="pl-pds">"</span>Content-Type: application/json<span class="pl-pds">"</span></span> -d <span class="pl-s"><span class="pl-pds">'</span>{"prompt": "What is the capital of France?"}<span class="pl-pds">'</span></span> http://localhost:1337/chat/completions</pre></div>
 <h3>Using Python</h3>
 <p><strong>Create a file named <code class="notranslate">test_g4f.py</code> with the following content:</strong></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">zahtevki</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">requests</span>
 
 <span class="pl-s1">url</span> <span class="pl-c1">=</span> <span class="pl-s">"http://localhost:1337/v1/chat/completions"</span>
 <span class="pl-s1">body</span> <span class="pl-c1">=</span> {
@@ -540,7 +540,7 @@
     ]
 }
 
-<span class="pl-s1">json_response</span> <span class="pl-c1">=</span> <span class="pl-s1">zahtevki</span>.<span class="pl-c1">post</span>(<span class="pl-s1">url</span>, <span class="pl-s1">json</span><span class="pl-c1">=</span><span class="pl-s1">body</span>).<span class="pl-c1">json</span>().<span class="pl-c1">get</span>(<span class="pl-s">'choices'</span>, [])
+<span class="pl-s1">json_response</span> <span class="pl-c1">=</span> <span class="pl-s1">requests</span>.<span class="pl-c1">post</span>(<span class="pl-s1">url</span>, <span class="pl-s1">json</span><span class="pl-c1">=</span><span class="pl-s1">body</span>).<span class="pl-c1">json</span>().<span class="pl-c1">get</span>(<span class="pl-s">'choices'</span>, [])
 
 <span class="pl-k">for</span> <span class="pl-s1">choice</span> <span class="pl-c1">in</span> <span class="pl-s1">json_response</span>:
     <span class="pl-en">print</span>(<span class="pl-s1">choice</span>.<span class="pl-c1">get</span>(<span class="pl-s">'message'</span>, {}).<span class="pl-c1">get</span>(<span class="pl-s">'content'</span>, <span class="pl-s">''</span>))</pre></div>

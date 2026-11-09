@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/guides/create_provider.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Luo toimittaja AI-työkalun avulla</title>
+    <title>Create Provider with AI Tool</title>
 
-    <meta name="description" content="GPT4Free-dokumentaatio luoda toimittaja AI-työkalun avulla. Täydellisiä ohjeita, esimerkkejä, suosituksia ja API-viittauksia vapaiden AI-pisteiden, kood generationin, ja AI-mallin integroinnin-паaruke." />
-    <meta name="keywords" content="GPT4Free, G4F, teko-ohjeet, ilmainen AI API, OpenAI vaihtoehto, JavaScript AI-asiakas, Python AI-kirjasto, AI-integraatio, koodin luonti, Luo tarjoaja AI-työkalulla" />
+    <meta name="description" content="GPT4Free documentation for Create Provider with AI Tool. Complete guides, examples, and API reference for free AI endpoints, code generation, and AI model integration." />
+    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, Create Provider with AI Tool" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Luo toimittaja AI-työkalun avulla | GPT4Free -dokumentaatio" />
-    <meta property="og:description" content="GPT4Free -dokumentaatio Luo toimittaja AI-työkalun avulla Norway Free AI-pisteet, esimerkit, ja laajalujuiset ohjeet." />
+    <meta property="og:title" content="Create Provider with AI Tool | GPT4Free Documentation" />
+    <meta property="og:description" content="GPT4Free documentation for Create Provider with AI Tool. Free AI endpoints, examples, and comprehensive guides." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Luo toimittaja AI-työkalun avulla | GPT4Free -dokumentaatio" />
-    <meta name="twitter:description" content="Vapaat AI-pisteet ja laajalujuiset ohjeet Luo toimittaja AI-työkalun avulla." />
+    <meta name="twitter:title" content="Create Provider with AI Tool | GPT4Free Documentation" />
+    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for Create Provider with AI Tool." />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -461,7 +461,7 @@
         </nav>
 
         <main role="main" class="markdown-body entry-content" itemprop="text" itemscope itemtype="https://schema.org/TechArticle">
-<h3>Luo toimittaja AI-työkalun avulla</h3>
+<h3>Create Provider with AI Tool</h3>
 <p>Call in your terminal the <code class="notranslate">create_provider</code> script:</p>
 <div class="highlight highlight-source-shell"><pre class="notranslate">python -m etc.tool.create_provider</pre></div>
 <ol>
@@ -477,7 +477,7 @@
 </ol>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> __future__ <span class="pl-k">import</span> <span class="pl-s1">annotations</span>
 
-<span class="pl-k">from</span> ..<span class="pl-s1">typing</span> <span class="pl-k">import</span> <span class="pl-v">AsyncResult</span>, <span class="pl-v">Viestejä</span>
+<span class="pl-k">from</span> ..<span class="pl-s1">typing</span> <span class="pl-k">import</span> <span class="pl-v">AsyncResult</span>, <span class="pl-v">Messages</span>
 <span class="pl-k">from</span> .<span class="pl-s1">base_provider</span> <span class="pl-k">import</span> <span class="pl-v">AsyncGeneratorProvider</span>
 
 <span class="pl-k">class</span> <span class="pl-v">HogeService</span>(<span class="pl-v">AsyncGeneratorProvider</span>):
@@ -488,14 +488,14 @@
     <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">create_async_generator</span>(
         <span class="pl-s1">cls</span>,
         <span class="pl-s1">model</span>: <span class="pl-smi">str</span>,
-        <span class="pl-s1">viestit</span>: <span class="pl-smi">Viestejä</span>,
-        <span class="pl-s1">proxy</span>: <span class="pl-smi">str</span> <span class="pl-c1">=</span> <span class="pl-c1">Ei mitään</span>,
+        <span class="pl-s1">messages</span>: <span class="pl-smi">Messages</span>,
+        <span class="pl-s1">proxy</span>: <span class="pl-smi">str</span> <span class="pl-c1">=</span> <span class="pl-c1">None</span>,
         <span class="pl-c1">**</span><span class="pl-s1">kwargs</span>
     ) <span class="pl-c1">-&gt;</span> <span class="pl-smi">AsyncResult</span>:
         <span class="pl-k">yield</span> <span class="pl-s">""</span></pre></div>
 <ol start="4">
 <li>Here, you can adjust the settings, for example, if the website does support streaming, set <code class="notranslate">supports_stream</code> to <code class="notranslate">True</code>...</li>
-<li>Write code to request the provider in <code class="notranslate">create_async_generator</code> ja <code class="notranslate">yield</code> the response, <em>even if</em> it's a one-time response, do not hesitate to look at other providers for inspiration.</li>
+<li>Write code to request the provider in <code class="notranslate">create_async_generator</code> and <code class="notranslate">yield</code> the response, <em>even if</em> it's a one-time response, do not hesitate to look at other providers for inspiration.</li>
 <li>Add the Provider Import in <a href="/docs/guides/g4f/Provider/__init__.py"><code class="notranslate">g4f/Provider/__init__.py</code></a></li>
 </ol>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> .<span class="pl-v">HogeService</span> <span class="pl-k">import</span> <span class="pl-v">HogeService</span>
@@ -510,8 +510,8 @@
 
 <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">g4f</span>.<span class="pl-c1">ChatCompletion</span>.<span class="pl-c1">create</span>(
     <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">'auto'</span>,
-    <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">Palveluntarjoaja</span>.<span class="pl-c1">PROVIDERNAME</span>,
-    <span class="pl-s1">viestit</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"test"</span>}],
+    <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-s1">g4f</span>.<span class="pl-c1">Provider</span>.<span class="pl-c1">PROVIDERNAME</span>,
+    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"test"</span>}],
     <span class="pl-s1">stream</span><span class="pl-c1">=</span><span class="pl-c1">True</span>
 )
 

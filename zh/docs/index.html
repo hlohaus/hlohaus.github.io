@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>g4f.dev 文档中心</title>
+    <title>g4f.dev Documentation Hub</title>
 
-    <meta name="description" content="GPT4Free 的官方 g4f.dev 文档中心。完整的指南、示例和 API 参考，用于免费 AI 端点、代码生成和 AI 模型集成。" />
-    <meta name="keywords" content="GPT4Free, G4F, AI文档, 免费AI API, OpenAI替代方案, JavaScript AI客户端, Python AI库, AI集成, 代码生成, g4f.dev文档中心" />
+    <meta name="description" content="Official g4f.dev documentation hub for GPT4Free. Complete guides, examples, and API reference for free AI endpoints, code generation, and AI model integration." />
+    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, g4f.dev Documentation Hub" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="g4f.dev 文档中心" />
-    <meta property="og:description" content="g4f.dev的官方文档中心，为GPT4Free提供免费AI端点、示例和全面指南。" />
+    <meta property="og:title" content="g4f.dev Documentation Hub" />
+    <meta property="og:description" content="Official g4f.dev documentation hub for GPT4Free. Free AI endpoints, examples, and comprehensive guides." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="g4f.dev文档中心 | GPT4Free文档" />
-    <meta name="twitter:description" content="g4f.dev文档中心的免费AI端点和全面文档。" />
+    <meta name="twitter:title" content="g4f.dev Documentation Hub | GPT4Free Documentation" />
+    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for g4f.dev Documentation Hub." />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -459,7 +459,7 @@
         </nav>
 
         <main role="main" class="markdown-body entry-content" itemprop="text" itemscope itemtype="https://schema.org/TechArticle">
-<h2>g4f.dev 文档中心</h2>
+<h2>g4f.dev Documentation Hub</h2>
 <p>
 <img src="https://g4f.dev/docs/images/pico.jpeg" alt="Welcome to the official **g4f.dev** docs for **GPT4Free** – free and convenient AI endpoints you can use directly in your apps, scripts, and even right in your browser.
 Here you’ll find a clear overview, quick examples, and entry points to deeper docs for every major feature."/>
@@ -473,7 +473,7 @@ Here you’ll find a clear overview, quick examples, and entry points to deeper 
 <li><a href="/docs/docker.html">Docker</a></li>
 <li><a href="/docs/requirements.html">Requirements</a></li>
 </ul>
-<h3>下载</h3>
+<h3>Downloads</h3>
 <ul>
 <li><strong>Desktop (Windows, macOS, Linux):</strong> Download the <a href="https://g4f.dev/#downloads">g4f-go launcher</a>. It is a small self-contained binary that installs CPython and g4f on first run, so no system Python is required.</li>
 <li><strong>Android:</strong> Download the <a href="https://g4f.dev/#downloads">G4F Android APK</a> for the native app, or use the g4f-go Termux build on ARM64 devices.</li>
@@ -490,12 +490,12 @@ Here you’ll find a clear overview, quick examples, and entry points to deeper 
 <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-en">Client</span>()
 <span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">client</span>.<span class="pl-c1">chat</span>.<span class="pl-c1">completions</span>.<span class="pl-c1">create</span>(
     <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"gpt-4.1"</span>,  <span class="pl-c"># Try "gpt-4o", "deepseek-v3", etc.</span>
-    <span class="pl-s1">条消息</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Hello"</span>}],
+    <span class="pl-s1">messages</span><span class="pl-c1">=</span>[{<span class="pl-s">"role"</span>: <span class="pl-s">"user"</span>, <span class="pl-s">"content"</span>: <span class="pl-s">"Hello"</span>}],
     <span class="pl-s1">web_search</span><span class="pl-c1">=</span><span class="pl-c1">False</span>
 )
 <span class="pl-en">print</span>(<span class="pl-s1">response</span>.<span class="pl-c1">choices</span>[<span class="pl-c1">0</span>].<span class="pl-c1">message</span>.<span class="pl-c1">content</span>)</pre></div>
 <p><strong>Output:</strong></p>
-<pre class="notranslate"><code class="notranslate">你好！今天你能帮我什么？
+<pre class="notranslate"><code class="notranslate">Hello! How can I assist you today?
 </code></pre>
 <hr>
 <h3>🎨  Image Generation</h3>
@@ -521,7 +521,7 @@ Here you’ll find a clear overview, quick examples, and entry points to deeper 
     <span class="pl-k">const</span> <span class="pl-s1">client</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">Client</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
     <span class="pl-k">const</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span><span class="pl-kos">.</span><span class="pl-c1">chat</span><span class="pl-kos">.</span><span class="pl-c1">completions</span><span class="pl-kos">.</span><span class="pl-en">create</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
         <span class="pl-c1">model</span>: <span class="pl-s">'gpt-4.1'</span><span class="pl-kos">,</span>  <span class="pl-c">// Or "gpt-4o", "deepseek-v3"</span>
-        <span class="pl-c1">条消息</span>: <span class="pl-kos">[</span><span class="pl-kos">{</span> <span class="pl-c1">role</span>: <span class="pl-s">'user'</span><span class="pl-kos">,</span> <span class="pl-c1">content</span>: <span class="pl-s">'Explain quantum computing'</span> <span class="pl-kos">}</span><span class="pl-kos">]</span>
+        <span class="pl-c1">messages</span>: <span class="pl-kos">[</span><span class="pl-kos">{</span> <span class="pl-c1">role</span>: <span class="pl-s">'user'</span><span class="pl-kos">,</span> <span class="pl-c1">content</span>: <span class="pl-s">'Explain quantum computing'</span> <span class="pl-kos">}</span><span class="pl-kos">]</span>
     <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
     <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">result</span><span class="pl-kos">.</span><span class="pl-c1">choices</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span><span class="pl-kos">.</span><span class="pl-c1">message</span><span class="pl-kos">.</span><span class="pl-c1">content</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
 <span class="pl-kos">&lt;/</span><span class="pl-ent">script</span><span class="pl-kos">&gt;</span></pre></div>

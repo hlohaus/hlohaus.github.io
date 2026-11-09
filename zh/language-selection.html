@@ -46,15 +46,15 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/language-selection.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>G4F - 语言选择</title>
+    <title>G4F - Language Selection</title>
 
-    <meta name="description" content="选择你的语言，加载社区翻译包，并跟踪 G4F 的 UI 翻译进度。" />
-    <meta name="keywords" content="G4F, GPT4Free, 语言, 翻译, 社区, 国际化" />
+    <meta name="description" content="Choose your language, load community translation packages and track UI translation progress for G4F." />
+    <meta name="keywords" content="G4F, GPT4Free, languages, translations, community, i18n" />
     <meta name="author" content="GPT4Free Team" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="G4F - 语言选择" />
-    <meta property="og:description" content="社区 UI 翻译：按语言的覆盖率、加载翻译包、清除存储。" />
+    <meta property="og:title" content="G4F - Language Selection" />
+    <meta property="og:description" content="Community UI translations: coverage per language, load packages, clear stores." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <link rel="apple-touch-icon" sizes="180x180" href="/dist/img/g4f.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/dist/img/g4f-32x32.png" />
@@ -259,30 +259,32 @@
 <body class="translate noads">
     <div class="wrap">
         <header>
-            <h1>🌐 语言选择</h1>
-            <button id="refresh-btn" class="primary">刷新</button>
-            <p class="subtitle">社区 UI 翻译 — 每种语言的覆盖范围，将包加载到本地存储或清除它们。</p>
+            <h1>🌐 Language Selection</h1>
+            <button id="refresh-btn" class="primary">Refresh</button>
+            <p class="subtitle">Community UI translations — coverage per language, load packages into your local store or clear them.</p>
         </header>
 
         <section class="stats">
-            <div class="stat"><div class="value" id="stat-langs">–</div><div class="label">已启用的语言</div></div>
-            <div class="stat"><div class="value" id="stat-total">–</div><div class="label">UI 片段总数</div></div>
-            <div class="stat"><div class="value" id="stat-mine">–</div><div class="label">您的语言</div></div>
+            <div class="stat"><div class="value" id="stat-langs">–</div><div class="label">Languages started</div></div>
+            <div class="stat"><div class="value" id="stat-total">–</div><div class="label">UI snippets total</div></div>
+            <div class="stat"><div class="value" id="stat-mine">–</div><div class="label">Your language</div></div>
         </section>
 
         <section class="toolbar">
-            <button id="load-mine" class="primary">⬇️ 加载我的语言</button>
-            <button id="clear-local" class="danger">🗑️ 卸载所选语言</button>
-            <span class="hint">只能同时加载一个语言包——加载另一个语言包会卸载之前的语言包。</span>
+            <button id="load-mine" class="primary">⬇️ Load my language</button>
+            <button id="clear-local" class="danger">🗑️ Unload selected language</button>
+            <span class="hint">Only one language package stays loaded — loading another unloads the previous one.</span>
         </section>
 
         <section class="lang-list" id="lang-list">
-            <div class="loading">正在加载语言…</div>
+            <div class="loading">Loading languages…</div>
         </section>
 
         <footer>
-            翻译由社区通过以下方式贡献：
-            <a href="https://g4f.dev/chat/">聊天翻译挑战</a> — 使用您的本地模型解决挑战以赚取蛋糕填充您的语言。请参阅 <a href="https://g4f.dev/docs/challenge-cakes">文档</a>.
+            Translations are contributed by the community via
+            <a href="https://g4f.dev/chat/">chat translation challenges</a> —
+            solve challenges with your local model to earn cakes and fill your language.
+            See the <a href="https://g4f.dev/docs/challenge-cakes">docs</a>.
         </footer>
     </div>
 

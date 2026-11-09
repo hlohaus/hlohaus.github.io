@@ -46,7 +46,7 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/home.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G4F - Centrum frameworków i narzędzi</title>
+    <title>G4F - Framework & Tools Hub</title>
     <link rel="icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="shortcut icon" href="/dist/img/g4f.svg" type="image/svg+xml">
     <link rel="manifest" href="/dist/img/site.webmanifest">
@@ -536,17 +536,17 @@
             <div class="brand-logo">
                 <i class="fa-solid fa-bolt"></i>
             </div>
-            <span class="brand-text">Framework G4F</span>
+            <span class="brand-text">G4F Framework</span>
         </a>
         <button class="nav-toggle" id="nav-toggle-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-actions">
             <i class="fa-solid fa-bars"></i>
         </button>
         <div class="nav-actions" id="nav-actions">
             <nav class="nav-links">
-                <a href="/">Strona główna</a>
-                <a href="/chat/">Czat</a>
-                <a href="/providers/">Dostawcy</a>
-                <a href="/stats/">Statystyki</a>
+                <a href="/">Home</a>
+                <a href="/chat/">Chat</a>
+                <a href="/providers/">Providers</a>
+                <a href="/stats/">Stats</a>
             </nav>
             <a class="connect-status" id="connect_status" href="#" target="_blank" rel="noopener" title="Connected backend URL">
                 <i class="fa-solid fa-plug"></i>
@@ -555,11 +555,11 @@
             </a>
             <div class="status-badge" id="backend-status-badge">
                 <span class="status-dot"></span>
-                <span id="backend-status-text">Backend Aktywny</span>
+                <span id="backend-status-text">Backend Active</span>
             </div>
             <button class="btn-toggle-sidebar" id="toggle-sidebar-btn">
                 <i class="fa-solid fa-cubes"></i>
-                <span>Dostawcy</span>
+                <span>Providers</span>
             </button>
         </div>
     </nav>
@@ -569,16 +569,16 @@
         <main class="content-area">
             <!-- Hero Header -->
             <section class="hero">
-                <h1 class="hero-title">Narzędzia AI i pulpit G4F</h1>
+                <h1 class="hero-title">G4F AI Tools & Dashboard</h1>
                 <p class="hero-subtitle">
-                    Uzyskaj dostęp do wysokowydajnych narzędzi AI, wyszukiwania w internecie, logów backendu w czasie rzeczywistym, statusu modelu oraz punktów końcowych wielu dostawców.
+                    Access high-performance AI tools, web search, real-time backend logs, model status, and multi-provider endpoints.
                 </p>
 
                 <!-- Search & Quick Query Box -->
                 <form action="/chat/" method="GET" class="search-box">
-                    <input type="text" name="prompt" class="search-input" id="search-query-input" placeholder="Zapytaj AI lub wprowadź prompt, aby przejść bezpośrednio do czatu..." autocomplete="off">
+                    <input type="text" name="prompt" class="search-input" id="search-query-input" placeholder="Ask AI or enter prompt to jump straight into chat..." autocomplete="off">
                     <button type="submit" class="search-btn">
-                        <i class="fa-solid fa-paper-plane"></i> Uruchom
+                        <i class="fa-solid fa-paper-plane"></i> Launch
                     </button>
                 </form>
             </section>
@@ -587,7 +587,7 @@
             <section>
                 <div class="section-header">
                     <h2 class="section-title">
-                        <i class="fa-solid fa-toolbox"></i> Narzędzia i moduły backendu
+                        <i class="fa-solid fa-toolbox"></i> Backend Tools & Modules
                     </h2>
                 </div>
 
@@ -599,13 +599,13 @@
                                 <div class="card-icon">
                                     <i class="fa-solid fa-globe"></i>
                                 </div>
-                                <span class="card-badge">Wyszukiwanie w sieci</span>
+                                <span class="card-badge">Web Search</span>
                             </div>
-                            <h3 class="card-title">Przeglądarka sieciowa z AI</h3>
-                            <p class="card-desc">Przeszukuj żywą sieć z pomocą AI, zbieraj dane ze stron, podsumowuj wiadomości i wyodrębniaj kontekst w czasie rzeczywistym.</p>
+                            <h3 class="card-title">AI Web Browser</h3>
+                            <p class="card-desc">Search the live web with AI assistance, scrape pages, summarize news, and extract real-time web context.</p>
                         </div>
                         <div class="card-action">
-                            <span>Otwórz przeglądarkę</span>
+                            <span>Open Browser</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -617,13 +617,13 @@
                                 <div class="card-icon">
                                     <i class="fa-solid fa-terminal"></i>
                                 </div>
-                                <span class="card-badge">Inspektor</span>
+                                <span class="card-badge">Inspector</span>
                             </div>
-                            <h3 class="card-title">Logi backendu</h3>
-                            <p class="card-desc">Przeglądaj logi API w czasie rzeczywistym, śledź wykonywanie promptów, audytuj przychodzące żądania i przeglądaj logi śladów systemowych.</p>
+                            <h3 class="card-title">Backend Logs</h3>
+                            <p class="card-desc">Inspect real-time API logs, track prompt executions, audit incoming requests, and view system trace logs.</p>
                         </div>
                         <div class="card-action">
-                            <span>Zobacz logi</span>
+                            <span>View Logs</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -635,13 +635,13 @@
                                 <div class="card-icon">
                                     <i class="fa-solid fa-chart-pie"></i>
                                 </div>
-                                <span class="card-badge">Analityka</span>
+                                <span class="card-badge">Analytics</span>
                             </div>
-                            <h3 class="card-title">Użycie i statystyki</h3>
-                            <p class="card-desc">Szczegółowy podział żądań, statystyki użycia tokenów, najlepsze metryki wydajności modeli i wykresy historii użycia.</p>
+                            <h3 class="card-title">Usage & Statistics</h3>
+                            <p class="card-desc">Detailed request breakdown, token usage stats, top model performance metrics, and usage history charts.</p>
                         </div>
                         <div class="card-action">
-                            <span>Zobacz statystyki</span>
+                            <span>View Stats</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -653,13 +653,13 @@
                                 <div class="card-icon">
                                     <i class="fa-solid fa-server"></i>
                                 </div>
-                                <span class="card-badge">Monitor zdrowia</span>
+                                <span class="card-badge">Health Monitor</span>
                             </div>
-                            <h3 class="card-title">Status systemu i dostawcy</h3>
-                            <p class="card-desc">Monitorowanie dostępności w czasie rzeczywistym, limity przydziałów, działające punkty końcowe modeli oraz kontrola stanu usługi.</p>
+                            <h3 class="card-title">System & Provider Status</h3>
+                            <p class="card-desc">Real-time availability monitoring, quota limits, working model endpoints, and service health check.</p>
                         </div>
                         <div class="card-action">
-                            <span>Sprawdź status</span>
+                            <span>Check Status</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -671,13 +671,13 @@
                                 <div class="card-icon">
                                     <i class="fa-solid fa-layer-group"></i>
                                 </div>
-                                <span class="card-badge">Katalog</span>
+                                <span class="card-badge">Catalog</span>
                             </div>
-                            <h3 class="card-title">Katalog dostawców AI</h3>
-                            <p class="card-desc">Odkryj 100+ obsługiwanych integracji dostawców AI (darmowych i opartych na autoryzacji), obsługiwane modele wizyjne oraz możliwości strumieniowania.</p>
+                            <h3 class="card-title">AI Providers Catalog</h3>
+                            <p class="card-desc">Explore 100+ supported free & auth-based AI provider integrations, supported vision models, and streaming capabilities.</p>
                         </div>
                         <div class="card-action">
-                            <span>Odkryj dostawców</span>
+                            <span>Explore Providers</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -689,13 +689,13 @@
                                 <div class="card-icon">
                                     <i class="fa-solid fa-comments"></i>
                                 </div>
-                                <span class="card-badge">Interfejs czatu</span>
+                                <span class="card-badge">Chat Interface</span>
                             </div>
-                            <h3 class="card-title">Asystent czatu G4F</h3>
-                            <p class="card-desc">Pełnowymiarowy interfejs konwersacyjny obsługujący przełączanie między wieloma modelami, niestandardowe monity, podświetlanie kodu i pamięć sesji.</p>
+                            <h3 class="card-title">G4F Chat Assistant</h3>
+                            <p class="card-desc">Full-featured conversational UI supporting multi-model switches, custom prompts, code highlighting, and session memory.</p>
                         </div>
                         <div class="card-action">
-                            <span>Rozpocznij czat</span>
+                            <span>Start Chat</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -707,13 +707,13 @@
                                 <div class="card-icon">
                                     <i class="fa-solid fa-wand-magic-sparkles"></i>
                                 </div>
-                                <span class="card-badge">Generatywne</span>
+                                <span class="card-badge">Generative</span>
                             </div>
-                            <h3 class="card-title">Studio obrazów AI</h3>
-                            <p class="card-desc">Generuj obrazy za pomocą modeli Flux, Stable Diffusion, Pollinations i DALL-E z niestandardowymi proporcjami obrazu.</p>
+                            <h3 class="card-title">AI Image Studio</h3>
+                            <p class="card-desc">Generate images using Flux, Stable Diffusion, Pollinations, and DALL-E models with custom aspect ratios.</p>
                         </div>
                         <div class="card-action">
-                            <span>Utwórz obrazy</span>
+                            <span>Create Images</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -725,13 +725,13 @@
                                 <div class="card-icon">
                                     <i class="fa-solid fa-shapes"></i>
                                 </div>
-                                <span class="card-badge">Mini-aplikacje</span>
+                                <span class="card-badge">Mini-Apps</span>
                             </div>
-                            <h3 class="card-title">Aplikacje i narzędzia internetowe</h3>
-                            <p class="card-desc">Zbiór interaktywnych narzędzi internetowych, w tym testery modeli, podglądy kodu, gry i narzędzia dla programistów.</p>
+                            <h3 class="card-title">Web Apps & Utilities</h3>
+                            <p class="card-desc">Collection of interactive web utilities including model testers, code previewers, games, and developer tools.</p>
                         </div>
                         <div class="card-action">
-                            <span>Otwórz Hub Aplikacji</span>
+                            <span>Open Apps Hub</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -745,11 +745,11 @@
                                 </div>
                                 <span class="card-badge">REST API</span>
                             </div>
-                            <h3 class="card-title">API kompatybilne z OpenAI</h3>
-                            <p class="card-desc">Połącz zewnętrzne aplikacje, takie jak LangChain, AutoGen i Continue, korzystając ze standardowych punktów końcowych `/v1/chat/completions`.</p>
+                            <h3 class="card-title">OpenAI-Compatible API</h3>
+                            <p class="card-desc">Connect external applications like LangChain, AutoGen, and Continue using standard `/v1/chat/completions` endpoints.</p>
                         </div>
                         <div class="card-action">
-                            <span>Zobacz dokumentację API</span>
+                            <span>View API Docs</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </a>
@@ -762,22 +762,22 @@
             <div class="sidebar-header">
                 <div class="sidebar-title">
                     <i class="fa-solid fa-server" style="color: var(--accent-light);"></i>
-                    <span>Katalog usługodawców</span>
+                    <span>Providers Catalog</span>
                 </div>
-                <span class="card-badge" id="sidebar-provider-count">0роўne aktywne</span>
+                <span class="card-badge" id="sidebar-provider-count">0 Active</span>
             </div>
             <div class="sidebar-search">
-                <input type="text" id="sidebar-filter-input" class="sidebar-search-input" placeholder="Filtruj usługodawców...">
+                <input type="text" id="sidebar-filter-input" class="sidebar-search-input" placeholder="Filter providers...">
             </div>
             <div class="sidebar-body" id="sidebar-providers-list">
-                <div style="text-align:center; padding: 2rem; color: var(--text-muted);">Wczytywanie usługodawców...</div>
+                <div style="text-align:center; padding: 2rem; color: var(--text-muted);">Loading providers...</div>
             </div>
         </aside>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 G4F Framework. All Rights Reserved. | <a href="https://github.com/xtekky/gpt4free" target="_blank">Repozytorium GitHub</a></p>
+        <p>&copy; 2026 G4F Framework. All Rights Reserved. | <a href="https://github.com/xtekky/gpt4free" target="_blank">GitHub Repository</a></p>
     </footer>
 
     <script>

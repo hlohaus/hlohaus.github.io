@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/config-yaml-routing.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Prilagođeno usmjeravanje modela s config.yaml | Dokumentacija GPT4Free</title>
+    <title>Custom Model Routing with config.yaml | GPT4Free Documentation</title>
 
-    <meta name="description" content="Dokumentacija GPT4Free za prilagođeno usmjeravanje modela s config.yaml. Cjeloviti vodiči, primjeri i referenca API-ja za besplatne AI točke krajnje, generiranje koda i integraciju AI modela." />
-    <meta name="keywords" content="GPT4Free, G4F, AI dokumentacija, besplatni AI API, alternativa OpenAI-a, JavaScript AI klijent, Python AI biblioteka, AI integracija, generiranje koda, prilagođeno usmjeravanje modela s config.yaml" />
+    <meta name="description" content="GPT4Free documentation for Custom Model Routing with config.yaml. Complete guides, examples, and API reference for free AI endpoints, code generation, and AI model integration." />
+    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, Custom Model Routing with config.yaml" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Prilagođeno usmjeravanje modela s config.yaml | Dokumentacija GPT4Free" />
-    <meta property="og:description" content="Dokumentacija GPT4Free za prilagođeno usmjeravanje modela s config.yaml. Besplatne AI točke krajnje, primjeri i cjeloviti vodiči." />
+    <meta property="og:title" content="Custom Model Routing with config.yaml | GPT4Free Documentation" />
+    <meta property="og:description" content="GPT4Free documentation for Custom Model Routing with config.yaml. Free AI endpoints, examples, and comprehensive guides." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Prilagođeno usmjeravanje modela s config.yaml | Dokumentacija GPT4Free" />
-    <meta name="twitter:description" content="Besplatne AI točke krajnje i cjelovita dokumentacija za prilagođeno usmjeravanje modela s config.yaml." />
+    <meta name="twitter:title" content="Custom Model Routing with config.yaml | GPT4Free Documentation" />
+    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for Custom Model Routing with config.yaml." />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -495,8 +495,8 @@ print(response.choices[0].message.content)</code></pre>
 <thead>
 <tr>
 <th>Key</th>
-<th>Potrebno</th>
-<th>Opis</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -538,7 +538,7 @@ The result is cached in memory (5 min TTL) and invalidated on 429 responses.</p>
 <table>
 <thead>
 <tr>
-<th>Pružatelj</th>
+<th>Provider</th>
 <th><code>get_quota()</code> format</th>
 <th>Example condition</th>
 </tr>
@@ -597,7 +597,7 @@ older than 1 hour are automatically pruned.</p>
 <td>Equality / inequality</td>
 </tr>
 <tr>
-<td><code>i</code> <code>or</code> <code>not</code></td>
+<td><code>and</code> <code>or</code> <code>not</code></td>
 <td>Logical connectives</td>
 </tr>
 <tr>

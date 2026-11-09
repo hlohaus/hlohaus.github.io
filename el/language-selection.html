@@ -46,15 +46,15 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/language-selection.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>G4F - Επιλογή Γλώσσας</title>
+    <title>G4F - Language Selection</title>
 
-    <meta name="description" content="Επιλέξτε τη γλώσσα σας, φορτώστε πακέτα μετάφρασης της κοινότητας και παρακολουθήστε την πρόοδο μετάφρασης της διεπαφής χρήστη για το G4F." />
-    <meta name="keywords" content="G4F, GPT4Free, γλώσσες, μεταφράσεις, κοινότητα, i18n" />
+    <meta name="description" content="Choose your language, load community translation packages and track UI translation progress for G4F." />
+    <meta name="keywords" content="G4F, GPT4Free, languages, translations, community, i18n" />
     <meta name="author" content="GPT4Free Team" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="G4F - Επιλογή Γλώσσας" />
-    <meta property="og:description" content="Μεταφράσεις διεπαφής χρήστη της κοινότητας: κάλυψη ανά γλώσσα, φόρτωση πακέτων, καθαρισμός αποθηκευτικών χώρων." />
+    <meta property="og:title" content="G4F - Language Selection" />
+    <meta property="og:description" content="Community UI translations: coverage per language, load packages, clear stores." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <link rel="apple-touch-icon" sizes="180x180" href="/dist/img/g4f.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/dist/img/g4f-32x32.png" />
@@ -259,30 +259,32 @@
 <body class="translate noads">
     <div class="wrap">
         <header>
-            <h1>🌐 Επιλογή Γλώσσας</h1>
-            <button id="refresh-btn" class="primary">Ανανέωση</button>
-            <p class="subtitle">Μεταφράσεις διεπαφής χρήστη της κοινότητας — κάλυψη ανά γλώσσα, φορτώστε πακέτα στο τοπικό κατάστημα σας ή καθαρίστε τα.</p>
+            <h1>🌐 Language Selection</h1>
+            <button id="refresh-btn" class="primary">Refresh</button>
+            <p class="subtitle">Community UI translations — coverage per language, load packages into your local store or clear them.</p>
         </header>
 
         <section class="stats">
-            <div class="stat"><div class="value" id="stat-langs">–</div><div class="label">Γλώσσες που ξεκίνησαν</div></div>
-            <div class="stat"><div class="value" id="stat-total">–</div><div class="label">Συνολικά αποσπάσματα διεπαφής χρήστη</div></div>
-            <div class="stat"><div class="value" id="stat-mine">–</div><div class="label">Η γλώσσα σας</div></div>
+            <div class="stat"><div class="value" id="stat-langs">–</div><div class="label">Languages started</div></div>
+            <div class="stat"><div class="value" id="stat-total">–</div><div class="label">UI snippets total</div></div>
+            <div class="stat"><div class="value" id="stat-mine">–</div><div class="label">Your language</div></div>
         </section>
 
         <section class="toolbar">
-            <button id="load-mine" class="primary">⬇️ Φόρτωση της γλώσσας μου</button>
-            <button id="clear-local" class="danger">🗑️ Αποφόρτωση επιλεγμένης γλώσσας</button>
-            <span class="hint">Μόνο ένα πακέτο γλώσσας παραμένει φορτωμένο — η φόρτωση ενός άλλου αποφορτώνει το προηγούμενο.</span>
+            <button id="load-mine" class="primary">⬇️ Load my language</button>
+            <button id="clear-local" class="danger">🗑️ Unload selected language</button>
+            <span class="hint">Only one language package stays loaded — loading another unloads the previous one.</span>
         </section>
 
         <section class="lang-list" id="lang-list">
-            <div class="loading">Φόρτωση γλωσσών…</div>
+            <div class="loading">Loading languages…</div>
         </section>
 
         <footer>
-            Οι μεταφράσεις предлага разведεν от общността чрез
-            <a href="https://g4f.dev/chat/">berbês chat translation challenges</a> — λύσε Cinemaaria kafka fibrosis Org-mode your local model to earn cakes and fill your language.ridges the <a href="https://g4f.dev/docs/challenge-cakes">документация</a>.
+            Translations are contributed by the community via
+            <a href="https://g4f.dev/chat/">chat translation challenges</a> —
+            solve challenges with your local model to earn cakes and fill your language.
+            See the <a href="https://g4f.dev/docs/challenge-cakes">docs</a>.
         </footer>
     </div>
 

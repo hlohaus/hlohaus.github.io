@@ -48,21 +48,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>G4Fチャット - 聴き、学び、挑戦する会話型AI</title>
+    <title>G4F Chat - Conversational AI that Listens, Learns, and Challenges</title>
 
     <!-- Improved meta description with relevant keywords -->
-    <meta name="description" content="G4F Chatは、あなたのアイデアを効果的に聞き、学び、挑戦するために設計された高度な会話型AIプラットフォームです。プライベートな会話、カスタマイズ可能な設定、複数のプロバイダーを備えたAIパワードチャットを体験してください。" />
+    <meta name="description" content="G4F Chat is an advanced conversational AI platform designed to listen, learn, and challenge your ideas effectively. Experience AI-powered chat with private conversations, customizable settings, and multiple providers." />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="G4Fチャット - 聴き、学び、挑戦する会話型AI" />
-    <meta property="og:description" content="最先端の技術を活用した、ダイナミックでプライベートでカスタマイズ可能な会話のために、G4F ChatのAIシステムと対話してください。" />
+    <meta property="og:title" content="G4F Chat - Conversational AI that Listens, Learns, and Challenges" />
+    <meta property="og:description" content="Engage with G4F Chat's AI system for dynamic, private, and customizable conversations powered by cutting-edge technology." />
     <meta property="og:image" content="/dist/img/g4f.svg" />
     <meta property="og:type" content="website" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="G4Fチャット - 聴き、学び、挑戦する会話型AI" />
-    <meta name="twitter:description" content="G4F Chatを使用して、プライベートでカスタマイズ可能なAI駆動型チャット体験を楽しみ、複数のAIプロバイダーとシームレスな通信をサポートしてください。" />
+    <meta name="twitter:title" content="G4F Chat - Conversational AI that Listens, Learns, and Challenges" />
+    <meta name="twitter:description" content="Use G4F Chat for private and customizable AI-driven chat experiences, supporting multiple AI providers and seamless communication." />
     <meta name="twitter:image" content="/dist/img/g4f.svg" />
 
     <!-- Canonical URL to avoid duplicate content issues -->
@@ -115,18 +115,18 @@
                             <i class="fa-solid fa-user" aria-hidden="true"></i>
                             <span id="user-tier-text" class="notranslate">Guest</span>
                         </div>
-                        <a id="sidebar-login-btn" class="tier-auth-btn" href="#" onclick="event.preventDefault(); window.location.href='/members.html?redirect='+encodeURIComponent(location.href);" title="メンバー専用エリアにログイン">
+                        <a id="sidebar-login-btn" class="tier-auth-btn" href="#" onclick="event.preventDefault(); window.location.href='/members.html?redirect='+encodeURIComponent(location.href);" title="Login to Members Area">
                             <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i>
-                            <span>ログイン</span>
+                            <span>Login</span>
                         </a>
-                        <button id="sidebar-logout-btn" class="tier-auth-btn hidden" onclick="cloudSyncLogout()" title="ログアウト">
+                        <button id="sidebar-logout-btn" class="tier-auth-btn hidden" onclick="cloudSyncLogout()" title="Logout">
                             <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>
-                            <span>ログアウト</span>
+                            <span>Logout</span>
                         </button>
                     </div>
                     <div class="tier-limits hidden" id="tier-limits-row">
-                        <span id="max-tokens-text" title="残りのトークン/制限"><i class="fa-solid fa-coins" aria-hidden="true"></i> -</span>
-                        <span id="max-requests-text" title="残りのリクエスト/制限"><i class="fa-solid fa-list" aria-hidden="true"></i> -</span>
+                        <span id="max-tokens-text" title="Tokens remaining/limit"><i class="fa-solid fa-coins" aria-hidden="true"></i> -</span>
+                        <span id="max-requests-text" title="Requests remaining/limit"><i class="fa-solid fa-list" aria-hidden="true"></i> -</span>
                     </div>
                 </div>
                 <div id="discord-upgrade-banner" class="discord-upgrade-banner hidden" role="region" aria-label="Discord free tier upgrade">
@@ -150,11 +150,11 @@
                 <nav class="top" aria-label="Conversation actions">
                     <button class="new_convo" onclick="new_conversation()" aria-label="Start a new conversation" tabindex="0">
                         <i class="fa-regular fa-plus" aria-hidden="true"></i>
-                        <span>新しい会話</span>
+                        <span>New Conversation</span>
                     </button>
                     <button class="new_convo" onclick="new_conversation(true)" aria-label="Start a private conversation" tabindex="0">
                         <i class="fa-solid fa-user-secret" aria-hidden="true"></i>
-                        <span>プライベート会話</span>
+                        <span>Private Conversation</span>
                     </button>
                     <br><br>
                     <div id="box_conversations" class="conversations" role="region" aria-live="polite" aria-label="List of conversations"></div>
@@ -162,16 +162,16 @@
                 <section class="bottom_buttons" aria-label="Support and links">
                     <button onclick="open_settings();" aria-label="Open settings">
                         <i class="fa-solid fa-gear" aria-hidden="true"></i>
-                        <span>設定を開く</span>
+                        <span>Open Settings</span>
                     </button>
                     <div class="info" role="region" aria-label="Support Discord">
                         <i class="fa fa-question-circle" aria-hidden="true"></i>
                         <span class="convo-title">
-                            サポート ~ 
+                            support ~ 
                             <a href="https://discord.gg/qXA4Wf4Fsm" target="_blank" rel="noopener noreferrer">discord.gg/qXA4Wf4Fsm</a>
                         </span>
                     </div>
-                    <div class="info" role="region" aria-label="GitHubリポジトリ">
+                    <div class="info" role="region" aria-label="GitHub Repository">
                         <i class="fa-brands fa-github" aria-hidden="true"></i>
                         <span class="convo-title">
                             github ~ 
@@ -193,23 +193,23 @@
                     <button class="settings-back-button" onclick="open_settings();" aria-label="Back to main interface">
                         <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                     </button>
-                     <h2>設定</h2>
+                     <h2>Settings</h2>
                 </header>
                 <form>
                   <div class="field">
-                      <span class="label">会話履歴を無効にする</span>
+                      <span class="label">Disable Conversation History</span>
                       <input type="checkbox" id="history" aria-checked="false" />
-                      <label for="history" class="toogle" title="応答時間を改善するか、大きな会話の問題を修正する"></label>
+                      <label for="history" class="toogle" title="Improve response time or fix large conversation issues"></label>
                   </div>
                   <div class="field">
-                      <span class="label">生成されたメディアをダウンロード</span>
+                      <span class="label">Download Generated Media</span>
                       <input type="checkbox" id="download_media" checked aria-checked="true" />
-                      <label for="download_media" class="toogle" title="生成された画像、音声、動画をダウンロードして保存"></label>
+                      <label for="download_media" class="toogle" title="Download and save generated images, audios, and videos"></label>
                   </div>
                   <div class="field">
-                      <span class="label">ダークモードを有効にする</span>
+                      <span class="label">Enable Dark Mode</span>
                       <input type="checkbox" id="darkMode" checked />
-                      <label for="darkMode" class="toogle" title="ダークモードを切り替える"></label>
+                      <label for="darkMode" class="toogle" title="Toggle Dark Mode"></label>
                   </div>
                   <div class="field">
                       <span class="label">Enable Model Search</span>
@@ -227,60 +227,60 @@
                       <label for="searchByProvider" class="toogle" title="Enable searching for models by provider name"></label>
                   </div>
                   <div class="field">
-                      <span class="label">エラーを報告</span>
+                      <span class="label">Report Errors</span>
                       <input type="checkbox" id="report_error" checked aria-checked="true" />
-                      <label for="report_error" class="toogle" title="エラーレポートを送信"></label>
+                      <label for="report_error" class="toogle" title="Send error reports"></label>
                   </div>
                   <div class="field">
-                      <span class="label">単語とトークンの数をカウント</span>
+                      <span class="label">Count Words and Tokens</span>
                       <input type="checkbox" id="countTokens" checked aria-checked="true" />
-                      <label for="countTokens" class="toogle" title="単語とトークンのカウントを有効にする"></label>
+                      <label for="countTokens" class="toogle" title="Enable word and token counting"></label>
                   </div>
                   <div class="field">
-                      <span class="label">自動方向調整（16:9 または 9:16）</span>
+                      <span class="label">Automatic Orientation (16:9 or 9:16)</span>
                       <input type="checkbox" id="automaticOrientation" checked aria-checked="true" />
-                      <label for="automaticOrientation" class="toogle" title="生成されたメディアの自動方向調整"></label>
+                      <label for="automaticOrientation" class="toogle" title="Auto-orient generated media"></label>
                   </div>
                   <div class="field box">
-                      <label for="systemPrompt" class="label">システムプロンプト</label>
-                      <textarea id="systemPrompt" placeholder="あなたは役立つアシスタントです。" aria-describedby="systemPrompt-desc" data-example="You can use this prompt to customize AI behavior, e.g., to enable image generation by using specified syntax."></textarea>
+                      <label for="systemPrompt" class="label">System Prompt</label>
+                      <textarea id="systemPrompt" placeholder="You are a helpful assistant." aria-describedby="systemPrompt-desc" data-example="You can use this prompt to customize AI behavior, e.g., to enable image generation by using specified syntax."></textarea>
                       <small id="systemPrompt-desc">Customize the AI's system prompt to personalize responses.</small>
                   </div>
                   <div class="field box">
-                      <label for="recognition-language" class="label" title="音声認識の優先言語を設定">音声認識言語</label>
-                      <input type="text" id="recognition-language" value="" placeholder="デフォルト: navigator.language" />
+                      <label for="recognition-language" class="label" title="Set preferred language for speech recognition">Speech Recognition Language</label>
+                      <input type="text" id="recognition-language" value="" placeholder="Default: navigator.language" />
                   </div>
 
                   <div class="field box hidden">
-                      <label for="Custom-api_base" class="label">カスタムプロバイダー ベース URL</label>
+                      <label for="Custom-api_base" class="label">Custom Provider Base URL</label>
                       <input type="url" id="Custom-api_base" name="Custom[api_base]" placeholder="http://localhost:8080/v1" autocomplete="off" />
                   </div>
                   <div class="field box hidden">
-                      <label for="Custom-api_key" class="label">カスタム プロバイダー API キー</label>
-                      <input type="text" id="Custom-api_key" name="Custom[api_key]" placeholder="API キー" autocomplete="off" />
+                      <label for="Custom-api_key" class="label">Custom Provider API Key</label>
+                      <input type="text" id="Custom-api_key" name="Custom[api_key]" placeholder="API key" autocomplete="off" />
                   </div>
 
                   <div class="bottom_buttons">
                       <button type="button" onclick="delete_conversations()" aria-label="Clear all conversations">
                           <i class="fa-solid fa-trash" aria-hidden="true"></i>
-                          <span>会話をクリア</span>
+                          <span>Clear Conversations</span>
                       </button>
                       <button type="button" onclick="save_storage()" aria-label="Export conversations">
                           <i class="fa-solid fa-download" aria-hidden="true"></i>
-                          <span>会話をエクスポート</span>
+                          <span>Export Conversations</span>
                       </button>
                       <button type="button" onclick="save_storage(true)" aria-label="Export settings">
                           <i class="fa-solid fa-pencil" aria-hidden="true"></i>
-                          <span>設定をエクスポート</span>
+                          <span>Export Settings</span>
                       </button>
                       <button type="button" onclick="this.querySelector('.fa-spin').classList.remove('hidden'); framework.translateAll().then(() => {this.querySelector('.fa-spin').classList.add('hidden')}).catch(() => {this.querySelector('.fa-spin').classList.add('hidden')})" aria-label="Translate user interface">
                           <i class="fa-solid fa-language" aria-hidden="true"></i>
-                          <span>UI を翻訳</span>
+                          <span>Translate UI</span>
                           <i class="fas fa-spinner fa-spin hidden" aria-hidden="true"></i>
                       </button>
                       <button type="button" onclick="deleteTranslations() && window.location.reload()" aria-label="Delete translations">
                           <i class="fa-solid fa-trash" aria-hidden="true"></i>
-                          <span>翻訳を削除</span>
+                          <span>Delete Translations</span>
                       </button>
                   </div>
                 </form>
@@ -292,7 +292,7 @@
             <div class="bottom_buttons">
                 <button id="close_provider_forms" type="button" aria-label="Close provider forms">
                     <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
-                    <span>閉じる</span>
+                    <span>Close</span>
                 </button>
             </div>
         </section>
@@ -303,14 +303,14 @@
                 <button class="mobile-sidebar-toggle" aria-label="Toggle sidebar menu">
                     <i class="fa-solid fa-bars" aria-hidden="true"></i>
                 </button>
-                <h2 class="convo-title" id="conversationTitle">新しい会話</h2>
+                <h2 class="convo-title" id="conversationTitle">New Conversation</h2>
                 <button class="new_convo_icon" onclick="new_conversation()" aria-label="Start new conversation">
                     <i class="fa-regular fa-plus" aria-hidden="true"></i>
                 </button>
             </header>
 
-            <label for="chatPrompt" class="sr-only">システムプロンプトテキストエリア</label>
-            <textarea id="chatPrompt" class="box" placeholder="システムプロンプト" aria-multiline="true" rows="3"></textarea>
+            <label for="chatPrompt" class="sr-only">System prompt textarea</label>
+            <textarea id="chatPrompt" class="box" placeholder="System prompt" aria-multiline="true" rows="3"></textarea>
 
             <button class="slide-header" aria-label="Collapse chat header">
                 <i class="fa-solid fa-angles-up" aria-hidden="true"></i>
@@ -327,11 +327,11 @@
                     <div class="input-area">
                         <a id="download" aria-hidden="true"></a><!-- Download Button -->
 
-                        <label for="userInput" class="sr-only">メッセージを入力してください</label>
+                        <label for="userInput" class="sr-only">Type your message</label>
                         <textarea
                           id="userInput"
                           class="box"
-                          placeholder="メッセージを入力..."
+                          placeholder="Type a message..."
                           cols="30"
                           rows="4"
                           style="white-space: pre-wrap;resize: none;"
@@ -341,22 +341,22 @@
                         <div class="send-buttons" role="group" aria-label="Send message buttons">
                             <button id="addButton" aria-label="Add message" type="button">
                                 <i class="fa-solid fa-square-plus" aria-hidden="true"></i>
-                                <span>追加</span>
+                                <span>Add</span>
                             </button>
 
                             <button id="sendButton" aria-label="Send message" type="submit">
                                 <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
-                                <span>送信</span>
+                                <span>Send</span>
                             </button>
                         </div>
 
                         <button class="micro-label" for="micro" aria-label="Microphone toggle">
-                            <small class="sr-only">音声入力を有効/無効にする（マイクをオン/オフ）。</small>
+                            <small class="sr-only">Toggle microphone for audio input.</small>
                             <i class="fa-solid fa-microphone-slash" aria-hidden="true"></i>
                         </button>
 
-                        <button id="search" aria-label="Web検索を有効にする">
-                            <small class="sr-only">Web検索を有効にする</small>
+                        <button id="search" aria-label="Enable web search">
+                            <small class="sr-only">Enable web search</small>
                             <i class="fa-solid fa-search" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -371,13 +371,13 @@
                     </div>
                     <div class="stop_generating stop_generating-hidden" role="region" aria-live="assertive">
                         <button id="cancelButton" aria-label="Stop generating response">
-                            <span>生成を停止</span>
+                            <span>Stop Generating</span>
                             <i class="fa-solid fa-stop" aria-hidden="true"></i>
                         </button>
                     </div>
                     <div class="regenerate" role="region" aria-live="polite">
                         <button id="regenerateButton" aria-label="Regenerate last response">
-                            <span>再生成</span>
+                            <span>Regenerate</span>
                             <i class="fa-solid fa-rotate" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -400,7 +400,7 @@
                         <br>
                     </label>
 
-                    <label class="image-select" for="image" title="画像ファイルを選択">
+                    <label class="image-select" for="image" title="Select image file">
                         <small id="imageHelp" class="sr-only">Select an image file.</small>
                         <input
                           type="file"
@@ -415,16 +415,16 @@
                         <br>
                     </label>
                     <br>
-                    <label class="capture-audio" for="audio" title="音声を録音">
-                        <button id="record-audio" type="button" aria-label="音声を録音">
-                            <span>音声を録音</span>
+                    <label class="capture-audio" for="audio" title="Record audio">
+                        <button id="record-audio" type="button" aria-label="Record audio">
+                            <span>Record audio</span>
                             <i class="fa-solid fa-microphone" aria-hidden="true"></i>
                         </button>
                     </label>
-                    <label class="add-link" for="link" title="リンクを追加">
-                        <button id="add-link" type="button" aria-label="リンクを追加">
+                    <label class="add-link" for="link" title="Add link">
+                        <button id="add-link" type="button" aria-label="Add link">
                             <i class="fa-solid fa-link" aria-hidden="true"></i>
-                            <span>リンクを追加</span>
+                            <span>Add link</span>
                         </button>
                     </label>
                     <button class="close" type="button" aria-label="Close media selector">
@@ -436,21 +436,21 @@
 
                 <nav class="chat-buttons" role="navigation" aria-label="Chat options">
                     <div class="field">
-                        <label for="model" class="sr-only">AI モデルを選択</label>
+                        <label for="model" class="sr-only">Select AI Model</label>
                         <select name="model" id="model" aria-describedby="modelHelp"></select>
-                        <small id="modelHelp" class="sr-only">会話に使用する AI モデルを選択してください。</small>
+                        <small id="modelHelp" class="sr-only">Select AI model to use for conversations.</small>
                     </div>
                     <div class="field">
-                        <button id="open_picker" type="button" aria-label="Open provider and model picker" title="すべてのプロバイダーとモデルを表示">
+                        <button id="open_picker" type="button" aria-label="Open provider and model picker" title="Browse all providers & models">
                             <i class="fa-solid fa-table-list" aria-hidden="true"></i>
                         </button>
                     </div>
                     <div class="field">
-                        <label for="provider" class="sr-only">プロバイダーを選択</label>
+                        <label for="provider" class="sr-only">Select Provider</label>
                         <select name="provider" id="provider" aria-describedby="providerHelp">
-                            <option value="AnyProvider">プロバイダー: 自動</option>
+                            <option value="AnyProvider">Provider: Auto</option>
                         </select>
-                        <small id="providerHelp" class="sr-only">会話用のAIプロバイダーを選択します。</small>
+                        <small id="providerHelp" class="sr-only">Select AI provider for conversations.</small>
                     </div>
                     <div class="field">
                         <button id="pin" type="button" aria-label="Pin conversation">
@@ -468,13 +468,13 @@
                 <button class="log-back-button" onclick="open_settings();" aria-label="Back to settings">
                     <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                 </button>
-                <h2>ログ</h2>
+                <h2>Logs</h2>
             </header>
         </section>
 
         <!-- Highlight.js iframe container-->
         <div class="hljs-iframe-container hidden" aria-hidden="true">
-            <iframe class="hljs-iframe" title="コード構文プレビュー"></iframe>
+            <iframe class="hljs-iframe" title="Code syntax preview"></iframe>
         </div>
     </div>
 

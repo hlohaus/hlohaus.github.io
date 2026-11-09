@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/selecting_a_provider.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>G4F - اختيار مزود</title>
+    <title>G4F - Selecting a Provider</title>
 
-    <meta name="description" content="توثيق GPT4Free لـ G4F - اختيار مزود. أدلة كاملة وأمثلة ومرجع API لنقاط نهاية الذكاء الاصطناعي المجانية وتوليد الكود ودمج نماذج الذكاء الاصطناعي." />
-    <meta name="keywords" content="GPT4Free، G4F، توثيق الذكاء الاصطناعي، API ذكاء اصطناعي مجاني، بديل OpenAI، عميل JavaScript للذكاء الاصطناعي، مكتبة Python للذكاء الاصطناعي، دمج الذكاء الاصطناعي، توليد الكود، G4F - اختيار مزود" />
+    <meta name="description" content="GPT4Free documentation for G4F - Selecting a Provider. Complete guides, examples, and API reference for free AI endpoints, code generation, and AI model integration." />
+    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, G4F - Selecting a Provider" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="G4F - اختيار مزود | توثيق GPT4Free" />
-    <meta property="og:description" content="توثيق GPT4Free لـ G4F - اختيار مزود. نقاط نهاية ذكاء اصطناعي مجانية وأمثلة وأدلة شاملة." />
+    <meta property="og:title" content="G4F - Selecting a Provider | GPT4Free Documentation" />
+    <meta property="og:description" content="GPT4Free documentation for G4F - Selecting a Provider. Free AI endpoints, examples, and comprehensive guides." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="G4F - اختيار مزود | توثيق GPT4Free" />
-    <meta name="twitter:description" content="نقاط نهاية ذكاء اصطناعي مجانية وتوثيق شامل لـ G4F - اختيار مزود." />
+    <meta name="twitter:title" content="G4F - Selecting a Provider | GPT4Free Documentation" />
+    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for G4F - Selecting a Provider." />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -461,17 +461,17 @@
         </nav>
 
         <main role="main" class="markdown-body entry-content" itemprop="text" itemscope itemtype="https://schema.org/TechArticle">
-<h2>G4F - اختيار مزود</h2>
+<h2>G4F - Selecting a Provider</h2>
 <p><strong>The Inference API also allows you to specify which provider(s) to use for processing requests. This is done using the <code class="notranslate">provider</code> parameter, which can be included alongside the <code class="notranslate">model</code> parameter in your API requests. Providers can be specified as a space-separated string of provider IDs.</strong></p>
 <h4>How to Specify a Provider</h4>
 <p>To select one or more providers, include the <code class="notranslate">provider</code> parameter in your request body. This parameter accepts a string of space-separated provider IDs. Each ID represents a specific provider available in the system.</p>
 <h4>Example: Getting a List of Available Providers</h4>
 <p>Use the following Python code to fetch the list of available providers:</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">الطلبات</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">requests</span>
 
 <span class="pl-s1">url</span> <span class="pl-c1">=</span> <span class="pl-s">"http://localhost:1337/v1/providers"</span>
 
-<span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">الطلبات</span>.<span class="pl-c1">get</span>(<span class="pl-s1">url</span>, <span class="pl-s1">headers</span><span class="pl-c1">=</span>{<span class="pl-s">"accept"</span>: <span class="pl-s">"application/json"</span>})
+<span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">requests</span>.<span class="pl-c1">get</span>(<span class="pl-s1">url</span>, <span class="pl-s1">headers</span><span class="pl-c1">=</span>{<span class="pl-s">"accept"</span>: <span class="pl-s">"application/json"</span>})
 <span class="pl-s1">providers</span> <span class="pl-c1">=</span> <span class="pl-s1">response</span>.<span class="pl-c1">json</span>()
 
 <span class="pl-k">for</span> <span class="pl-s1">provider</span> <span class="pl-c1">in</span> <span class="pl-s1">providers</span>:
@@ -481,7 +481,7 @@
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">provider_id</span> <span class="pl-c1">=</span> <span class="pl-s">"HuggingChat"</span>
 <span class="pl-s1">url</span> <span class="pl-c1">=</span> <span class="pl-s">f"http://localhost:1337/v1/providers/<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">provider_id</span><span class="pl-kos">}</span></span>"</span>
 
-<span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">الطلبات</span>.<span class="pl-c1">get</span>(<span class="pl-s1">url</span>, <span class="pl-s1">headers</span><span class="pl-c1">=</span>{<span class="pl-s">"accept"</span>: <span class="pl-s">"application/json"</span>})
+<span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">requests</span>.<span class="pl-c1">get</span>(<span class="pl-s1">url</span>, <span class="pl-s1">headers</span><span class="pl-c1">=</span>{<span class="pl-s">"accept"</span>: <span class="pl-s">"application/json"</span>})
 <span class="pl-s1">provider_details</span> <span class="pl-c1">=</span> <span class="pl-s1">response</span>.<span class="pl-c1">json</span>()
 
 <span class="pl-en">print</span>(<span class="pl-s">f"Provider ID: <span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">provider_details</span>[<span class="pl-s">'id'</span>]<span class="pl-kos">}</span></span>"</span>)
@@ -489,7 +489,7 @@
 <span class="pl-en">print</span>(<span class="pl-s">f"Parameters: <span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">provider_details</span>[<span class="pl-s">'params'</span>]<span class="pl-kos">}</span></span>"</span>)</pre></div>
 <h4>Example: Using a Single Provider in Text Generation</h4>
 <p>Specify a single provider (<code class="notranslate">HuggingChat</code>) in the request body:</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">الطلبات</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">requests</span>
 
 <span class="pl-s1">url</span> <span class="pl-c1">=</span> <span class="pl-s">"http://localhost:1337/v1/chat/completions"</span>
 
@@ -501,7 +501,7 @@
     ]
 }
 
-<span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">الطلبات</span>.<span class="pl-c1">post</span>(<span class="pl-s1">url</span>, <span class="pl-s1">json</span><span class="pl-c1">=</span><span class="pl-s1">payload</span>, <span class="pl-s1">headers</span><span class="pl-c1">=</span>{<span class="pl-s">"Content-Type"</span>: <span class="pl-s">"application/json"</span>})
+<span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">requests</span>.<span class="pl-c1">post</span>(<span class="pl-s1">url</span>, <span class="pl-s1">json</span><span class="pl-c1">=</span><span class="pl-s1">payload</span>, <span class="pl-s1">headers</span><span class="pl-c1">=</span>{<span class="pl-s">"Content-Type"</span>: <span class="pl-s">"application/json"</span>})
 <span class="pl-s1">data</span> <span class="pl-c1">=</span> <span class="pl-s1">response</span>.<span class="pl-c1">json</span>()
 
 <span class="pl-k">if</span> <span class="pl-s">"choices"</span> <span class="pl-c1">in</span> <span class="pl-s1">data</span>:
@@ -511,7 +511,7 @@
     <span class="pl-en">print</span>(<span class="pl-s">"No response received"</span>)</pre></div>
 <h4>Example: Using Multiple Providers in Text Generation</h4>
 <p>Specify multiple providers by separating their IDs with a space:</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">الطلبات</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">requests</span>
 
 <span class="pl-s1">url</span> <span class="pl-c1">=</span> <span class="pl-s">"http://localhost:1337/v1/chat/completions"</span>
 
@@ -523,7 +523,7 @@
     ]
 }
 
-<span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">الطلبات</span>.<span class="pl-c1">post</span>(<span class="pl-s1">url</span>, <span class="pl-s1">json</span><span class="pl-c1">=</span><span class="pl-s1">payload</span>, <span class="pl-s1">headers</span><span class="pl-c1">=</span>{<span class="pl-s">"Content-Type"</span>: <span class="pl-s">"application/json"</span>})
+<span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">requests</span>.<span class="pl-c1">post</span>(<span class="pl-s1">url</span>, <span class="pl-s1">json</span><span class="pl-c1">=</span><span class="pl-s1">payload</span>, <span class="pl-s1">headers</span><span class="pl-c1">=</span>{<span class="pl-s">"Content-Type"</span>: <span class="pl-s">"application/json"</span>})
 <span class="pl-s1">data</span> <span class="pl-c1">=</span> <span class="pl-s1">response</span>.<span class="pl-c1">json</span>()
 
 <span class="pl-k">if</span> <span class="pl-s">"choices"</span> <span class="pl-c1">in</span> <span class="pl-s1">data</span>:
@@ -533,7 +533,7 @@
     <span class="pl-en">print</span>(<span class="pl-s">"No response received"</span>)</pre></div>
 <h4>Example: Using a Provider for Image Generation</h4>
 <p>You can also use the <code class="notranslate">provider</code> parameter for image generation:</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">الطلبات</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">requests</span>
 
 <span class="pl-s1">url</span> <span class="pl-c1">=</span> <span class="pl-s">"http://localhost:1337/v1/images/generate"</span>
 
@@ -544,7 +544,7 @@
     <span class="pl-s">"response_format"</span>: <span class="pl-s">"url"</span>
 }
 
-<span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">الطلبات</span>.<span class="pl-c1">post</span>(<span class="pl-s1">url</span>, <span class="pl-s1">json</span><span class="pl-c1">=</span><span class="pl-s1">payload</span>, <span class="pl-s1">headers</span><span class="pl-c1">=</span>{<span class="pl-s">"Content-Type"</span>: <span class="pl-s">"application/json"</span>})
+<span class="pl-s1">response</span> <span class="pl-c1">=</span> <span class="pl-s1">requests</span>.<span class="pl-c1">post</span>(<span class="pl-s1">url</span>, <span class="pl-s1">json</span><span class="pl-c1">=</span><span class="pl-s1">payload</span>, <span class="pl-s1">headers</span><span class="pl-c1">=</span>{<span class="pl-s">"Content-Type"</span>: <span class="pl-s">"application/json"</span>})
 <span class="pl-s1">data</span> <span class="pl-c1">=</span> <span class="pl-s1">response</span>.<span class="pl-c1">json</span>()
 
 <span class="pl-k">if</span> <span class="pl-s">"data"</span> <span class="pl-c1">in</span> <span class="pl-s1">data</span>:

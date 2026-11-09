@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/gui-locales.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GUI lokalni vowels d klasraftihed s alcune routes | Dokumentacija GPT4Free</title>
+    <title>GUI locale and diagnostics routes | GPT4Free Documentation</title>
 
-    <meta name="description" content="Dokumentacija GPT4Free za GUI lokalni vowels d klasraftihed s praktyka routes. Potpuna uputstva, primeri i referenca API-ja za besplatan accesni tačke AI, generisanje koda, i integraciju modela AI." />
-    <meta name="keywords" content="GPT4Free, G4F, документација вештачке интелигенције, бесплатни AI API, OpenAI алтернатива, JavaScript AI клијент, Python AI библиотека, интеграција AI, генерисање кода, GUI локализација и дијагностичке руте" />
+    <meta name="description" content="GPT4Free documentation for GUI locale and diagnostics routes. Complete guides, examples, and API reference for free AI endpoints, code generation, and AI model integration." />
+    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, GUI locale and diagnostics routes" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="GUI lokalni vowels d klasraftihed s alcune routes | Dokumentacija GPT4Free" />
-    <meta property="og:description" content="Документација GPT4Free за GUI локализацију и дијагностичке руте. Бесплатни AI крајњи тачки, примери и комплетни водичи." />
+    <meta property="og:title" content="GUI locale and diagnostics routes | GPT4Free Documentation" />
+    <meta property="og:description" content="GPT4Free documentation for GUI locale and diagnostics routes. Free AI endpoints, examples, and comprehensive guides." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="GUI lokalni vowels d klasraftihed s alcune routes | Dokumentacija GPT4Free" />
-    <meta name="twitter:description" content="Бесплатни AI крајњи тачки и комплетна документација за GUI локализацију и дијагностичке руте." />
+    <meta name="twitter:title" content="GUI locale and diagnostics routes | GPT4Free Documentation" />
+    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for GUI locale and diagnostics routes." />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -497,7 +497,7 @@ flow.</p></li></ul>
 <p>Server-side copy covers the homepage, providers catalog, and static labels.
 Chat and playground content is mostly dynamic and relies on the runtime global
 translations. Static translations live in <code>g4f/gui/server/locale.py</code>; add a page
-to <code>PAGES</code> и <code>COPY</code> only when its visible copy can be translated.</p>
+to <code>PAGES</code> and <code>COPY</code> only when its visible copy can be translated.</p>
 <h2>Static GitHub Pages mirror</h2>
 <p>The public site at &lt;https://g4f.dev&gt; is statically hosted on GitHub Pages, so it
 cannot run the Flask middleware. <code>g4f.dev/scripts/build-locales.mjs</code> generates
@@ -520,7 +520,7 @@ That includes the document <code>&lt;title&gt;</code> and the SEO metadata (<cod
 <code>keywords</code>, <code>og:title</code>, <code>og:description</code>, <code>twitter:title</code>, and
 <code>twitter:description</code>). The build also writes every English metadata string to
 <code>dist/js/snippets/meta.json</code>, so the community catalog can translate metadata
-the same way it translates UI copy. <code>og:url</code> и <code>og:locale</code> are rewritten to
+the same way it translates UI copy. <code>og:url</code> and <code>og:locale</code> are rewritten to
 the current locale page instead of the English source URL. The runtime
 bootstrap then covers dynamic copy for all 38 API languages, not just the four
 languages the Flask GUI serves. Unprefixed URLs stay canonical for English, and

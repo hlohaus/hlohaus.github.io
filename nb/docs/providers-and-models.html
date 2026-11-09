@@ -46,23 +46,23 @@
     <link rel="alternate" hreflang="x-default" href="https://g4f.dev/docs/providers-and-models.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>G4F - Leverandører og Modeller</title>
+    <title>G4F - Providers and Models</title>
 
-    <meta name="description" content="GPT4Free-dokumentasjon for Leverandører og Modeller. Fullstendige guider, eksempler og API-referanse for gratis AI-endepunkter, kodegenerering og AI-modellintegrasjon." />
-    <meta name="keywords" content="GPT4Free, G4F, AI-dokumentasjon, gratis AI-API, OpenAI-alternativ, JavaScript AI-klient, Python AI-bibliotek, AI-integrasjon, kodegenerering, G4F - Leverandører og Modeller" />
+    <meta name="description" content="GPT4Free documentation for Providers and Models. Complete guides, examples, and API reference for free AI endpoints, code generation, and AI model integration." />
+    <meta name="keywords" content="GPT4Free, G4F, AI documentation, free AI API, OpenAI alternative, JavaScript AI client, Python AI library, AI integration, code generation, G4F - Providers and Models" />
     <meta name="author" content="GPT4Free Team" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="G4F - Leverandører og modeller | GPT4Free dokumentasjon" />
-    <meta property="og:description" content="GPT4Free dokumentasjon for G4F - Leverandører og modeller. Gratis AI-endepunkter, eksempler og omfattende veiledninger." />
+    <meta property="og:title" content="G4F - Providers and Models | GPT4Free Documentation" />
+    <meta property="og:description" content="GPT4Free documentation for G4F - Providers and Models. Free AI endpoints, examples, and comprehensive guides." />
     <meta property="og:site_name" content="GPT4Free Documentation" />
     <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="G4F - Leverandører og modeller | GPT4Free dokumentasjon" />
-    <meta name="twitter:description" content="Gratis AI-endepunkter og omfattende dokumentasjon for G4F - Leverandører og modeller." />
+    <meta name="twitter:title" content="G4F - Providers and Models | GPT4Free Documentation" />
+    <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for G4F - Providers and Models." />
     <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
 
     <!-- Canonical -->
@@ -311,13 +311,13 @@
         
         <div class="selector-grid">
             <div class="form-group">
-                <label for="select-provider">Leverandør</label>
+                <label for="select-provider">Provider</label>
                 <select id="select-provider" class="form-select">
-                    <option value="">Laster leverandører...</option>
+                    <option value="">Loading providers...</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="select-model">Modell</label>
+                <label for="select-model">Model</label>
                 <select id="select-model" class="form-select">
                     <option value="">Select a provider first</option>
                 </select>
@@ -338,7 +338,7 @@
         
         <div class="code-output">
             <div id="code-python" class="code-content active">
-                <button class="copy-btn" onclick="copyCode('python')">Kopier</button>
+                <button class="copy-btn" onclick="copyCode('python')">Copy</button>
 <pre><code id="code-python-content" class="language-python">from g4f.client import Client
 
 client = Client()
@@ -349,7 +349,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)</code></pre>
             </div>
             <div id="code-javascript" class="code-content">
-                <button class="copy-btn" onclick="copyCode('javascript')">Kopier</button>
+                <button class="copy-btn" onclick="copyCode('javascript')">Copy</button>
 <pre><code id="code-javascript-content" class="language-javascript">import { createClient } from 'https://g4f.dev/dist/js/providers.js';
 
 const client = createClient('default');
@@ -360,7 +360,7 @@ const result = await client.chat.completions.create({
 console.log(result.choices[0].message.content);</code></pre>
             </div>
             <div id="code-curl" class="code-content">
-                <button class="copy-btn" onclick="copyCode('curl')">Kopier</button>
+                <button class="copy-btn" onclick="copyCode('curl')">Copy</button>
 <pre><code id="code-curl-content" class="language-bash">curl https://g4f.space/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
@@ -372,7 +372,7 @@ console.log(result.choices[0].message.content);</code></pre>
     </div>
 
     <div class="section">
-        <h1>Direkteleverandører</h1>
+        <h1>Live Providers</h1>
         <small>JavaScript client library providers with integrated functionality</small>
         <div class="table" id="js-providers-table">
             <div>Loading JS Providers...</div>
@@ -431,7 +431,7 @@ print(response.json())
     </div>
 
     <div class="section">
-        <h2>Egendefinerte leverandører</h2>
+        <h2>Custom Providers</h2>
         <small>Loaded from <a href="https://g4f.space/custom/api/servers" target="_blank">custom/api/servers</a> (with fallback to public)</small>
         <div class="table" id="custom-providers-table">
             <div>Loading Custom Providers...</div>
