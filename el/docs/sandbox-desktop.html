@@ -765,6 +765,7 @@ interface for the sandbox:</p>
 <pre><code class="language-text">sandbox-cli &lt;tool&gt;          install &lt;tool&gt; if missing, then run it here
 sandbox-cli install &lt;tool&gt;  install only
 sandbox-cli list            list the known tools
+sandbox-cli nodejs          install the newest Node.js (Current) release + npm
 sandbox-cli settings        model, API key, HOME, provider and proxy
 sandbox-cli reset           clear the saved settings
 sandbox-cli package         show, update or pin the g4f package
@@ -775,9 +776,18 @@ sandbox-cli urls            print the public URLs served by the API
 sandbox-cli hosts           print the /etc/hosts entries for the app domains
 sandbox-cli harness         pick a coding agent and a model from the g4f API
 sandbox-cli polli-sandbox   create/connect/manage hosted Polli sandboxes</code></pre>
+<p>When <code>/g4f-bin</code> exists (Android container), <code>list</code> also appends a
+<code>g4f-bin commands</code> group with every bundled command and a short description.</p>
 <p>Tools install on first click (vendor installer, npm package,
 <code>pip install --user</code>, or Chrome's <code>.deb</code>), so the image stays small. The
-settings commands accept flags for scripting, for example
+<code>nodejs</code> entry installs the newest Node.js "Current" release and npm from
+NodeSource instead of Debian's older package; the same path is used when a
+bare container needs Node for its first npm-based tool. The
+installers write their launchers into per-user directories such as
+<code>~/.local/bin</code> και <code>~/.opencode/bin</code>; <code>sandbox-cli</code> links every installed
+launcher into <code>/usr/local/bin</code>, so tools like <code>opencode</code> also work from a plain
+terminal and not only from the menu. The settings commands accept flags for
+scripting, for example
 <code>sandbox-cli settings --api-key &#x27;key&#x27; --model gpt-4o</code>,
 <code>sandbox-cli settings --show</code> και <code>sandbox-cli settings --json</code>.</p>
 <p>The launcher and its Python runtime are owned by <code>g4f-go</code>, so the management

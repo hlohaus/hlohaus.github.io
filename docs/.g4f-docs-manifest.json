@@ -7,8 +7,13 @@
     },
     "android-container.md": {
       "html": "android-container.html",
-      "html_sha256": "ccca824933a2d41f2bbf9cf10f6b594148386f1be714004288ef4e03001d3ead",
-      "markdown_sha256": "e4be4daa9ef46ad9ac843814bbba92842b21fa74de6e30064a6287fcc06d74e5"
+      "html_sha256": "93386a2c83fa321e67b6d7ca3c5c7e25dd35aed985499d04301901e4350d2fd1",
+      "markdown_sha256": "f0dca0786e1f9bc14fd8239538ade32bbacf0605f6753fd24f7ce06372f67953"
+    },
+    "anondrop.md": {
+      "html": "anondrop.html",
+      "html_sha256": "01b716883ae61baa5604663bbd12cdf9cd93a26df0e03e26669d6138c88fbefc",
+      "markdown_sha256": "a9abeecbfe8a76b89569b7d67b3f492ee09238be57cd577880dce099343eb43b"
     },
     "api-route.md": {
       "html": "api-route.html",
@@ -57,8 +62,8 @@
     },
     "sandbox-desktop.md": {
       "html": "sandbox-desktop.html",
-      "html_sha256": "778152d92f298931f2dd212ec8d2a889eaf6b3fa8316e3f95e04f8cd5cc99a91",
-      "markdown_sha256": "50075af97c204c93ac9eabc0a3b04f40de3995335c785e998d38524c34072289"
+      "html_sha256": "23ede5b2e68c2eda53fd7cb06cde9797a4a0899521d4ad8bb4bb1338c7cd020a",
+      "markdown_sha256": "3fa96a4aac5016be737bce85555e8196a9496416f2658185493af2657e7201e0"
     }
   },
   "schema": 1,

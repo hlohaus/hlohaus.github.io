@@ -494,38 +494,35 @@ or binaries from that project are used.</p>
         └── start-desktop.sh</code></pre>
 <p><code>assets/container/catalog.json</code> pins every remote artifact by SHA-256. A
 checksum mismatch aborts installation; no unsigned or floating binary is used.
-The optional <code>g4f.prebuilt</code> entry can pin a gzip tarball containing
-<code>opt/g4f-venv</code> ו <code>usr/local/bin/g4f-api</code>. The current pin is the exact
-v8.9.4 release asset, not a floating <code>latest/download</code> URL. When present, the
-overlay replaces the apt/pip pass entirely; when it is <code>null</code>,
-<code>provision-base.sh</code> runs as the fallback.</p>
-<p><code>runtime.python.packages</code> pins the exact Debian arm64/amd64 packages used to
-provide <code>/usr/bin/python3</code> and its standard library. <code>prepare_python.py</code>
-verifies every package and extracts only the needed files at build time, so the
-prebuilt venv works without running apt on the phone. <code>g4f.desktop_prebuilt</code>
-can similarly pin an optional XFCE overlay, downloaded only when <strong>Desktop</strong> is
-checked. A single APK asset tree
-can hold only one architecture; the build defaults to <code>arm64-v8a</code> and accepts
-<code>-PcontainerPythonAbi=x86_64</code> for x86 builds. The same build task copies
-all repository <code>bin/</code> commands plus the Linux arm64 <code>g4f-go</code> binary into
-<code>container/bin</code>, which is bound at <code>/g4f-bin</code> and placed first on <code>PATH</code>.
-<code>G4F_PYTHON=/opt/g4f-venv/bin/python</code> is exported in every session and in
-<code>/etc/profile.d/g4f.sh</code>, so <code>g4f-go</code> inside the container reuses the bundled
-venv interpreter instead of trying to download a CPython archive over HTTPS
-(which can fail when the container has no CA certificates). <code>g4f-go</code> also
-detects that explicit <code>G4F_PYTHON</code> and no longer points <code>PYTHONHOME</code> at its own
-downloaded runtime, which would break the venv interpreter in the same way.
-<code>writeLaunchers()</code> also refreshes <code>g4f-go</code> from the APK on reconnect, so an app
-update repairs an existing container without reinstalling it. The same profile
-and every launcher also clear <code>PYTHONHOME</code>; a stale value makes
+No Python runtime or venv is shipped in the APK or the catalog. The optional
+<code>g4f.prebuilt</code> entry can still pin a gzip overlay with pre-provisioned
+launchers, but it is <code>null</code> so a fresh install uses <code>provision-base.sh</code>; the
+old overlay contained <code>/opt/g4f-venv</code> and is intentionally not used.
+<code>g4f.desktop_prebuilt</code> can pin an optional XFCE overlay, downloaded only when
+<strong>Desktop</strong> is checked. A single APK asset tree can hold only one architecture;
+the build defaults to <code>arm64-v8a</code> and accepts <code>-PcontainerPythonAbi=x86_64</code> for
+x86 builds. The same build task copies all repository <code>bin/</code> commands plus the
+Linux arm64 <code>g4f-go</code> binary into <code>container/bin</code>, which is bound at <code>/g4f-bin</code>
+and placed first on <code>PATH</code>.</p>
+<p>Python is supplied by <code>g4f-go</code>, not by the app. On first use inside the
+container, <code>g4f-go</code> downloads its pinned CPython archive into
+<code>/root/.g4f/python-embed</code>, verifies the SHA-256, and installs the bundled
+<code>/g4f-src</code> checkout with an editable pip install. <code>provision-base.sh</code> only
+installs <code>ca-certificates</code>, <code>sudo</code> ו <code>git</code> via apt (the download needs a CA
+bundle; git and sudo are part of the interactive container); it never
+runs <code>python3 -m venv</code> or pip directly. The editable install marks the runtime
+as builtin, so later <code>g4f-go api</code> runs do not replace the APK's source with
+PyPI's latest release. <code>writeLaunchers()</code> refreshes <code>g4f-go</code> from the APK on
+reconnect, so an app update repairs an existing container without reinstalling
+it. Every launcher and the shell profile clear <code>PYTHONHOME</code>; a stale value makes
 CPython fail at startup with <code>No module named encodings</code> / `Failed to get codec
-of filesystem encoding<code>. </code>runtime.curl`
-pins a static musl curl with an embedded CA bundle; <code>prepare_curl.py</code> verifies
-its archive and binary hashes and places it in <code>container/bin</code> so <code>sandbox-cli</code>
-can download installers without apt or system certificates. The Android
-<code>g4f-go</code> build stays separate for Termux; it uses the Termux <code>python</code> package
-and cannot run inside the Debian rootfs. The release workflow publishes it as
-<code>g4f-go-&lt;version&gt;-android-arm64.zip</code> alongside the desktop launchers.</p>
+of filesystem encoding<code>. </code>runtime.curl` pins a static musl curl with an embedded
+CA bundle; <code>prepare_curl.py</code> verifies its archive and binary hashes and places it
+in <code>container/bin</code> so <code>sandbox-cli</code> can download installers without apt or system
+certificates. The Android <code>g4f-go</code> build stays separate for Termux; it uses the
+Termux <code>python</code> package and cannot run inside the Debian rootfs. The release
+workflow publishes it as <code>g4f-go-&lt;version&gt;-android-arm64.zip</code> alongside the
+desktop launchers.</p>
 <p>Android denies <code>execve()</code> of binaries in app-writable storage. The build-time
 helper <code>prepare_proot.py</code> therefore extracts <code>libproot.so</code> ו
 <code>libproot_loader.so</code> from the pinned Termux package into <code>app/src/main/jniLibs</code>.
@@ -540,15 +537,25 @@ create its <code>/var/lib/dpkg/status-old</code> backup.</p>
 <ol><li><p><code>ContainerActivity</code> starts <code>ContainerService</code> as a foreground service with a
 partial wake lock, so downloads and long-running sessions survive screen-off.</p></li><li><p><code>ContainerManager.install()</code> downloads the rootfs and the two Termux support
 packages, verifies their hashes, extracts them (with path-traversal checks),
-writes the bind-mounted resolver, copies the provisioning scripts, the
-bundled Python runtime and the <code>bin/</code> commands. PRoot itself and its loader
-were already packaged as native libraries during the build.</p></li><li><p>If <code>g4f.prebuilt</code> is pinned, the verified overlay is extracted directly into
-the rootfs and <code>.provisioned-base</code> is written—no apt/pip pass. Otherwise a
-<strong>setup</strong> terminal session runs <code>provision-base.sh</code> inside PRoot: it clears
-stale dpkg/apt locks, repairs dpkg state, rewrites <code>/etc/resolv.conf</code>, retries
-<code>apt-get update</code> up to three
-times, installs Python 3, then creates <code>/opt/g4f-venv</code> and installs the
-bundled source with the <code>api</code> extra plus Flask dependencies.</p></li><li><p>If the user checked <strong>Desktop</strong>, a pinned <code>desktop_prebuilt</code> overlay is
+writes the bind-mounted resolver, copies the provisioning scripts and the
+<code>bin/</code> commands. PRoot itself and its loader were already packaged as native
+libraries during the build.</p></li><li><p>If <code>g4f.prebuilt</code> is pinned, the verified overlay is extracted directly into
+the rootfs and <code>.provisioned-base</code> is written. The current catalog leaves it
+<code>null</code>, so a <strong>setup</strong> terminal session runs <code>provision-base.sh</code> inside
+PRoot: it clears stale dpkg/apt locks, repairs dpkg state, rewrites
+<code>/etc/resolv.conf</code>, retries <code>apt-get update</code> up to three times, installs
+<code>ca-certificates</code>, <code>sudo</code> ו <code>git</code>, and then runs
+<code>g4f-go install -e /g4f-src[api]</code> plus the
+small Flask GUI dependencies. <code>g4f-go</code> downloads its own CPython (~60 MB)
+and owns the pip install; the rootfs gets no Python, pip or venv.</p>
+<p>The first run therefore needs a few minutes and a working connection. A
+dropped mobile transfer no longer hangs forever: <code>g4f-go</code> aborts a stalled
+read after 90 s, retries three times, and resumes from the bytes already on
+disk with an HTTP Range request. The provisioning script retries the
+<code>g4f-go install</code> once more and mirrors its full output to
+<code>/g4f-scripts/provision-base.log</code> (app files dir), which survives the
+terminal session and can be pulled with <code>adb</code> when something fails. The
+setup tab shows the same progress live, including the download bar.</p></li><li><p>If the user checked <strong>Desktop</strong>, a pinned <code>desktop_prebuilt</code> overlay is
 extracted immediately; otherwise a setup session runs
 <code>provision-desktop.sh</code>. It delegates the apt work to the shared
 <code>install-desktop.sh</code>, which is also used by the Polli sandbox bootstrap.
@@ -557,8 +564,10 @@ sandbox-desktop landing page/touch controls on top and runs
 <code>novnc-brand.sh</code>, so the APK carries a <strong>complete g4f-branded client</strong> —
 not just an overlay. The full tree replaces <code>/usr/share/novnc</code>, including
 the <code>vnc.html</code> and icon logos; no stock noVNC mark is left.</p></li><li><p>Once the filesystem is ready, <strong>API</strong> is started automatically with
-<code>--debug</code>, which mounts the bundled GUI. With <code>G4F_VNC_PORT</code> exported by the
-launcher, the same server serves the noVNC client at <code>/desktop/</code>.</p></li><li><p>Chat, API and Desktop are the first three single-instance tabs. <strong>צ׳אט</strong>
+<code>g4f-go api --debug</code>, which mounts the bundled GUI from the installed g4f
+package. With <code>G4F_VNC_PORT</code> exported by the launcher, the same server serves
+the noVNC client at <code>/desktop/</code>.</p></li><li><p>Home, Chat, API, Desktop and Store are pinned before the shell tabs. <strong>בית</strong> opens
+the locally served site home page at <code>http://127.0.0.1:1337/</code>; <strong>צ׳אט</strong>
 starts the API session if needed and opens its bundled GUI at
 <code>http://127.0.0.1:1337/chat/</code>; <strong>Desktop</strong> opens
 <code>http://127.0.0.1:1337/desktop/</code>. Desktop mode launches <code>Xvnc :1</code> ו
@@ -573,41 +582,84 @@ The noVNC <strong>Full</strong> button uses the WebView's HTML fullscreen custom
 when an iframe request is blocked, the <code>AndroidDesktop</code> bridge hides the
 app chrome and Android system bars instead. Closing an overlay hides its
 Close button, and stopping the container shows a stopped message rather than
-an exit error.</p></li></ol>
+an exit error. <strong>Store</strong> reads <code>sandbox-cli list</code> in a hidden PTY, renders a
+searchable catalog of every sandbox tool, and runs
+<code>sandbox-cli install &lt;tool&gt;</code> in a visible terminal when <strong>Install</strong> is tapped.
+<code>list</code> also appends a <code>g4f-bin commands</code> group with every file bound at
+<code>/g4f-bin</code>, using each script's first comment or docstring line as its
+description; <strong>Terminal</strong> opens one in a shell with its name at the prompt.
+New tools and commands appear without an APK update.</p></li></ol>
 <h2>Terminal implementation</h2>
 <p><code>app/src/main/cpp/pty.cpp</code> allocates a pseudo-terminal with <code>posix_openpt()</code>,
 <code>grantpt()</code> ו <code>unlockpt()</code>, forks a child that calls <code>setsid()</code> ו <code>execve()</code>s
 PRoot with the slave PTY attached to stdin/stdout/stderr. The Java layer reads
-the master side on a dedicated thread and forwards bytes (base64-encoded) to
-<code>assets/container/terminal.html</code>, which renders them with a locally bundled
-xterm.js 5.5.0 client (plus the Fit addon) — no CDN is fetched at runtime.
-Keystrokes and resize events travel back through the <code>AndroidTerminal</code>
-JavaScript bridge. <code>/etc/profile.d/g4f.sh</code> keeps <code>/g4f-bin</code> on <code>PATH</code> for login
-shells, so the repo <code>bin/</code> commands and <code>g4f-go</code> remain available after
-<code>bash -l</code> resets <code>PATH</code>.</p>
-<p>The terminal needs no CDN: xterm.js renders ANSI colors and cursor movement.
-The fixed Chat/API/Desktop tabs stay visible while any number of shell tabs
-scroll separately and are restored on reconnect. Each new shell opens with a
-short banner pointing to <code>sandbox-cli list</code>, <code>sandbox-cli &lt;tool&gt;</code> ו <code>g4f-go</code>.
-A Termux-style key row is pinned below the terminal (Esc, Tab, Ctrl, Alt,
-arrows, Home/End, <code>^C</code>, <code>^D</code>). The sticky Ctrl/Alt keys also modify characters
-typed on the hardware keyboard, so selecting Ctrl and pressing <code>c</code> sends <code>^C</code>.
-A mostly-horizontal finger drag selects text (and copies it), while vertical
-drags scroll the terminal. Touching either end of the last selection and dragging
-adjusts that range. Copy/All keep the selection when tapped, and the dynamic
-shell tab strip scrolls horizontally while Close/Close All stay pinned in view.</p>
+the master side on a dedicated thread and forwards the bytes to the native
+<code>TerminalView</code>
+(<code>app/src/main/java/dev/g4f/android/container/TerminalView.java</code>). The view
+decodes UTF-8 incrementally, interprets the ANSI/VT100 subset produced by bash,
+apt and the bundled tools, and paints its cell grid with <code>Canvas</code>. No WebView,
+CDN or bundled JavaScript is involved in the terminal path.
+Keystrokes and resize events travel back through <code>ContainerService.writeBytes()</code>
+ו <code>ContainerService.resize()</code>. <code>/etc/profile.d/g4f.sh</code> keeps <code>/g4f-bin</code> on
+<code>PATH</code> for login shells, so the repo <code>bin/</code> commands and <code>g4f-go</code> remain
+available after <code>bash -l</code> resets <code>PATH</code>.</p>
+<p>The renderer handles 16/256/truecolour SGR, cursor addressing and movement,
+erase/insert/delete line and character operations, scroll regions, the alternate
+screen, wide characters and up to 5000 lines of scrollback. The fixed
+Home/Chat/API/Desktop/Store tabs stay visible while any number of shell tabs scroll
+horizontally so all of them remain reachable. Shell tabs are restored on
+reconnect. Each new shell opens with a short banner pointing to
+<code>sandbox-cli list</code>, <code>sandbox-cli &lt;tool&gt;</code> ו <code>g4f-go</code>.</p>
+<p>A Termux-style key row is pinned below the terminal (Esc, Tab, Ctrl, Alt,
+arrows, Home/End, <code>^C</code>, <code>^D</code>, Select, Copy, All and Paste). The sticky Ctrl/Alt
+keys also modify characters typed on the hardware keyboard or through the IME,
+so selecting Ctrl and pressing <code>c</code> sends <code>^C</code>. A long-press selects the word
+under the finger and dragging extends the range; in Select mode every drag
+selects. A mostly vertical drag scrolls back through the buffer, and a tap
+returns focus and opens the keyboard. Copy and All use the Android clipboard.</p>
+<p>The <strong>Full</strong> tab switches the current Chat/Desktop page or shell to immersive
+fullscreen: the status line, action bar, tab bar and Android system bars are
+hidden. A fullscreen shell keeps the key row, so Ctrl/Alt, arrows, Esc and the
+clipboard buttons remain available while the tab bar is gone; Chat, Home and
+Desktop use the whole stage. Tap <strong>✕ Exit</strong> or press Back to restore the chrome.</p>
+<h2>Provider browser automation (CDP)</h2>
+<p>There is no installable Chrome on Android, so providers that need a browser
+attach to the app's own WebView over the abstract Unix socket
+<code>@webview_devtools_remote_&lt;app pid&gt;</code>. This works in the container as well as in
+Classic mode:</p>
+<ul><li><p><code>ContainerActivity</code> enables WebView debugging (honouring the <code>WebViewDebug</code>
+manifest switch) and keeps a hidden control WebView with a <code>127.0.0.1</code> base
+URL. It exposes <code>window.G4FAutomation</code>, the same bridge the Classic chat page
+provides.</p></li><li><p><code>ContainerManager.prootEnv()</code> exports
+<code>G4F_WEBVIEW_DEVTOOLS_SOCKET=webview_devtools_remote_&lt;app pid&gt;</code> into every
+PRoot session. The container's Python process has a different pid, so it
+cannot derive the socket name itself.</p></li><li><p>The API launcher and shell profile export the same markers, and
+<code>writeLaunchers()</code> records the socket name in
+<code>/g4f-scripts/webview-devtools-socket</code>. This keeps the container API working
+when a session was started without <code>prootEnv()</code>; g4f also probes the live
+socket if a recorded pid became stale after an app restart.</p></li><li><p><code>g4f.requests.cdp</code> treats <code>G4F_CONTAINER=1</code> as Android, resolves the socket
+from <code>G4F_WEBVIEW_DEVTOOLS_SOCKET</code> (or <code>G4F_WEBVIEW_PID</code>), and connects with
+<code>aiohttp.UnixConnector</code> exactly as in Classic mode. <code>CDPSession</code> creates a
+dedicated automation WebView through the bridge, so the container API is not
+hijacked, and closes it again when the session ends.</p></li></ul>
+<p>Automation therefore needs the app UI to be running: the DevTools socket and
+the bridge live in <code>ContainerActivity</code>. If the activity is destroyed while the
+foreground service keeps the API alive, a provider that needs the browser
+reports that no WebView target is reachable.</p>
 <h2>Why the desktop is optional</h2>
 <p>A GUI environment adds roughly 300–500 MB and several hundred packages to a
-phone. Keeping it opt-in means a typical install only needs Python, pip and the
-API dependencies. The base and desktop provisioning scripts are separate, so an
+phone. Keeping it opt-in means a typical install only needs <code>ca-certificates</code>,
+<code>sudo</code>, <code>git</code>, the <code>g4f-go</code> CPython runtime and the API dependencies. The base
+and desktop provisioning scripts are separate, so an
 installed container can be upgraded with just:</p>
 <pre><code class="language-sh">bash /g4f-scripts/provision-desktop.sh</code></pre>
 <p>from any terminal tab. It writes <code>.provisioned-desktop</code> in the app-visible
 scripts directory, which is how the UI knows the desktop is ready.</p>
 <h2>Limitations</h2>
 <ul><li><p>PRoot needs ptrace; some hardened OEM firmwares block it. In that case the
-setup terminal shows a permission/ptrace error from PRoot.</p></li><li><p>Only <code>arm64-v8a</code> ו <code>x86_64</code> are shipped, matching the Chaquopy ABIs.</p></li><li><p>The terminal renderer is line-oriented, but keeps full PTY input/output and
-the Termux-style key row, so shell editors remain usable without a CDN.</p></li><li><p>Classic chat and the container API both use port 1337. Stop one before
+setup terminal shows a permission/ptrace error from PRoot.</p></li><li><p>Only <code>arm64-v8a</code> ו <code>x86_64</code> are shipped, matching the Chaquopy ABIs.</p></li><li><p>The terminal renderer implements the ANSI subset that shells and package
+managers need; full-screen applications that require every terminal extension
+may still render imperfectly.</p></li><li><p>Classic chat and the container API both use port 1337. Stop one before
 starting the other.</p></li><li><p>The PRoot, talloc and shmem binaries are GPL/BSD licensed third-party
 artifacts from the Termux package repository; PRoot and its loader are
 extracted at build time, talloc and shmem at install time. Their licenses are
